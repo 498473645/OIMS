@@ -1,0 +1,97 @@
+<input type="hidden" name="id" />
+<table style="width:98%">
+	<tr>
+		<td class="formTdTitle">资产分类</td><td>
+		<select name="category">
+			<option value="1">医疗设备</option>
+			<option value="2">信息化设备</option>
+			<option value="3">文体设备</option>
+			<option value="4">营房营具</option>
+			<option value="5">通信设备</option>
+			<option value="6">其他设备</option>
+		</select>
+		</td>
+		<td class="formTdTitle">资产编号</td><td><input class="inputCommon" type="text" name="flowerNo" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">资产名称</td><td><input class="inputCommon" type="text" name="name" /></td>
+		<td class="formTdTitle">采购价格</td><td><input class="inputCommon" type="text" name="price" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">规格</td><td><input class="inputCommon" type="text" name="guige" /></td>
+		<td class="formTdTitle">型号</td><td><input class="inputCommon" type="text" name="xinghao" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">采购日期</td><td><input class="inputCommon" type="text" name="purchaseOrderDate" id="purchaseOrderDate"/></td>
+		<td class="formTdTitle">安装日期</td><td><input class="inputCommon" type="text" name="setupDate" id="setupDate" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">凭证名称</td><td><input class="inputCommon" type="text" name="voucher" /></td>
+		<td class="formTdTitle">档案号</td><td><input class="inputCommon" type="text" name="voucherNo" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle" >设备序列号</td><td><input class="inputCommon" type="text" name="sn" /></td>
+		<td class="formTdTitle"  title="最佳使用寿命年限">使用寿命</td><td><input style="width:90%" class="inputCommon" type="text" name="serviceLife" />年</td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">使用部门</td><td><select class="inputCommon" name="deptId"></select></td>
+		<td class="formTdTitle">管理员</td><td><select class="inputCommon" name="operator"></select></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">使用地点</td><td><input class="inputCommon" type="text" name="local" /></td>
+		<td class="formTdTitle">下次维护时间</td><td><input class="inputCommon" type="text" name="nextMaintenanceDate" id="nextMaintenanceDate"/></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right">
+			<table style="border:1px solid green;width:98%">
+				<tr>
+					<td class="formTdTitle">制造商</td><td><input class="inputCommon" type="text" name="manufacturer" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">联系人</td><td><input class="inputCommon" type="text" name="contacts" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">电话</td><td><input class="inputCommon" type="text" name="tel" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">手机</td><td><input class="inputCommon" type="text" name="mobile" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">传真</td><td><input class="inputCommon" type="text" name="fax" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">Email</td><td><input class="inputCommon" type="text" name="mail" /></td>
+				</tr>
+			</table>
+		</td>
+		<td colspan="2" align="right">
+			<table style="border:1px solid green;width:95%">
+				<tr>
+					<td class="formTdTitle">供应商</td><td><input class="inputCommon" type="text" name="supplier" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">联系人</td><td><input class="inputCommon" type="text" name="supporter" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">电话</td><td><input class="inputCommon" type="text" name="supporttel" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">手机</td><td><input class="inputCommon" type="text" name="supportmobile" /></td>
+				</tr>
+				<tr>
+					<td class="formTdTitle">传真</td><td><input class="inputCommon" type="text" name="supportfax" /></td>
+				</tr><tr>
+					<td class="formTdTitle">Email</td><td><input class="inputCommon" type="text" name="supportmail" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">使用说明</td><td colspan="3"><textarea class="inputCommon" name="infomation"></textarea></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">保养需知</td><td colspan="3"><textarea class="inputCommon" name="maintenanceNotice"></textarea></td>
+	</tr>
+</table>
+</body>
+</html>

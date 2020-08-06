@@ -1,0 +1,45 @@
+<!-- 处置界面 -->
+<div id="handle">
+	<div id="handle_pinyin_div" style="width:100%;background-color: #e1e1e1;" fixed>
+		<table id="inspect_pinyin_table" style="width:100%;border-collapse: collapse;">
+			<tr style="background-color:#e1e1e1;">
+				<td style="width:50%;padding:0;height:24px;">
+					<table>
+						<tr>
+							<td align="center" style="padding:0;width:50px;">检索</td>
+							<td align="center" style="padding:0;"><input id="handle_pinyin_text" type="text" class="blur"></td>
+						</tr>
+					</table>
+				</td>
+				<!-- 
+				<td align="right" style="padding:0;">
+					<span>眼别：</span>
+					<input type="radio" value="48" name="handle_eyesort" checked id="rl"><label for="rl">双眼</label>
+					<input type="radio" value="47" name="handle_eyesort" id="r"><label for="r">右眼</label>
+					<input type="radio" value="46" name="handle_eyesort" id="l"><label for="l">左眼</label>
+				</td>
+				 -->
+			</tr>
+		</table>
+	</div>
+	
+	<div id="handle_optionList" style="overflow:auto;" fixed>
+		<table class="selectItemTable"></table>
+	</div>
+	<div id="handle_tool_div" fixed>
+		<table style="background-color: #e1e1e1; width: 100%;">
+			<tr>
+				<td>
+					<div class="btn" id="handle_list_btn">
+						<a><span class="advsumit" style="margin-top:2px;"></span>提交</a>
+						<a><span class="print" style="margin-top:2px;"></span>打印</a>
+						<a><span class="remove" style="margin-top:2px;"></span>删除</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="handle_resultList_div" fixed>
+		<div id="handle_resultList" style="height:100px;"></div>
+	</div>
+</div>

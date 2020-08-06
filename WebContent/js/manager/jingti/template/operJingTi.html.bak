@@ -1,0 +1,11 @@
+<h1>西南医院高值耗材使用明细表</h1>
+<div style="margin:20px">
+	<p style="text-align:left">
+		<span>科室:</span><span>眼科手术室</span></span><span style="margin-left:100px">患者姓名:</span><span class='patientName' ></span><span style="margin-left:100px">患者ID号:</span><span class='identity' ></span><span style='margin-left:100px'>手术日期:</span><span class='operationDate' style="text-align:left"></span>
+	</p>
+	<table class='content' cellspacing=0 cellpadding=0 border=1 style='margin-top:20px;margin-bottom:20px'>
+		
+		<tr><td>序号</td><td style="width:100px">产品注册名称</td><td style="width:180px">产品注册证号</td><td>通用名</td><td>规格型号</td><td>生产厂家</td><td>计量单位</td><td>数量</td><td>单价</td><td style="width:200px">产品批号</td><td>效期</td></tr>
+	</table>
+	<p style="text-align:left"><span style="margin-left:100px">手术医生签字:</span><span class='doctor'></span><span style="margin-left:300px">护士签字:</span><span class='nurse'></span></p>
+</div>

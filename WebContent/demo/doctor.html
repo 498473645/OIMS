@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>医生工作站</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../style/green/css/green.css" rel="stylesheet"
+	type="text/css" />
+<link href="../style/green/css/openWin.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/icon.css" rel="stylesheet" type="text/css" />
+<link href="../subgroup/calendar/css/jscal2.css" rel="stylesheet"
+	type="text/css" />
+<link href="../oimsslide/oimsslide.css" rel="stylesheet" type="text/css" />
+<link href="../css/doctorWorkstation.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/oimsInput.css" rel="stylesheet" type="text/css" />
+<link href="../css/doctor.css" rel="stylesheet" type="text/css" />
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	var contextPath = "/EMR";
+	function resize_1() {
+		var bannerHeight = $("#header").outerHeight();
+		var bottomHeight = $("#footer").outerHeight();
+		var winHeight = $(window).height();
+		var bodyHeight = winHeight - bannerHeight - bottomHeight;
+		$("#content").height(bodyHeight);
+		var marginTop = ($(".content").height() - $(".welcomefont").height()) / 2;
+		$(".welcomebg").height($(".content").height())
+				.css("overflow", "hidden");
+		$(".welcomefont").css("margin-top", marginTop / 2 - 20 + "px");
+		mainBodyHeight = bodyHeight;
+		var h0 = $(".menu .down").outerHeight();
+		var h1 = $(".menu .up").outerHeight();
+		var h2 = $(".menu .wel").outerHeight();
+		var h3 = $(".menu .modulertitle").outerHeight();
+		$(".menu .nav").height(bodyHeight - h0 - h1 - h2 - h3);
+		$(".left .narrow").height(bodyHeight);
+		var c = $(".left .narrow span");
+		var h = (bodyHeight - c.height()) / 2;
+		c.css({
+			"margin-top" : h
+		});
+		c.click(function() {
+			var cw = $(".left").width() - c.width();
+			if (leftMenuClose) {
+				$(".left").css("margin-left", 0);
+				$(".right").css({
+					"width" : $(".right").width() - cw,
+					"margin-left" : $(".left").width()
+				});
+				leftMenuClose = false;
+			} else {
+				$(".left").css("margin-left", -cw);
+				$(".right").css({
+					"width" : $(".right").width() + cw,
+					"margin-left" : c.width()
+				});
+				leftMenuClose = true;
+			}
+		});
+	}
+	$(document).ready(resize_1);
+</script>
+<script src="../demo/doctor/jquery.wresize.js"></script>
+<script src="../js/language.config.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/categoryTree.js"></script>
+<script src="../js/jquery.oimsDialog.js"></script>
+<script src="../demo/doctor/demo.js"></script>
+<script src="../demo/doctor/demo.data.js"></script>
+<script src="../demo/doctor/demo.tree.js"></script>
+<script src="../demo/doctor/demo.checkorder.js"></script>
+<script src="../demo/doctor/ly_jcd.js"></script>
+<script src="../oimsslide/oimsslide.js"></script>
+<script type="text/javascript" src="../highcharts/highcharts.js"></script>
+<script type="text/javascript" src="../highcharts/exporting.js"></script>
+<script type="text/javascript" src="../demo/doctor/duibi.js"></script>
+<script type="text/javascript" src="../demo/doctor/demo.entrance.js"></script>
+<script type="text/javascript" src="../demo/doctor/demo.billing.js"></script>
+<script type="text/javascript" src="../demo/doctor/demo.inquiry.js"></script>
+
+</head>
+<body style="overflow: hidden;">
+	<div class="header" id="header">
+		<div class="logo"></div>
+		<div class="set">
+			<ul>
+				<li class="settext"><a href="javascript:userConfing();">设置</a></li>
+				<li class="exit"><a href="javascript:loginOut();">退出</a></li>
+				<li class="help"><a href="#">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content" id="content" style="overflow:hidden;">
+		<div class="left" id="left">
+			<div class="menu">
+				<div class="wel">
+					<span></span>
+					<p>欢迎您！</p>
+					<p>管理员(检查医生)</p>
+					<p class="time">2012.7.3 星期二 15:39:00</p>
+				</div>
+				<div class="modulertitle">医生工作站</div>
+				<div class="up"></div>
+				<div class="nav">
+					<ul>
+						<li class="l1"><a href="#" id="m01"><span class="menu1"></span>病历管理</a></li>
+						<li class="l1"><a href="#"><span class="menu2"></span>医生工作站</a></li>
+						<li class="on"><a href="#"><span class="menu2"></span>模板管理</a></li>
+						<ul style="display: block;">
+							<li><a
+								style="width: 160px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; o-text-overflow: ellipsis;"
+								title="输入模板"> <span class="css"></span>输入模板
+							</a></li>
+						</ul>
+					</ul>
+				</div>
+				<div class="down"></div>
+			</div>
+			<div class="narrow">
+				<span></span>
+			</div>
+		</div>
+		<div id="right" class="right">
+			<div class="title">
+				<div class="titleT">
+					<span class="title1"></span>患者接诊
+				</div>
+				<div class="sum">
+					<strong>今日接诊患者总数：</strong><span>[</span><span><font
+						class="red">1</font></span><span>]人:</span><strong>待诊患者：</strong><span>[</span><span><font
+						class="red">1</font></span><span>]人,</span><strong>复诊患者：</strong><span>[</span><span><font
+						class="blue">0</font></span><span>]人,</span><strong>已过号患者：</strong><span>[</span><span><font
+						class="green">0</font></span><span>]人,</span><strong>已完成患者：</strong><span>[</span><span><font
+						class="green">0</font></span><span>]人</span>
+				</div>
+			</div>
+			<div class=toolbar>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="patientinfo">
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<th align="right" nowrap="nowrap" class="headimg"></th>
+									<td align="right" nowrap="nowrap"><strong>病历号：</strong><span>857185995</span></td>
+									<td nowrap="nowrap"><strong>姓名：</strong><span>卢方</span></td>
+									<td align="right" nowrap="nowrap"><strong>性别：</strong><span>男</span></td>
+									<td><strong>年龄：</strong><span>64</span></td>
+									<td align="right" nowrap="nowrap"><strong>电话：</strong><span>18212344321</span></td>
+									<td><strong>医保</strong><span></span></td>
+									<td align="right" nowrap="nowrap"><strong>公费</strong><span></span></td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<div class="btn">
+								<a href="javascript:test()"><span class="diagnosis"></span>下一位</a>
+								<a href="#"><span class="gh"></span>过号</a> 
+								<a href="#"><span class="start"></span>完成</a>
+								<a href="#"><span class="print"></span>打印</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="containor" id="case">
+				<div id="compare_show" class="records" >
+				</div>
+				<div id="duibi" class="mcListTag compare">
+					<div style="height: 100%; overflow: hidden;" id="jzlistdiv_gd">
+						<div id="jzlistdiv"
+							style="height: 100%;">
+								<ul>
+									<li style="cursor: pointer; overflow: hidden;" id="li_sn_1" class="visited">
+										<span class="emr_jiuzhenlistcheck"><input type="checkbox" style="vertical-align:top;"></span>
+										<p>当前</p>
+										<p>医生：管理员</p>
+									</li>
+									<li style="cursor: pointer;" id="li_sn_2">
+										<span class="emr_jiuzhenlistcheck"><input type="checkbox" style="vertical-align:top;"></span>
+										<p>2014-01-12</p>
+										<p>医生：胡龙尊</p>
+									</li>
+									<li style="cursor: pointer;" id="li_sn_3">
+										<span class="emr_jiuzhenlistcheck"><input type="checkbox" style="vertical-align:top;"></span>
+										<p>2013-12-12</p>
+										<p>医生：邹金金</p>
+									</li>
+								</ul>
+							</div>
+					</div>
+				</div>
+				<div id="main" class="main">
+					<div style="height: 28px;" id="maintab"
+						class="tablabe2 mcTitleTag">
+						<div class="tab_hide tab_show" onclick="_emr_showCaseTab(this)">
+							<span>诊断</span>
+						</div>
+						<div id="first_table" class="tab_hide"
+							onclick="_emr_showCaseTab(this)">
+							<span>病史</span>
+						</div>
+						<div class="tab_hide" onclick="_emr_showCaseTab(this)">
+							<span>查体</span>
+						</div>
+						<div class="tab_hide" onclick="_emr_showCaseTab(this)">
+							<span>检查</span>
+						</div>
+						<div class="tab_hide" onclick="_emr_showCaseTab(this)">
+							<span>处方</span>
+						</div>
+					</div>
+				</div>
+				<!--  
+				<div id="showcheckorder" onclick="_emr_showCheckOrder(this)"
+					class="mcListTag"
+					style="float: right; text-align: center; layout-flow: vertical-ideographic; font-size: 14px; width: 2%; min-width: 24px; height: 100%; overflow: hidden; cursor: pointer; background-color: #bfbfbf">
+					<h3 style="margin-right: 5px;">检查化验结果</h3>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+	<div class="footer" id="footer">
+		<div class="footerlogo"></div>
+		<p>版权所有：北京思格玛软件有限公司</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* CSS Document */
+html{ overflow-x:hidden;}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:13px;	
+	color:#000000;
+        line-height:20px;
+	scrollbar-face-color:#f2f2f2;
+    scrollbar-highlight-color: #bfbebe;
+    scrollbar-shadow-color: #bababa;
+    scrollbar-3dlight-color: #e5e5e5;
+    scrollbar-arrow-color: #bfbebe;
+    scrollbar-track-color: #e5e5e5;
+    scrollbar-darkshadow-color: #f2f2f2;
+    scrollbar-base-color: #c9c9c9;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+ul li{ list-style:none;}
+a img{ border:none;}
+div,ul,li,a,span,p,ol,img,form,input,textarea,select,h1,h2,h3,h4,h5,h6{ padding:0; margin:0;}
+a{ text-decoration:none; color:#000000;cursor:hand; cursor:pointer;}
+table td{ height:25px; padding-right:3px; padding-left:2px;  } 
+.clear{ clear:both; height:10px;}
+input.focus{
+	border:1px solid #57b3c0;
+	background:#e7f7f9;
+	height:20px;
+	color:#4f4f4f;
+	width:100%;
+	line-height:20px; 
+	vertical-align:middle	
+
+}
+input.blur{
+	border:1px solid #bebebe;
+	background:#fff url(../images/inputbg.png) repeat-x left top; 
+	height:20px;
+	color:#4f4f4f;
+	width:100%;
+	line-height:20px; 
+	vertical-align:middle
+
+}
+input.error1{
+	border:1px solid #c41f1f;
+	background:#ffd1d1; 
+	height:20px;
+	color:#4f4f4f;
+	width:100%;
+	line-height:20px; 
+	vertical-align:middle
+
+}
+input.blurview{	
+    border:1px solid #bebebe;
+	background:#fff url(../images/inputbg.png) repeat-x left top;  
+	height:20px;
+	color:#ccc;
+	width:100%;
+	line-height:20px; 
+	vertical-align:middle
+	}
+input.alert{
+	border:1px solid #DB1111; 
+	background:#FFC7C7;
+	line-height:16px;
+}
+input.checkbox{
+	border:0px;
+}
+input.radio{
+	border:0px;
+}
+input.fileField{
+      border:1px solid #bebebe;
+	   background:#fff url(../images/inputbg.png) repeat-x left top; 
+	   width:100%;height:20px;
+	
+
+	}
+input.fileFieldh{ height:27px;}	
+textarea{
+	border:1px solid #bebebe;
+	background:#fff url(../images/inputbg.png) repeat-x left top; 
+	background:#FFFFFF; 
+	line-height:17px;
+	width:100%;
+}
+textarea.focus{
+	border:1px solid #57b3c0;
+	background:#e7f7f9;
+	width:100%;
+}
+textarea.blur{
+	border:1px solid #bebebe;
+	background:#fff url(../images/inputbg.png) repeat-x left top; 
+	width:100%;
+} 
+select{
+	height:22px;
+	margin-bottom:1px !important;
+	margin-top:0px;
+	*margin-bottom:0px !important;
+	width:100%;
+}
+select.focus{
+	border:1px solid #bebebe; 
+	background:#e7f7f9;
+	height:22px;
+	margin-bottom:1px !important;
+	margin-top:0px;
+	*margin-bottom:0px !important;
+
+}
+select.blur{
+	border:1px solid #57b3c0;
+	background:#FFFFFF; 
+	height:22px;
+	margin-bottom:1px !important;
+	margin-top:0px;
+	*margin-bottom:0px !important;
+
+}
+fieldset.fieldsetsytle{ background:none; text-align:left; border:1px solid #dcdcdc;  color:#4f4f4f;}
+fieldset.fieldsetsytle legend{ color:#4f4f4f}
+span.required{ color:#F00; display:block; width:5px; height:17px; float:right; padding-top:5px;}
+
+.searchfile .fieldstyle {
+ height: 22px;
+ width: 181px;
+ border: 0px;
+ float: left;
+}
+.searchfile .fieldstyle input {
+ width: 180px;
+ height: 22px;
+ line-height: 22px;
+}
+
+.searchfile .buttonstyle {
+ font-size: 12px;
+ color:white;
+ height:23px;
+ text-align:center;
+ background:url(../images/bowsre.png) no-repeat;
+ float: left;
+ margin-top:1px;
+}
+
+.searchfile .buttonstyle input.fieldbutton{ width:61px; height:23px; background:none; border:none;}
+.searchfile .buttonstyle input.fieldbutton1{ width:61px; height:23px; background:none; border:none;}
+searchfile input{
+ background: transparent;
+ border: 0px;
+}
+.searchfile .fieldstyle input.fieldtext{
+	 border:1px solid #bebebe;
+ background:#fff url(../images/inputbg.png) repeat-x left top; 
+    width:98%;
+	height:20px;
+	margin-top:2px;
+	}
+
+
+
+
+
+
+
+
+
+.searchfile .fieldstylebig {
+ height: 22px;
+ width: 181px;
+ border: 0px;
+ float: left;
+}
+.searchfile .fieldstylebig input {
+ width: 180px;
+ height: 22px;
+ line-height: 22px;
+}
+
+.searchfile .buttonstylebig {
+ font-size: 12px;
+ color:white;
+ height:27px;
+ text-align:center;
+ background:url(../images/bowsrebig.png) no-repeat;
+ float: left;
+
+}
+
+.searchfile .buttonstylebig input.fieldbutton{ width:88px; height:27px; background:none; border:none;}
+searchfile input{
+ background: transparent;
+ border: 0px;
+}
+.searchfile .fieldstylebig input.fieldtext{
+	 border:1px solid #bebebe;
+     background:#fff url(../images/inputbg.png) repeat-x left top; 
+    width:98%;
+	height:20px;
+	margin-top:2px;
+	}
+
+.waiting{ width:300px; height:90px; background:url(../images/waitting.gif) no-repeat ; margin:200px auto;}
+.waiting p{ height:75px; line-height:75px; vertical-align:middle; padding-left:80px; font-size:14px; font-weight:bold;}
+
+.welcomebg{ background:url(../images/welcome.png) no-repeat left bottom; height:100%; }
+.welcomefont{ height:172px; width:646px; margin:20px auto; background:url(../images/welcomefont.png) no-repeat;}
+
+.gongzuojingli{border:1px solid #ddd; margin:2px; padding:2px;}
+.btnlist li{width:180px; height:22px; line-height:22px; display:block; float:left; margin:2px; text-align:center; border:1px solid #ddd; background:#fff}

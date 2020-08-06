@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* 左边主菜单图标 */
+span.menu1{ background:url(../images/menuicon.png) no-repeat 0px 0px;}
+span.menu2{ background:url(../images/menuicon.png) no-repeat -23px 0px;}
+span.menu3{ background:url(../images/menuicon.png) no-repeat -46px 0px;}
+span.menu4{ background:url(../images/menuicon.png) no-repeat -69px 0px;}
+span.menu5{ background:url(../images/menuicon.png) no-repeat -91px 0px;}
+span.menu6{ background:url(../images/menuicon.png) no-repeat -114px 0px;}
+span.menu7{ background:url(../images/menuicon.png) no-repeat -135px 0px;}
+span.menu8{ background:url(../images/menuicon.png) no-repeat -156px 0px;}
+span.menu9{ background:url(../images/menuicon.png) no-repeat -180px 0px;}
+span.menu10{ background:url(../images/menuicon.png) no-repeat -201px 0px;}
+span.menu11{ background:url(../images/menuicon.png) no-repeat -224px 0px;}
+span.menu12{ background:url(../images/menuicon.png) no-repeat -247px 0px;}
+span.menu13{ background:url(../images/menuicon.png) no-repeat -269px 0px;}
+span.menu14{ background:url(../images/menuicon.png) no-repeat -0px -43px;}
+span.menu15{ background:url(../images/menuicon.png) no-repeat -23px -43px;}
+span.menu16{ background:url(../images/menuicon.png) no-repeat -47px -43px;}
+span.menu17{ background:url(../images/menuicon.png) no-repeat -70px -43px;}
+span.menu18{ background:url(../images/menuicon.png) no-repeat -3px -233px;}
+span.menu19{ background:url(../images/menuicon.png) no-repeat -28px -233px;}
+span.menu20{ background:url(../images/menuicon.png) no-repeat -54px -234px;}
+span.menu21{ background:url(../images/menuicon.png) no-repeat -81px -233px;}
+span.menu22{ background:url(../images/menuicon.png) no-repeat -107px -232px;}
+span.menu23{ background:url(../images/menuicon.png) no-repeat -133px -230px;}
+span.menu24{ background:url(../images/menuicon.png) no-repeat -106px -303px;}
+span.title1{ background:url(../images/menuicon.png) no-repeat -6px -277px; }
+
+
+/****开始时间按钮********/
+a.startime{ background:url(../images/menuicon.png) no-repeat 0px -166px; display:block; width:95px; height:63px; padding-top:3px;}
+a.starcheck{ background:url(../images/menuicon.png) no-repeat 0px -95px; display:block; width:95px; height:65px; padding-top:6px; }
+a.breakcheck{ background:url(../images/menuicon.png) no-repeat 0px -95px; display:block; width:95px; height:65px; padding-top:6px; }
+div.doctortitle1 span.flash{background:url(../images/menuicon.png) no-repeat -243px -97px;}
+.checklist ul li span.start{ background:url(../images/menuicon.png) no-repeat -158px -160px;}
+.checklist ul li span.in{ background:url(../images/menuicon.png) no-repeat -233px -140px;}
+.checklist ul li span.end{ background:url(../images/menuicon.png) no-repeat -215px -140px;}
+.checklist ul li span.wrong{ background:url(../images/menuicon.png) no-repeat -213px -162px;}
+.checklist ul li span.dcheck{ background:url(../images/menuicon.png) no-repeat -231px -161px;}
+.checklist ul li span.ycheck{ background:url(../images/menuicon.png) no-repeat -187px -281px;}
+.checklist ul li span.dSupplements{ background:url(../images/menuicon.png) no-repeat -206px -280px;}
+
+.checklist ul li span.live{ background:url(../images/menuicon.png) no-repeat -226px -281px;}
+.checklist ul li span.din{ background:url(../images/menuicon.png) no-repeat -243px -280px;}
+.checklist ul li span.dlinkno{ background:url(../images/menuicon.png) no-repeat -263px -281px;}
+.checklist ul li span.slinkno{ background:url(../images/menuicon.png) no-repeat -282px -281px;}
+.checklist ul li span.derror{ background:url(../images/menuicon.png) no-repeat -280px -184px;}
+.checklist ul li span.lose{ background:url(../images/menuicon.png) no-repeat -282px -222px;}
+.checklist ul li span.fileno{ background:url(../images/menuicon.png) no-repeat -277px -124px;}
+/*新版采集使用*/
+.studyListDiv ul li span.start{ background:url(../images/menuicon.png) no-repeat -158px -160px;}
+.studyListDiv ul li span.in{ background:url(../images/menuicon.png) no-repeat -233px -140px;}
+.studyListDiv ul li span.end{ background:url(../images/menuicon.png) no-repeat -215px -140px;}
+.studyListDiv ul li span.wrong{ background:url(../images/menuicon.png) no-repeat -213px -162px;}
+.studyListDiv ul li span.dcheck{ background:url(../images/menuicon.png) no-repeat -231px -161px;}
+.studyListDiv ul li span.ycheck{ background:url(../images/menuicon.png) no-repeat -187px -281px;}
+.studyListDiv ul li span.dSupplements{ background:url(../images/menuicon.png) no-repeat -206px -280px;}
+.studyListDiv ul li span.live{ background:url(../images/menuicon.png) no-repeat -226px -281px;}
+.studyListDiv ul li span.din{ background:url(../images/menuicon.png) no-repeat -243px -280px;}
+.studyListDiv ul li span.dlinkno{ background:url(../images/menuicon.png) no-repeat -263px -281px;}
+.studyListDiv ul li span.slinkno{ background:url(../images/menuicon.png) no-repeat -282px -281px;}
+.studyListDiv ul li span.derror{ background:url(../images/menuicon.png) no-repeat -280px -184px;}
+.studyListDiv ul li span.lose{ background:url(../images/menuicon.png) no-repeat -282px -222px;}
+.studyListDiv ul li span.fileno{ background:url(../images/menuicon.png) no-repeat -277px -124px;}
+/*新版采集使用*/
+/******增删改查按钮***********/
+.btn a span.sumit{ background:url(../images/menuicon.png) no-repeat 0px -23px;   }
+.btn a span.doing{ background:url(../images/menuicon.png) no-repeat -16px -23px;   }
+.btn a span.import{ background:url(../images/menuicon.png) no-repeat -33px -23px;   }
+.btn a span.gh{ background:url(../images/menuicon.png) no-repeat -50px -23px;   }
+.btn a span.view{ background:url(../images/menuicon.png) no-repeat -66px -23px; }
+.btn a span.report{ background:url(../images/menuicon.png) no-repeat -83px -23px; }
+.btn a span.export{ background:url(../images/menuicon.png) no-repeat -96px -41px; }
+.btn a span.outfrom{ background:url(../images/menuicon.png) no-repeat -195px -140px; }
+.btn a span.oufrom{ background:url(../images/menuicon.png) no-repeat -112px -24px; }
+.btn a span.add{ background:url(../images/menuicon.png) no-repeat -226px -23px; }
+.btn a span.del{ background:url(../images/menuicon.png) no-repeat -116px -137px; }
+.btn a span.edit{ background:url(../images/menuicon.png) no-repeat -178px -142px; }
+.btn a span.start{ background:url(../images/menuicon.png) no-repeat -272px -22px; }
+.btn a span.reset{ background:url(../images/menuicon.png) no-repeat -178px -23px; }
+.btn a span.nullify{ background:url(../images/menuicon.png) no-repeat -0px -66px; }
+.btn a span.extract{ background:url(../images/menuicon.png) no-repeat -17px -66px; }
+.btn a span.pass{background:url(../images/menuicon.png) no-repeat -269px -46px; }
+.btn a span.makelist{ background:url(../images/menuicon.png) no-repeat -102px -98px;   }
+.btn a span.diagnosis{ background:url(../images/menuicon.png) no-repeat -123px -97px;   }
+.btn a span.advice{ background:url(../images/menuicon.png) no-repeat -144px -99px;   }
+.btn a span.dpersonnel{ background:url(../images/menuicon.png) no-repeat -98px -115px;   }
+.btn a span.checkitem{ background:url(../images/menuicon.png) no-repeat -98px -138px;   }
+.btn a span.itemclass{ background:url(../images/menuicon.png) no-repeat -139px -119px;   }
+.btn a span.seedoctor{ background:url(../images/menuicon.png) no-repeat -158px -120px;   }
+.btn a span.prohibit{ background:url(../images/menuicon.png) no-repeat -274px -106px;   }
+.btn a span.confirm{background:url(../images/menuicon.png) no-repeat -50px -70px;}
+.btn a span.role{background:url(../images/menuicon.png) no-repeat -261px -184px;}
+.btn a span.authority{background:url(../images/menuicon.png) no-repeat -233px -205px;}
+.btn a span.restore{background:url(../images/menuicon.png) no-repeat -252px -204px;}
+
+/*********弹出DIV 标题及按钮图标*************/
+.opentitle span.view{background:url(../images/menuicon.png) no-repeat -66px -23px;}
+.opentitle span.report{background:url(../images/menuicon.png) no-repeat -83px -23px; }
+.opentitle span.outfrom{background:url(../images/menuicon.png) no-repeat -65px -260px;}/*筛选*/
+.opentitle span.advsearch{background:url(../images/menuicon.png) no-repeat -145px -23px;}
+.opentitle span.openexport{background:url(../images/menuicon.png) no-repeat -33px -23px;}
+.opentitle span.add{background:url(../images/menuicon.png) no-repeat -226px -23px;}
+.opentitle span.pass{background:url(../images/menuicon.png) no-repeat -269px -46px; }
+.opentitle span.watermark{background:url(../images/menuicon.png) no-repeat -99px -202px; }
+.opentitle span.engagement{background:url(../images/menuicon.png) no-repeat -122px -202px; }
+.opentitle span.addoffice{background:url(../images/menuicon.png) no-repeat -144px -204px; }
+.opentitle span.addadministrative{background:url(../images/menuicon.png) no-repeat -165px -205px; }
+.opentitle span.addhospital{background:url(../images/menuicon.png) no-repeat -211px -205px; }
+.opentitle span.addpersonnel{background:url(../images/menuicon.png) no-repeat -188px -204px; }
+.opentitle span.reset{ background:url(../images/menuicon.png) no-repeat -178px -23px; }
+.opentitle span.Treatmentsituation{background:url(../images/menuicon.png) no-repeat -158px -120px;}/*就诊情况*/
+.opentitle span.export{ background:url(../images/menuicon.png) no-repeat  -96px -41px; }/*导出*/
+
+.opentitle span.presure{background:url(../images/menuicon.png) no-repeat -213px -305px; }/*眼压*/
+
+.opentitle span.vision{background:url(../images/menuicon.png) no-repeat -192px -306px; }/*视力*/
+.opentitle span.doing{ background:url(../images/menuicon.png) no-repeat -16px -23px;   }
+.opentitle span.import{ background:url(../images/menuicon.png) no-repeat -33px -23px;   }
+.opentitle span.gh{ background:url(../images/menuicon.png) no-repeat -50px -23px;   }
+.opentitle span.view{ background:url(../images/menuicon.png) no-repeat -66px -23px; }
+.opentitle span.report{ background:url(../images/menuicon.png) no-repeat -83px -23px; }
+.opentitle span.export{ background:url(../images/menuicon.png) no-repeat -96px -41px; }
+.opentitle span.outfrom{ background:url(../images/menuicon.png) no-repeat -195px -140px; }
+.opentitle span.oufrom{ background:url(../images/menuicon.png) no-repeat -112px -24px; }
+.opentitle span.del{ background:url(../images/menuicon.png) no-repeat -116px -137px; }
+.opentitle span.edit{ background:url(../images/menuicon.png) no-repeat -178px -142px; }
+.opentitle span.start{ background:url(../images/menuicon.png) no-repeat -272px -22px; }
+.opentitle span.reset{ background:url(../images/menuicon.png) no-repeat -178px -23px; }
+.opentitle span.nullify{ background:url(../images/menuicon.png) no-repeat -0px -66px; }
+.opentitle span.extract{ background:url(../images/menuicon.png) no-repeat -17px -66px; }
+.opentitle span.pass{background:url(../images/menuicon.png) no-repeat -269px -46px; }
+.opentitle span.makelist{ background:url(../images/menuicon.png) no-repeat -102px -98px;   }
+.opentitle span.diagnosis{ background:url(../images/menuicon.png) no-repeat -123px -97px;   }
+.opentitle span.advice{ background:url(../images/menuicon.png) no-repeat -144px -99px;   }
+.opentitle span.dpersonnel{ background:url(../images/menuicon.png) no-repeat -98px -115px;   }
+.opentitle span.checkitem{ background:url(../images/menuicon.png) no-repeat -98px -138px;   }
+.opentitle span.itemclass{ background:url(../images/menuicon.png) no-repeat -139px -119px;   }
+.opentitle span.seedoctor{ background:url(../images/menuicon.png) no-repeat -158px -120px;   }
+.opentitle span.prohibit{ background:url(../images/menuicon.png) no-repeat -274px -106px;   }
+.opentitle span.confirm{background:url(../images/menuicon.png) no-repeat -50px -70px;}
+.opentitle span.role{background:url(../images/menuicon.png) no-repeat -261px -184px;}
+.opentitle span.authority{background:url(../images/menuicon.png) no-repeat -233px -205px;}
+.opentitle span.restore{background:url(../images/menuicon.png) no-repeat -252px -204px;}
+
+
+
+
+span.reset{ background:url(../images/menuicon.png) no-repeat -178px -23px; }
+span.outfrom{background:url(../images/menuicon.png) no-repeat -112px -23px; }
+span.choose{background:url(../images/menuicon.png) no-repeat -273px -84px; }
+span.save{background:url(../images/menuicon.png) no-repeat -136px -138px; }
+span.close{background:url(../images/menuicon.png) no-repeat -116px -137px; }
+span.pen{background:url(../images/menuicon.png) no-repeat -178px -142px;}
+span.color{background:url(../images/menuicon.png) no-repeat -156px -140px;}
+span.saveeyes{ background:url(../images/menuicon.png) no-repeat -136px -138px;}
+span.subscribe{background:url(../images/menuicon.png) no-repeat -99px -157px; }
+span.patient{background:url(../images/menuicon.png) no-repeat -99px -178px; }
+span.add{background:url(../images/menuicon.png) no-repeat  -226px -23px; }
+span.del{background:url(../images/menuicon.png) no-repeat -241px -23px; }
+span.view{ background:url(../images/menuicon.png) no-repeat -66px -23px; }
+span.backupbtn{ background:url(../images/menuicon.png) no-repeat -118px -181px; }
+span.oldown{ background:url(../images/menuicon.png) no-repeat -138px -181px; }
+span.export{ background:url(../images/menuicon.png) no-repeat -33px -25px; }
+span.down{background:url(../images/menuicon.png) no-repeat -160px -233px;}
+span.register{background:url(../images/menuicon.png) no-repeat -3px -309px;}
+span.print{background:url(../images/menuicon.png) no-repeat -24px -309px;}
+span.confirm{background:url(../images/menuicon.png) no-repeat -43px -309px;}
+span.audit{background:url(../images/menuicon.png) no-repeat -65px -308px;}
+span.assignment{background:url(../images/menuicon.png) no-repeat -86px -306px;}
+span.registera{background:url(../images/menuicon.png) no-repeat -3px -329px;}
+span.printa{background:url(../images/menuicon.png) no-repeat -24px -329px;}
+span.confirma{background:url(../images/menuicon.png) no-repeat -43px -329px;}
+span.audita{background:url(../images/menuicon.png) no-repeat -65px -328px;}
+span.assignmenta{background:url(../images/menuicon.png) no-repeat -86px -326px;}
+
+span.advsumit{background:url(../images/menuicon.png) no-repeat -161px -23px;}
+span.combo{background:url(../images/menuicon.png) no-repeat -194px -23px;}
+span.advreset{background:url(../images/menuicon.png) no-repeat -178px -23px;}
+span.upload{background:url(../images/menuicon.png) no-repeat -194px -23px;}
+span.noupload{background:url(../images/menuicon.png) no-repeat -211px -23px;}
+span.report{background:url(../images/menuicon.png) no-repeat -83px -23px;}
+span.browse{background:url(../images/menuicon.png) no-repeat -272px -66px;}
+span.treeicon{background:url(../images/menuicon.png) no-repeat -118px -118px; }
+span.screen{background:url(../images/menuicon.png) no-repeat -272px -206px;}
+span.close{background:url(../images/menuicon.png) no-repeat -116px -137px;}
+
+span.plus{background:url(../images/menuicon.png) no-repeat -128px -306px;}
+span.plusa{background:url(../images/menuicon.png) no-repeat -151px -306px;}
+span.addh{background:url(../images/menuicon.png) no-repeat -257px -307px;}
+span.addha{background:url(../images/menuicon.png) no-repeat -277px -307px;}
+span.minus{background:url(../images/menuicon.png) no-repeat -236px -307px;}
+span.minusa{background:url(../images/menuicon.png) no-repeat -109px -328px;}
+span.sfz{background:url(../images/menuicon.png) no-repeat -277px -305px;}
+
+
+
+/*************标准弹出提示窗口*********/
+.openbutton a span.submit{background:url(../images/menuicon.png) no-repeat -51px -70px;  }
+.openbutton a span.cancel{background:url(../images/menuicon.png) no-repeat -88px -70px;}
+.openbutton a span.confirm{background:url(../images/menuicon.png) no-repeat -50px -70px;}
+.openbutton a span.return{background:url(../images/menuicon.png) no-repeat -153px -179px;}
+.opentitle span.openwinicon{background:url(../images/menuicon.png) no-repeat -70px -70px;}
+span.error{ background:url(../images/menuicon.png) no-repeat -215px -45px;}
+span.warning{ background:url(../images/menuicon.png) no-repeat -113px -44px;}
+span.success{background:url(../images/menuicon.png) no-repeat -164px -45px;}
+span.case{background:url(../images/menuicon.png) no-repeat -170px -177px; }
+span.info1{background:url(../images/menuicon.png) no-repeat -191px -179px;}
+span.openform{background:url(../images/menuicon.png) no-repeat -273px -164px;}
+span.edit{ background:url(../images/menuicon.png) no-repeat -178px -142px; }
+span.confirm{background:url(../images/menuicon.png) no-repeat -50px -70px;}
+span.checkitem{ background:url(../images/menuicon.png) no-repeat -98px -138px;   }
+
+/*************登录页面按钮*************/
+.loginbtn a span.loginicon{background:url(../images/menuicon.png) no-repeat -178px -114px;}
+.loginbtn a span.advreseticon{background:url(../images/menuicon.png) no-repeat -204px -117px;}
+
+/******************启用禁用*****************/
+span.disable{background:url(../images/menuicon.png) no-repeat -232px -120px;}
+span.using{background:url(../images/menuicon.png) no-repeat -253px -119px;}
+
+span.disable{width:16px; height:16px; padding-top:2px; padding-right:8px; padding-bottom:2px; padding-left:8px; margin-right:3px; }
+span.using{width:16px; height:16px; padding-top:2px; padding-right:8px; padding-bottom:2px; padding-left:8px; margin-right:3px; }
+/******************制灰图标*****************/
+.btn a span.reporta{ background:url(../images/menuicon.png) no-repeat -182px -232px; }
+.btn a span.edita{ background:url(../images/menuicon.png) no-repeat -203px -234px;}
+.btn a span.reseta{ background:url(../images/menuicon.png) no-repeat -222px -234px;}
+.btn a span.nullifya{ background:url(../images/menuicon.png) no-repeat -244px -233px;}
+.btn a span.outfroma{ background:url(../images/menuicon.png) no-repeat -65px -258px;}
+.btn a span.viewa{ background:url(../images/menuicon.png) no-repeat -2px -257px;}
+.btn a span.importa{ background:url(../images/menuicon.png) no-repeat -22px -258px;}
+.btn a span.exporta{ background:url(../images/menuicon.png) no-repeat -43px -257px;}
+.btn a span.oufroma{ background:url(../images/menuicon.png) no-repeat -265px -234px;}
+.btn a span.sumita{ background:url(../images/menuicon.png) no-repeat -82px -259px;}
+.btn a span.doinga{ background:url(../images/menuicon.png) no-repeat -103px -260px;}
+.btn a span.gha{ background:url(../images/menuicon.png) no-repeat -123px -259px;}
+.btn a span.adda{ background:url(../images/menuicon.png) no-repeat -145px -259px;}
+.btn a span.dela{ background:url(../images/menuicon.png) no-repeat -163px -259px;}
+.btn a span.starta{ background:url(../images/menuicon.png) no-repeat -180px -257px;}
+.btn a span.rolea{ background:url(../images/menuicon.png) no-repeat -201px -258px;}
+.btn a span.restorea{ background:url(../images/menuicon.png) no-repeat -223px -257px;}
+.btn a span.authoritya{ background:url(../images/menuicon.png) no-repeat -244px -255px;}
+.btn a span.prohibita{ background:url(../images/menuicon.png) no-repeat -262px -254px;}
+.btn a span.passa{ background:url(../images/menuicon.png) no-repeat -281px -255px;}
+.btn a span.dpersonnela{ background:url(../images/menuicon.png) no-repeat -33px -282px;}
+.btn a span.checkitema{ background:url(../images/menuicon.png) no-repeat -55px -280px;}
+.btn a span.itemclassa{ background:url(../images/menuicon.png) no-repeat -76px -280px;}
+.btn a span.seedoctora{ background:url(../images/menuicon.png) no-repeat -96px -282px;}
+.btn a span.screena{ background:url(../images/menuicon.png) no-repeat -118px -281px;}
+.btn a span.downa{ background:url(../images/menuicon.png) no-repeat -143px -281px;}
+
+
+
+span.cut{ background:url(../images/menuicon.png) no-repeat -165px -282px;  }
+span.doing{ background:url(../images/menuicon.png) no-repeat -158px -120px;   }

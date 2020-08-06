@@ -1,0 +1,51 @@
+.containor .compare{width: 0px; height: 100%; overflow: hidden;}
+.records{float:left;font-size: 14px;width: 26px; height: 100%; min-height: 455px; overflow: hidden; cursor: pointer; text-align: center; }
+.main_showrecords{width:1030px;}
+.main .mcTitleTag{height:28px; font-weight:bold; width:auto; background:url(../../../images/tdtitlebg.png) 0 1px repeat-x}
+.main h3{display:block; height:26px; line-height:26px; text-align:center; border-bottom:1px solid #d2d2d2; background:url(../../../images/tdtitlebg.png) repeat-x}
+/*问诊、体格检查等*/
+.main .maintab{height: 430px; padding: 0px 0px; width: 100%}
+/*问诊*/
+.main .maintab .inquiry {width: 40%; height: 100%; float: left; margin-left: 2px; border: 1px solid #d2d2d2;}
+.main .maintab .inquiry div{height: 20%;}
+.main .maintab .inquiry div textarea{height: 70%; width: 99.8%;border:0px;}
+.main .maintab .templet{width: 29%; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 100%;}
+.main .maintab .templet table{border:0px;border-collapse: collapse;width:100%;}
+/*体格检查*/
+.main .maintab .physical{width: 40%; float: left; margin-left: 2px; height: 100%;}
+.main .maintab .physical table{border:1px solid #d2d2d2; border-collapse:collapse;}
+.main .maintab .physical table td{ border:1px solid #d2d2d2; border-collapse:collapse; height:21px; overflow:hidden; text-align:center; padding:0px;}
+.main .maintab .physical table th{ border:1px solid #d2d2d2; border-collapse:collapse; background:url(../images/thbg.png) repeat-x ; height:24px; overflow:hidden;}
+.main .maintab .physical table td textarea{border:0px;width: 99.8%;}
+.main .maintab .paint{width: 29%; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 100%;}
+.main .maintab .paint span{width:16px; height:16px; float:left;margin:4px;border: 1px solid #d2d2d2;}
+.main .maintab .paint .pen{background:url(../../../images/pen.png) no-repeat;border:2px inset #d2d2d2;}
+.main .maintab .paint .minus{background: url(../../../images/minus.png) no-repeat;border:0px;}
+.main .maintab .paint .text{width:22px;border:0px;}
+.main .maintab .paint .text input{width:20px; background:#fff; height:16px; padding:0px; border:1px solid #c4c4c4;}
+.main .maintab .paint .add{background: url(../../../images/add.png) no-repeat;border:0px;}
+.main .maintab .paint .selected{border:2px inset white; width:15px; height:15px;}
+/*开单*/
+.main .maintab .billing{width: 50%; float: left; margin-left: 2px; height: 100%;border:1px solid #d2d2d2;}
+.main .maintab .checktips{width: 49%; float: left; margin-left: 2px; height: 100%;border:1px solid #d2d2d2;}
+.main .maintab .disease{border:1px solid #d6d6d6;background:#ffffff; overflow-x:hidden; overflow-y:auto; margin-bottom:6px;}
+.main .maintab .disease .title{ height:22px; background:url(../../../style/green/images/diseasetitlebg.png) repeat-x left top; font-size:12px; font-weight:normal; line-height:22px; vertical-align:middle; text-align:left;}
+.main .maintab .disease .title span{ width:10px; background:url(../../../style/green/images/icon1.png) no-repeat center; display:block; height:22px; float:left; margin-right:5px;}
+.main .maintab .disease .title span.open{ cursor:pointer;display:block; height:22px; width:18px; float:right; margin-right:6px; background:url(../../../style/green/images/open.png) no-repeat center;}
+.main .maintab .disease ul{ padding:8px; height:130px;}
+.main .maintab .disease ul li{ text-align:left; line-height:30px; height:30px; border-bottom:1px dashed #aeaeae;}
+.main .maintab .disease ul li span{ display:block; height:30px; width:39px; float:right; background:url(../../../style/green/images/tubg.png) no-repeat center; text-align:center; line-height:30px; vertical-align:middle; cursor:pointer;}
+.main .maintab .disease ul li span.over{ display:block; height:30px; width:39px; float:right; background:url(../../../style/green/images/tubg1.png) no-repeat center; text-align:center; line-height:30px; vertical-align:middle;cursor:pointer;}
+.main .maintab .disease ul li span:hover{ background:url(../../../style/green/images/tubg1.png) no-repeat center;cursor:pointer;}
+.main .maintab .disease .title span.close{ cursor:pointer;display:block; height:22px; width:18px; float:right; margin-right:6px; background:url(../../../style/green/images/close2.png) no-repeat center;}
+
+.main #handle #prescription table{width:100%;border:0px solid #d2d2d2; border-collapse:collapse;}
+.main #handle #prescription table td{ background-color:#fff;border:1px solid #d2d2d2; border-collapse:collapse; height:15px; overflow:hidden; text-align:center; padding:0px;}
+.main #handle #prescription table th{ border:1px solid #d2d2d2; border-collapse:collapse; background:url(../images/thbg.png) repeat-x ; height:15px; overflow:hidden;}
+
+.main #handle #medical table{width:100%;border:0px solid #d2d2d2; border-collapse:collapse;}
+.main #handle #medical table td{ background-color:#fff;border:1px solid #d2d2d2; border-collapse:collapse; height:15px; overflow:hidden; text-align:center; padding:0px;}
+.main #handle #medical table th{ border:1px solid #d2d2d2; border-collapse:collapse; background:url(../images/thbg.png) repeat-x ; height:15px; overflow:hidden;}
+
+
+

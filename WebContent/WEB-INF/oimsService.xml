@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop
+		   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/task   
+           http://www.springframework.org/schema/task/spring-task-3.0.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+           http://cxf.apache.org/jaxws 
+         http://cxf.apache.org/schemas/jaxws.xsd">
+    <bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+    <context:component-scan base-package="cn.com.oims.service.impl"/>
+   <tx:annotation-driven transaction-manager="transactionManager"/>
+   <bean id="hisService"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://127.0.0.1:7070/OIMSWebServer/publish/his.service
+			</value>
+		</property>
+		<property name="serviceInterface">
+			<value>cn.com.oims.web.server.HisService</value>
+		</property>
+	</bean>
+<!-- 	
+		<jaxws:client id="lisWebService"
+		serviceClass="cn.com.oims.webservice.LisWebService"
+		address="http://192.168.1.109:8080/hospitalWebService/LisWebService" />
+	<jaxws:client id="examWebService"
+		serviceClass="cn.com.oims.webservice.ExamWebService"
+		address="http://192.168.1.109:8080/hospitalWebService/ExamWebService" />
+	<jaxws:client id="hisWebService"
+		serviceClass="cn.com.oims.webservice.HisWebService"
+		address="http://192.168.1.109:8080/hospitalWebService/HisWebService" />
+	<jaxws:client id="medicineWebService"
+		serviceClass="cn.com.oims.webservice.MedicineWebService"
+		address="http://192.168.1.109:8080/hospitalWebService/MedicineWebService" /> -->
+
+	<!-- <jaxws:client id="lisWebService"
+		serviceClass="cn.com.oims.webservice.LisWebService"
+		address="http://132.147.160.112:80/hospitalWebService/LisWebService" />
+	<jaxws:client id="examWebService"
+		serviceClass="cn.com.oims.webservice.ExamWebService"
+		address="http://132.147.160.112:80/hospitalWebService/ExamWebService" />
+	<jaxws:client id="hisWebService"
+		serviceClass="cn.com.oims.webservice.HisWebService"
+		address="http://132.147.160.112:80/hospitalWebService/HisWebService" />
+	<jaxws:client id="medicineWebService"
+		serviceClass="cn.com.oims.webservice.MedicineWebService"
+		address="http://132.147.160.112:80/hospitalWebService/MedicineWebService" /> --> 
+	<jaxws:client id="lisWebService"
+		serviceClass="cn.com.oims.webservice.LisWebService"
+		address="http://127.0.0.1:7070/hospitalWebService/LisWebService" />
+	<jaxws:client id="examWebService"
+		serviceClass="cn.com.oims.webservice.ExamWebService"
+		address="http://127.0.0.1:7070/hospitalWebService/ExamWebService" />
+	<jaxws:client id="hisWebService"
+		serviceClass="cn.com.oims.webservice.HisWebService"
+		address="http://127.0.0.1:7070/hospitalWebService/HisWebService" />
+	<jaxws:client id="medicineWebService"
+		serviceClass="cn.com.oims.webservice.MedicineWebService"
+		address="http://127.0.0.1:7070/hospitalWebService/MedicineWebService" /> 
+	<jaxws:client id="docWebService"
+		serviceClass="cn.com.oims.webservice.DocWebService"
+		address="http://127.0.0.1:7070/hospitalWebService/DocWebService" /> 	
+	<jaxws:client id="tjWebService"
+		serviceClass="cn.com.oims.webservice.TJWebService"
+		address="http://127.0.0.1:7070/hospitalWebService/TJWebService" /> 
+		
+</beans>

@@ -1,0 +1,12 @@
+body{margin:0; padding:0; background:#fff}
+.printPage{padding:24px; margin:12px; background: #fff; page-break-after: always;}
+.printPage h1{font-size:14px; text-align:center; margin:0; padding:0}
+.printPage table, #printTag table{width:100%; border-collapse:collapse; padding:0; margin:0; /*border:1px solid #000*/}
+.printPage td, .printPage th{font-size:12px; background:#fff;font-size:12px; /*border:1px solid #000;*/ padding:0; margin:0; text-align:center}
+.printPage th, #printTag th{text-align:center; height:15px; line-height:15px}
+/*.printPage td, #printTag td{height:16px; line-height:16px}*/
+/*.printPage td, #printTag td{height:30px; line-height:30px}*/
+#printTag{background: #ddd; padding:8px; width:1200px; overflow:auto;}
+/*.printPage table{width:1060px}*/
+.printPage table{width:1000px}
+.printPage .content{cellspacing:0;cellpadding:0;border:1px solid #000;margin-top:20px;margin-bottom:20px}

@@ -1,0 +1,145 @@
+<!-- 诊断 -->
+<div id="diagnosis">
+	<div id="diagnose_left" style="float: left; width: 388px; min-height: 442px;margin-left:3px;border: 1px solid #d2d2d2;">
+		<div id="diagnose_left_top" style="overflow:hidden;white-space:nowrap;">
+			<div id="disease" style="width: 100%; overflow:auto;float:left;">
+				<div id="diagnose_pinyin_div" style="background-color:#e1e1e1;">
+					<table>
+						<tr>
+							<td align="center">检索</td>
+							<td align="center"><input id="diagnose_pinyin_txt" type="text" class="blur"></td>
+						</tr>
+					</table>
+				</div>
+				<div id="disgnose_optionTable_div" style="width:100%;border-top:1px solid #d2d2d2;overflow-x:hidden;overflow-y:auto;">
+					<table id="disgnose_optionTable" class="selectItemTable">
+						
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="diagnose_left_bottom" style="border-top: 1px solid #d2d2d2;">
+			<table id="diagnose_resulttable_tool" style="background-color:#e1e1e1;width:100%;">
+				<tr>
+					<td>
+						<table style="width:100%;">
+							<tr>
+								<td style="width:50px;"><strong>诊断结果</strong></td>
+								<!-- 
+								<td><input type="text" class="blur" id="diagnose_result_custom_text"></td>
+								<td width="55"><div class="btn">
+										<a>添加</a></td>
+								 -->
+							</tr>
+						</table>
+					</td>
+					<td>
+						<div class="btn">
+							<a><span class="advsumit" style="margin-top:2px;"></span>提交</a>
+							<a><span class="remove" style="margin-top:2px;"></span>删除</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div id="diagnose_result_list">
+			</div>
+		</div>
+	</div>
+	 
+	<!--  -->
+	<div id="checkorderview"
+		style="width: 408px; background-color: #f3f3f3; overflow: hidden;float:right;border:1px solid #d2d2d2;" fixed>
+		<div id="diagnose_result_tab" class="tablabe2 mcTitleTag" style="height: 28px; margin-bottom: 0px;">
+			<DIV class="tab_hide">
+				<SPAN>视力</SPAN>
+			</DIV>
+			<DIV class="tab_hide">
+				<SPAN>眼压</SPAN>
+			</DIV>
+			<DIV class="tab_hide">
+				<SPAN>验光</SPAN>
+			</DIV>
+		</div>
+		<div id="diagnose_inspect_result_div" class="studyShowTag"
+			style="height: 291px; background-color: #ffffff; overflow: auto; white-space: nowrap;">
+			<div id="diagnose_vision" style="display:none;">
+				<table>
+					<tr><th>眼别</th><th>裸眼视力</th><th>近视力</th><th>矫正视力</th></tr>
+					<tr>
+						<td>右眼</td>
+						<td><input id="rl" class="blur" style="text-align:center;" type="text"></td>
+						<td><input id="rj" class="blur" style="text-align:center;" type="text"></td>
+						<td><input id="rjz" class="blur" style="text-align:center;" type="text"></td>
+					</tr>
+					<tr>
+						<td>左眼</td>
+						<td><input id="ll" class="blur" style="text-align:center;" type="text"></td>
+						<td><input id="lj" class="blur" style="text-align:center;" type="text"></td>
+						<td><input id="ljz" class="blur" style="text-align:center;" type="text"></td>
+					</tr>
+				</table>
+			</div>
+			<div id="diagnose_iop" style="display:none;">
+				<table>
+					<tr><th>右眼</th><th>左眼</th></tr>
+					<tr>
+						<td><input id="iop_od" class="blur" style="text-align:center;" type="text"></td>
+						<td><input id="iop_os" class="blur" style="text-align:center;" type="text"></td>
+					</tr>
+				</table>
+				<!-- 
+				<table>
+					<tr>
+						<td id="iop" style="border-top: 0px;"></td>
+					</tr>
+				</table>
+				 -->
+			</div>
+			<div id="diagnose_optometry" style="display:none;">
+				<table>
+					<caption>客观屈光度参考值</caption>
+					<tr><th>眼别</th><th>球镜度</th><th>散光度</th><th>轴位</th></tr>
+					<tr><td>右眼</td><td id="refRS"></td><td id="refRC"></td><td id="refRA"></td></tr>
+					<tr><td>左眼</td><td id="refLS"></td><td id="refLC"></td><td id="refLA"></td></tr>
+					<tr><td>瞳距</td><td id="refPd" colspan="3"></td></tr>
+				</table>
+				<table>
+					<caption>角膜曲率参考值</caption>
+					<tr><th>右眼</th><th>角膜屈光度</th><th>曲率半径</th><th>方向</th></tr>
+					<tr><td>水平方向</td><td id="krtRHd"></td><td id="krtRHmm"></td><td id="krtRHa"></td></tr>
+					<tr><td>垂直方向</td><td id="krtRVd"></td><td id="krtRVmm"></td><td id="krtRVa"></td></tr>
+					<tr><td>平均值</td><td id="krtRAved"></td><td id="krtRAvemm"></td><td></td></tr>
+					<tr><td>角膜散光度</td><td id="krtRCylmm"></td><td id=""></td><td id="krtRCyla"></td></tr>
+					<tr><th>左眼</th><th>角膜屈光度</th><th>曲率半径</th><th>方向</th></tr>
+					<tr><td>水平方向</td><td id="krtLHd"></td><td id="krtLHmm"></td><td id="krtLHa"></td></tr>
+					<tr><td>垂直方向</td><td id="krtLVd"></td><td id="krtLVmm"></td><td id="krtLVa"></td></tr>
+					<tr><td>平均值</td><td id="krtLAved"></td><td id="krtLAvemm"></td><td></td></tr>
+					<tr><td>角膜散光度</td><td id="krtLCylmm"></td><td id=""></td><td id="krtLCyla"></td></tr>
+				</table>
+			</div>
+			<div id="diagnose_photo" style="display:none;">
+			</div>
+		</div>
+
+		<div id="diagnose_inspect_tab_sort" class="tablabe2 mcTitleTag" style="height: 28px; margin-bottom: 0px;">
+			<DIV class="tab_hide">
+				<SPAN>检查单</SPAN>
+			</DIV>
+			<!-- 
+			<DIV id="yanya_result" class="tab_hide">
+				<SPAN>化验单</SPAN>
+			</DIV>
+			 -->
+		</div>
+		<div id="diagnose_inspect_list" class="checklist" style="display:none;overflow:hidden;">
+			<ul style="white-space: nowrap;">
+				
+			</ul>
+		</div>
+		<div id="diagnose_assay_list" class="checklist" style="display:none;overflow:hidden;">
+			<ul style="height: 100px; white-space: nowrap;">
+				
+			</ul>
+		</div>
+	</div>
+</div>

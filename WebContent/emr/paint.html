@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.swfobject.1-1-1.js"></script>
+<script type="text/javascript">
+//var flashMovie = null;
+//var paintMovie = null;
+var contextPath="OIMS";
+function showPaint(tag,id,imagePath,i){
+	var tip = i%2==0?"OD":"OS";
+	var flashMovie = $("<div />").appendTo(tag);
+	flashMovie.flash(
+			{
+				swf: '../swf/mypaint.swf',
+				width: 481,
+				height: 86,
+				play: false,
+				flashvars: {
+					url:imagePath,
+					tip:tip || '',
+					tipWidth:'45',
+					saveCallBackFunc:saveMRCallback
+				}
+			}
+		);
+	$("<a />").text("test").click(function(){
+		  flashMovie.flash(function() {
+				this.loadPhoto({url:'../physical_images/conjunctival_od.png',tip:'OD',tipWidth:'45'});
+			});
+	  }).appendTo("body");
+}
+
+$(document).ready(
+	function () {
+		//var flashMovie = $('#flashInteract .movie');
+		//var flashMovie = $("<div />").appendTo("body");
+		var tag=$("body");
+		var id=10;
+		var imagePath="../physical_images/conjunctival_od.png";
+		var i=0;
+
+		var obj =' {"date":{"date":25,"day":5,"hours":13,"minutes":35,"month":6,"seconds":34,"time":1406266534905,"timezoneOffset":-480,"year":114},"doing":"保存画图","gonghao":"","message":"","obj":{"eyeSort":"OD","visitId":13,"categoryId":30303,"pictruePath":"/UploadFile/7/13/m_r_photos/30303_OD.png"},"state":1}';
+		var x = eval('('+obj+')');
+		alert(x.doing);
+		showPaint(tag,id,imagePath,i);
+	}
+);
+function saveMRCallback(){
+	
+}
+function sendToFlash(){
+	flashMovie.flash(
+			function() {
+				//this.SetVariable('/:message', document.getElementById('data').value);
+				this.loadPhoto({url:'../physical_images/conjunctival_os.png',tip:'OS',tipWidth:'45'});
+			}
+		);
+}
+</script>
+</head>
+<body>
+<div id="flashInteract">
+	<div class="movie"></div>
+	</div>
+	<p>
+		<input type="text" value="I come from javascript." size="20" onfocus="this.select();" id="data" /> 
+		<input type="button" onclick="sendToFlash();" value="Send to Flash" />
+		<input type="button" onclick="getFromFlash();" value="Get from Flash" />
+	</p>
+</body>
+</html>

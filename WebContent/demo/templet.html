@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>医生工作站</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../style/green/css/green.css" rel="stylesheet"
+	type="text/css" />
+<link href="../style/green/css/openWin.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/icon.css" rel="stylesheet" type="text/css" />
+<link href="../subgroup/calendar/css/jscal2.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/oimsInput.css" rel="stylesheet" type="text/css" />
+<link href="../css/doctorWorkstation.css" rel="stylesheet"
+	type="text/css" />
+
+<script src="../js/jquery.min.js"></script>
+<script src="../demo/doctor/templet/templet.js"></script>
+<script type="text/javascript">
+	var contextPath = "/EMR";
+	function resize() {
+		var bannerHeight = $("#header").outerHeight();
+		var bottomHeight = $("#footer").outerHeight();
+		var winHeight = $(window).height();
+		var bodyHeight = winHeight - bannerHeight - bottomHeight;
+		$("#content").height(bodyHeight);
+		var marginTop = ($(".content").height() - $(".welcomefont").height()) / 2;
+		$(".welcomebg").height($(".content").height())
+				.css("overflow", "hidden");
+		$(".welcomefont").css("margin-top", marginTop / 2 - 20 + "px");
+		mainBodyHeight = bodyHeight;
+		var h0 = $(".menu .down").outerHeight();
+		var h1 = $(".menu .up").outerHeight();
+		var h2 = $(".menu .wel").outerHeight();
+		var h3 = $(".menu .modulertitle").outerHeight();
+		$(".menu .nav").height(bodyHeight - h0 - h1 - h2 - h3);
+		$(".left .narrow").height(bodyHeight);
+		var c = $(".left .narrow span");
+		var h = (bodyHeight - c.height()) / 2;
+		c.css({
+			"margin-top" : h
+		});
+		c.click(function() {
+			var cw = $(".left").width() - c.width();
+			if (leftMenuClose) {
+				$(".left").css("margin-left", 0);
+				$(".right").css({
+					"width" : $(".right").width() - cw,
+					"margin-left" : $(".left").width()
+				});
+				leftMenuClose = false;
+			} else {
+				$(".left").css("margin-left", -cw);
+				$(".right").css({
+					"width" : $(".right").width() + cw,
+					"margin-left" : c.width()
+				});
+				leftMenuClose = true;
+			}
+		});
+	}
+	$(document).ready(resize);
+	$(window).resize(resize);
+</script>
+</head>
+<body>
+	<div class="header" id="header">
+		<div class="logo"></div>
+		<div class="set">
+			<ul>
+				<li class="settext"><a href="javascript:userConfing();">设置</a></li>
+				<li class="exit"><a href="javascript:loginOut();">退出</a></li>
+				<li class="help"><a href="#">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content" id="content">
+		<div class="left" id="left">
+			<div class="menu">
+				<div class="wel">
+					<span></span>
+					<p>欢迎您！</p>
+					<p>管理员(检查医生)</p>
+					<p class="time">2012.7.3 星期二 15:39:00</p>
+				</div>
+				<div class="modulertitle">医生工作站</div>
+				<div class="up"></div>
+				<div class="nav">
+					<ul>
+						<li class="l1"><a href="#" id="m01"><span class="menu1"></span>病历管理</a></li>
+						<li class="l1"><a href="#"><span class="menu2"></span>医生工作站</a></li>
+						<li class="on"><a href="#"><span class="menu2"></span>模板管理</a></li>
+						<ul style="display: block;">
+							<li class="on"><a
+								style="width: 160px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; o-text-overflow: ellipsis;"
+								title="病历模板"> <span class="css"></span>病历模板
+							</a></li>
+						</ul>
+					</ul>
+				</div>
+				<div class="down"></div>
+			</div>
+			<div class="narrow">
+				<span></span>
+			</div>
+		</div>
+		<div id="right" class="right">
+			<div class="title">
+				<div class="titleT">
+					<span class="title1"></span>病历模板
+				</div>
+			</div>
+			<div id="main" style="overflow: auto;">
+				<table
+					style="width: 100%; height: 100%; border: 1px solid #d2d2d2; border-collapse: collapse;">
+					<tr>
+						<td valign="top" style="width:50%;">
+							<table
+								style="width: 100%; border: 1px solid #d2d2d2; border-collapse: collapse;">
+								<tr>
+									<td width="10%" align="right">名称：</td>
+									<td width="35%" align="left"><input type="text"
+										class="blur"></td>
+									<td width="1%" align="left"><span style="color: red">*</span></td>
+									<td width="15%" align="right">关联疾病：</td>
+									<td width="35%" align="left"><input type="text"
+										class="blur"></td>
+									<td width="1%" align="left"><span style="color: red">*</span></td>
+								</tr>
+								<tr>
+									<td align="right">级别：</td>
+									<td align="left"><input type="text" class="blur"></td>
+									<td width="1%" align="left"><span style="color: red">*</span></td>
+									<td align="right">复用模板：</td>
+									<td align="left"><input type="text" class="blur"></td>
+									<td width="1%" align="left"><span style="color: red"></span></td>
+								</tr>
+								<!-- 
+								<tr>
+									<td align="right">创建者：</td>
+									<td align="left"><input type="text" class="blur"></td>
+									<td align="left"><span style="color: red"></span></td>
+									<td align="left"><span style="color: red"></span></td>
+									<td align="left"><span style="color: red"></span></td>
+									<td align="left"><span style="color: red"></span></td>
+								</tr>
+								 -->
+							</table>
+							<table
+								style="width: 100%; border: 1px solid #d2d2d2; border-collapse: collapse;margin-top:2px;">
+								<tr>
+									<td width="10%" rowspan="5" align="center"
+										style="border: 1px solid #d2d2d2;">问诊</td>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">主诉</td>
+									<td width="80%" align="left" style="border: 1px solid #d2d2d2;">
+										<div id="inquiry" style="width:100%;height:100%;background-color:#fff;border:1px solid #d2d2d2;cursor:text;">
+											<div id="inquiry_input_div" style="width:25px;height:100%;">
+												<input id="inquiry_input_text" type="text" style="width:100%;height:100%;border:0px;background-color:#fff;">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">现病史</td>
+									<td width="80%" align="left" style="border: 1px solid #d2d2d2;"><input
+										type="text" class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">既往史</td>
+									<td width="80%" align="left" style="border: 1px solid #d2d2d2;"><input
+										type="text" class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">个人史</td>
+									<td width="80%" align="left" style="border: 1px solid #d2d2d2;"><input
+										type="text" class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">家族史</td>
+									<td width="80%" align="left" style="border: 1px solid #d2d2d2;"><input
+										type="text" class="blur"></td>
+								</tr>
+							</table>
+							<table
+								style="width: 100%; border: 1px solid #d2d2d2; border-collapse: collapse;margin-top:2px;">
+								<tr>
+									<td width="10%" rowspan="11" align="center"
+										style="border: 1px solid #d2d2d2;">体格检查</td>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;">右眼</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;">左眼</td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">结膜</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">巩膜</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">眼球</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">角膜</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">前房</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">虹膜</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">瞳孔</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">晶状体</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">玻璃体</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+								<tr>
+									<td width="10%" align="center"
+										style="border: 1px solid #d2d2d2;">眼底</td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+									<td width="40%" align="center"
+										style="border: 1px solid #d2d2d2;"><input type="text"
+										class="blur"></td>
+								</tr>
+							</table>
+						</td>
+						<td valign="top">
+							<div class="mcTag" style="width:100%;height:389px;">
+								<div style="height: 28px;" id="mcTitleTag_id"
+									class="tablabe2 mcTitleTag">
+									<div id="first_table" class="tab_hide tab_show"
+										onclick="_emr_showCaseTab(this)">
+										<span>检查项目</span>
+									</div>
+									<div class="tab_hide" onclick="_emr_showCaseTab(this)">
+										<span>化验项目</span>
+									</div>
+								</div>
+								<div style="height:100px;border-bottom:1px solid #d2d2d2;">
+								
+								</div>
+								<div style="height:250px;border-bottom:1px solid #d2d2d2;">
+								
+								</div>
+							</div>
+							
+							<div class="openbutton">
+								<a><span class="advsumit"></span>提交</a>
+								<a><span class="reset"></span>重置</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+	</div>
+	<div class="footer" id="footer">
+		<div class="footerlogo"></div>
+		<p>版权所有：北京思格玛软件有限公司</p>
+	</div>
+</body>
+</html>

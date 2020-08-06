@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="style/green/css/green.css" rel="stylesheet" type="text/css" />
+<link href="css/icon.css" rel="stylesheet" type="text/css" />
+<script src="js/main.js"></script>
+<script language="javascript">
+window.onload = function() {
+	changeRow_color("tab");changeRow_color("tab2");changeRow_color("tab3");
+}
+</script>
+</head>
+
+<body>
+<div class="header" id="header">
+    <div class="logo"></div>
+    <div class="set">
+      <ul>
+      <li class="settext"><a href="">123</a></li>
+      <li class="exit"><a href="">退出</a></li>
+      <li class="help"><a href="">帮助</a></li>
+      </ul>
+    </div>
+</div>
+
+<div class="content" id="content">
+<div class="left" id="left">
+   <div class="menu">
+       <div class="wel">
+          <span></span>
+          <p>欢迎您！</p>
+          <p>管理员(检查医生)</p>
+          <p class="time">2012.7.3  星期二 15:39:00</p>
+       </div>
+       <div class="modulertitle">检查医生工作站</div>
+       <div class="up"></div>
+       <div class="nav">
+           <ul>
+            <li class="on1"><a href="javascript:c('m01');" id="m01"><span class="menu1"></span>检查信息</a> </li>
+                    <ul id="m01d" style="display:none;" class="u1">
+                        <li class="l22 on2"><a href="" ><span></span>检查单执行</a></li>
+                        <li class="l22"><a href="" ><span></span>已检查</a></li>
+                        <li class="l22"><a href=""><span></span>待补传</a></li>
+                        <li class="l22"><a href=""><span></span>过号列表</a></li>
+                        <li class="l22"><a href=""><span></span>检查单统计</a></li>
+                        <li class="l22"><a href=""><span></span>用户修改</a></li>
+                    </ul>
+            <li class="l1"><a href=""><span class="menu2"></span>检查报告</a></li>           
+            <li class="l1"><a href=""><span class="menu3"></span>预约管理</a></li>
+            <li class="l1"><a href=""><span class="menu4"></span>统计查询</a></li>
+            <li class="l1"><a href=""><span class="menu5"></span>病历示范</a></li>
+            <li class="l1"><a href=""><span class="menu6"></span>患者管理</a></li>
+            <li class="l1"><a href=""><span class="menu7"></span>日志管理</a></li>
+            <li class="l1"><a href=""><span class="menu8"></span>数据管理</a></li>
+            <li class="l1"><a href="javascript:c('m02');" id="m02"><span class="menu9"></span>模板管理</a></li>
+                      <ul  id="m02d" style="display:none;" class="u1">
+                          <li class="l22"><a href="" ><span></span>输入模板</a></li>
+                          <li class="l22"><a href="" ><span></span>报告模板</a></li>
+                      </ul>
+            <li class="l1"><a href=""><span class="menu10"></span>系统配置</a></li>
+            <li class="l1"><a href=""><span class="menu11"></span>检查设备</a></li>
+            <li class="l1"><a href=""><span class="menu12"></span>检查项目</a></li>
+            <li class="l1"><a href=""><span class="menu13"></span>员工管理</a></li>
+            <li class="l1"><a href=""><span class="menu14"></span>办公室管理</a></li>
+            <li class="l1"><a href=""><span class="menu15"></span>科室管理</a></li>
+            <li class="l1"><a href=""><span class="menu16"></span>用户管理</a></li>
+            <li class="l1"><a href=""><span class="menu17"></span>单位信息</a></li>
+            
+           </ul>
+       </div>
+       <div class="down"></div>
+   </div>
+   <div class="narrow"><span></span></div> 
+</div>
+</div>
+
+<div class="footer" id="footer">
+ <div class="footerlogo"></div>
+ <p>版权所有：北京思格玛软件有限公司</p>
+</div>
+
+<script language="JavaScript">
+var cur_id="";
+var flag=0,sflag=0;
+
+//-------- 菜单点击事件 -------
+function c(srcelement)
+{
+  var targetid,targetelement;
+  var strbuf;
+
+  //-------- 如果点击了展开或收缩按钮---------
+  targetid=srcelement+"d";
+  targetelement=document.getElementById(targetid);
+
+  if (targetelement.style.display=="none")
+  {
+     srcelement.className="active";
+     targetelement.style.display='';
+
+     menu_flag=0;
+   
+  }
+  else
+  {
+     srcelement.className="";
+     targetelement.style.display="none";
+
+     menu_flag=1;
+
+     var links=document.getElementsByTagName("A");
+     for (i=0; i<links.length; i++)
+     {
+       srcelement=links[i];
+       if(srcelement.parentNode.className.toUpperCase()=="L1" && srcelement.className=="active" && srcelement.id.substr(0,1)=="m")
+       {
+          menu_flag=0;
+  
+          break;
+       }
+     }
+  }
+}
+
+
+function d(id)
+{
+   var winMgr = parent.parent.table_index.main.winManager;
+	 if (!winMgr) {
+	   if (firstTime) {	     
+	     firstTime = false;
+	   }
+	   timerId = setTimeout(bindFunc(d, window, URL, id), 100);
+	   return;
+	 }
+	 firstTime = true;
+	 if (timerId) {
+	   clearTimeout(timerId);
+	 }
+	 if (winMgr) {
+	
+	   return;
+	 }
+}
+
+</script>
+</body>
+</html>

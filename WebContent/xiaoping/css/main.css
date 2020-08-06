@@ -1,0 +1,234 @@
+@charset "utf-8";
+/* CSS Document */
+html{ overflow:hidden;}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:14px;
+	font-family:"微软雅黑";
+	scrollbar-arrow-color:#3e8eab; /*三角箭头的颜色*/
+	scrollbar-face-color:#85d3db; /*立体滚动条的颜色（包括箭头部分的背景色）*/
+	scrollbar-3dlight-color: #53b6c0; /*立体滚动条亮边的颜色*/
+	scrollbar-highlight-color:#d8d8d8; /*滚动条的高亮颜色（左阴影？）*/
+	scrollbar-shadow-color: #d8d8d8; /*立体滚动条阴影的颜色*/
+	scrollbar-darkshadow-color: #b4d5d8; /*立体滚动条外阴影的颜色*/
+	scrollbar-track-color: #c9eff3; /*立体滚动条背景颜色*/
+	scrollbar-base-color: #c6f1f8; /*滚动条的基色*/
+
+
+}
+a{ text-decoration:none; color:#5e5d5d;}
+div,ul,li,p,span,h1,h2,input{ padding:0px; margin:0px;}
+ul li{ list-style:none;}
+.content{ height:600px; width:800px;}
+.header{ height:34px; background:url(../imgaes/headerbg.png) repeat-x;}
+.header .logo{ background:url(../imgaes/logo.png) no-repeat left top; text-align:right; height:34px; line-height:34px; vertical-align:middle; font-size:12px; padding-right:10px;}
+.header .logo span{ display:block; float:right; margin-left:10px; height:34px;}
+.header .logo span.time{ background:url(../imgaes/time.png) no-repeat left; padding:0px 0px 0px 32px; }
+.header .logo span.link{ height:16px; background:url(../imgaes/communication.png) no-repeat; width:16px;margin-top:8px;}
+.header .logo span.nolink{ height:16px; background:url(../imgaes/communication1.png) no-repeat; width:16px; margin-top:8px;}
+.header .logo span.server_green{ height:16px; background:url(../imgaes/server_green.png) no-repeat; width:16px; margin-top:8px;}
+.header .logo span.server_red{ height:16px; background:url(../imgaes/server_red.png) no-repeat; width:16px; margin-top:8px;}
+.header .logo span.server_web{ height:16px; background:url(../imgaes/server_web.png) no-repeat; width:16px; margin-top:8px;}
+.header .logo span.server_s{ height:16px; background:url(../imgaes/server_s.png) no-repeat; width:16px; margin-top:8px;}
+.main{ height:469px; background:url(../imgaes/mainbg.png) no-repeat; }
+.main .menuleft{  float:left; width:44px; padding-top:5px;}
+.main .menuleft ul li{ height:102px; background:url(../imgaes/menu1.png) no-repeat; width:34px; display:block; writing-mode:tb-rl;  font-size:16px; padding-top:30px; padding-right:10px; cursor:pointer;}
+.main .menuleft ul li:hover{background:url(../imgaes/menu11.png) no-repeat;cursor:pointer;}
+.main .menuleft ul li.visited{background:url(../imgaes/menu11.png) no-repeat;cursor:pointer;}
+.opation1{ position:absolute; top:40px;}
+.opation2{ position:absolute; top:150px;}
+.opation3{ position:absolute; top:260px;}
+.opation4{ position:absolute; top:370px;}
+.main .menuright{ width:44px; float:right; padding-top:5px;}
+.main .menuright ul li{height:102px; background:url(../imgaes/menu2.png) no-repeat; width:34px; display:block; writing-mode:tb-rl;  font-size:16px; padding-top:30px; padding-right:10px; cursor:pointer;}
+.main .menuright ul li:hover{background:url(../imgaes/menu22.png) no-repeat;cursor:pointer;}
+.main .menuright ul li.visited{background:url(../imgaes/menu22.png) no-repeat;cursor:pointer;}
+.footer{ height:80px; background:url(../imgaes/footerbg.png) repeat-x; padding-top:17px; padding-left:100px;}
+.pos{ padding-left:200px;}
+.footer a{ width:184px; height:66px; display:block; background:url(../imgaes/bottonbg.png) no-repeat; float:left; margin-right:20px; color:#00525d; font-size:22px; line-height:66px; vertical-align:middle; }
+.footer a:hover{background:url(../imgaes/bottonbg1.png) no-repeat; }
+.footer a span{ width:40px;height:39px; display:block; float:left; margin-top:15px; margin-left:20px; margin-right:10px;} 
+.footer a span.star{ background:url(../imgaes/star.png) no-repeat;}
+.footer a span.end{ background:url(../imgaes/stop.png) no-repeat;}
+.footer a span.next{ background:url(../imgaes/next.png) no-repeat;}
+.footer a span.save{ background:url(../imgaes/save.png) no-repeat;}
+.footer a span.star1{ background:url(../imgaes/star1.png) no-repeat;}
+.footer a span.end1{ background:url(../imgaes/stop1.png) no-repeat;}
+.footer a span.next1{ background:url(../imgaes/next1.png) no-repeat;}
+.footer a span.save1{ background:url(../imgaes/save1.png) no-repeat;}
+.footer a span.break{ background:url(../imgaes/break.png) no-repeat;}
+.page{  height:32px; background:url(../imgaes/tfootbg.png) repeat-x; text-align:right; padding-right:20px;padding-top:8px;}
+.page a{ display:block; float:right; height:25px; width:77px; background:url(../imgaes/pageup.png) no-repeat; margin-left:12px; text-align:center;}
+.contant{ width:693px;padding-top:13px; height:100%; margin:0px auto;}
+
+.info{ height:130px; background:url(../imgaes/infobg.png) no-repeat; margin-bottom:8px; padding:7px;} 
+.info .i{ background:#cbe7eb; height:126px; border:1px solid #8ba8aa; overflow:hidden;}
+.tabinfo{ width:693px;}
+.tabinfo .title{ height:40px; background:url(../imgaes/tabinfotitle.png) no-repeat; font-size:18px; line-height:40px; vertical-align:middle; padding-left:15px; color:#484948;}
+.tabmain{ border:1px solid #4998a2; height:246px; overflow-y:auto; border-top:none; background:#fbfbfb;}
+.tabmain1{border:1px solid #4998a2;  overflow-y:auto; border-top:none; background:#fbfbfb;}
+.tabmain ul.doctorname{ padding:20px; padding-left:45px;}
+.tabmain ul.doctorname li{ display:block; width:89px; height:42px; background:url(../imgaes/doctorbg.png) no-repeat; float:left; margin-right:12px; margin-bottom:16px; color:#5e5d5d; font-size:16px; text-align:center; line-height:42px; vertical-align:middle; cursor:pointer;}
+.tabmain ul.doctorname li.vid{ background:url(../imgaes/doctorbg2.png) no-repeat;}
+
+
+.querybg{ height:51px; background:url(../imgaes/querybg.png) repeat-x;}
+.patientinfo { padding:5px;}
+.patientinfo table td{ height:32px; color:#606060;}
+.patientinfo table td input{ width:130px; background:#f0f8ff; border:1px solid #ababab; line-height:20px; height:20px; vertical-align:middle; color:#ababab;}
+.sum{ width:224px; height:190px; background:url(../imgaes/sumbg.png) no-repeat; z-index:9999; position:absolute; top:110px; left:500px; }
+.sum ul{padding:6px; padding-top:5px;}
+.sum ul li{ height:45px; width:70px; display:block; cursor:pointer; float:left;}
+.sum ul li.one{ background:url(../imgaes/a.png) 0px 0px no-repeat;}
+.sum ul li.one:hover{ background:url(../imgaes/aa.png) 0px 0px  no-repeat;}
+.sum ul li.two{ background:url(../imgaes/a.png) -70px 0px no-repeat;}
+.sum ul li.two:hover{ background:url(../imgaes/aa.png) -70px 0px no-repeat;}
+.sum ul li.three{ background:url(../imgaes/a.png) -140px 0px no-repeat;}
+.sum ul li.three:hover{ background:url(../imgaes/aa.png) -140px 0px no-repeat;}
+.sum ul li.four{ background:url(../imgaes/a.png) 0px -45px no-repeat;}
+.sum ul li.four:hover{ background:url(../imgaes/aa.png) 0px -45px no-repeat;}
+.sum ul li.five{ background:url(../imgaes/a.png) -70px -45px no-repeat;}
+.sum ul li.five:hover{ background:url(../imgaes/aa.png) -70px -45px no-repeat;}
+.sum ul li.six{ background:url(../imgaes/a.png) -140px -45px no-repeat;}
+.sum ul li.six:hover{ background:url(../imgaes/aa.png) -140px -45px no-repeat;}
+.sum ul li.seven{ background:url(../imgaes/a.png) 0px -90px no-repeat;}
+.sum ul li.seven:hover{ background:url(../imgaes/aa.png) 0px -90px no-repeat;}
+.sum ul li.eight{ background:url(../imgaes/a.png) -70px -90px no-repeat;}
+.sum ul li.eight:hover{ background:url(../imgaes/aa.png) -70px -90px no-repeat;}
+.sum ul li.nain{ background:url(../imgaes/a.png) -140px -90px no-repeat;}
+.sum ul li.nain:hover{ background:url(../imgaes/aa.png) -140px -90px no-repeat;}
+.sum ul li.zero{ background:url(../imgaes/a.png) -70px -135px no-repeat;}
+.sum ul li.zero:hover{ background:url(../imgaes/aa.png) -70px -135px  no-repeat;}
+.sum ul li.del{ background:url(../imgaes/a.png) -0px -135px no-repeat;}
+.sum ul li.del:hover{ background:url(../imgaes/aa.png) -0px -135px no-repeat;}
+.sum ul li.okbg{ background: url(../imgaes/a.png) -140px -135px no-repeat;}
+
+.sum ul li.ok{ background:url(../images/a.png) no-repeat}
+.number{ padding-top:7px; padding-left:16px;}
+.number .querybtn1{ background: url(../imgaes/btnbg1.png) no-repeat;height:37px; width:86px; border:none; cursor:pointer;}
+.number .enter{ background: url(../imgaes/enter1.png) no-repeat; height:37px; width:86px; border:none;cursor:pointer;}
+input.biginput{ height:32px; width:440px; background:#f0f8ff; border:1px solid #ababab; float:left; font-size:14px; color:#929292; line-height:32px; vertical-align:middle; margin-right:5px;}
+
+.tablabel{
+	height:30px;
+	margin:2px 0px 0px 0px;
+	padding:0px 0px 0px 5px;     
+	background:url(../imgaes/tabbg_bg.png) repeat-x left bottom;
+	font-size:12px;	
+	padding-top:5px;
+}
+.tab_hide {
+	color: #4f4f4f;
+	height: 29px;
+	margin:0px 2px 0px 2px;/*设置上边距1px,以得到off的下边框与tabdiv下边线重合*/
+	line-height: 25px;
+	float: left;
+	width:81px;
+	background: url(../imgaes/tabhiddle.png) no-repeat;/*****背景图片与on一致，均为tabbg.png*/
+	cursor: pointer;
+	text-align:center; font-size:14px;
+}
+.tab_show {
+	color: #4f4f4f;
+	height: 30px;
+	margin:0px 2px 0px 2px;
+	width:81px;
+	line-height: 25px;
+	float: left;
+	background:url(../imgaes/tabshow.png) no-repeat;/*****背景图片与off一致，均为tabbg.png*/
+	/*border-bottom:1px solid #fff;*/
+	cursor: pointer;
+	text-align:center; font-size:14px;
+}
+.ze{ padding:10px; height:170px; overflow:hidden; overflow-y:auto;}
+.ze p{ line-height:23px; font-size:14px; color:#525252;}
+.peoinfo{ padding:10px;}
+.peoinfo table{ border:1px solid #e3e3e3; border-collapse:collapse;}
+.peoinfo table td{ height:35px; color:#525252; border:1px solid #e3e3e3; border-collapse:collapse; padding-left:3px; padding-right:3px;}
+
+.list table{ border:1px solid #d5d5d5; border-collapse:collapse;}
+.list table th{ height:38px; background:url(../imgaes/thbg.png) repeat-x; color:#515151; font-size:14px; border:1px solid #d5d5d5; border-collapse:collapse; border-top:none;}
+.list table th.mheight{ height:30px; background:url(../imgaes/thbg.png) repeat-x; color:#515151; font-size:14px; border:1px solid #d5d5d5; border-collapse:collapse; border-top:none;}
+.list table td{ border:1px solid #d5d5d5; border-collapse:collapse; height:32px; text-align:center;}
+
+.list table td.foot{ height:40px; background:url(../imgaes/tfootbg.png) repeat-x; text-align:right; padding-right:20px;}
+.list table td.foot a{ display:block; float:right; height:25px; width:77px; background:url(../imgaes/pageup.png) no-repeat; margin-left:12px; text-align:center; margin-top:6px;}
+.list table tr.gare{ background:#fafafa;}
+.list table td input.seeing{ width:80px; height:26px; border-top:1px solid #c3c3c3;border-left:1px solid #c3c3c3; border-right:1px solid #dddddd; border-bottom:1px solid #dddddd; }
+.list table td input.seeing1{ width:180px; height:26px; border-top:1px solid #c3c3c3;border-left:1px solid #c3c3c3; border-right:1px solid #dddddd; border-bottom:1px solid #dddddd; }
+.list table td.seet{ height:45px;}
+.list table td.minheight{ height:22px;}
+.prompt{ padding:10px;}
+.prompt table td.img{ text-align:center; height:150px;}
+.prompt table td.text{ padding:10px 15px; height:80px; overflow-y:auto; }
+.tabinfo{ overflow:hidden;}
+.tabinfo .left{ width:350px;height:290px; float:left;}
+.tabinfo .left1{ width:330px;height:290px; float:left;}
+ .title1{ background:url(../imgaes/tabinfotitle1.png) no-repeat; height:40px;  padding-left:15px; line-height:40px; vertical-align:middle;color:#484948; font-size:18px;  }
+  .title2{ background:url(../imgaes/tabinfotitle2.png) no-repeat; height:40px;  padding-left:15px; line-height:40px; vertical-align:middle;color:#484948; font-size:18px;  }
+.tabinfo .right{width:334px; float:right; height:290px; background:url(../imgaes/sumbg1.png) no-repeat;}
+.tabinfo .right1{width:350px; float:right; height:295px; }
+.tabinfo .right ul{ padding:6px; padding-top:8px; padding-left:7px;}
+.tabinfo .right ul li{ display:block; width:107px; height:68px; float:left; cursor:pointer;}
+.tabinfo .right ul li.d1{ background:url(../imgaes/dd.png) 0px 0px;}
+.tabinfo .right ul li.d1:hover{background:url(../imgaes/dg.png) 0px 0px;}
+.tabinfo .right ul li.d2{ background:url(../imgaes/dd.png) -107px 0px;}
+.tabinfo .right ul li.d2:hover{background:url(../imgaes/dg.png) -107px 0px;}
+.tabinfo .right ul li.d3{ background:url(../imgaes/dd.png) -214px 0px;}
+.tabinfo .right ul li.d3:hover{background:url(../imgaes/dg.png) -214px 0px;}
+.tabinfo .right ul li.d4{ background:url(../imgaes/dd.png) 0px -68px;}
+.tabinfo .right ul li.d4:hover{background:url(../imgaes/dg.png) 0px -68px;}
+.tabinfo .right ul li.d5{ background:url(../imgaes/dd.png) -107px -68px;}
+.tabinfo .right ul li.d5:hover{background:url(../imgaes/dg.png) -107px -68px;}
+.tabinfo .right ul li.d6{ background:url(../imgaes/dd.png) -214px -68px no-repeat;}
+.tabinfo .right ul li.d6:hover{background:url(../imgaes/dg.png) -214px -68px;}
+.tabinfo .right ul li.d7{ background:url(../imgaes/dd.png) 0px -136px no-repeat;}
+.tabinfo .right ul li.d7:hover{background:url(../imgaes/dg.png) 0px -136px no-repeat;}
+.tabinfo .right ul li.d8{ background:url(../imgaes/dd.png) -107px -136px no-repeat;}
+.tabinfo .right ul li.d8:hover{background:url(../imgaes/dg.png) -107px -136px no-repeat;}
+.tabinfo .right ul li.d9{ background:url(../imgaes/dd.png) -214px -136px;}
+.tabinfo .right ul li.d9:hover{background:url(../imgaes/dg.png) -214px -136px;}
+.tabinfo .right ul li.dc{ background:url(../imgaes/dd.png) 0px -204px ;}
+.tabinfo .right ul li.dc:hover{background:url(../imgaes/dg.png) 0px -204px;}
+.tabinfo .right ul li.d0{ background:url(../imgaes/dd.png) -107px -204px ;}
+.tabinfo .right ul li.d0:hover{background:url(../imgaes/dg.png) -107px -204px;}
+.tabinfo .right ul li.d{ background:url(../imgaes/dd.png) -214px -204px;}
+.tabinfo .right ul li.d:hover{background:url(../imgaes/dg.png) -214px -204px ;}
+.list table tr.t1 td {background-color:#fff; }
+.list table tr.t2 td {background-color:#f9f9f9; }
+.list table tr.t3 td {background-color:#bbe5ea; }
+.list table tr.t4 td {background-color:#bbe5ea; }
+
+/************弹出窗口*************/
+.xpopenWin{ width:433px; height:259px; background:#f3f3f3; border:1px solid #a0a0a0; color:#444444;}
+.xpopenWin .titlexp{ height:46px; background:url(../imgaes/titlebg.png) repeat-x; line-height:46px; vertical-align:middle; font-size:18px; padding-left:6px; }
+.xpopenWin .titlexp span.icon{ display:block;width:24px; height:24px; background:url(../imgaes/bricks.png) no-repeat; float:left; margin-top:9px; margin-right:5px;}
+.xpopenWin .titlexp span.icon:hover{ background:url(../imgaes/bricks.png) no-repeat;}
+.xpopenWin .titlexp span.close{ display:block; width:32px; height:32px; background:url(../imgaes/colse.png) no-repeat; float:right; margin-right:9px; margin-top:6px; cursor:pointer;}
+.xpopenWin .titlexp span:hover{ background:url(../imgaes/colse1.png) no-repeat;}
+.xpopenWin .btn{ height:58px; background:#e9e9e9; border-top:1px solid #d1d1d1; padding-left:160px; padding-top:10px;  }
+.xpopenWin .btn1{  padding-left:100px;  }
+.xpopenWin .opencontant{ height:144px; line-height:144px; vertical-align:middle; padding-left:170px; font-size:20px;}
+.success{ background:#f3f3f3 url(../imgaes/success.png) no-repeat 40px 70px;}
+.error{ background:#f3f3f3 url(../imgaes/error.png) no-repeat 40px 70px;}
+.confirm{background:#f3f3f3 url(../imgaes/confirm.png) no-repeat 40px 70px;}
+.warning{ background:#f3f3f3 url(../imgaes/warning.png) no-repeat 40px 70px;}
+.xpopenWin .btn a{ display:block; width:100px; height:44px; background:url(../imgaes/btnbg.png) no-repeat; float:left; margin-right:30px; line-height:44px; vertical-align:middle; font-size:18px;}
+.xpopenWin .btn a span{ width:24px; height:24px; display:block; float:left; margin-left:15px; margin-top:10px; margin-right:5px;}
+.xpopenWin .btn a span.qd{ background:url(../imgaes/qd.png) no-repeat;}
+.xpopenWin .btn a span.qx{ background:url(../imgaes/qx.png) no-repeat;}
+.textipnut{ height:16px; width:80px; border:1px solid #dfdfdf;}
+
+
+.key{ position:absolute; z-index:99999; top:100px; left:42px; height:271px; width:716px; background:url(../imgaes/bf.png) no-repeat center;}
+.key ul{ padding:8px; padding-right:0px;}
+.key ul li{ width:59px; height:60px; margin-right:5px; margin-bottom:6px; background:url(../imgaes/keybg.png) no-repeat center; float:left; font-size:20px; text-align:center; line-height:60px; vertical-align:middle; cursor:pointer; }
+.key ul li:hover{background:url(../imgaes/keybg1.png) no-repeat center; }
+.key ul li span.delect{ background:url(../imgaes/del.png) no-repeat center; display:block; width:59px; height:60px;}
+.key ul li.enterr{ background:url(../imgaes/enter.png) no-repeat center; width:124px; height:60px;}
+.key ul li.enterr:hover{ background:url(../imgaes/entert.png) no-repeat center; width:124px; height:60px;}
+
+.key ul li.enterr1{ background:url(../imgaes/entert.png) no-repeat center; width:124px; height:60px;}

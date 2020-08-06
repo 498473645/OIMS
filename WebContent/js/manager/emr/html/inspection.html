@@ -1,0 +1,73 @@
+<!-- 检查 -->
+<div id="inspection">
+	<div id="inspect_left" style="float: left; margin-left: 3px; border: 1px solid #d2d2d2;">
+		<div id="inspect_left_top" style="width: 100%; height: 215px; border-bottom: 1px solid #d2d2d2;overflow:hidden;">
+			<div id="inspectionsort" style="width: 112px; height: 100%; border-right: 1px solid #d2d2d2; float: left;"></div>
+			<div id="inspect_itemlist_div" style="width: 81%; height: 100%; float: left;overflow:hidden;">
+				<table id="inspect_pinyin_table" style="width:100%;border-collapse: collapse;">
+					<tr style="background-color:#e1e1e1;">
+						<td style="width:50%;padding:0;height:24px;">
+							<table>
+								<tr>
+									<td align="center" style="padding:0;">检索</td>
+									<td align="center" style="padding:0;"><input id="inspect_pinyin_txt" type="text" class="blur"></td>
+								</tr>
+							</table>
+						</td>
+						<td align="right" style="padding:0;">
+							<span>眼别：</span>
+							<input type="radio" value="48" name="inspect_eyesort" checked id="rl"><label for="rl">双眼</label>
+							<input type="radio" value="47" name="inspect_eyesort" id="r"><label for="r">右眼</label>
+							<input type="radio" value="46" name="inspect_eyesort" id="l"><label for="l">左眼</label>
+						</td>
+					</tr>
+				</table>
+				<div id="inspect_selectitem_div" style="width:100%;border-top:1px solid #d2d2d2;height:189px;overflow-y:auto;">
+					<table class="selectItemTable"></table>
+				</div>
+			</div>
+		</div>
+		<div id="inspect_left_bottom" style="height:180px;">
+			<div style="background-color:#e1e1e1;">
+				<table width="100%">
+					<tr>
+						<td><strong>申请项目列表</strong></td>
+						<td>
+							<div id="inspect_btn" class="btn">
+								<a><span class="advsumit" style="margin-top:2px;"></span>提交</a>
+								<a><span class="print" style="margin-top:2px;"></span>打印</a>
+								<a><span class="remove" style="margin-top:2px;"></span>删除</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="inspect_selectedlist_div">
+			</div>
+		</div>
+	</div>
+	<!--  -->
+	<div id="inspect_right" style="width: 288px; float: right;border: 1px solid #d2d2d2;" fixed>
+		<h3 id="inspect_tips">检查提示</h3>
+		<div id="inspect_paint_OD" style="width:100%;height:183px;"><img style="width:100%;height:100%;"/></div>
+		<div id="inspect_paint_OS" style="width:100%;height:183px;margin-top:2px;"><img style="width:100%;height:100%;"/></div>
+		<div id="inspect_paint_tip" style="width:100%;margin-top:2px;">
+			<textarea id="inspect_paint_tip_txt" style="overflow: auto;width:99%;">请输入检查要求</textarea>
+		</div>
+		<div id="inspect_paint_tool">
+			<div style="height: 26px; overflow: hidden; margin-top: 2px;">
+				<div id="inspect_colorselector" class="painttool" style="float: left;">
+					<a><span class="minus" id="inspect_minus"></span></a> 
+					<a><span class="text"><input type="text" value="1" id="inspect_pensize"></span></a>
+					<a><span class="add" id="inspect_add"></span></a> 
+					<a><span name="selector" style="background-color: #ff0000;" class="selected"></span></a> 
+					<a><span name="selector" style="background-color: #0000ff;"></span></a> 
+					<a><span name="selector" style="background-color: #006600;"></span></a>
+				</div>
+				<div class="sbtn">
+					<a>保存</a><a>重画</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

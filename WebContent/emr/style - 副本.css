@@ -1,0 +1,268 @@
+body,td{background:#f3f3f3; font-size:12px; margin:0; padding:0;line-height:1.5;}
+	#buttons{margin-top:4px}
+	#top{line-height:30px; height:30px; border-bottom:1px solid #d2d2d2}
+	#top #patientInfo img{display:inline; vertical-align:middle;}
+	#visitRecord{ background:#f3f3f3; font-size:15px; font-weight:bold; float:left; width: 26px;overflow: hidden; cursor: pointer; vertical-align:middle;text-align: center;border-right:1px solid #d2d2d2;border-bottom:1px solid #d2d2d2;}
+	
+	/* #visitRecord a{
+		overflow: hidden;
+		text-align: center;
+		border: 1px solid #d2d2d2;
+		display: block;
+		line-height: 18px;
+		width:25px;
+		background:url("../style/green/images/menubg1.png")repeat-y;
+	}
+	#visitRecord a:hover{
+		background:url("../style/green/images/menubghover1.png") repeat-y;
+	} */
+	
+	.hiden_a{
+		margin:4px 0;
+		display:block;
+		background:url("../style/green/images/tabbg31.png") no-repeat  top left;
+		padding-top:5px;
+	}
+	.hiden_a_label{
+		overflow: hidden;
+		text-align: center;
+		display: block;
+		line-height: 18px;
+		width:25px;
+		padding-bottom:4px;
+		background:url("../style/green/images/tabbg331.png") no-repeat left bottom;
+	}
+	.hiden_a1{
+		background:url("../style/green/images/tabbg32.png") no-repeat  top left;
+	}
+	.hiden_a_libel1{
+		background:url("../style/green/images/tabbg332.png") no-repeat left bottom;
+	}
+	.medicalRecord{ margin-left:26px}
+	.doctortitle{
+		height: 28px;
+		background: url(../style/green/images/tdtitlebg.png) repeat-x -1px;
+		text-align: center;
+		font-weight: bold;
+		line-height: 27px;
+		vertical-align: middle;
+		margin-left:26px;
+		padding-left:8px;
+	}
+	.tabContent{overflow:auto; overflow-x: hidden;}
+	.tabContent h1, .tabRight h1,.shiliOrYanyaTemplate h1{
+		display: block;
+		font-size:14px;
+		height: 26px;
+		line-height: 26px;
+		text-align: center;
+		background: url(../style/green/images/tdtitlebg.png) repeat-x;
+	}
+	.tabRight h1{color:blue}
+	.tab{padding: 3px 0 0 0; margin:0; overflow:hidden; height:22px}
+	.tabRight{width:336px; float:right; border-left:1px solid #d2d2d2;}
+	.inputContent{border-top:1px solid #d2d2d2;font-size:15px;border-bottom:1px solid #d2d2d2; padding:2px; background:#fff; height:50px;outline: none; word-break: break-all; overflow-x: hidden;}
+	.suifang{text-align:left}
+	.inputCurrent{background:#fefeed:}
+	#indexInput{height:28px; line-height:28px;}
+	.visitList{position:absolute; width:112px; border-right:1px solid #d2d2d2; background:#f3f3f3; left:28px}
+	.visitList .contrast {
+	    background: url("../style/green/images/contrastbg.png") repeat-x;
+	    border-bottom: 1px solid #bbbaba;
+	    height: 21px;
+	    line-height: 21px;
+	    padding: 0 0 0 8px;
+	    text-align: center;
+	}
+	.visitList .up1 {
+		display:block;
+	    background: url("../style/green/images/up1.png") no-repeat ;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList .up1:hover {
+	    background: url("../style/green/images/up1.png") no-repeat;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList .down1 {
+		display:block;
+	    background: url("../style/green/images/down1.png") no-repeat;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList .down1:hover {
+	    background: url("../style/green/images/down1.png") no-repeat;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList ul li{
+		border-bottom: 1px solid #fff;
+   		line-height: 26px;
+   		height:46px;
+    	padding: 10px 0;
+    	text-align:center;
+	}
+	.visitList ul li.on{
+		background: url("../images/libghover.png") no-repeat ;
+	}
+	.visitList ul li span{
+		display: block;
+	    float: left;
+	    margin-left: 8px;
+	    margin-top: 15px;
+	}
+	span.replaceTxt{color:blue; display:none}
+	.patientInformation{width: 470px;  background-color: rgb(249, 249, 249); position: absolute; border:1px solid #d2d2d2; left:26px; display:none}
+	span.blue{color:blue}
+	.tabRight .templateList{/*height:200px;*/overflow-y:auto}
+	.templateList{overflow:auto}
+	.templateList a{display:block; margin:2px; border:1px solid #d2d2d2; line-height:1.2; padding:4px;; background:#fff}
+	.templateList a:hover{color:#fff; background:red}
+	.tabContent table{width:100%; border-collapse: collapse;table-layout: fixed;}
+	.tabContent table th {
+	    -moz-border-bottom-colors: none;
+	    -moz-border-left-colors: none;
+	    -moz-border-right-colors: none;
+	    -moz-border-top-colors: none;
+	    background: url("../images/tdtitlebg.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+	    border-collapse: collapse;
+	    border-color: #d2d2d2;
+	    border-image: none;
+	    border-style: solid solid none;
+	    border-width: 1px 1px 0;
+	    height: 24px;
+	    font-size:15px
+	}
+	.tabContent table td{
+	    border: 1px solid #d2d2d2;
+	    border-collapse: collapse;
+	    cursor: text;
+	    overflow: hidden;
+	    padding: 0;
+	    text-align: center;
+	}
+	.tabContent table td.tdTitle{/*color:#53b4b5;*/ font-weight:bold; font-size:15px}
+	.tabContent table td div{
+		height:48px;background:#fff; text-align:left; padding:4px;font-size:13px;
+	}
+	.jctsPaintTag{width:285px; height:265px; margin:0 auto; text-align:center}
+	.jctsPaintTag .jctsPaintTitleTag{height:22px}
+	.jctsPaintTag .jctsPaintTitleTag a{width:48px; display:block; float:left; line-height:20px; margin:1px; border:1px solid #d2d2d2 }
+	.jctsPaintTag .jctsPaintTitleTag a.selected{background:#d2d2d2}
+	.paintTag{position:absolute; width:285px; height:235px;top:0; left:0; overflow:hidden; border:3px solid #d2d2d2; display:none; z-index:999; top:0; left:0}
+	.paintDiv{width:285px; height:235px; border:1px solid #d2d2d2;}
+	.paintBtn{height:30px; border-top:1px solid #d2d2d2; text-align:center; padding-top:2px}
+	.paintBtn span,.paintBtn a{display:block; margin:2px}
+	.paintBtn input{width:16px; height:16px; float:left; border:1px solid #d2d2d2}
+	.paintBtn span{float:left; width:16px; height:16px} 
+	.paintBtn span.bichuDiff{background:url("../images/minus.png") no-repeat ;}
+	.paintBtn span.bichuAdd{background:url("../images/add.png") no-repeat }
+	.paintBtn span.on{border:2px solid #666}
+	.paintBtn a{float:right; width:32px; height:24px; background:url("../style/green/images/line.png") no-repeat; text-align:center; padding-left:2px}
+	.paintBtn a:hover{background:url("../style/green/images/btnbg.png") repeat-x; border: 1px solid #bbbaba}
+	.searchDiv,.btnDiv{text-indent:0.5em;height:30px; background:#e1e1e1; line-height:30px}
+	.btnDiv{font-size:15px; font-weight:bold; padding:4px}
+	.diseaseList{border-top:1px solid #d2d2d2; border-bottom:1px solid #d2d2d2; overflow:auto}
+	.btnDiv .btn{font-weight:normal;font-size:12px}
+	ul.itemList{overflow-x:hidden; overflow-y:auto}
+	ul.itemList li,div.itemListDiv ul li{float:left; width:50%}
+	.diseaseList li a,.itemListDiv li a{margin:2px 2px 0; background:#fff; border:1px solid #d2d2d2; display:block; height:22px; line-height:22px; padding:2px}
+	.diseaseList li a:hover,.itemListDiv a:hover{background:#aadbe7;text-indent:.5em}
+	.diseaseList li a.on,.itemListDiv a.on{background:#aadbe7}
+	.patientDisease{background:#fff; overflow:auto;}
+	.patientDisease  td{background:#fff; }
+	.patientDisease td.on,.patientDisease td.on select{background:#aadbe7}
+	.patientDisease td.selected,.patientDisease td.selected select{background:#fefeed}
+	.patientDisease  td span{display:block; text-align:left; text-indent:.5em}
+	.patientDisease td input{width:100%; height:100%; border:0}
+	.patientDisease  td select{width:100%; height:100%; border:0; background:#fff}
+	.studyListTitle{background: url(../style/green/images/tdtitlebg.png) repeat-x -1px; padding-left:9px; border-top:1px solid #d2d2d2; border-bottom:1px solid #d2d2d2}
+	.categoryClass{width:112px; overflow:hidden; border-right:1px solid #d2d2d2; float:left}
+	.categoryClass a{margin:2px; overflow:hidden; text-align:center; border:1px solid #d2d2d2; display:block; height:22px; line-height:22px; background:url("../style/green/images/menubg.png") repeat-x}
+	#saveCombo a{background:url("../style/green/images/menubg.png") repeat-x}
+	#saveCombo a.selected,#saveCombo a.on,.categoryClass a:hover,.categoryClass a.selected,.categoryClass a.on{background:url("../style/green/images/menubghover.png") repeat-x}
+	.itemListDiv,.examCombo,.studyListDiv{overflow:auto}
+	.jckdJcTsDiv{border:4px solid #aadbe7; position:absolute; background:#fff; display:none; overflow:auto; line-height:22px}
+	.jckdJcTsDiv h1{background:#e1e1e1; text-align:center; font-size:15px; height:30px; line-height:30px}
+	.jckdJcTsDiv label.title{display:block; padding:0; text-indent:8px;}
+	.jckdJcTsDiv table{width:100%}
+	#patientExamDiv .showJCTS{background:#aadbe7;}
+	td.input{background:#fff; text-align:left; height:30px}
+	td.input span{display:block; float:left }
+	td.input span.title{width:88px; border:0;}
+	td.input input{border:0; height:100%; float:left}
+	.shiliOrYanyaTemplate{position:absolute; overflow:auto;background:#fff}
+	.shiliOrYanyaTemplate .templateList a{width:70px; float:left;text-align:center; font-size:12px; font-weight:bold;}
+	.shiliOrYanyaTemplate div.templateList{text-align:center; padding-left:18px; overflow:auto}
+	.itemListDiv tr td{background:#fff}
+	tr.on td{background:#aadbe7}
+	
+	<!--刘洋的CSS-->
+	<!--就诊记录的CSS-->
+	.emrHistoryRecord{margin-left:26px;height:606px;}
+	.emrHistoryRecord .record{background: rgb(255, 255, 255);color: rgb(79, 79, 79); padding-bottom:12px; overflow:auto}
+	.emrHistoryRecord .record table{margin:auto}
+	.emrHistoryRecord .recordInquriyTable{text-align: center;width: 640px;border-collapse: collapse;font-size: 12px;}
+	.emrHistoryRecord .recordInquriyTable .cell{border:1px solid #d2d2d2;height:32px;}
+	.emrHistoryRecord .recordInquriyTable .txtleft{text-align: left;padding:0px;}
+	.emrHistoryRecord .recordInquriyTable .paint{/*width:49%;*/height:150px;border:1px solid #d2d2d2;position:relative;}
+	.emrHistoryRecord .recordInquriyTable .itemlinkover{float:left;margin:5px;color:blue;}
+	.emrHistoryRecord .recordInquriyTable .itemlink{float:left;margin:5px;color:red;}
+	.emrHistoryRecord .recordInquriyTable .item{float:left;margin:5px;cursor:default;}
+	
+	.itemListDiv .carething{width:50%;height:100%;float:left;border-right:3px solid #d2d2d2}
+	.itemListDiv .followtime{width:49%;height:100%;float:left}
+	.itemListDiv .zysx{border-top:1px solid #d2d2d2;border-bottom:1px solid #d2d2d2;padding-bottom:1px;padding-right:1px;background:#fff;overflow-y	:auto;outline: none; word-break: break-all; overflow-x: hidden;}
+	#patientDiseaseDiv .showJCTS{background:#aadbe7}
+	.eyeTitle{ height:32px;width:60px;font-size:14px;border-right:1px #d2d2d2 solid;margin-right:10px; /*padding-left:10px;border:1px solid #bbbaba;*/  line-height:32px; vertical-align:middle;}
+	.showSelectTemplate{position:absolute; left:0; top:0; width:58px; border:1px solid #d2d2d2; background:#fff; display:none}
+	.showSelectTemplate a{display:block; margin:1px; border:1px solid #d2d2d2; background:#fff; text-align:center}
+	.showSelectTemplate a:hover{background:#ff0000; color:#fff}
+	.templateChangeValue{color:blue; border:1px solid #ccc; background:#ccc}
+	.templateCategory{overflow:auto}
+	.templateCategory a{/*width:50px;*/ padding:0 8px; float:left; background:#ddd; text-align:center; font-size:14px;; font-weight:bold; height:24px; line-height:24px; margin:2px}
+	.templateCategory a.selected{background:#aadbe7}
+	
+	.studyListDiv li{margin:2px 8px}
+	.studyListDiv li a:hover{}
+	.printTag{padding:15px; overflow:auto; background:#ccc}
+	.printPage table td{background:none;}
+	.printPage h2{font-size:16px; text-align:center; line-height:22px; padding:0; margin:0}
+    .printPage h1{font-size:18px; text-align:center; line-height:30px padding:0; margin:0}
+    .printPage .barcodeDiv{height:47px; float:right; overflow:hidden;margin-right:20px}
+    .printPage .title{background:none; border:0;}
+    .printPage .patient{border-top:3px solid; padding-top:2px; border-bottom:1px solid; border-color:#000}
+   .printPage{margin-bottom:12px; padding-top:12px; background: #fff; page-break-after: always;}
+   .printPage .orderList{height:280px; overflow:hidden; padding:8px;*padding-left:4px}
+   .printPage .orderList table{width:98%;/* margin:0 auto*/}
+    .printPage .orderList td{background:#fff}
+    .printPage .orderList strong{font-size:14px}
+    .printPage .bottom{border-top:3px solid #000}
+    .printPage .bottom .kdtime{float:right; width:183px;}
+    .printPage .bottom .infomation{padding-left:8px}
+    .printPage .recordInquriyTable{width:640px; margin:auto}
+    .printPage p{margin:0; padding:0;display:inline;font-size:14px}
+    .ypcs{background:url('template/html/ypcs.JPG') right bottom no-repeat #fff;}
+    .searchDiv select{width:100px; line-height:24px; margin:2px 0  0; float:left}
+    
+    
+	#menuTagDiv{background:url(../images/time-down.png) no-repeat 4px 8px; width:112px; text-align:center;  float:left}
+	div.menuTag{position:absolute; width:112px; background:#fff; display:none; border-left:1px solid #fff}
+	div.menuTagDiv{border:1px solid #fff}
+	div.menuTag a{display:block; overflow:hidden; margin:0}
+ 	div.menuTag a.up, .menuTag a.down{height:10px}
+ 	div.menuTag li{border-bottom:2px solid #fff}
+ 	div.menuTag li a{height:22px; background:url("../style/green/images/menubg.png") repeat-x; line-height:22px; border:1px solid #ddd; text-indent:.5em}
+ 	div.menuTag li a:hover,div.menuTag li a.on{background:url("../style/green/images/menubghover.png") repeat-x}
+
+	.studyViewDiv .button{ height:25px; padding-right:28px; padding-left:30px; padding-top:5px; padding-bottom:11px; width:88px; background:url(../style/green/images/bigbtnbg.png) no-repeat center; /*line-height:27px;*/ vertical-align:middle; margin-right:3px; }
+	#inputCombo input{text-algin:center;margin-left:45px;width:60px;float:left;background:url(../style/green/images/bigbtnbg.png) no-repeat center; /*line-height:27px;*/ vertical-align:middle;}
+    #examComboDiv a{width:100%;font-size:14px;background;margin-top:5px;margin-bottom:5px;background:url("../style/green/images/menubg.png") repeat-x;margin:2px; overflow:hidden;border:1px solid #d2d2d2; display:block; height:22px; line-height:22px}
+    .taocanSaveDiv{position: absolute; background: none repeat scroll 0% 0% rgb(255, 255, 255); width: 250px; top: 319.5px;}
+    .taocanSaveDiv .taocanListDiv{border:1px solid #ccc; padding:2px 12px; overflow-y:auto; overflow-x:hidden; border:"1px solid #ccc"}
+    .taocanSaveDiv ul li{text-align:left; line-height:24px; height:24px; text-indent:0.5em}
+    .taocanSaveDiv ul li input{display:inline; margin:3px 0; float:left}
+    #taocanItemDiv{padding:4px}
+    #taocanItemDiv table{width:100%}
+    #taocanItemDiv table td.on{background:#ddd}

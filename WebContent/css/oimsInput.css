@@ -1,0 +1,46 @@
+
+.MRDiv_BG_2{position:absolute; width:69px; height:38px; background:url("../images/openwinbg1.png") no-repeat}
+.MRDiv_BG_1{position:absolute; width:40px; height:39px; background:url("../images/openwinbg2.png") no-repeat}
+.MRDiv_BG_1 a,.MRDiv_BG_2 a{display:block; float:left; width:18px; height:18px; margin:10px 0 0 12px;}
+.MRDiv_BG_1 a:hover,.MRDiv_BG_2 a:hover{border:1px solid #fff}
+.MR_BT_Pen{background:url(../images/openwinicon1.png) 2px no-repeat}
+.MR_BT_Paint{background:url(../images/openwinicon2.png) 2px no-repeat}
+.inputTemplateList{position:absolute; width:280px; border:1px solid #c3c3c3; background:#f3f3f3; top:0; left:0}
+.inputTemplateList .oims_title{
+    background: url(../images/opentitlebg.png) repeat-x left top;
+    height: 28px;
+    border-bottom: 1px solid #72b6bf;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 4px;
+    line-height: 28px;
+    text-align: center;
+}
+.inputTemplateList .oims_title span{
+    width: 24px;
+    background: url(../images/close.png) no-repeat;
+    float: right;
+    height: 23px;
+    margin-top: 2px;
+    cursor: pointer;
+    margin-right: 2px;
+}
+.inputTemplateList a{display:block; padding-left:6px; line-height:22px; margin:2px}
+.inputTemplateList a:hover{background:#c3c3c3; color:#fff}
+.selectAllClass{
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    height:15px; 
+    vertical-align:bottom;
+}
+.invertSelectClass{
+    display: inline-block;
+    float: left;
+    height:15px; 
+    vertical-align:bottom;
+}
+.selectAllClassInput{
+	height:15px; 
+    vertical-align:bottom;
+}

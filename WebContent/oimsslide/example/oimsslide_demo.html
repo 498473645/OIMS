@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>oimsslide Demo</title>
+
+<!--(1)引入js和css文件 -->
+<script type="text/javascript" src="../oimsslide/oimsslide.js"></script>
+<link rel="stylesheet" type="text/css" href="../oimsslide/oimsslide.css" />
+<script type="text/javascript" >
+	//单击放大图片时请将此属性设置值，双击放大图片请不要加此属性
+	//hs.expandCursor="zoomin.cur";
+	
+	//如需要在图片放大时切换（上一张 下一张）   请使用此方法初始化组件
+	hs.addSlideshow({});
+	//hs.Thumbstrip({});
+	//window.onload = function(){
+		function aa(){	
+			var aa1 = document.getElementById("bb");
+			if(aa1.style.backgroundColor == "blue"){
+				aa1.style.backgroundColor ="red";
+			}else{
+				aa1.style.backgroundColor ="blue";
+			}
+			return false;
+		}
+	//}
+</script>
+</head>
+
+<body style ="">
+
+<!-- (2) 把需要展示的图片放到一个DIV里 (class 属性 请不要更改) -->
+<div class="oimsslide-gallery">
+
+
+		<div  id ="bb" style="height: 200px;width: 200px;background-color: blue;vertical-align: middle;text-align: center;float: left;padding-top:65px" >
+
+			<!-- (3) img标签src中放缩略图 a标签href中放全尺寸图片 单击事件需在方法最后返回false 以阻止a标签默认事件的执行-->
+			<a href="../images/gallery2.jpg" class="oimsslide"  id ="aa" onclick="aa();return false" ondblclick="return hs.expand(this)">
+				<img src="../images/gallery1.thumb.jpg" alt="oimsslide JS" title="双击放大" />
+			</a>
+			<!--(4) 紧跟a标签的div中放入图片标题，此标题将在图片放大时在图片下部显示 (class 属性不要修改)-->
+			<div class="oimsslide-caption">
+				Caption for the first image. This caption can be styled using CSS.
+			</div>
+			<!--(5) 此标题将在缩略图下部显示 -->
+			<div>2012091801双击放大</div>
+		</div>
+
+
+		<div style="height: 200px;width: 200px;background-color: green;vertical-align: middle;text-align: center;float: left;padding-top:65px" >
+			<a href="../images/gallery2.jpg" class="oimsslide" onclick="return hs.expand(this)">
+				<img src="../images/gallery2.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+			</a>
+			<div class="oimsslide-caption">
+				Caption for the second image.
+			</div>
+			<div>单击放大</div>
+		</div>
+
+
+
+		<a href="../images/gallery3.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the third image.
+		</div>
+				
+				
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+		<a href="../images/IMG_20120708_151657.jpg" class="oimsslide" onclick="return hs.expand(this)">
+			<img src="../images/gallery3.thumb.jpg" alt="oimsslide JS" title="点击放大" />
+		</a>
+		<div class="oimsslide-caption">
+			Caption for the fourthly image.
+		</div>
+
+
+</div>
+
+</body>
+</html>

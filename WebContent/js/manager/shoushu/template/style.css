@@ -1,0 +1,8 @@
+.groupTag{float:left;background:#fff;margin-right:4px;overflow:hidden}
+.deptTag{float:right;background:#fff;margin-left:4px;overflow:hidden}
+.groupTitle{text-align:center; line-height:30px; height:30px; font-weight:bold; background:#ddd}
+.groupTag .hover,.deptTag .hover{color:#fff; background:#ff0000}
+.groupTag li{border:1px solid #ddd; margin:2px;text-indent:1em;line-height:22px; display:bolck;}
+.groupTag input{width:194px; margin:2px; height:22px}
+.memberList a.close, .groupTag a.close{width:14px; border:1px solid #ddd; height:14px; font-weight:bold; line-height:14px; margin:2px; display:block; float:right;text-indent:0; text-align:center}
+.memberList a.close:hover, .groupTag a.close:hover{color:yellow; border-color:#ff0000}

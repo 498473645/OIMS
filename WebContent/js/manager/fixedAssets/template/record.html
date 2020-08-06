@@ -1,0 +1,35 @@
+<input type="hidden" name="id" />
+<input type="hidden" name="fixedAssetsId" />
+<table style="width:100%">
+	<tr>
+		<td class="formTdTitle">资产名称</td><td><input disabled="disabled" class="inputCommon" type="text" name="name" /></td>
+		<td class="formTdTitle">资产编号</td><td><input disabled="disabled" class="inputCommon" type="text" name="flowerNo" /></td>
+		<td class="formTdTitle">管理员</td><td><input disabled="disabled" class="inputCommon" type="text" name="operator" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">维护时间</td>
+		<td><input class="inputCommon" type="text" name="maintainDate" id="maintainDate" /></td>
+		<td class="formTdTitle">维护类型</td><td>
+			<input type="radio" checked="checked" name="maintainType" value="0" id="maintainType0" />
+			<label for="maintainType0">常规</label>
+			<input type="radio" name="maintainType" value="1" id="maintainType1" />
+			<label for="maintainType1">维修</label>
+		</td>
+		<td class="formTdTitle">操作员</td><td><input class="inputCommon" type="text" name="maintenance" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">手机</td><td><input class="inputCommon" type="text" name="mobile" /></td>
+		<td class="formTdTitle">电话</td><td><input class="inputCommon" type="text" name="tel" /></td>
+		<td class="formTdTitle">Email</td><td><input class="inputCommon" type="text" name="email" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">下次维护时间</td>
+		<td><input class="inputCommon" type="text" name="nextMaintenanceDate" id="nextMaintenanceDate" />
+		</td>
+		<td colspan="4"></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">备注</td><td colspan="5">
+		<textarea name="note" class="inputCommon"></textarea></td>
+	</tr>
+</table>

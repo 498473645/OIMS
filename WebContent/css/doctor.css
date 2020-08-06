@@ -1,0 +1,68 @@
+.emr_doctorTitle01{padding-top:4px;}
+.emr_doctorTitle02{float: left;}
+.emr_doctorTitle03{float: right;padding-top:4px;}
+.emr_searchDiv{width:400px;height:26px;margin-right:10px;margin-bottom:0px;float: right;}
+.emr_searchTable{width:100%;cellspacing:0;cellpadding:0;border:0;}
+.emr_minwidth{min-width:900px;}
+.emr_listdiv{padding-top:12px;}
+
+.emr_binglijilu01{margin:8px;border:1px solid #d2d2d2;overflow:auto;}
+.emr_quickMenudiv{margin-right:2px;margin-bottom:8px}
+.emr_quickMenudiv01{border-top:1px solid #d2d2d2;}
+.emr_binglijilutextarea{width: 99.6%;}
+.emr_paintosod{width:360px;height:242px ;float:left;margin-right:5px}
+.emr_paintfontsize{font-size: 12px;}
+.emr_bgdiv{position:absolute;top:0;left:0;background:#ccc;filter:alpha(opacity=5);opacity:0.01;}
+.emr_huatutitle{font-size: 12px;color: blue;font-style: normal;}
+.emr_showimagediv01{padding:10px;}
+.emr_showimagediv02{width:360px;height:230px ;float:left;margin-right:5px}
+.emr_showimage00{width:360px;height:230px ;}
+.emr_functionbutton{float:right;text-align:right;width:420px;}
+.emr_functionbuttona{float:right;margin-right:0;}
+.emr_jcdtitle{text-align: left;padding-left: 2.5px;overflow: hidden;}
+.emr_jcdtab00{margin:4px 2px 0 4px;}
+.emr_jcdtab01{margin:4px 2px 0;}
+.emr_jcdlistpointer{cursor:pointer;}
+.emr_huayantable{border-top:1px solid #D2D2D2;text-align:center;color:#4F4F4F;font-size:14px;font-size:12px;color:#4F4F4F;}
+.emr_huayantableth{background:none repeat scroll 0 0 #D2D2D2;height:22px;line-height:22px;}
+.emr_huayantabletd{border-top:1px solid #D2D2D2;text-align:center;height:25px;padding-left:2px;padding-right:3px;word-break:break-all;min-width:50px;}
+.emr_doublebtn{float:right;margin: 3px 4px 3px 0px;}
+.emr_doublebtnspan{margin-top:3px;}
+.emr_oimsslidediv{width:195px; height:146px; float:left;text-align:center ;vertical-align: middle;}
+.emr_reportbtndiv{float:right; width:70%;}
+.emr_reportbtndiv00{margin-top: 2px;margin-right: 5px;}
+.emr_chufangtable{width:100%;border:0;cellspacing:0;cellpadding:0;}
+.emr_yaopinedittable{display:block;text-align:center;}
+
+.emr_duibi00{overflow:auto;height:500px;}
+.emr_duibitimediv{height:35px;width:100%;}
+.emr_duibig{height:465px;width:100%;overflow:auto;}
+.emr_duibishowspan{color: blue;cursor: pointer;}
+.emr_duibilis{height:450px;overflow:auto;}
+.emr_duibistudydiv{height:520px;overflow:auto;}
+.emr_duibiyanguangdiv{height:470px;overflow:auto;}
+.emr_jiuzhenlistduibispan{display:block;float:right;margin-right:40px;margin-top:2.5px;cursor:pointer;}
+.emr_jiuzhenlistcheck{display:block;float:left;margin-left:8px;margin-top:15px;}
+.emr_jiuzhenlistgundongbtn{cursor:pointer;height:10px;}
+.emr_jiuzhenzhenduaninput00{width:99.5%;font-size:12px;}
+
+.emr_kaidandiv00{width:80px;height:100%;float:left;}
+.emr_kaidandiv01{width:20px;height:100%;float:left;}
+.emr_kaidandiv02{width:60px;height:100%;float:left;}
+.emr_kaidandiv03{height:15px;width:100px;float:left;}
+.emr_kaidandiv04{height:15px;width:25px;float:left;}
+.emr_kaidandiv05{height:15px;width:75px;float:left;text-align:left;}
+.emr_kaidanyeqiandiv{height:28px;width:auto;font-weight: bold;}
+.emr_teshujianchadiv{height:25px;width:100%;}
+.emr_kaidanteshu00{width:718px;height:258px;}
+.emr_kaidanteshu01{width:350px;padding-right:0px;float:left;}
+.emr_kaidanteshu02{width:350px;padding-left:0px;float:right;}
+.emr_kaidanjianchatishispan{display:block;float:right;width:53px;height:30px;padding-right:4px;cursor:pointer;line-height:30px;text-align:center;padding-left:2px;}
+.emr_kaidanli{text-align:left;line-height:30px;height:30px;border-bottom:1px dashed #aeaeae;}
+.emr_kaidantwolistshow{margin-right:0px;margin-bottom:0px;overflow-y:hidden;}
+.emr_kaidancheckbox{display:block;float:left;height:22px;}
+.emr_kaidanyaoqiudiv{height:30px;width:730px;float:left;padding-top: 5px;}
+.emr_kaidanyaoqiuarea{height:28px;width:728px;line-height: 15px;}
+.emr_kaidanjianchatushi{color:blue;cursor:pointer;display:block;folat:right;margin-right:5px;height:30px;width:39px;float:right;text-align:center;line-height:30px;vertical-align:middle;}
+.emr_kaidanjianchayqshow{height:30px;width:730px;float:left;padding-top: 5px;}
+

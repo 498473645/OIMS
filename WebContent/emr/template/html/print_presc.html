@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>处方打印</title>
+<!-- 
+<object id="jatoolsPrinter" classid="CLSID:B43D3361-D075-4BE2-87FE-057188254255" ></object>
+ -->
+<style type="text/css">
+*{padding:0;margin:0;}
+td,span{font-size:13px;}
+.printcontainer{width:150mm;height:120mm;margin:auto;background-color:#fff;padding:2mm;page-break-after: always;}
+table{border-collapse: collapse;width:100%;height:16mm;table-layout:fixed;margin-top:1mm;border-bottom:2px solid black;}
+th{border:1px solid black;border-top:0;height:6mm;}
+.left30{margin-left:15mm;}
+.diagnose{overflow:hidden;text-overflow:ellipsis;}
+.medicalList{width:100%;max-height:80mm;border:0;}
+.medicalList ul{list-style:none}
+.medicalList ul li{margin-top:2mm;margin-left:5mm;}
+.doctorSign{margin-top:2mm;border-top:2px solid black;padding-top:2mm;}
+.doctorSign span{float:right;margin-right:50mm;}
+</style>
+<script language='javascript' src="../js/jquery.min.js"></script>
+<script language='javascript' src="../js/jquery-barcode.min.js"></script>
+<script language='javascript'>
+	function onload(){
+		var id = $('#medicalNo').text();
+		if(id){
+			$('div[name="barcode"]').barcode($('#medicalNo').text(),'code39',{barWidth:1,barHeight:30,showHRI:false});
+		}
+	}
+</script></head>
+<body onload="onload()">
+	<!--start-->
+	<div id="recordcontainer">
+		<div id="<!--page-->" class="printcontainer">
+			<div style="height:90%;width:90%;margin:0 auto;">
+				<h2 style="text-align:center;border-bottom:1px solid black;">陆军军医大学第一附属医院（西南医院）眼科处方</h2>
+				<table style="height:10mm;">
+					<tr>
+						<td style="width:15%;">姓名：<!--name--></td>
+						<td style="width:25%;">性别：<!--sex--></td>
+						<td style="width:15%;">年龄：<!--age--></td>
+						<td style="width:20%;">ID号：<span id="medicalNo"><!--medicalNo--></span></td>
+						<td rowspan="2"><div name="barcode"></div></td>
+					</tr>
+					<tr>
+						<td colspan="2">诊室：<!--position--></td>
+						
+						<td class="diagnose" colspan="2">诊断：<!--diagnose--></td>
+					</tr>
+				</table>
+				<div class="medicalList">
+					<ul>
+						<!--list-->
+					</ul>
+				</div>
+				<div class="jungaiJifei" style="font-size:12px; font-weight:bold; text-align:center; visibility: hidden">已军改计费</div>
+				<table style="width:100%;border-top:2px solid black;height:10mm;">
+				<tr>
+					<td style="width:50mm;">医生签字：<!--doctor--></td>
+					<td style="width:50mm;">打印日期：<!--date--></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--end-->
+</body></html>

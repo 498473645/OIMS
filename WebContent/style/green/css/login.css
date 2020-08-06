@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.logincontent{ background:#dddddd url(../images/loginbg.png) repeat-x left top; }
+.loginbg{ width:866px; height:477px; margin:0px auto; background:url(../images/login.png) no-repeat;}
+.login{ height:210px; width:280px; padding-left:325px; padding-top:152px;}
+.login table td{ line-height:35px;}
+.login table td a.loginbtn{ width:244px; height:37px; text-align:center; display:block; background:url(../images/loginbtn.png) no-repeat; font-weight:bold; font-size:14px;}
+.login table td a.loginbtn:hover{ background:url(../images/loginbtnhover.png) no-repeat;}
+.login table td a.passwordtext{ color:#008b9c; text-decoration:underline;}
+.loginbtn{ height:35px; font-size:14px; text-align:left; padding-left:60px;}
+.loginbtn a{ width:88px; height:32px; background:url(../images/loginbtn.png) no-repeat; display:block; float:left; margin-right:10px;}
+.loginbtn a:hover{ background:url(../images/loginbtnhover.png) no-repeat;}
+.loginbtn a span{ width:22px; height:22px; display:block; float:left; margin-left:10px; margin-top:4px; margin-right:6px;} 
+.login table td a{ text-decoration:underline;}

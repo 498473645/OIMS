@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>医生工作站</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="style/green/css/green.css" rel="stylesheet" type="text/css" />
+<link href="style/green/css/openWin.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/icon.css" rel="stylesheet" type="text/css" />
+<link href="subgroup/calendar/css/jscal2.css" rel="stylesheet"
+	type="text/css" />
+<link href="oimsslide/oimsslide.css" rel="stylesheet" type="text/css" />
+
+<link href="css/doctorWorkstation.css" rel="stylesheet" type="text/css" />
+<link href="css/oimsInput.css" rel="stylesheet" type="text/css" />
+<link href="css/doctor.css" rel="stylesheet" type="text/css" />
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="oimsslide/oimsslide.js"></script>
+<script src="js/language.config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/categoryTree.js"></script>
+<script src="js/jquery.oimsDialog.js"></script>
+<script src="demo/doctor/demo.js"></script>
+<script src="demo/doctor/demo.data.js"></script>
+<script src="demo/doctor/demo.tree.js"></script>
+<script src="demo/doctor/demo.checkorder.js"></script>
+<script src="demo/doctor/ly_jcd.js"></script>
+<script type="text/javascript" src="highcharts/highcharts.js"></script>
+<script type="text/javascript" src="highcharts/exporting.js"></script>
+<script type="text/javascript" src="demo/doctor/duibi.js"></script>
+<script type="text/javascript">
+	var contextPath = "/EMR";
+	function resize() {
+		var bannerHeight = $("#header").outerHeight();
+		var bottomHeight = $("#footer").outerHeight();
+		var winHeight = $(window).height();
+		var bodyHeight = winHeight - bannerHeight - bottomHeight;
+		$("#content").height(bodyHeight);
+		var marginTop = ($(".content").height() - $(".welcomefont").height()) / 2;
+		$(".welcomebg").height($(".content").height())
+				.css("overflow", "hidden");
+		$(".welcomefont").css("margin-top", marginTop / 2 - 20 + "px");
+		mainBodyHeight = bodyHeight;
+		var h0 = $(".menu .down").outerHeight();
+		var h1 = $(".menu .up").outerHeight();
+		var h2 = $(".menu .wel").outerHeight();
+		var h3 = $(".menu .modulertitle").outerHeight();
+		$(".menu .nav").height(bodyHeight - h0 - h1 - h2 - h3);
+		$(".left .narrow").height(bodyHeight);
+		var c = $(".left .narrow span");
+		var h = (bodyHeight - c.height()) / 2;
+		c.css({
+			"margin-top" : h
+		});
+		c.click(function() {
+			var cw = $(".left").width() - c.width();
+			if (leftMenuClose) {
+				$(".left").css("margin-left", 0);
+				$(".right").css({
+					"width" : $(".right").width() - cw,
+					"margin-left" : $(".left").width()
+				});
+				leftMenuClose = false;
+			} else {
+				$(".left").css("margin-left", -cw);
+				$(".right").css({
+					"width" : $(".right").width() + cw,
+					"margin-left" : c.width()
+				});
+				leftMenuClose = true;
+			}
+		});
+	}
+	$(document).ready(resize);
+	$(window).resize(resize);
+</script>
+</head>
+<body>
+	<div class="header" id="header">
+		<div class="logo"></div>
+		<div class="set">
+			<ul>
+				<li class="settext"><a href="javascript:userConfing();">设置</a></li>
+				<li class="exit"><a href="javascript:loginOut();">退出</a></li>
+				<li class="help"><a href="#">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content" id="content">
+		<div class="left" id="left">
+			<div class="menu">
+				<div class="wel">
+					<span></span>
+					<p>欢迎您！</p>
+					<p>管理员(检查医生)</p>
+					<p class="time">2012.7.3 星期二 15:39:00</p>
+				</div>
+				<div class="modulertitle">医生工作站</div>
+				<div class="up"></div>
+				<div class="nav">
+					<ul>
+						<li class="l1"><a href="#" id="m01"><span class="menu1"></span>病历管理</a></li>
+						<li class="on"><a href="#"><span class="menu2"></span>医生工作站</a></li>
+					</ul>
+				</div>
+				<div class="down"></div>
+			</div>
+			<div class="narrow">
+				<span></span>
+			</div>
+		</div>
+		<div id="right" class="right">
+			<div class="title">
+				<div class="titleT">
+					<span class="title1"></span>患者接诊
+				</div>
+				<div class="sum">
+					<strong>今日接诊患者总数：</strong><span>[</span><span><font
+						class="red">1</font></span><span>]人:</span><strong>待诊患者：</strong><span>[</span><span><font
+						class="red">1</font></span><span>]人,</span><strong>复诊患者：</strong><span>[</span><span><font
+						class="blue">0</font></span><span>]人,</span><strong>已过号患者：</strong><span>[</span><span><font
+						class="green">0</font></span><span>]人,</span><strong>已完成患者：</strong><span>[</span><span><font
+						class="green">0</font></span><span>]人</span>
+				</div>
+			</div>
+			<div class="advquery">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="50%">
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<th align="right" nowrap="nowrap" class="headimg"></th>
+									<td align="right" nowrap="nowrap"><strong>病历号：</strong><span>857185995</span></td>
+									<td nowrap="nowrap"><strong>姓名：</strong><span>卢方</span></td>
+									<td align="right" nowrap="nowrap"><strong>性别：</strong><span>男</span></td>
+									<td><strong>年龄：</strong><span>64</span></td>
+									<td align="right" nowrap="nowrap"><strong>电话：</strong><span>18212344321</span></td>
+									<td><strong>医保</strong><span></span></td>
+									<td align="right" nowrap="nowrap"><strong>公费</strong><span></span></td>
+								</tr>
+							</table>
+						</td>
+
+						<td width="50%">
+							<div class="btn">
+								<a href=""><span class="diagnosis"></span>下一位</a> 
+								<a href=""><span class="gh"></span>过号</a> 
+								<a href=""><span class="makelist"></span>开单</a> 
+								<a href=""><span class="start"></span>完成</a> 
+								<a href=""><span class="print"></span>打印</a>
+
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div
+				style="margin: 5px; border: 1px solid rgb(210, 210, 210); height: 455px; overflow: auto; min-width: 1100px;"
+				id="case">
+				<div id="compare_show"
+					style="width: 2%; height: 455px; overflow: hidden;cursor:pointer;text-align:center;"
+					class="mcListTag">
+					<h3 style="margin-top:150px;margin-left:auto;margin-right:auto;">查看就诊记录</h3>
+				</div>
+				<div id="duibi"
+						style="width: 0px; height: 450px; overflow: hidden;"
+						class="mcListTag">
+						<div style="height: 450px; overflow: hidden;" id="jzlistdiv_gd">
+							<div id="jzlistdiv" style="border: 1px solid rgb(210, 210, 210);height:450px;">
+								<ul >
+									<li style="cursor: pointer;overflow:hidden;" id="li_sn_1" class="visited"><span
+										class="emr_jiuzhenlistcheck"><input value="565"
+											type="checkbox"></span>
+										<p>2014-01-21</p>
+										<p>就诊ID：565</p></li>
+									<li style="cursor: pointer;" id="li_sn_2"><span
+										class="emr_jiuzhenlistcheck"><input value="564"
+											type="checkbox"></span>
+										<p>2014-01-20</p>
+										<p>就诊ID：564</p></li>
+									<li style="cursor: pointer;" id="li_sn_3"><span
+										class="emr_jiuzhenlistcheck"><input value="252"
+											type="checkbox"></span>
+										<p>2013-12-11</p>
+										<p>就诊ID：252</p></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				<div id="main" style="width: 95%; height: 455px;" class="mcTag">
+					<div style="height: 28px;" id="mcTitleTag_id"
+						class="tablabe2 mcTitleTag">
+						<div id="first_table" class="tab_hide tab_show"
+							onclick="_emr_showCaseTab(this)">
+							<span>问诊</span>
+						</div>
+						<div class="tab_hide" onclick="_emr_showCaseTab(this)">
+							<span>体格检查</span>
+						</div>
+						<div class="tab_hide" onclick="_emr_showCaseTab(this)">
+							<span>诊断</span>
+						</div>
+						<div class="tab_hide" onclick="_emr_showCaseTab(this)">
+							<span>处理</span>
+						</div>
+						<span class="edito emr_quickMenudiv"></span>
+					</div>
+					<div id="inquiry" class="list"
+						style="height: 400px; padding: 0px 0px;"
+						class="mcChildTad emr_binglijilu01">
+						<div style="width: 440px; float: left;margin-left:2px; border: 1px solid #d2d2d2;">
+							<div>
+								<h3>主诉</h3>
+								<textarea id="main_txt" onfocus="_emr_inquiry(this)"
+									style="height: 50px; width: 99.8%;"></textarea>
+							</div>
+							<div>
+								<h3>现病史</h3>
+								<textarea id="now_txt" onfocus="_emr_inquiry(this)"
+									style="height: 50px; width: 99.8%;"></textarea>
+							</div>
+							<div>
+								<h3>既往史</h3>
+								<textarea id="old_txt" onfocus="_emr_inquiry(this)"
+									style="height: 50px; width: 99.8%;"></textarea>
+							</div>
+							<div>
+								<h3>过敏史</h3>
+								<textarea id="allergies_txt" onfocus="_emr_inquiry(this)"
+									style="height: 50px; width: 99.8%;"></textarea>
+							</div>
+							<div>
+								<h3>家族史</h3>
+								<textarea id="family_txt" onfocus="_emr_inquiry(this)"
+									style="height: 50px; width: 99.8%;"></textarea>
+							</div>
+						</div>
+						<div
+							style="width: 260px; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 395px">
+							<h3 id="inquiry_title">主诉</h3>
+							<input type="hidden" id="inquiry_position">
+							<div id="inquiry_context" class="inputTemplateList_emr"></div>
+						</div>
+						<div
+							style="width: 260px; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 395px">
+							<h3>常用病历</h3>
+							<div></div>
+						</div>
+					</div>
+					<div id="physical" class="list"
+						style="height: 410px; display: none; padding: 0px 0px;"
+						class="mcChildTad">
+						<div id="physical_" style="width: 740px; float: left;margin-left:2px;">
+							<table width="100%"
+								style="text-align: center; font-size: 12px; border-collapse: collapse;"
+								border="0">
+								<tr>
+									<th></th>
+									<th>右眼</th>
+									<th>左眼</th>
+								</tr>
+								<tr height="30px">
+									<td width="90px">
+										眼睑
+									</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>结膜</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>巩膜</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>眼位、眼球运动</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>角膜</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>前房</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>虹膜</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>瞳孔</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>晶状体</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="30px">
+									<td>玻璃体</td>
+									<td><textarea onclick="_emr_physical(this)"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)"></textarea>
+								</tr>
+								<tr height="45px">
+									<td>眼底(<input type="checkbox"><span>散瞳</span>)
+									</td>
+									<td><textarea onclick="_emr_physical(this)" style="height: 44px"></textarea></td>
+									<td><textarea onclick="_emr_physical(this)" style="height: 44px"></textarea>
+								</tr>
+							</table>
+						</div>
+						<div
+							style="width: 250px; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 405px">
+							<h3 id="physical_title">
+								眼睑(<a style="color: blue;" href="javascript:showPaintDialog()">画图</a>)
+							</h3>
+							<input type="hidden" id="physical_position">
+							<div id="physical_context" class="inputTemplateList_emr"></div>
+						</div>
+					</div>
+					<div id="diagnosis" class="list"
+						style="height: 410px; display: none; padding: 0px 0px;"
+						class="mcChildTad">
+						<div class="diagnoselist" style="width: 500px; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 405px;min-height: 405px">
+							<ul>
+							</ul>
+						</div>
+						<div style="width: 80px; float: left; margin-left: 5px; height: 405px">
+							<div style="margin: 170px auto;">
+								<div><input type="button" value="已确诊" onclick="_emr_diagnosed()"></div>
+								<div style="margin-top:10px;"><input type="button" value="未确诊" onclick="_emr_undiagnosed()"></div>
+							</div>
+						</div>
+						<div style="width: 380px;overflow:auto; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 405px">
+							<ul id='disease' class='ztree'></ul>
+						</div>
+						<script type="text/javascript">
+							_emr_createDiseaseTree();
+						</script>
+					</div>
+					<div id="handle" class="list"
+						style="height: 410px; display: none; padding: 0px 0px;"
+						class="mcChildTad">
+						<div
+							style="width: 680px; height: 95%; float: left; margin-top: 0px;margin-left:2px;">
+							<div style="width: 680px; float: left; border: 1px solid #d2d2d2;">
+							<div>
+								<h3>医嘱<span style="float:right;margin-right:10px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></h3>
+								<textarea id="medical_order_txt" onfocus="_emr_deal(this)"
+									style="height: 50px; width: 99.8%;"></textarea>
+							</div>
+							<div>
+								<h3>处置<span style="float:right;margin-right:10px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></h3>
+								<textarea id="handle_txt" onfocus="_emr_deal(this)"
+									style="height: 50px; width: 99.8%;"></textarea>
+							</div>
+							<div onclick="_emr_showMedical()">
+								<h3>处方<a style="float:right;margin-right:10px;" onclick="_emr_addmedical()">＋</a></h3>
+								<div>
+									<table width="100%">
+										<tr>
+											<th width="30%">药名</th>
+											<th width="10%" colspan="2">数量</th>
+											<th width="25%">用量</th>
+											<th width="30%">用药途径</th>
+											<th width="5%"></th>
+										</tr>
+									</table>
+								</div>
+								<div style="height:181px;width:100%;overflow:auto;background-color:#ffffff;">
+									<table width="100%" id="medical_table">
+									</table>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div
+							style="width: 260px; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 395px">
+							<div style="height:240px">
+								<h3 id="deal_title">医嘱</h3>
+								<input type="hidden" id="deal_position">
+								<div id="deal_content" class="inputTemplateList_emr"></div>
+							</div>
+							<div>
+								<h3 id="medical_allergies_title">药物过敏史</h3>
+								<div id="medical_allergies_content" class="inputTemplateList_emr">
+									<a>青霉素</a>
+									<a>庆大霉素</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="test" onclick="_emr_showCheckOrder(this)" class="mcListTag" 
+					style="float:right;text-align:center;font-size:14px;width: 2%; 
+						height: 455px; overflow: hidden;cursor:pointer;background-color:#bfbfbf">
+					<h3 style="margin-top:150px;margin-left:auto;margin-right:auto;">检查化验结果</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer" id="footer">
+		<div class="footerlogo"></div>
+		<p>版权所有：北京思格玛软件有限公司</p>
+	</div>
+</body>
+</html>

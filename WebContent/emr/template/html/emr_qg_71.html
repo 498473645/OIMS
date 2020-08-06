@@ -1,0 +1,211 @@
+<div id="jtssjl" style="padding-bottom: 0px; margin: 0px auto; padding-left: 10px; width: 623px; padding-right: 10px; background: rgb(255,255,255); color: rgb(79,79,79); padding-top: 30px">
+    <h1 style="text-align: center; line-height: 50px; height: 50px; font-size: 20px">
+        晶体手术记录</h1>
+    <div style="border-bottom: rgb(51,51,51) 2px solid; font-size: 14px;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    <th nowrap="nowrap" width="14%">
+                        科别</th>
+                    <td width="14%">
+                        <label id="kebie">kebie</label></td>
+                    <th height="30" nowrap="nowrap" width="9%">
+                        姓名：</th>
+                    <td width="18%">
+                        <label id="suffererName">suffererName</label></td>
+                    <th nowrap="nowrap" width="10%">
+                        ID号</th>
+                    <td width="11%">
+                        <label id="blh">blh</label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="content" style=" padding-left: 0px; padding-right: 0px; font-size: 14px; padding-top: 10px;">
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                <tr>
+                    <td nowrap="nowrap" align="left" colspan="7">
+                    <strong>一、术前准备</strong></td>
+                </tr><tr>
+                    <td nowrap="nowrap" rowspan="3" style="width:15px; border-bottom:1px solid;">
+                    健康教育：</td>
+                    <td nowrap="nowrap">
+                    联系方式<input type="checkbox" id="jkjy1" name="jkjy" style="width:18px; height:18px;" value="1"/></td>
+                    <td nowrap="nowrap">
+                    注意事项<input type="checkbox" id="jkjy2" name="jkjy" style="width:18px; height:18px;" value="2"/></td>
+                    <td nowrap="nowrap" align="right">
+                    眼别：</td>
+                    <td nowrap="nowrap" colspan="3">
+                        <input type="radio" id="yb_r" name="yanbie" value="r" onclick="ssfs_change_yb();" />右&nbsp;&nbsp;
+              <input type="radio" id="yb_l" name="yanbie" value="l" onclick="ssfs_change_yb();" />左&nbsp;&nbsp;
+              <input type="radio" id="yb_s" name="yanbie" value="s" onclick="ssfs_change_yb();" />双&nbsp;&nbsp;
+          </td>
+                </tr><tr>
+                    <td nowrap="nowrap" align="right">
+                    身高</td>
+                    <td nowrap="nowrap">
+                    <input id="sg" name="sg" type="text" style="width:90%px; height:18px;border:0px;"/></td>
+                    <td nowrap="nowrap" align="right" colspan="2">
+                    体重&nbsp;<input id="tz" name="tz" type="text" style="width:74%; height:18px;border:0px;"/></td>
+                    <td nowrap="nowrap">
+                    体温</td>
+                    <td nowrap="nowrap">
+                    <input id="tw" name="tw" type="text" style="width:99%; height:18px;border:0px;"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap" align="right" style=" border-bottom:1px solid;">
+                    脉搏</td>
+                    <td nowrap="nowrap" style=" border-bottom:1px solid;">
+                    <input id="mb" name="mb" type="text" style="width:99%; height:18px;border:0px;"/></td>
+                    <td nowrap="nowrap" align="right" colspan="2" style=" border-bottom:1px solid;">
+                    呼吸&nbsp;<input id="hx" name="hx" type="text" style="width:74%; height:18px;border:0px; overflow:visible"/></td>
+                    <td nowrap="nowrap" style=" border-bottom:1px solid;">
+                    血压</td>
+                    <td nowrap="nowrap" style=" border-bottom:1px solid;">
+                    <input id="xy" name="xy" type="text" style="width:99%; height:18px;border:0px;"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap" rowspan="4">
+                    术晨准备：</td>
+                    <td nowrap="nowrap">
+                    冲洗结膜囊<input type="checkbox" id="sczb1" name="sczb" style="width:18px; height:18px;border:0px;" value="1"/></td>
+                    <td nowrap="nowrap" colspan="2">
+                    消毒眼周皮肤<input type="checkbox" id="sczb2" name="sczb" style="width:18px; height:18px;border:0px;" value="2"/></td>
+                    <td nowrap="nowrap" colspan="3">
+                    无菌纱布包眼<input type="checkbox" id="sczb3" name="sczb" style="width:18px; height:18px;border:0px;" value="3"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    充分扩瞳<input type="checkbox" id="sczb4" name="sczb" style="width:18px; height:18px;border:0px;"  value="4"/></td>
+                    <td nowrap="nowrap" colspan="5">
+                    抗生素眼药：已点<input type="checkbox" id="sczb5" name="sczb" style="width:18px; height:18px;border:0px;" value="5"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    泪道冲洗：</td>
+                    <td nowrap="nowrap">
+                    不需要<input type="checkbox" id="ldcx1" name="ldcx" style="width:18px; height:18px;border:0px;" value="1"/></td>
+                    <td nowrap="nowrap">
+                    通畅<input type="checkbox" id="ldcx2" name="ldcx" style="width:18px; height:18px;border:0px;" value="2"/></td>
+                    <td nowrap="nowrap" colspan="3">
+                    不通畅<input type="checkbox" id="ldcx3" name="ldcx" style="width:18px; height:18px;border:0px;" value="3"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    备注:</td>
+                    <td colspan="5" style=" text-align:left;">
+                        <textarea id="bz" name="bz" rows="3" style="width:99%;border:0px;"></textarea></td>
+                </tr><tr>
+                    <td nowrap="nowrap" colspan="5" align="right" style=" border-bottom:1px solid;">
+                    签名:</td>
+                    <td nowrap="nowrap" colspan="2" style=" border-bottom:1px solid;">
+                 <label id="sqzb_qm" onclick="openFloatDiv1('sqzb_qm','sqzb_qm_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                 <label id="sqzb_qm_gh" style="display:none;"></label>
+          </td>
+                </tr>
+        </table>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+                    <td nowrap="nowrap" align="left" colspan="7">
+                    <strong>二、手术记录</strong></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    麻醉方法：</td>
+                    <td nowrap="nowrap">
+                    表面麻醉<input type="checkbox" id="mzff1" name="mzff" style="width:18px; height:18px;border:0px;" vlaue="1"/></td>
+                    <td nowrap="nowrap">
+                    球后麻醉<input type="checkbox" id="mzff2" name="mzff" style="width:18px; height:18px;border:0px;" value="2"/></td>
+                    <td nowrap="nowrap" colspan="4">
+                    球周麻醉<input type="checkbox" id="mzff3" name="mzff" style="width:18px; height:18px;border:0px;" value="3"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    麻药：</td>
+                    <td nowrap="nowrap" colspan="2">
+                    0.4%盐酸奥布卡因<input type="checkbox" id="my1" name="my" style="width:18px; height:18px;" value="1"/></td>
+                    <td nowrap="nowrap" colspan="4">
+                    2%利多卡因<input type="checkbox" id="my2" name="my" style="width:18px; height:18px;border:0px;" value="2"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    其他：</td>
+                    <td nowrap="nowrap" colspan="6">
+                    <input id="qt" name="qt" type="text" style="width:99%; height:18px;border:0px; "/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    手术开始时间：</td>
+                    <td nowrap="nowrap" colspan="2">
+                    <input id="kssj" name="kssj" type="text" style="width:150px; height:18px;border:0px;"/></td>
+                    <td nowrap="nowrap">
+                    手术结束时间：</td>
+                    <td nowrap="nowrap" colspan="3">
+                    <input id="jssj" name="jssj" type="text" style="width:150px; height:18px;border:0px; "/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    手术名称：</td>
+                    <td nowrap="nowrap" colspan="6">
+                    有晶体眼后房型人工晶体植入术（ICL<input type="checkbox" id="ssmc1" name="ssmc" style="width:18px; height:18px;border:0px;" value="1" />
+                    TICL<input type="checkbox" id="ssmc2" name="ssmc" style="width:18px; height:18px;border:0px;" value="2"/>
+                    PRL<input type="checkbox" id="ssmc3" name="ssmc" style="width:18px; height:18px;border:0px;" value="3"/>)</td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    植入人工晶体：</td>
+                    <td nowrap="nowrap" colspan="3">
+                    厂家：<input id="cj" name="cj" type="text" style="width:88%; height:18px;border:0px; "/></td>
+                    <td nowrap="nowrap" colspan="3">
+                    型号：<input id="xh" name="xh" type="text" style="width:77%; height:18px;border:0px;"/></td>
+                </tr><tr>
+                    <td nowrap="nowrap">
+                    主刀医师：</td>
+                    <td nowrap="nowrap">
+          <input type='text' id='zdys'  style="width:99%; height:23px; overflow:visible;border:0px;border:0px;" onclick="openFloatDiv('zdys')" onkeydown="closeFloatDiv()"/>
+          <input type='hidden' id='zdys_gh'/>
+          </td>
+                    <td nowrap="nowrap">
+                    助手医师:</td>
+                    <td nowrap="nowrap">
+                    <input type='text' id='zsys'  style="width:99%; height:23px; overflow:visible;border:0px;border:0px;" onclick="openFloatDiv('zsys')" onkeydown="closeFloatDiv()"/>
+                    <input type='hidden' id='zsys_gh'/>
+                    <td nowrap="nowrap" align="right">
+                    护士:</td>
+                    <td nowrap="nowrap" colspan="2">
+                    <input type='text' id='hs'  style="width:99%; height:23px; overflow:visible;border:0px;border:0px;" onclick="openFloatDiv('hs')" onkeydown="closeFloatDiv()"/>
+                    <input type='hidden' id='hs_gh'/>
+          </td>
+                </tr><tr>
+                    <td nowrap="nowrap" colspan="5" align="right" style=" border-bottom:1px solid;">
+                    签名:</td>
+                    <td nowrap="nowrap" colspan="2" style=" border-bottom:1px solid;">
+                 <label id="ssjl_qm" onclick="openFloatDiv1('ssjl_qm','ssjl_qm_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                 <label id="ssjl_qm_gh" style="display:none;">
+          </td>
+                </tr>
+        </table>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+                    <td nowrap="nowrap" align="left" colspan="2">
+                    <strong>三、手术经过</strong></td>
+                </tr><tr>
+                    <td nowrap="nowrap" colspan="2" style="line-height:20px;">
+                    1、透明角膜缘辅助切口位于<input type="text" id="ssjg1" style="width:30px;border:0px;"/>点。<br />
+                    2、辅助切口前方注入甲基纤维素粘弹剂。<br />
+                    3、透明角膜缘主切口自<input type="text" id="ssjg31" style="width:30px;border:0px;"/>点到<input type="text" id="ssjg32"  style="width:30px;border:0px;"/>点，长度<input type="text" id="ssjg33" style="width:30px;border:0px;"/>mm。<br />
+                    4、置入人工晶体（支撑点位于<input type="text" id="ssjg41"  style="width:30px;border:0px;"/>、<input type="text" id="ssjg42"  style="width:30px;border:0px;"/>、<input type="text" id="ssjg43" style="width:30px;border:0px;"/>、<input type="text" id="ssjg44" style="width:30px;border:0px;"/>、点）。（仅用于ICL及TIGl）<br />
+                    5、清除粘弹剂（完全<input type="checkbox" id="ssjg51" name="ssjg5" style="width:18px; height:18px;border:0px;" value="1"/>;
+                    少许残留<input type="checkbox" id="ssjg52" name="ssjg5" style="width:18px; height:18px;border:0px;" value="2"/>;
+                    较多残留<input type="checkbox" id="ssjg53" name="ssjg5" style="width:18px; height:18px;border:0px;" value="3"/>）。<br />
+                    6、切口缝合（无<input type="checkbox" id="ssjg61" name="ssjg6" style="width:18px; height:18px;border:0px;" value='1' />;
+                    间断缝合共<input type="text" id="ssjg62" name="ssjg62" style="width:30px;border:0px;"/>针<input type="checkbox" id="ssjg63" name="ssjg6" style="width:18px; height:18px;border:0px;" value='3'/>）。<br />
+                    7、点必殊眼膏包眼。<br />
+                    8、特殊记录:</td>
+                </tr><tr>
+                    <td nowrap="nowrap" align="right" style=" border-bottom:1px solid;width:80%;">
+                    签名:</td>
+                    <td nowrap="nowrap" style=" border-bottom:1px solid;width:20%">
+                 <label id="ssjg_qm" onclick="openFloatDiv1('ssjg_qm','ssjg_qm_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                 <label id="ssjg_qm_gh" style="display:none;">
+          </td>
+                </tr>
+        </table>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+                    <td nowrap="nowrap" align="right" height="23px">
+                    手术日期:
+                    <label id="nian" style="width:30px;"></label>年<label id="yue" style="width:30px;"></label>月<label id="ri" style="width:30px;"></label>日&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+        </table>
+    </div>
+</div>                                                       

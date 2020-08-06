@@ -1,0 +1,38 @@
+<!-- 体格检查页面 -->
+<div id="physical">
+	<div id="physical_left" class="physical" style="width:500px;margin-left:3px;height:442px;float:left;overflow:auto;">
+		<table id="physical_item" class="physicaltable">
+		</table>
+	</div>
+	<div id="physical_right" class="templet" style="width:288px;height:442px;float:right;border:1px solid #d2d2d2;" fixed>
+		<h3 id="physical_title_h3"><a id="physical_title" style="color:#3333FF;">眼睑</a></h3>
+		<div style="padding:5px;background-color:#e1e1e1;">
+			<table id="physical_search_table">
+				<tr>
+					<td align="center">拼音查询</td>
+					<td align="center"><input id="physical_pinyin" type="text" class="blur"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="physical_selectitem_div" style="height:50px;padding:2px;overflow:auto;border-top:1px solid #d2d2d2;border-bottom:1px solid #d2d2d2;">
+			<table id="physical_selectitem_table" class="optiontable optiontableleft">
+			</table>
+			<ul id="physical_display_tree" style="height:100%;width:100%;border:0;"></ul>
+		</div>
+		<div id="physical_paint" style="width:100%;height:235px;overflow:hidden;">
+			<div id="physical_paint_content" style="height:183px;overflow:hidden;">
+			</div>
+			<div style="height:26px;overflow:hidden;margin-top:2px;">
+				<div id="physical_colorselector" class="painttool" style="float:left;">
+					<a><span class="minus" id="physical_pensize_minus" ></span></a>
+					<a><span class="text"><input type="text" value="1" id="physical_pensize"></span></a>
+					<a><span class="add" id="physical_pensize_add"></span></a>
+					<a><span name="selector" style="background-color:#ff0000;" class="selected"></span></a>
+					<a><span name="selector" style="background-color:#006600;"></span></a>
+					<a><span name="selector" style="background-color:#0000ff;"></span></a>
+				</div>
+				<div id="physical_paint_btns" class="sbtn"><a>放大</a><a>保存</a><a>重画</a></div>
+			</div>
+		</div>
+	</div>
+</div>

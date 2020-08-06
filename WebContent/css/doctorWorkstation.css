@@ -1,0 +1,51 @@
+.right .pt{margin:12px 12px 0; line-height:28px}
+.right .categoryTree .categoryTitle{height:22px; line-height:20px; color:#666}
+.right .categoryTree .categoryTitle a{width:58px; display:block; float:left}
+.right .mcListTag{background: url(../images/tdbg.png) repeat-y; float:left;overflow: auto;}
+.right .mcListTag ul li{border-bottom:1px solid #fff;line-height:23px;padding:10px 0}
+.right .mcListTag ul li p{text-align:center}
+.right .mcListTag ul li.visited,.right .mcListTag ul li.mo{background:url(../images/libghover.png) no-repeat}
+
+.right .mcTag{border-left:1px solid #d2d2d2; border-right:1px solid #d2d2d2;float:left}
+.right .mcTag .mcTitleTag{height:28px; font-weight:bold; width:auto; background:url(../images/tdtitlebg.png) 0 1px repeat-x}
+.right .mcTag h3{display:block; height:26px; line-height:26px; text-align:center; border-bottom:1px solid #d2d2d2; background:url(../images/tdtitlebg.png) repeat-x}
+.right .mcTag p{background:#fff}
+.right .mcTag p textarea{font-size:12px; border:0; width:100%;height:100%}
+
+.right .displayTag .studyTitleTag{width:100%; text-align:center; line-height:30px; font-weight:bold; border-bottom:1px solid #d2d2d2; background:url(../images/tdtitlebg.png) 0 3px repeat-x #F3F3F3}
+.right .displayTag .studyShowTag{background:#fff; overflow-y:scroll}
+.right .displayTag .studyShowTag table{border:1px solid #d2d2d2; width:90%; margin:12px auto}
+.right .displayTag .studyShowTag table th{background:#d2d2d2; line-height:22px; height:22px}
+.right .displayTag .studyShowTag table td{text-align:center; border-top:1px solid #d2d2d2}
+.right .displayTag .studyShowTag ul li{background:#000; width:200px; height:200px; float:left}
+.right .displayTag .studyShowTag ul li a{width:200px; height:180px; display:block; display:table-cell; vertical-align:middle}
+.right .displayTag .studyShowTag ul li a img{border:0}
+.right .displayTag .studyShowTag ul li p{width:200px; background:#fff; height:20px; line-height:20px; text-align:center}
+.right .displayTag .studyListTitleTag{width:100%; text-align:center; line-height:28px; font-weight:bold; border-bottom:1px solid #d2d2d2; background:url(../images/tdtitlebg.png) 0 1px repeat-x; border-top:1px solid #d2d2d2}
+.right .displayTag .studyListTag{overflow:auto;}
+.right .displayTag .studyListTag ul{margin:8px;width:380px}
+.right .displayTag .studyListTag ul li{height:22px; line-height:22px; width:168px; float:left}
+.right .displayTag .studyListTag ul li span{float:left; block:display; width:17px; height:17px; margin:4px 2px 0}
+.right .displayTag .studyListTag ul li.ready span{background:url(../images/menuicon.png) -215px -140px no-repeat}
+.right .displayTag .studyListTag ul li.error span{background:url(../images/menuicon.png) -213px -162px no-repeat}
+.right .displayTag .studyListTag ul li.upload span{background:url(../images/menuicon.png) -233px -140px no-repeat}
+.right .displayTag .studyListTag ul li.wait span{background:url(../images/menuicon.png) -231px -161px no-repeat}
+.right .displayTag .studyListTag ul li.examing span{background:url(../images/menuicon.png) -158px -160px no-repeat}
+.mainBody{overflow:auto}
+.mainBody ul{margin:8px}
+.mainBody ul li{width:238px; height:136px;padding:8px; float:left; line-height:22px; border:1px solid #b4b4b4; background:#f9f9f9; color:#000; margin:1px; overflow:hidden; cursor:pointer;}
+.mainBody ul li:hover{ background:#d9f6f9;}
+ .mainBody ul li a{display:block; border:1px solid #fff; width:100px; height:100px; float:left; margin:4px; overflow:hidden}
+.mainBody .jtime{ height:22px; background:#e9e9e9; text-align:center;}
+.MCmenuDiv{position:absolute;width:108px; background:rgb(247, 247, 247); top:10px;left:10px; border:1px solid #d2d2d2}
+.MCmenuDiv a{display:block; height:22px; line-height:22px; padding-left:18px; border-bottom:1px solid #d2d2d2;}
+.MCmenuDiv a:hover{background:#ff0000;color:#fff}
+
+.advTag{margin:12px}
+.advTag ul li{width:320px; height:22px; line-height:22px; text-align:left;}
+.advTag ul li input{float:left; width:200px}
+.advTag ul li span{width:108px; float:left; text-align:right; display:bolck; font-size:12px; margin-right:8px}
+
+.studyShowTag table{border:1px solid #d2d2d2; width:90%; margin:12px auto}
+.studyShowTag table th{background:#d2d2d2; line-height:22px; height:22px}
+.studyShowTag table td{text-align:center; border-top:1px solid #d2d2d2}

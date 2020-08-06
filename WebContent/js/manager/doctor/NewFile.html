@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript" src="jquery-1.10.1.js" ></script>
+<script type="text/javascript" >
+$(document).ready(function(){
+	var doctor_id = 'songrenfei';
+	var password = 'admin';
+	var patient_id = '16';
+	var data = {"doctor_id":doctor_id,"password":password,"patient_id":patient_id};
+	var url = "http://localhost:8080/OIMSV3/publish/tj_index.htm";
+	
+	$.ajax({
+        url : url,
+        data : data,
+        async : true,
+        type : "POST",
+        dataType : 'json',
+        success : function(data){}
+    });
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

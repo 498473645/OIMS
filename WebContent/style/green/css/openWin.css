@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**********弹出DIV样式**********/
+.openWin{ background:#f7f7f7; border:1px solid #b0b0b0; overflow:hidden; width:300px; text-align:center; overflow-y:auto;}
+.openWin .opentitle{ background:url(../images/opentitlebg.png) repeat-x left top; height:28px; border-bottom:1px solid #72b6bf; font-size:14px; font-weight:bold; padding-left:4px; line-height:28px; text-align:left; padding-right:10px; }
+.openWin .opentitle .closediv{ display:block; height:23px;float:right; padding-top:2px; width:18px; }
+.openWin .opentitle .closediv a{ display:block; height:23px; float:right;}
+.openWin .opentitle .closediv a.small{ width:26px; background:url(../images/small.png) no-repeat;}
+.openWin .opentitle .closediv a.small:hover{width:26px; background:url(../images/small1.png) no-repeat;}
+.openWin .opentitle .closediv a.big{ width:26px; background:url(../images/big.png) no-repeat;}
+.openWin .opentitle .closediv a.big:hover{ width:26px; background:url(../images/biga.png) no-repeat;}
+.openWin .opentitle .closediv a.biga{ width:26px; background:url(../images/big1.png) no-repeat;}
+.openWin .opentitle .closediv a.biga:hover{ width:26px; background:url(../images/big1a.png) no-repeat;}
+.openWin .opentitle .closediv a.close{ width:24px; background:url(../images/close.png) no-repeat;}
+.openWin .opentitle .closediv a.close:hover{width:24px; background:url(../images/close1.png) no-repeat;}
+.openWin .opentitle span{ width:16px; height:18px; float:left; display:block; margin-right:5px; margin-top:4px; }
+
+.openWin .opencontent{  background:#f7f7f7; padding:0px; overflow:auto }
+.openWin .opencontent .more{ display:block; float:right; width:20px; height:38px; background:url(../images/more.png) no-repeat center;}
+.openWin .opencontent .openbtn{ height:38px; line-height:38px; vertical-align:middle; padding-left:10px; }
+/************/
+
+.ji{background: #C0C0C0;}
+.ou{background: #FFFFFF;}
+.openWin .opencontent .openbtn div ul li{line-height:25px; width:100px; text-align: center; }
+.openWin .opencontent .openbtn div ul li:hover{background: #0000FF; }
+
+/************/
+
+.openWin .check{  padding:10px;}
+.openWin .check .checkdiv1{ background:#f1f1f1; border:1px solid #c2c2c2; padding:5px; overflow-y:auto; overflow-x:hidden;   }
+.openWin .check .checkdiv{ background:#f1f1f1; border:1px solid #c2c2c2; padding:5px; float:left; width:715px; overflow-y:auto; overflow-x:hidden; clear:both;  }
+.checkdiv1 table td.sl{ background:#e1e1e1; font-weight:bold; }
+.openWin .check p{ line-height:25px; height:25px; text-align:left; vertical-align:middle; width:100%;}
+.openWin .opencontent .imgview{ padding:10px; padding-right:0px; height:430px; overflow-y:auto; overflow-x:hidden; }
+.openWin .opencontent .imgview ul li img{ width:200px; height:156px; display:block; float:left;padding-bottom:8px;border:none; cursor:pointer;}
+.openWin .opencontent .imgview ul li{ width:200px; height:186px; float:left; background:#d8d8d8; margin-right:10px; margin-bottom:10px; padding-bottom:5px;}
+.openWin .opencontent .imgview ul li p{ line-height:10px; text-align:center;cursor:pointer; }
+
+.openWin .opencontent .imgview ul li:hover{ background:#6db2bb;}
+.openWin .opencontent table { width:98%;}
+.openWin .opencontent table td{ height:30px; padding-left:2px; padding-right:2px;  }
+
+.openbutton{ height:38px; background:#f1f1f1; border-top:1px solid #e6e6e6;padding-top:15px; text-align:center; clear:both;}
+.openbutton a{ height:25px; padding-right:28px; padding-left:30px; padding-top:7px; padding-bottom:11px; width:88px; background:url(../images/bigbtnbg.png) no-repeat center; line-height:27px; vertical-align:middle; margin-right:3px; }
+.openbutton a:hover{ background:url(../images/bigbtnbg1.png) no-repeat center;}
+.openbutton a span{  width:17px; height:17px;  padding-left:7px; padding-right:8px; margin-right:5px; }
+.openWin .openbuttonthree{ height:40px; width:310px; clear:both; padding-top:15px; margin:0px auto;  }
+.openWin .openbuttonthree a{ display:block; width:88px; float:left;height:27px;  background:url(../images/bigbtnbg.png) no-repeat; line-height:27px; vertical-align:middle; margin-right:15px; }
+.openWin .openbuttonthree a:hover{ background:url(../images/bigbtnbg1.png) no-repeat;}
+.openWin .openbuttonthree a span{ display:block; float:left; width:17px; height:17px; margin-left:16px; margin-top:5px; margin-right:4px;  }
+.openWin.error .opencontent{ background:url(../images/error.png) no-repeat 35px 35px;  font-size:14px; padding-left:108px;  padding-right:8px;display:table-cell}
+
+.openWin .opencontent p.text{ width:180px; padding:40px 0px;   font-size:14px; }
+.openWin.alert .opencontent{ background:url(../images/warning.png) no-repeat 35px 35px; padding-left:108px; font-size:14px;padding-right:8px;display:table-cell}
+.openWin.confirm .opencontent{ background:url(../images/confirm.png) no-repeat 35px 35px; padding-left:108px; font-size:14px;padding-right:8px; display:table-cell}
+
+.openWin.success .opencontent{ background:url(../images/success.png) no-repeat 35px 35px; padding-left:108px; font-size:14px;padding-right:8px; display:table-cell}
+.openWin .tableinfo{ height:38px;}
+
+.openWin .checkdiv .position{width:33%; float:left;  }
+.openWin .checkdiv .checkbilling{ width:340px;float:left; overflow:hidden; overflow-y:auto;}
+.openWin .checkdiv  .checkimg{ width:470px; float:right; margin-right:3px; overflow:hidden;} 
+.openWin .checkdiv .eyetext{ padding-top:5px; height:60px;}
+.eyetext textarea{ width:99%; height:55px;}
+.openWin .checkdiv span.os{ font-size:14px; font-weight:bold; float:right; cursor:pointer;}
+.openWin .checkdiv span.od{ font-size:14px; font-weight:bold;float:right; cursor:pointer;}
+.openWin .checkdiv span.saveeyes{float:right;}
+.openWin .checkdiv .disease{ border:1px solid #d6d6d6; margin-right:6px; background:#ffffff; overflow-x:hidden; overflow-y:auto; margin-bottom:6px;}
+.openWin .checkdiv .disease .title{ height:22px; background:url(../images/diseasetitlebg.png) repeat-x left top; font-size:12px; font-weight:normal; line-height:22px; vertical-align:middle; text-align:left;}
+.openWin .checkdiv .disease .title span{ width:10px; background:url(../images/icon1.png) no-repeat center; display:block; height:22px; float:left; margin-right:5px;}
+.openWin .checkdiv .disease .title span.open{ display:block; height:22px; width:18px; float:right; margin-right:6px; background:url(../images/open.png) no-repeat center;}
+.openWin .checkdiv .disease ul{ padding:8px; height:130px;}
+.openWin .checkdiv .disease ul li{ text-align:left; line-height:30px; height:30px; border-bottom:1px dashed #aeaeae;}
+.openWin .checkdiv .disease ul li span{ display:block; height:30px; width:39px; float:right; background:url(../images/tubg.png) no-repeat center; text-align:center; line-height:30px; vertical-align:middle; cursor:pointer;}
+.openWin .checkdiv .disease ul li span.over{ display:block; height:30px; width:39px; float:right; background:url(../images/tubg1.png) no-repeat center; text-align:center; line-height:30px; vertical-align:middle;cursor:pointer;}
+.openWin .checkdiv .disease ul li span:hover{ background:url(../images/tubg1.png) no-repeat center;cursor:pointer;}
+.openWin .checkdiv .disease .title span.close{ display:block; height:22px; width:18px; float:right; margin-right:6px; background:url(../images/close2.png) no-repeat center;}
+.openWin .pople{ height:110px; width:114px; text-align:center;padding-top:5px;}
+ 
+.openWinimg{ background:#f7f7f7; border:1px solid #b0b0b0; overflow:hidden; width:418px; text-align:center;height:150px; padding:12px;}
+.openWinimg img{ margin-right:9px;}
+.eyeb{ height:28px; clear:both; text-align:left; padding-left:10px; padding-top:15px; background:url(../images/eyebg.png) repeat-x; border-bottom:1px solid #aeaeae; font-size:16px; font-weight:bold;}
+.avdsearch{ clear:both; border:1px solid #d0d0d0; padding:5px; background:#e7f3f4;  }
+.avdsearch table td{  height:25px; }
+
+
+.avdopenbutton{ height:30px; background:#e7f3f4 url(../images/bg1.png) repeat-x left bottom;padding-top:5px; text-align:center;}
+.avdopenbutton a{ height:27px; padding-right:28px; padding-left:28px; padding-top:5px; padding-bottom:11px; width:88px; background:url(../images/bigbtnbg.png) no-repeat center; line-height:27px; vertical-align:middle; margin-right:3px; }
+.avdopenbutton a:hover{ background:url(../images/bigbtnbg1.png) no-repeat center;}
+.avdopenbutton a span{  width:17px; height:17px; padding-top:-2px; padding-bottom:3px; padding-left:7px; padding-right:8px; margin-right:5px;}
+.openWin .opencontentvs{ padding:8px;}
+.openWin .opencontentvs table{ height:35px; border:1px solid #d5d5d5; border-collapse:collapse;}
+.openWin .opencontentvs table td{ border:1px solid #d5d5d5; border-collapse:collapse;}
+.openWin .opencontentvs table.vstime{ background:#dbf1f5; text-align:center; font-weight:bold; color:#007183;}
+.openWin .opencontentvs table.vstime td.timew{ width:100px;}
+.openWin .opencontentvs table.vstime td.timetdw{ width:228px;}
+.openWin .opencontentvs .vsmenu{padding-left:5px; height:27px; background:url(../images/vsbg.png) repeat-x top; border:1px solid #d6d6d6; border-top:none; text-align:left; font-weight:bold; color:#02788f; line-height:27px; vertical-align:middle;}
+.openWin .opencontentvs .vsmenu span.vsopen{ display:block; float:left; width:20px; height:16px; padding-top:10px; background:url(../images/vsopen.png) no-repeat center; }
+.openWin .opencontentvs table.opentable td{ width:218px; line-height:20px; text-align:center; padding:5px;}
+.openWin .opencontentvs table.opentable td.opentd{ width:87px; background:#e8e8e8; text-align:right; padding-right:10px;}
+.openWin .opencontentvs .vsmenu span.vscolse{display:block; float:left; width:20px; height:16px; padding-top:10px; background:url(../images/vsclose.png) no-repeat center; }
+
+.opencontent table.chuf th{ border:1px solid #d2d2d2; border-collapse:collapse; background:url(../images/thbg.png) repeat-x ; height:24px;}
+.opencontent table.chuf{border:1px solid #d2d2d2; border-collapse:collapse; margin-bottom:15px; }
+.opencontent table.chuf td{border:1px solid #d2d2d2; border-collapse:collapse; padding-right:3px; }
+.btnchu{ padding:10px 0px; height:20px;  padding-right:10px; }
+.contentchu{ margin-left:10px;}
+.opencontent table.chuf td.chudel{ background:url(../images/closes.png) no-repeat center;}

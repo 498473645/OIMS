@@ -1,0 +1,36 @@
+<input type="hidden" name="id" />
+<table style="width:608px">
+	<tr>
+		<td style="font-weight:bold; text-align:right">手术名称</td><td colspan="3"><input type="text" name="name" id="name" style="width:100%" /></td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold; text-align:right">手术大小</td>
+		<td>
+			<input type="radio" name="operationSize" value="0" id="operationSize0" /><label for="operationSize0">小手术 &nbsp; </label>
+			<input type="radio" name="operationSize" value="1" id="operationSize1" /><label for="operationSize1">中等手术 &nbsp; </label>
+			<input type="radio" name="operationSize" value="2" id="operationSize2" /><label for="operationSize2">大手术 &nbsp; </label>
+		</td>
+		<td style="font-weight:bold; text-align:right">手术级别</td>
+		<td>
+			<input type="radio" name="levelFlag" value="0" id="levelFlag0" /><label for="levelFlag0">一级手术 &nbsp; </label>
+			<input type="radio" name="levelFlag" value="1" id="levelFlag1" /><label for="levelFlag1">二级手术 &nbsp; </label>
+			<input type="radio" name="levelFlag" value="2" id="levelFlag2" /><label for="levelFlag2">三级手术 &nbsp; </label>
+			<input type="radio" name="levelFlag" value="3" id="levelFlag3" /><label for="levelFlag3">四级手术 &nbsp; </label>
+		</td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold; text-align:right">HIS编码</td><td><input type="text" name="operationCode" id="operationCode" style="width:100%" /></td>
+		<td style="font-weight:bold; text-align:right">收费编码</td><td><input type="text" name="priceCode" id="priceCode" style="width:100%" /></td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold; text-align:right">收费金额</td><td><input type="text" name="price" id="price" style="width:100%" /></td>
+		<td style="font-weight:bold; text-align:right">拼音简写</td><td><input type="text" name="inputCode" id="inputCode" style="width:100%" /></td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold; text-align:right">手术说明</td>
+		<td colspan="3">
+			<textarea name="infomation" id="infomation" style="width:100%; height:108px"></textarea>
+		</td>
+	</tr>
+	<tr><td></td><td colspan="3"><div class="openbutton"><a><span class="advsumit"></span>提交</a><a><span class="advreset"></span>重置</a></div></td></tr>
+</table>

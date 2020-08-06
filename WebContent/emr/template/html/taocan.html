@@ -1,0 +1,32 @@
+<input type="hidden" name="taocanId" id="taocanId" />
+<table>
+	<tr>
+		<td style="width:58px; text-align:right;">套餐名称</td><td algin="left"><input type="text" name="tcmc" id="tcmc" style="width:60%" />&nbsp; &nbsp; <input type="checkbox" value="true" name="belong" id="belong" /><label for="belong">共享</label></td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;">明细</td><td>
+			<div class="list" style="padding:0; height:350px; overflow:auto">
+				<table id="mingxi" style="width:100%">
+					<tr><th style="width:88px">类别</th><th>名称</th><th style="width:40px">数量</th><th style="width:108px">眼别/标本</th><th style="width:128px">执行科室</th><th style="width:10px"><a href="#" id="addTaocanMX" title="增加">+</a></th></tr>
+					<tr>
+					<td>
+						<select name="categoryId">
+							<option value="13">眼科检查</option>
+							<option value="14">科外检查</option>
+							<option value="15">化验</option>
+						</select>
+					</td>
+					<td><input type="text" name="xmmc" style="border:0; width:100%; height:18px" /><input type="hidden" name="jcxmId" /></td>
+					<td><input type="text" name="count" style="border:0; width:100%; height:18px" /></td>
+					<td><select name="yanbiebiaoben"></select></td>
+					<td><select name="zhixingkeshiSelected"></select></td>
+					<td><a href="javascript:void(0);" class="removeOne" title="删除" style="font-weight:bold">-</a></td>
+				</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;">备注</td><td style="text-align:left" colspan="3"><textarea name="beizhu" id="beizhu" style="width:100%"></textarea></td>
+	</tr>
+</table>
