@@ -1194,11 +1194,11 @@ function showRGJTChuRukuForm(category){
 					var td=$('<td style="height:140px"/>').appendTo(tr);
 					td.text(i+1);
 					td=$('<td/>').appendTo(tr);
-					td.text('人工晶体');
+					td.text(this.showName?this.showName:'');
 					td=$('<td/>').appendTo(tr);
 					td.text(this.info?this.info:'');
 					td=$('<td/>').appendTo(tr);
-					td.text('人工晶体');
+					td.text(this.showName?this.showName:'');
 					td=$('<td/>').appendTo(tr);
 					td.text(this.typeName);
 					td=$('<td/>').appendTo(tr);
@@ -2079,7 +2079,8 @@ function showJingtixhPageList(btns){
 			          {title:"ID",key:"id"},
 			          {title:"型号名称",key:"name"},
 			          {title:"编码缩写",key:"code"},
-			          {title:"晶体型号简要说明",key:"infomation"}
+			          {title:"晶体型号简要说明",key:"infomation"},
+				      {title:"注册名称",key:"showName"}
 			          ],
 			data : {// data表示传的参数
 				currentPage : 1,

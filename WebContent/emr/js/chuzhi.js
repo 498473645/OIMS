@@ -24,7 +24,7 @@ var saveSpecialTreat='/publish/emrOrder/saveOrUpdateSpecialTreat.htm';
 
 var jctsPaintMovie = null;
 var chuzhiSearching = false;
-
+var jiuzhenId;//住院证初始就诊ID
 var findJcxmUrl='/publish/jcxm/getJcxmById.htm';
 
 //根据EMROrder的ID查询对应的检查在HIS/LIS上的缴费状态
@@ -368,13 +368,15 @@ if($("#buttons span.zyz") == null || $("#buttons span.zyz") == undefined || $("#
 		$("<a style='display: block;'><span class='zyz' />住院证</a>").appendTo($("#buttons"));
 		$("#buttons span.zyz").parent().click(function(){
 			//住院证弹出框
-			zyzForm();
+			zyzForm(currentVisit);
 		});
 	}
 }
 
 //提交保存住院证 并且弹出打印预览界面
-function zyzForm(){	
+function zyzForm(visitList){
+	currentVisit = visitList;
+	jiuzhenId = visitList.id;
 	var view = addZyzDialog();
 	var form_saveZyz = $("<form/>").attr("id", "form_saveZyz").attr(
 			"action", contextPath + "/publish/emr/saveOrUpdateEMRInHospitalCard.htm")
@@ -382,10 +384,13 @@ function zyzForm(){
 	$(view).appendTo(form_saveZyz);
 	var div_openbutton = $("<div/>").attr("id", "div_openbutton").attr("class",
 			"openbutton").appendTo(form_saveZyz);// 底部div
-	
+	if (jiuzhenId == undefined){
+		$.oimsAlert("当天患者没有住院证记录!");
+		return;
+	}
 	//查询住院证
 	var emrInHospitalInfo = getJSONData("/publish/emr/findZyzByJiuzhenId.htm", {//zyzid
-		jiuzhenId : currentVisit.id,
+		jiuzhenId : jiuzhenId,
 		tag : Math.random()
 	}, "post");
 	if(emrInHospitalInfo != null && emrInHospitalInfo != undefined && emrInHospitalInfo.state && emrInHospitalInfo.obj != null){
@@ -491,7 +496,7 @@ function saveZyz(){
 	
 	//查询住院证
 	var emrInHospitalInfo = getJSONData("/publish/emr/findZyzByJiuzhenId.htm", {//zyzid
-		jiuzhenId : currentVisit.id,
+		jiuzhenId : jiuzhenId,
 		tag : Math.random()
 	}, "post");
 	if(emrInHospitalInfo != null && emrInHospitalInfo != undefined && emrInHospitalInfo.state && emrInHospitalInfo.obj != null){
@@ -510,7 +515,7 @@ function saveZyz(){
 	}
 	var zyz_lszd = "";//获取诊断内容 并赋值
 	var zhenduanList = getJSONData("/publish/emr/getExistsDiagnosis.htm", {
-		visitId : currentVisit.id,
+		visitId : jiuzhenId,
 		tag : Math.random()
 	}, "post");
 	
@@ -614,13 +619,13 @@ function saveZyz(){
 function emr_zyz_window_open(){
 	//查询住院证
 	var emrInHospitalInfo = getJSONData("/publish/emr/findZyzByJiuzhenId.htm", {//zyzid
-		jiuzhenId : currentVisit.id,
+		jiuzhenId : jiuzhenId,
 		tag : Math.random()
 	}, "post");
 	if(emrInHospitalInfo != null && emrInHospitalInfo != undefined && emrInHospitalInfo.state && emrInHospitalInfo.obj != null){
 		emrInHospitalInfo = emrInHospitalInfo.obj;
 		//页面跳转 传递挂号id 再通过调取父页面zyzloadInformation函数 获取数据信息 
-		var zyzWindow = window.open(contextPath+"/emr/zyzempty.jsp?visiteId="+currentVisit.id,'channelmode=yes,resizable=1');
+		var zyzWindow = window.open(contextPath+"/emr/zyzempty.jsp?visiteId="+jiuzhenId,'channelmode=yes,resizable=1');
 		
 	}else{
 		$.oimsAlert("未读取到住院证信息");
@@ -631,6 +636,7 @@ function emr_zyz_window_open(){
  * 获取打印住院证的信息
  * */
 function zyzloadInformation(currentVisitID){
+
 	var emrInHospitalInfo = getJSONData("/publish/emr/findZyzByJiuzhenId.htm", {
 		jiuzhenId : currentVisitID,
 		tag : Math.random()
@@ -707,8 +713,10 @@ function zyzloadInformation(currentVisitID){
 		}
 		var zyz_xingming = currentPatient.xingming;
 		var zyz_patientid = currentPatient.binglihao;
-		var zyz_nianling = currentPatient.age;
-		var zyz_xingbie = currentPatient.sex;
+		var zyz_nianling = _emr_calculteAge(formatDate(currentPatient.shengri.time));
+		var man = '男';
+		var women = '女'
+		var zyz_xingbie = currentPatient.xingbie?man:women;
 		var zyz_job = currentPatient.job;
 		var zyz_OIMSPatientid = currentPatient.id;
 		var zyz_zyzlx = parseInt(emrInHospitalInfo.inpCardType);

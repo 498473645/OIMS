@@ -559,6 +559,7 @@ function _emr_showWorkPanel(li,bl){
 	var patient = $('body').data('patient');
 	var data = getJSONData(EMR_PATIENT_INFO_URL,{binglihao:patient.binglihao},"POST");
 	currentPatient=data.obj.patient;
+	visitList = data.obj.visitList;
 
 	var index = li.index();
 	if(!li.hasClass('visited')){
@@ -597,8 +598,9 @@ function _emr_showWorkPanel(li,bl){
 					});
 
 					$("#zyz").click(function(){
+						
 						//住院证弹出框
-						zyzForm();
+						zyzForm(visitList[index]);
 					});
 
 					function speClickPDF(jcdid,data_getPDFListByJcd,data_getReportListByJcd){

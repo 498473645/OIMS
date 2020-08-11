@@ -486,7 +486,7 @@ function _emr_patientList_obj() {
 				title : "年龄",// "年龄",
 				key : "birthday",
 				func : function(d) {
-					return getAge(d);
+					return _emr_calculteAge(formatDate(d));
 				}
 			}, {
 				title : "联系方式",// "联系方式",

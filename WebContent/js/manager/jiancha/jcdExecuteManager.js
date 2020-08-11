@@ -1230,7 +1230,7 @@ function showGuoHaoJcdList(btns) {
 		return;
 	pageTitle = "已过号检查单";
 	init();
-	// shebeiManager();// 检查设备配置验证(根据工号和IP判断)
+	shebeiManager();// 检查设备配置验证(根据工号和IP判断)
 	var passJcdFunTemplate = "<table width='100%' border='0' cellspacing='0' cellpadding='0'>"
 			+ "<tr>"
 			+ "<td width='23%' class='leftalign' ><input name='search_binglihao_xingming' type='text' class='blurview' id='search_binglihao_xingming' onfocus=\"this.className='focus'\" onblur=\"this.className='blur'\" value="
@@ -1664,7 +1664,7 @@ function showBuChuanJcdList(btns) {
 		return;
 	pageTitle = "待补传检查单";
 	init();
-	// shebeiManager();// 检查设备配置验证(根据工号和IP判断)
+	shebeiManager();// 检查设备配置验证(根据工号和IP判断)
 	var passJcdFunTemplate = "<table width='100%' border='0' cellspacing='0' cellpadding='0'>"
 			+ "<tr>"
 			+ "<td width='23%' class='leftalign' ><input name='search_binglihao_xingming' type='text' class='blurview' id='search_binglihao_xingming' onfocus=\"this.className='focus'\" onblur=\"this.className='blur'\" value="

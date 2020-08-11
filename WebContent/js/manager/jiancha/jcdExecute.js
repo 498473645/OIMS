@@ -47,7 +47,7 @@ function jishi() {
 }
 // 检查设备配置验证(整理)
 function shebeiManager() {
-	debugger
+	
 	var glsbListUrl = "/publish/shebei/getShebeiListForUserAndIp.htm";// 根据工号和IP获得设备信息
 	var data = getJSONData(glsbListUrl, {
 		tag : Math.random()
@@ -63,6 +63,7 @@ function shebeiManager() {
 
 function jcysManager(){
 	// 检查医生下拉框赋值
+	
 	var jcysData = getJSONData(
 			"/publish/yuangong/getJianChaDoctorByBumenAndQuanxian.htm", {
 				tag : Math.random()
@@ -329,9 +330,9 @@ function showExecuteJcdList(btns) {
 			+ "导入" + "</a>" + "</div>" + "</td>" + "</tr>" + "</table>";
 	$("<div/>").attr("id", "advquery").addClass("advquery").appendTo("#right");
 	$(executeJcdListTemplate).appendTo("#advquery");
-	// if (task.jcsbid != null && task.jcsbid != "") {
-		btnProwerConfig(btns);// 按钮加上权限
-	// }
+	if (task.jcsbid != null && task.jcsbid != "") {
+		 btnProwerConfig(btns);// 按钮加上权限
+	}
 	loadExecuteJcdList();// 待检查检查单列表
 	$("#search_binglihao_xingming").val("").focus();
 	$("#search_binglihao_xingming").click(function() {
@@ -657,7 +658,6 @@ function seniorSearchReset_executeJcd() {
 
 /** ****************************************开始检查按钮调用的方法开始****************************************** */
 function startJiancha() {
-	debugger
 	var blh = $("#searchId").val();
 	if (blh == "" || blh == "请输入病历号或刷卡后回车") {
 		$.oimsAlert("请选择需要操作的检查单");
@@ -882,7 +882,6 @@ function init_Baogao_Moban(baogaoMoban_jcd){
 
 // 打开出报告窗口(整理)
 function openDialog_outBaogao_baogao_wenzi() {
-	debugger
 	importJS("/js/manager/baogao/baogaoController.js");
 	dataObjects_choice = null;// 选中行的数据
 	var dataObjects = getCheckBoxValue();

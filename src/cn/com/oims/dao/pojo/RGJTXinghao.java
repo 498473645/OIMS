@@ -1,13 +1,7 @@
 package cn.com.oims.dao.pojo;
 
+import javax.persistence.*;
 import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "rgjt_xinhao")
@@ -24,6 +18,9 @@ public class RGJTXinghao implements Serializable {
   
   @Column(length = 20, nullable = false)
   private String code;
+
+  @Column(name="SHOW_NAME", length = 50, nullable = false)
+  private String showName;
   
   @Column(length = 500)
   private String infomation;
@@ -58,5 +55,13 @@ public class RGJTXinghao implements Serializable {
   
   public void setInfomation(String infomation) {
     this.infomation = infomation;
+  }
+
+  public String getShowName() {
+    return showName;
+  }
+
+  public void setShowName(String showName) {
+    this.showName = showName;
   }
 }

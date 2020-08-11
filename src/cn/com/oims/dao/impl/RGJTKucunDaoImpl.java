@@ -1,28 +1,13 @@
 package cn.com.oims.dao.impl;
 
 import cn.com.oims.dao.IRGJTKucunDao;
-import cn.com.oims.dao.pojo.RGJTCgmx;
-import cn.com.oims.dao.pojo.RGJTCgsq;
-import cn.com.oims.dao.pojo.RGJTChukuSQ;
-import cn.com.oims.dao.pojo.RGJTChukusqmx;
-import cn.com.oims.dao.pojo.RGJTCrkls;
-import cn.com.oims.dao.pojo.RGJTCrklx;
-import cn.com.oims.dao.pojo.RGJTCrkmx;
-import cn.com.oims.dao.pojo.RGJTKucun;
-import cn.com.oims.dao.pojo.RGJTKucunMX;
-import cn.com.oims.web.form.RGJTBaobiaoForm;
-import cn.com.oims.web.form.RGJTCaigouSearchForm;
-import cn.com.oims.web.form.RGJTChukuSearchForm;
-import cn.com.oims.web.form.RGJTKucunLSSearchForm;
-import cn.com.oims.web.form.RGJTKucunSearchForm;
+import cn.com.oims.dao.pojo.*;
+import cn.com.oims.web.form.*;
 import com.codesnet.common.MultiUtils;
 import com.codesnet.common.Page;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.springframework.stereotype.Component;
+
+import java.util.*;
 
 @Component
 public class RGJTKucunDaoImpl extends BaseDaoImpl implements IRGJTKucunDao {
@@ -436,7 +421,7 @@ public class RGJTKucunDaoImpl extends BaseDaoImpl implements IRGJTKucunDao {
   
   @Override
   public List<Map<String, Object>> getJingTiDetalsByOperationId(Long operationId) {
-    String hql = "select new map(rmx.id as id,rcj.name as manufacturer,rxh.name as typeName,rplx.name as panTypeName,rmx.diopter as diopter,rtg.aConstant as aConstant,rtg.surfaceDiameter as surfaceDiameter,rtg.diameter as diameter,rmx.sn as sn,rmx.expiTime as expiTime,rmx.batchNumber as batchNumber,rmx.quantity as quantity,rxh.infomation as info,rtg.price as price) from RGJTCrkmx rmx,RGJTCjtglx rtg,RGJTChangjia rcj,RGJTXinghao rxh,RGJTPanleixing rplx where rmx.proId=rtg.id and rtg.manufacturer=rcj.id and rtg.typeId=rxh.id and rtg.panTypeId=rplx.id and  rmx.operationId=" + operationId + " and rmx.note is null";
+    String hql = "select new map(rmx.id as id,rcj.name as manufacturer,rxh.name as typeName,rplx.name as panTypeName,rmx.diopter as diopter,rtg.aConstant as aConstant,rtg.surfaceDiameter as surfaceDiameter,rtg.diameter as diameter,rmx.sn as sn,rmx.expiTime as expiTime,rmx.batchNumber as batchNumber,rmx.quantity as quantity,rxh.infomation as info,rxh.showName as showName, rtg.price as price) from RGJTCrkmx rmx,RGJTCjtglx rtg,RGJTChangjia rcj,RGJTXinghao rxh,RGJTPanleixing rplx where rmx.proId=rtg.id and rtg.manufacturer=rcj.id and rtg.typeId=rxh.id and rtg.panTypeId=rplx.id and  rmx.operationId=" + operationId + " and rmx.note is null";
     List<Map<String, Object>> list = this.hibernateTemplate.find(hql);
     return list;
   }
