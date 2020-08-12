@@ -495,7 +495,7 @@ function bl_set_jbxx_er(blh){
 	//$("#caseNumber").text(jbxx.jz_id);
 	$("#show_bl_er").find("#caseNumber").text(jbxx.blh);
 	$("#show_bl_er").find("#jhr").text(jbxx.hzlxr);
-	//$("#show_bl_er").find("#cli_date").text(jbxx.jzrq);
+	$("#show_bl_er").find("#cli_date").val(jbxx.jzrq);
 }
 function ssjl_set_jbxx(blh){
 	var jbxx = getJbxx_qg(blh);
@@ -522,7 +522,7 @@ function bl_set_jbxx(blh){
 	$("#show_bl").find("#sex").text(jbxx.sex);
 	$("#show_bl").find("#birthday").text(jbxx.birthday);
 	$("#show_bl").find("#job").val(jbxx.gzdw);
-	//$("#show_bl").find("#cli_date").text(jbxx.jzrq);
+	$("#show_bl").find("#cli_date").val(jbxx.jzrq);
 	$("#show_bl").find("#address").val(jbxx.address);
 	$("#show_bl").find("#cellphone").val(jbxx.dianhua);
 	$("#show_bl").find("#age").text(jbxx.age);
@@ -4460,6 +4460,16 @@ function ti_qgss(autoSaveTag){
 		if(qgss_tmp == 0){
 			$("#qgss_temp").val(1);
 			var temp = ssjl_get();
+			if (temp.recorder == '') {
+				$.oimsAlert("记录人不能为空！");
+				$("#qgss_temp").val(0);
+				return;
+			}
+			if (temp.ssys_l == null) {
+				$.oimsAlert("手术医生不能为空！");
+				$("#qgss_temp").val(0);
+				return;
+			}
 			temp.lc_id = $("#lc_id").text();
 			var url_qgss = "";
 			if(temp.id==null){//添加
