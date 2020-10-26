@@ -338,18 +338,18 @@ function _emr_patientList_obj() {
 				// 	strTitle:"该患者为7天内复查患者，如果要复制上一次病历，请点“续诊”；<br/>如果要新建病历，请点“新建”；<br/><font style='color:red; font-weight:bold;'>如果要查看病历，请点“查看”；</font><br/>不做任何操作，请直接关闭。",
 				// 	remove_length:true
 				// },function(){
-				// 	//续诊
-				// 	var huanZheFenZhen_saveOrUpdateJiuzhen_data = getJSONData(
-				// 		huanZheFenZhen_saveOrUpdateJiuzhen_url, {
-				// 			id : jiuzhen.id
-				// 		}, "POST");
-				// 	if (huanZheFenZhen_saveOrUpdateJiuzhen_data.state) {
-				// 		// alert("提示分诊成功!出现患者就诊");
-				// 		doctorJieZhen(fucha,huanZheFenZhen_saveOrUpdateJiuzhen_data.obj);
-				// 	} else {
-				// 		// alert("提示分诊失败！出现患者列表");
-				// 		showListStyle_doctor_sreachData();
-				// 	}
+					//续诊
+					var huanZheFenZhen_saveOrUpdateJiuzhen_data = getJSONData(
+						huanZheFenZhen_saveOrUpdateJiuzhen_url, {
+							id : jiuzhen.id
+						}, "POST");
+					if (huanZheFenZhen_saveOrUpdateJiuzhen_data.state) {
+						// alert("提示分诊成功!出现患者就诊");
+						doctorJieZhen(fucha,huanZheFenZhen_saveOrUpdateJiuzhen_data.obj);
+					} else {
+						// alert("提示分诊失败！出现患者列表");
+						showListStyle_doctor_sreachData();
+					}
 				// },function(){
 				// 	//新建空病例
 				// 	var huanZheFenZhen_saveOrUpdateJiuzhen_data = getJSONData(
@@ -372,15 +372,15 @@ function _emr_patientList_obj() {
 				// 	});
 				// }
 				//隐藏患者列表
-				$('.title,.tablabel,.mainBody').hide();
-
-				var cpt = {};
-				var cp_ = utilTool().listSelectOne() ;
-				cpt.patientId = cp_.patientId;
-				showCurrentPatient(cpt);
-
+				// $('.title,.tablabel,.mainBody').hide();
+				//
+				// var cpt = {};
+				// var cp_ = utilTool().listSelectOne() ;
+				// cpt.patientId = cp_.patientId;
+				// showCurrentPatient(cpt);
+				//
 				// });
-				$('div.opencontent').css({'text-align':'left'});
+				// $('div.opencontent').css({'text-align':'left'});
 			}
 		}
 		//如果不是复查的病人
@@ -455,12 +455,12 @@ function _emr_patientList_obj() {
 
 			//$("#careFrame").focus();
 		}
-		if(!fucha){
+		// if(!fucha){
 			iframe[0].src = contextPath+"/emr/emr.jsp?binglihao=" + p.binglihao+"&visiteId="+jiuzhen.id+"&fenzhenkaidan="+fenzhenkaidan;
-		}
-		else{
-			iframe[0].src = contextPath+"/emr/emr.jsp?binglihao=" + p.binglihao+"&fucha=1&visiteId="+jiuzhen.id+"&fenzhenkaidan="+fenzhenkaidan;
-		}
+		// }
+		// else{
+		// 	iframe[0].src = contextPath+"/emr/emr.jsp?binglihao=" + p.binglihao+"&fucha=1&visiteId="+jiuzhen.id+"&fenzhenkaidan="+fenzhenkaidan;
+		// }
 
 	}
 
