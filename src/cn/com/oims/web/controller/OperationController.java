@@ -5,48 +5,32 @@ import cn.com.oims.common.FavFTPUtil;
 import cn.com.oims.dao.pojo.Operation;
 import cn.com.oims.dao.pojo.OperationDict;
 import cn.com.oims.service.IOperationService;
-import cn.com.oims.web.form.OperationApplicationForm;
-import cn.com.oims.web.form.OperationAppointmentForm;
-import cn.com.oims.web.form.OperationConsumableForm;
-import cn.com.oims.web.form.OperationConsumableSearchForm;
-import cn.com.oims.web.form.OperationPlanForm;
-import cn.com.oims.web.form.OperationRecordForm;
-import cn.com.oims.web.form.OperationSearchForm;
-import cn.com.oims.web.form.OperationShowForm;
+import cn.com.oims.web.form.*;
 import cn.com.oims.webservice.HisWebService;
 import com.codesnet.common.JSONWriterUtils;
 import com.codesnet.common.MyResult;
 import com.codesnet.common.Page;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import jxl.Workbook;
 import jxl.format.Alignment;
 import jxl.format.CellFormat;
 import jxl.format.Colour;
 import jxl.format.UnderlineStyle;
-import jxl.write.Label;
-import jxl.write.WritableCell;
-import jxl.write.WritableCellFormat;
-import jxl.write.WritableFont;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
-import jxl.write.WriteException;
+import jxl.write.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.lang.Boolean;
 
 @Controller
 @RequestMapping({"shoushu"})
@@ -384,10 +368,10 @@ public class OperationController {
       wcfFC_content.setAlignment(Alignment.CENTRE);
       String[] titles = { 
           "加急", "患者ID号", "患者姓名", "性别", "年龄", "诊断", "手术类别", "手术大小", "手术级别", "手术名称", 
-          "手术时间", "主刀医生", "专业组", "状态", "第一助手", "巡回", "住院手术分类", "手术间", "眼别" };
+          "手术时间", "主刀医生", "专业组", "状态", "第一助手", "巡回", "住院手术分类", "手术间", "眼别","麻醉方式" };
       Integer[] widths = { 
           Integer.valueOf(5), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(10), Integer.valueOf(10), Integer.valueOf(40), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(30), 
-          Integer.valueOf(30), Integer.valueOf(18), Integer.valueOf(12), Integer.valueOf(12), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18) };
+          Integer.valueOf(30), Integer.valueOf(18), Integer.valueOf(12), Integer.valueOf(12), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18),Integer.valueOf(18) };
       for (int i = 0; i < titles.length; i++) {
         Label label = new Label(i, 0, titles[i], (CellFormat)wcfFC_title);
         sheet.addCell((WritableCell)label);
@@ -460,7 +444,8 @@ public class OperationController {
             (map.get("circuitNurseName") == null) ? "" : map.get("circuitNurseName").toString(), 
             map.get("category").toString().equals("0") ? "" : ((map.get("childCategory") == null) ? "" : ((Integer.parseInt(map.get("childCategory").toString()) == 1) ? "常规" : ((Integer.parseInt(map.get("childCategory").toString()) == 2) ? "日间手术" : ((Integer.parseInt(map.get("childCategory").toString()) == 3) ? "非二次计划手术" : "周末手术")))), 
             (map.get("operationRoom") == null) ? "" : map.get("operationRoom").toString(), 
-            (map.get("yanbie") == null) ? "" : map.get("yanbie").toString() };
+            (map.get("yanbie") == null) ? "" : map.get("yanbie").toString(),
+                getAnesthesiaName(Integer.parseInt(map.get("anesthesia").toString()))};
         int row = i + startRow + 1;
         System.out.println("row:" + row);
         for (int j = 0; j < titleLength; j++) {
@@ -471,6 +456,28 @@ public class OperationController {
     } catch (WriteException e) {
       e.printStackTrace();
     } 
+  }
+
+  public String getAnesthesiaName(Integer anesthesia) {
+    String n = "";
+    switch (anesthesia.intValue()) {
+      case 0:
+        n = "无麻醉";
+        break;
+      case 1:
+        n = "表面麻醉";
+        break;
+      case 2:
+        n = "局部麻醉";
+        break;
+      case 3:
+        n = "吸入全麻";
+        break;
+      case 4:
+        n = "静脉全麻";
+        break;
+    }
+    return n;
   }
   
   private String getProcessState(String string) {
