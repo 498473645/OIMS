@@ -1613,7 +1613,9 @@ public class JiuzhenDaoImpl extends BaseDaoImpl implements IJiuzhenDao {
     Map<String, Object> map = new HashMap<String, Object>();
     int count = 0;
     Map<String, Object> pmap = new HashMap<String, Object>();
-    Date startTime = new Date(MultiUtils.getStartTimeOfDay().getTime() - 604800000L);
+    //十天前
+    Date startTime = new Date(MultiUtils.getStartTimeOfDay().getTime() - 864000000L);
+    //昨天
     Date endTime = new Date(MultiUtils.getEndTimeOfDay().getTime() - 86400000L);
     String hql = "select new map(a.id as id,a.serialNo as serial_no,a.haoma as haoma,a.huanzheId as patientId,a.caozuoren as caozuoren,a.caozuoTime as caozuotime,a.beizhu as keshi,a.fzys as fzys,( select e.xingming from YuanGong e where e.gonghao=a.fzys) as fzysName,a.zhenbie as zhenbie,a.state as state ,( select b.binglihao from HuanZheXinXi b where b.id = a.huanzheId )as binglihao,( select d.category from Category d where d.id = a.state )as pstate,( select b.xingming from HuanZheXinXi b where b.id = a.huanzheId )as name,( select d.shengri from HuanZheXinXi d where d.id = a.huanzheId ) as birthday,( select d.photourl from HuanZheXinXi d where d.id = a.huanzheId ) as photo,( select d.shouji from HuanZheXinXi d where d.id = a.huanzheId ) as mobile,( select d.xingbie from HuanZheXinXi d where d.id = a.huanzheId ) as sex) from Jiuzhen a  where 1=1 ";
     if (fenzhenkaidan == null || fenzhenkaidan.intValue() == 0) {

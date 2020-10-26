@@ -189,6 +189,11 @@ public class JiuZhenController extends BaseController {
         if (js_time.equals(l_time) && (jiuzhenSelect.getState().intValue() == 27 || 
           jiuzhenSelect.getState().intValue() == 30)) {
           jiuzhenSelect.setFzys(gonghao);
+        } else if (!js_time.equals(l_time) &&  (jiuzhenSelect.getState().intValue() == 28
+                || jiuzhenSelect.getState().intValue() == 29
+                || jiuzhenSelect.getState().intValue() == 94)){
+          //复查的患者再次接诊不产生新的就诊记录即新病历
+          jiuzhenSelect.setFzys(gonghao);
         } else {
           //4.6 其他情况。新建就诊对象
           jiuzhenSelect = new Jiuzhen();
