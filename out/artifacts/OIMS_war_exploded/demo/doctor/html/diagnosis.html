@@ -1,0 +1,104 @@
+<!-- 璇婃柇椤甸潰 -->
+<div id="diagnosis" class="maintab">
+	<div style="width: 690px; height: 100%; float: left;">
+		<div class="diagnoselist" style="width: 100%; border: 1px solid #d2d2d2; margin-left: 5px; height: 170px;max-height:170px;">
+			<ul>
+			</ul>
+		</div>
+		<div
+			style="width: 100%; margin-left: 5px; height: 20px; margin-top: 5px; margin-bottom: 5px;">
+			<div>
+				<table style="height: 26px; border-collapse: collapse;width:60%">
+					<tr>
+						<td align="right">快速查找</td>
+						<td align="left"><input type="text" class="blur"></td>
+						<td>&nbsp;</td>
+						<td><input type="button" value="已确诊" onclick="_emr_diagnosed()"></td>
+						<td><input type="button" value="未确诊" onclick="_emr_undiagnosed()"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div
+			style="width: 100%; overflow: auto; border: 1px solid #d2d2d2; margin-left: 5px; height: 230px;">
+			<ul id='disease' class='ztree'></ul>
+		</div>
+	</div>
+	<div
+		style="width: 418px; height: 100%; float: right;">
+		<div id="checkorderview"
+			style="width: 100%; background-color: #f3f3f3; overflow: hidden;">
+			<div class="studyTitleTag" id="photo_title" style="height: 30px;">
+				<DIV id="shili_result" class="emr_jcdtab00 tab_show">
+					<SPAN>常规检查</SPAN>
+				</DIV>
+				<DIV id="yanya_result" class="emr_jcdtab01 tab_hide">
+					<SPAN>OCT</SPAN>
+				</DIV>
+			</div>
+			<div id="photo" class="studyShowTag"
+				style="height: 270px; border: 1px solid #d2d2d2; background-color: #ffffff; overflow: auto; white-space: nowrap;">
+				<table>
+					<tr><th>眼别</th><th>矫正视力</th><th>近视力</th><th>裸眼视力</th></tr>
+					<tr><td>右眼</td><td></td><td></td><td></td></tr>
+					<tr><td>左眼</td><td></td><td></td><td></td></tr>
+				</table>
+				<table>
+					<tr>
+						<td id="iop" style="border-top:0px;">
+							<script type="text/javascript">
+								showYanya();
+							</script>
+						</td>
+					</tr>
+				</table>
+				
+				<table>
+					<caption>客观屈光度参考值</caption>
+					<tr><th>眼别</th><th>球镜度</th><th>散光度</th><th>轴位</th></tr>
+					<tr><td>右眼</td><td></td><td></td><td></td></tr>
+					<tr><td>左眼</td><td></td><td></td><td></td></tr>
+					<tr><td>瞳距</td><td></td><td></td><td></td></tr>
+				</table>
+				<table>
+					<caption>角膜曲率参考值</caption>
+					<tr><th>左眼</th><th>角膜屈光度</th><th>曲率半径</th><th>方向</th></tr>
+					<tr><td>水平方向</td><td></td><td></td><td></td></tr>
+					<tr><td>垂直方向</td><td></td><td></td><td></td></tr>
+					<tr><td>平均值</td><td></td><td></td><td></td></tr>
+					<tr><td>角膜散光度</td><td></td><td></td><td></td></tr>
+					<tr><th>右眼</th><th>角膜屈光度</th><th>曲率半径</th><th>方向</th></tr>
+					<tr><td>水平方向</td><td></td><td></td><td></td></tr>
+					<tr><td>垂直方向</td><td></td><td></td><td></td></tr>
+					<tr><td>平均值</td><td></td><td></td><td></td></tr>
+					<tr><td>角膜散光度</td><td></td><td></td><td></td></tr>
+				</table>
+			</div>
+			
+			<!-- -->
+			<div class="studyTitleTag" style="height: 30px;">
+				<DIV class="emr_jcdtab00 tab_show">
+					<SPAN>检查单</SPAN>
+				</DIV>
+				<DIV id="yanya_result" class="emr_jcdtab01 tab_hide">
+					<SPAN>化验单</SPAN>
+				</DIV>
+			</div>
+			<div class="checklist" style="border: 1px solid #d2d2d2;">
+				<ul style="height: 100px; white-space: nowrap;">
+					<li id="oct" class="emr_jcdlistpointer" title="待检查 ">OCT<span
+						class="dcheck"></span></li>
+					<li id="jiaomo" class="emr_jcdlistpointer" title="待检查 ">角膜地形图检查<span
+						class="dcheck"></span></li>
+					<li id="lxd" class="emr_jcdlistpointer" title="待检查 ">裂隙灯<span
+						class="dcheck"></span></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		_emr_createDiseaseTree();
+		_emr_initCheckOrderView();
+	</script>
+</div>

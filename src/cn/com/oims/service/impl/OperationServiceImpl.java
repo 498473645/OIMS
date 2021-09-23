@@ -46,38 +46,38 @@ import org.springframework.util.StringUtils;
 @Service
 public class OperationServiceImpl implements IOperationService {
   public static final int PROCESS_STATE_INIT = 0;
-  
+
   public static final int PROCESS_STATE_APPLICATION = 1;
-  
+
   public static final int PROCESS_STATE_PLAN = 2;
-  
+
   public static final int PROCESS_STATE_UNDOING = 4;
-  
+
   public static final int PROCESS_STATE_COMPELET = 3;
-  
+
   public static final int PROCESS_STATE_STOP = 5;
-  
+
   @Autowired
   private IOperationDao operationDao;
-  
+
   @Autowired
   private IJiuzhenDao jiuzhenDao;
-  
+
   @Autowired
   private IYuanGongDao ygDao;
-  
+
   @Autowired
   private IOperationDictDao dictDao;
-  
+
   @Autowired
   private IHuanZheXinXiDao hzDao;
-  
+
   @Autowired
   private HisWebService hisWebService;
-  
+
   @Autowired
   private IBuMenDao bumenDao;
-  
+
   public void saveOrUpdateOperationDict(OperationDict dict) {
     Integer id = dict.getId();
     String inputCode = dict.getInputCode();
@@ -95,56 +95,56 @@ public class OperationServiceImpl implements IOperationService {
             inputCode = p;
           } else {
             inputCode = String.valueOf(inputCode) + p;
-          } 
+          }
         } catch (Exception exception) {}
         b++;
-      } 
+      }
       dict.setInputCode(inputCode.toUpperCase());
-    } 
+    }
     if (id == null) {
       this.operationDao.saveOrUpdate(dict);
       return;
-    } 
+    }
     OperationDict od = this.operationDao.getOperationDict(id);
     if (od == null)
-      throw new RuntimeException("未找到要修改的记录！"); 
+      throw new RuntimeException("未找到要修改的记录！");
     BeanUtils.copyProperties(dict, od);
     od.setId(id);
     this.operationDao.saveOrUpdate(od);
   }
-  
+
   public List<OperationDict> findOperationDictList(String inputCode, Page page) {
     return this.operationDao.findOperationDictList(inputCode, page);
   }
-  
+
   public void deleteOperationDict(Integer id) {
     if (this.operationDao.operationExists(id))
-      throw new RuntimeException("手术字典已存在记录！"); 
+      throw new RuntimeException("手术字典已存在记录！");
     this.operationDao.delete(this.operationDao.getOperationDict(id));
   }
-  
+
   @Transactional
   public void saveOrUpdateOperation(OperationAppointmentForm form, String gonghao) {
     Operation operation;
     if (form.getId() != null) {
       operation = this.operationDao.getOperation(form.getId());
       if (operation == null)
-        throw new RuntimeException("未找到要修改的记录！"); 
+        throw new RuntimeException("未找到要修改的记录！");
       BeanUtils.copyProperties(form, operation);
     } else {
       operation = new Operation();
       if (this.operationDao.patientOperationAppointmentExists(form.getPatientId(), form.getOperationDictIds(), form.getVisitId()))
-        throw new RuntimeException("患者已预约"); 
+        throw new RuntimeException("患者已预约");
       BeanUtils.copyProperties(form, operation);
       operation.setInsertTime(new Date());
       operation.setInsertUser(gonghao);
-    } 
+    }
     if (form.getCondition() == null)
-      operation.setCondition("一般"); 
+      operation.setCondition("一般");
     this.operationDao.saveOrUpdate(operation);
     saveOrUpdateOperationDetails(operation.getId(), form.getEyes(), form.getOperationDictIds(), gonghao);
   }
-  
+
   private void saveOrUpdateOperationDetails(Long id, String[] eyes, String[] operationDictIds, String gonghao) {
     List<OperationDetail> list = this.operationDao.findOperationDetails(id);
     for (int i = 0; i < eyes.length; i++) {
@@ -156,15 +156,15 @@ public class OperationServiceImpl implements IOperationService {
           list.remove(od);
           x = false;
           break;
-        } 
-      } 
+        }
+      }
       if (x)
-        this.operationDao.saveOrUpdate(new OperationDetail(id, Integer.valueOf(eye), Integer.valueOf(operationDictId), gonghao)); 
-    } 
+        this.operationDao.saveOrUpdate(new OperationDetail(id, Integer.valueOf(eye), Integer.valueOf(operationDictId), gonghao));
+    }
     if (list.size() > 0)
-      this.operationDao.deleteAll(list); 
+      this.operationDao.deleteAll(list);
   }
-  
+
   public Map<String, Object> findOperationList(Page page, OperationSearchForm form) {
     List<Map<String, Object>> list = this.operationDao.findOperationList(page, form);
     Iterator<Map<String, Object>> itr = list.iterator();
@@ -174,27 +174,27 @@ public class OperationServiceImpl implements IOperationService {
       if (deptId != null) {
         OperationGroup group = this.dictDao.getOperationGroup(deptId);
         m.put("groupName", group.getName());
-      } 
+      }
       String gonghao = (String)m.get("doctor");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("doctorName", yg.getXingming());
-      } 
+      }
       gonghao = (String)m.get("firstAssistant");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("firstAssistantName", yg.getXingming());
-      } 
+      }
       gonghao = (String)m.get("secondAssistant");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("secondAssistantName", yg.getXingming());
-      } 
+      }
       gonghao = (String)m.get("circuitNurse");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("circuitNurseName", yg.getXingming());
-      } 
+      }
       String operationRoom = (m.get("operationRoomId") == null) ? null : m.get("operationRoomId").toString();
       if (operationRoom != null)
         if (operationRoom.equals("1")) {
@@ -211,7 +211,7 @@ public class OperationServiceImpl implements IOperationService {
           m.put("operationRoom", "急诊");
         } else if (operationRoom.equals("7")) {
           m.put("operationRoom", "门诊");
-        }  
+        }
       List details = this.operationDao.findOperationDetailsMap((Long)m.get("id"));
       m.put("operationDetails", details);
       if (details != null && details.size() > 0) {
@@ -220,51 +220,51 @@ public class OperationServiceImpl implements IOperationService {
           if (Integer.parseInt(eye) == OimsCategoryConfig.LEFT_EYE.intValue()) {
             m.put("yanbie", "左眼");
             continue;
-          } 
+          }
           if (Integer.parseInt(eye) == OimsCategoryConfig.RIGHT_EYE.intValue()) {
             m.put("yanbie", "右眼");
             continue;
-          } 
+          }
           if (Integer.parseInt(eye) == OimsCategoryConfig.DOUBLE_EYE.intValue())
-            m.put("yanbie", "双眼"); 
-        } 
-      } 
-    } 
+            m.put("yanbie", "双眼");
+        }
+      }
+    }
     Map<String, Object> map = new HashMap<>();
     map.put("list", list);
     map.put("page", page);
     return map;
   }
-  
+
   @Transactional
   public void deleteOperation(Long id) {
     this.operationDao.delete(getOperation(id));
     List<OperationDetail> list = this.operationDao.findOperationDetails(id);
     this.operationDao.deleteAll(list);
   }
-  
+
   public Operation getOperation(Long id) {
     return this.operationDao.getOperation(id);
   }
-  
+
   public OperationDict getOperationDict(Integer id) {
     return this.operationDao.getOperationDict(id);
   }
-  
+
   @Transactional
   public void saveOrUpdateOperationApplication(OperationApplicationForm form, String gonghao) {
     Operation operation;
     if (form.getId() != null) {
       operation = this.operationDao.getOperation(form.getId());
       if (operation == null)
-        throw new RuntimeException("没有找到此预约记录！"); 
+        throw new RuntimeException("没有找到此预约记录！");
       if (operation.getProcessState() > 1)
-        throw new RuntimeException("此手术预约已安排"); 
+        throw new RuntimeException("此手术预约已安排");
     } else {
       operation = new Operation();
       operation.setInsertTime(new Date());
       operation.setInsertUser(gonghao);
-    } 
+    }
     BeanUtils.copyProperties(form, operation);
     operation.setProposerDoctor(gonghao);
     operation.setApplicationTime(new Date());
@@ -272,23 +272,23 @@ public class OperationServiceImpl implements IOperationService {
     this.operationDao.saveOrUpdate(operation);
     saveOrUpdateOperationDetails(operation.getId(), form.getEyes(), form.getOperationDictIds(), gonghao);
   }
-  
+
   @Transactional
   public void saveOrUpdateOperationPlan(OperationPlanForm form, String gonghao) {
     Operation operation;
     if (form.getId() != null) {
       operation = this.operationDao.getOperation(form.getId());
       if (operation == null)
-        throw new RuntimeException("没有找到此预约记录！"); 
+        throw new RuntimeException("没有找到此预约记录！");
       if (operation.getProcessState() > 2)
-        throw new RuntimeException("此手术申请已处理完毕！"); 
+        throw new RuntimeException("此手术申请已处理完毕！");
     } else {
       operation = new Operation();
       operation.setInsertTime(new Date());
       operation.setInsertUser(gonghao);
       operation.setProposerDoctor(gonghao);
       operation.setApplicationTime(new Date());
-    } 
+    }
     BeanUtils.copyProperties(form, operation);
     operation.setPlanner(gonghao);
     operation.setPlanTime(new Date());
@@ -296,7 +296,7 @@ public class OperationServiceImpl implements IOperationService {
     this.operationDao.saveOrUpdate(operation);
     saveOrUpdateOperationDetails(operation.getId(), form.getEyes(), form.getOperationDictIds(), gonghao);
   }
-  
+
   public Map<String, Object> getOperationMap(String blh) {
     Map<String, Object> map0 = this.operationDao.getOperationMap(blh);
     Map<String, Object> map1 = null;
@@ -304,41 +304,41 @@ public class OperationServiceImpl implements IOperationService {
       map1 = getHISPatientMap(blh);
     } catch (Exception e) {
       e.printStackTrace();
-    } 
+    }
     if (map0 == null && map1 != null)
-      return map1; 
+      return map1;
     if (map0 != null) {
       if (map1 != null) {
         Date d0 = (Date)map0.get("visitTime");
         Date d1 = (Date)map1.get("visitTime");
         if (d1.after(d0))
-          return map1; 
-      } 
+          return map1;
+      }
       StringBuffer sb = new StringBuffer();
       List<Map<String, Object>> list = this.jiuzhenDao.findJzZhenduanList((Long)map0.get("visitId"));
       for (Map<String, Object> m : list) {
         sb.append((m.get("eye") == null) ? "" : m.get("eye"));
         sb.append(m.get("disease"));
         if (((Integer)m.get("confirmed")).intValue() == 0)
-          sb.append("?"); 
+          sb.append("?");
         sb.append(",");
-      } 
+      }
       String medical = sb.toString();
       map0.put("medical", medical.substring(0, medical.length() - 1));
       return map0;
-    } 
+    }
     if (map0 == null && map1 == null)
-      return getPaientMap(blh); 
+      return getPaientMap(blh);
     return null;
   }
-  
+
   private Map<String, Object> getPaientMap(String blh) {
     Map<String, Object> map = new HashMap<>();
     HuanZheXinXi hzxx = this.hzDao.getHuanzhexinxiByBLH(blh);
     if (hzxx == null) {
       Patient p = this.hisWebService.getPatientById(blh);
       if (p == null)
-        return null; 
+        return null;
       hzxx = new HuanZheXinXi();
       hzxx.setBinglihao(blh);
       hzxx.setXingming(p.getName());
@@ -348,7 +348,7 @@ public class OperationServiceImpl implements IOperationService {
       hzxx.setDianhua(p.getTel());
       hzxx.setShouji(p.getMobile());
       this.hzDao.saveHuanZhe(hzxx);
-    } 
+    }
     map.put("patientId", hzxx.getId());
     map.put("name", hzxx.getXingming());
     map.put("sex", Boolean.valueOf(hzxx.isXingbie()));
@@ -358,11 +358,11 @@ public class OperationServiceImpl implements IOperationService {
     map.put("contact", hzxx.getHzlxr());
     return map;
   }
-  
+
   private Map<String, Object> getHISPatientMap(String blh) {
     PatientVistInfomation pvi = this.hisWebService.getPatientVistInfomation(blh);
     if (pvi == null)
-      return null; 
+      return null;
     Map<String, Object> map = new HashMap<>();
     HuanZheXinXi hzxx = this.hzDao.getHuanzhexinxiByBLH(blh);
     if (hzxx == null) {
@@ -378,7 +378,7 @@ public class OperationServiceImpl implements IOperationService {
       hzxx.setHzlxr(pvi.getContact());
       hzxx.setHzlxrdh(pvi.getContactTel());
       this.hzDao.saveHuanZhe(hzxx);
-    } 
+    }
     map.put("patientId", hzxx.getId());
     map.put("name", hzxx.getXingming());
     map.put("sex", Boolean.valueOf(hzxx.isXingbie()));
@@ -394,14 +394,14 @@ public class OperationServiceImpl implements IOperationService {
     map.put("areaCode", pvi.getAreaCode());
     return map;
   }
-  
+
   @Transactional
   public void saveOrUpdateOperationRecord(OperationRecordForm form, String gonghao) {
     Operation operation = this.operationDao.getOperation(form.getId());
     if (operation == null)
-      throw new RuntimeException("没有找到此预约记录！"); 
+      throw new RuntimeException("没有找到此预约记录！");
     if (operation.getProcessState() < 2)
-      throw new RuntimeException("手术未安排！"); 
+      throw new RuntimeException("手术未安排！");
     BeanUtils.copyProperties(form, operation);
     operation.setRecorder(gonghao);
     operation.setRecordTime(new Date());
@@ -433,18 +433,18 @@ public class OperationServiceImpl implements IOperationService {
             if (sbf.length() > 40) {
               medical = sbf.substring(0, 40);
               break;
-            } 
+            }
           } else {
             if (sbf.length() + tmp.length() > 39) {
               medical = sbf.toString();
               break;
-            } 
+            }
             sbf.append("," + tmp);
-          } 
+          }
           b++;
-        } 
-      } 
-    } 
+        }
+      }
+    }
     o.setMedical(medical);
     o.setCondition(operation.getCondition());
     o.setOperationSize(getOperationSizeTitle(operation.getOperationSize()));
@@ -458,21 +458,21 @@ public class OperationServiceImpl implements IOperationService {
     if (operation.getFirstAssistant() != null && !operation.getFirstAssistant().isEmpty()) {
       yg = this.ygDao.getYuanGongByGH(operation.getFirstAssistant());
       o.setFirstAssistant(yg.getXingming());
-    } 
+    }
     if (operation.getSecondAssistant() != null && !operation.getSecondAssistant().isEmpty()) {
       yg = this.ygDao.getYuanGongByGH(operation.getSecondAssistant());
       o.setSecondAssistant(yg.getXingming());
-    } 
+    }
     o.setAnesthesia(getAnesthesiaName(operation.getAnesthesia()));
     o.setAnesthetist(operation.getAnesthetist());
     if (operation.getCircuitNurse() != null && !operation.getCircuitNurse().isEmpty()) {
       yg = this.ygDao.getYuanGongByGH(operation.getCircuitNurse());
       o.setCircuitNurse(yg.getXingming());
-    } 
+    }
     if (operation.getInstrumentNurse() != null && !operation.getInstrumentNurse().isEmpty()) {
       yg = this.ygDao.getYuanGongByGH(operation.getInstrumentNurse());
       o.setInstrumentNurse(yg.getXingming());
-    } 
+    }
     o.setStartDate(operation.getOperationTime());
     o.setEndDate(operation.getOperationCompleteTime());
     o.setRecoder(recorder);
@@ -487,7 +487,7 @@ public class OperationServiceImpl implements IOperationService {
       if (i > 0) {
         sb.append(",");
         operationCodes.append(",");
-      } 
+      }
       OperationDict od = this.operationDao.getOperationDict(Integer.valueOf(Integer.parseInt(operationDictIds[i])));
       String eye = (eyes == null || eyes[i] == null) ? null : eyes[i].trim();
       if (eye.equals("46")) {
@@ -498,20 +498,20 @@ public class OperationServiceImpl implements IOperationService {
         eye = "[双眼]";
       } else {
         eye = "";
-      } 
+      }
       sb.append(eye);
       sb.append(od.getName());
       if (od.getOperationCode() == null || od.getOperationCode().isEmpty() || od.getOperationCode().trim().equals("")) {
         operationCodes.append("@");
       } else {
         operationCodes.append(od.getOperationCode());
-      } 
+      }
       temp.append(od.getLevelFlag().intValue() + 1);
       if (i != operationDictIds.length - 1)
-        temp.append(","); 
+        temp.append(",");
       if (od.getLevelFlag().intValue() >= operation_level.intValue())
-        operation_level = Integer.valueOf(od.getLevelFlag().intValue() + 1); 
-    } 
+        operation_level = Integer.valueOf(od.getLevelFlag().intValue() + 1);
+    }
     o.setNote(operationCodes.toString());
     o.setOperationSize(String.valueOf(operation_level.toString()) + "," + temp.toString());
     o.setOperationNames(sb.toString());
@@ -522,10 +522,10 @@ public class OperationServiceImpl implements IOperationService {
       } else {
         String msg = this.hisWebService.saveOperationRecord(o);
         if (msg == null)
-          return; 
+          return;
         operation.setSend(Boolean.valueOf(true));
         operation.setSendMsg(msg);
-      } 
+      }
     } else {
       operation.setOperationCompleteTime(null);
       operation.setOperationTime(null);
@@ -535,12 +535,12 @@ public class OperationServiceImpl implements IOperationService {
         this.hisWebService.deleteOperationRecord(o);
         operation.setSend(Boolean.valueOf(false));
         operation.setSendMsg(null);
-      } 
-    } 
+      }
+    }
     this.operationDao.saveOrUpdate(operation);
     saveOrUpdateOperationDetails(operation.getId(), form.getEyes(), operationDictIds, gonghao);
   }
-  
+
   public String getAnesthesiaName(Integer anesthesia) {
     String n = "";
     switch (anesthesia.intValue()) {
@@ -559,10 +559,10 @@ public class OperationServiceImpl implements IOperationService {
       case 4:
         n = "静脉全麻";
         break;
-    } 
+    }
     return n;
   }
-  
+
   public String getOperationSizeTitle(Integer operationSize) {
     String t = "";
     switch (operationSize.intValue()) {
@@ -575,16 +575,16 @@ public class OperationServiceImpl implements IOperationService {
       case 2:
         t = "大";
         break;
-    } 
+    }
     return t;
   }
-  
+
   public Map<String, Object> showOperationMap(OperationShowForm form) {
     Map<String, Object> map = new HashMap<>();
     if (form.getId() != null) {
       Operation operation = this.operationDao.getOperation(form.getId());
       if (operation == null)
-        throw new RuntimeException("没有找到此预约记录！"); 
+        throw new RuntimeException("没有找到此预约记录！");
       List<Operation> list = new ArrayList<>();
       list.add(operation);
       map.put("list", operation);
@@ -593,10 +593,10 @@ public class OperationServiceImpl implements IOperationService {
       List<Operation> list = this.operationDao.getOperation(form.getPatientId(), form.getVisitId());
       map.put("list", list);
       map.put("patient", this.hzDao.findHuanZheById(form.getPatientId()));
-    } 
+    }
     return map;
   }
-  
+
   @Transactional
   public void setOperationProcessState(Long[] ids, Integer state, String gonghao) {
     byte b;
@@ -606,26 +606,26 @@ public class OperationServiceImpl implements IOperationService {
       Long id = arrayOfLong[b];
       Operation operation = this.operationDao.getOperation(id);
       if (operation == null)
-        throw new RuntimeException("没有找到此预约记录！"); 
+        throw new RuntimeException("没有找到此预约记录！");
       if (operation.getProcessState() < 2)
-        throw new RuntimeException("不是已安排的手术！"); 
+        throw new RuntimeException("不是已安排的手术！");
       operation.setProcessState(state.intValue());
       operation.setRecorder(gonghao);
       operation.setRecordTime(new Date());
       this.operationDao.saveOrUpdate(operation);
       b++;
-    } 
+    }
   }
-  
+
   public List<OperationConsumable> findOperationConsumable(Long operationId) {
     return this.operationDao.findOperationConsumable(operationId);
   }
-  
+
   @Transactional
   public void saveOrUpdateOperationConsumable(Long operationId, Boolean used, Vector<OperationConsumableForm> vec, String gonghao) {
     Operation operation = this.operationDao.getOperation(operationId);
     if (operation == null)
-      throw new RuntimeException("未找到手术耗材记录！"); 
+      throw new RuntimeException("未找到手术耗材记录！");
     List<OperationConsumable> oldList = this.operationDao.findOperationConsumable(operationId);
     this.operationDao.deleteAll(oldList);
     for (OperationConsumableForm ocf : vec) {
@@ -639,9 +639,9 @@ public class OperationServiceImpl implements IOperationService {
       Date useDate = used.booleanValue() ? operation.getOperationCompleteTime() : operation.getAppointmentTime();
       oc.setUseDate(operation.getOperationCompleteTime());
       this.operationDao.saveOrUpdate(oc);
-    } 
+    }
   }
-  
+
   public Map<String, Object> findOperationConsumablePageList(OperationConsumableSearchForm form, Page page) {
     List<Map<String, Object>> list = this.operationDao.findOperationConsumablePageList(form, page);
     Map<String, Object> map = new HashMap<>();
@@ -649,7 +649,7 @@ public class OperationServiceImpl implements IOperationService {
     map.put("page", page);
     return map;
   }
-  
+
   public List<Map<String, Object>> findOperationList(OperationSearchForm form) {
     List list = this.operationDao.findOperationList(form);
     Iterator itr = list.iterator();
@@ -659,27 +659,27 @@ public class OperationServiceImpl implements IOperationService {
       if (deptId != null) {
         OperationGroup group = this.dictDao.getOperationGroup(deptId);
         m.put("groupName", group.getName());
-      } 
+      }
       String gonghao = (String) m.get("doctor");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("doctorName", yg.getXingming());
-      } 
+      }
       gonghao = (String) m.get("firstAssistant");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("firstAssistantName", yg.getXingming());
-      } 
+      }
       gonghao = (String) m.get("secondAssistant");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("secondAssistantName", yg.getXingming());
-      } 
+      }
       gonghao = (String) m.get("circuitNurse");
       if (gonghao != null) {
         YuanGong yg = this.ygDao.getYuanGongByGH(gonghao);
         m.put("circuitNurseName", yg.getXingming());
-      } 
+      }
       String operationRoom = (m.get("operationRoomId") == null) ? null : m.get("operationRoomId").toString();
       if (operationRoom != null)
         if (operationRoom.equals("1")) {
@@ -696,7 +696,7 @@ public class OperationServiceImpl implements IOperationService {
           m.put("operationRoom", "急诊");
         } else if (operationRoom.equals("7")) {
           m.put("operationRoom", "门诊");
-        }  
+        }
       List details = this.operationDao.findOperationDetailsMap((Long)m.get("id"));
       m.put("operationDetails", details);
       if (details != null && details.size() > 0) {
@@ -705,16 +705,63 @@ public class OperationServiceImpl implements IOperationService {
           if (Integer.parseInt(eye) == OimsCategoryConfig.LEFT_EYE.intValue()) {
             m.put("yanbie", "左眼");
             continue;
-          } 
+          }
           if (Integer.parseInt(eye) == OimsCategoryConfig.RIGHT_EYE.intValue()) {
             m.put("yanbie", "右眼");
             continue;
-          } 
+          }
           if (Integer.parseInt(eye) == OimsCategoryConfig.DOUBLE_EYE.intValue())
-            m.put("yanbie", "双眼"); 
-        } 
-      } 
-    } 
+            m.put("yanbie", "双眼");
+        }
+      }
+    }
     return list;
+  }
+
+  /**
+   * @Description: 查询手术预约列表(首页)
+   * @param page 分页查询对象
+   * @param form 手术查询表单
+   * @return
+   * @author huxiaoqiang
+   * @date 2019-12-17 11:42:23
+   */
+  @Override
+  public Map<String, Object> findOperationListForIndex(Page page, OperationSearchForm form) {
+    //1、分页查询手术预约数据
+    List<Map<String,Object>> list = operationDao.findOperationListForIndex(page, form);
+    Iterator<Map<String,Object>> itr = list.iterator();
+    while(itr.hasNext()){
+      Map<String,Object> m = itr.next();
+
+      String gonghao = (String)m.get("doctor");
+      YuanGong yg;
+      if(gonghao!=null){
+        //3、根据工号查询员工信息
+        yg = ygDao.getYuanGongByGH(gonghao);
+        m.put("doctorName", yg.getXingming());
+      }
+
+      List details = this.operationDao.findOperationDetailsMap((Long)m.get("id"));
+      m.put("operationDetails", details);
+      if(details!=null&&details.size()>0){
+        String eye=(((Map<String,Object>)details.get(0)).get("eyes")==null?null:((Map<String,Object>)details.get(0)).get("eyes").toString());
+        if(eye==null){
+        }
+        else if(Integer.parseInt(eye)==OimsCategoryConfig.LEFT_EYE){
+          m.put("yanbie", "左眼");
+        }else if(Integer.parseInt(eye)==OimsCategoryConfig.RIGHT_EYE){
+          m.put("yanbie", "右眼");
+        }else if(Integer.parseInt(eye)==OimsCategoryConfig.DOUBLE_EYE){
+          m.put("yanbie", "双眼");
+        }
+      }
+
+
+    }
+    Map<String,Object> map = new HashMap<String,Object>();
+    map.put("list", list);
+    map.put("page", page);
+    return map;
   }
 }

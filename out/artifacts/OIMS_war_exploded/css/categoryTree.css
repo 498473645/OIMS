@@ -1,0 +1,6 @@
+.categoryTree ul{padding-left:12px}
+.categoryTree ul li a.treeButton{display:block;float:left; width:18px;}
+.categoryTree ul li.opened{background:url(../images/open.gif) 8px 6px no-repeat }
+.categoryTree ul li.closed{background:url(../images/close.gif) 8px 6px no-repeat }
+.categoryTree ul li a{height:22px;line-height:22px;}
+.categoryTree ul li a.on{background:blue; color:#fff}

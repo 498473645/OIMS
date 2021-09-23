@@ -1,0 +1,4 @@
+裂隙灯眼底、OCT、造影、眼底照相均使用眼底图（fundus_od.png右眼）
+眼前节照相——conjunctival_od.png、conjunctival_os.png
+UBM——UBM.png
+裂隙灯——裂隙灯.png

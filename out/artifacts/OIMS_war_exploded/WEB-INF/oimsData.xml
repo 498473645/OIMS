@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                        http://www.springframework.org/schema/context 
+                        http://www.springframework.org/schema/context/spring-context-3.1.xsd
+                        http://www.springframework.org/schema/tx 
+                        http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@132.147.160.112:oims" />
+		<property name="user" value="topcon" />
+		<property name="password" value="Oims2014" />
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="10" />
+		<property name="initialPoolSize" value="1" />
+		<property name="maxIdleTime" value="60" />
+		<property name="acquireIncrement" value="2" />
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="cn.com.oims.dao.pojo" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.OracleDialect
+				hibernate.show_sql=true
+				hibernate.format_sql=true
+				hibernate.hbm2ddl.auto=update
+			</value>
+		</property>
+	</bean>
+	 -->
+
+	<!--
+        <bean id="oldEyeDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+            <property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+             <property name="jdbcUrl" value="jdbc:oracle:thin:@132.147.160.20:1521:orcl" />
+            <property name="user" value="ykmz" />
+            <property name="password" value="yk2002" />
+            <property name="minPoolSize" value="5" />
+            <property name="maxPoolSize" value="10" />
+            <property name="initialPoolSize" value="1" />
+            <property name="maxIdleTime" value="60" />
+            <property name="acquireIncrement" value="2" />
+            定义在从数据库获取新连接失败后重复尝试的次数。Default: 30
+            <property name="acquireRetryAttempts" value="1" />
+        </bean>
+         -->
+
+	<!-- 	<bean id="middleControllerFSK" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+            <property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+             <property name="jdbcUrl" value="jdbc:oracle:thin:@132.147.15.36:1521:ISUPER" />
+            <property name="user" value="SPECTRA" />
+            <property name="password" value="artceps" />
+            <property name="minPoolSize" value="5" />
+            <property name="maxPoolSize" value="10" />
+            <property name="initialPoolSize" value="1" />
+            <property name="maxIdleTime" value="60" />
+            <property name="acquireIncrement" value="2" />
+            定义在从数据库获取新连接失败后重复尝试的次数。Default: 30
+            <property name="acquireRetryAttempts" value="1" />
+        </bean>
+         -->
+
+	<!-- 本地Oracle数据库 -->
+	<!--  <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+            <property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+            <property name="jdbcUrl" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl" />
+            <property name="user" value="topcon" />
+            <property name="password" value="Oims2014" />
+            <property name="minPoolSize" value="5" />
+            <property name="maxPoolSize" value="10" />
+            <property name="initialPoolSize" value="1" />
+            <property name="maxIdleTime" value="60" />
+            <property name="acquireIncrement" value="2" />
+        </bean>
+        <bean id="sessionFactory"
+            class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+            <property name="dataSource" ref="dataSource" />
+            <property name="packagesToScan" value="cn.com.oims.dao.pojo" />
+            <property name="hibernateProperties">
+                <value>
+                    hibernate.dialect=org.hibernate.dialect.OracleDialect
+                    hibernate.show_sql=true
+                    hibernate.format_sql=true
+                    hibernate.hbm2ddl.auto=update
+                </value>
+            </property>
+        </bean> -->
+	<!-- 服务器数据库 -->
+	<!--
+
+	<property name="jdbcUrl" value="jdbc:oracle:thin:@192.168.56.101:1521:topcon" />
+		<property name="user" value="topcon" />
+		<property name="password" value="123456" />
+
+	 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="oracle.jdbc.OracleDriver" />
+		<!--		<property name="jdbcUrl" value="jdbc:oracle:thin:@103.79.25.206:1521:OIMS" />-->
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:OIMS" />
+		<property name="user" value="topcon" />
+		<property name="password" value="Oims2014" />
+		<!--连接池中保留的最小连接数。-->
+		<property name="minPoolSize" value="10" />
+		<!--连接池中保留的最大连接数。Default: 15 -->
+		<property name="maxPoolSize" value="45" />
+		<property name="initialPoolSize" value="1" />
+		<!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime" value="60" />
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement" value="5" />
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts" value="1" />
+	</bean>
+	<bean id="sessionFactory"
+		  class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="cn.com.oims.dao.pojo" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=cn.com.oims.common.OracleWmCodeDialect
+				hibernate.show_sql=true
+				<!--				hibernate.format_sql=true-->
+				<!--实体对应的表如果不存在则会创建。如果实体中新增加了字段，会在相应的表中增加一列。-->
+				hibernate.hbm2ddl.auto=none
+			</value>
+		</property>
+	</bean>
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" /> <property name="jdbcUrl"
+		value="jdbc:mysql://127.0.0.1:3306/oims?useUnicode=true&amp;characterEncoding=utf8"
+		/> <property name="user" value="root" /> <property name="password" value="root"
+		/> <property name="minPoolSize" value="5" /> <property name="maxPoolSize"
+		value="10" /> <property name="initialPoolSize" value="1" /> <property name="maxIdleTime"
+		value="60" /> <property name="acquireIncrement" value="2" /> </bean> <bean
+		id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" /> <property name="packagesToScan"
+		value="cn.com.oims.dao.pojo" /> <property name="hibernateProperties"> <props>
+		<prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+		<prop key="hibernate.show_sql">true</prop> <prop key="hibernate.format_sql">true</prop>
+		</props> </property> </bean> -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<context:component-scan base-package="cn.com.oims.dao.impl" />
+
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 	<bean id="hirJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+            <property name="dataSource" ref="oldEyeDataSource" />
+        </bean>
+        <bean id="middleControlJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+            <property name="dataSource" ref="middleControllerFSK" />
+        </bean> -->
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager"
+		  class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+</beans>

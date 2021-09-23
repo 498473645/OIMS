@@ -1,0 +1,33 @@
+<input type="hidden" name="id" id="id" />
+<table>
+	<tr>
+		<td style="width:58px; text-align:right;">标题</td><td colspan="3"><input type="text" name="title" id="title" style="width:100%" /></td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;">供货商</td><td><select name="supplier" id="supplier"></select></td>
+		<td style="width:58px; text-align:right;">购回日期</td><td style="text-align:left"><input type="text" name="expectedDate" id="expectedDate" style="width:108px" /></td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;">明细</td><td colspan="3">
+			<div class="list" style="padding:0; height:280px; overflow:auto">
+				<table id="mingxi" style="width:100%">
+					<tr><th>厂家</th><th>晶体名称</th><th width="48">襻类型</th><th width="48">屈光度</th><th width="48">A常数</th><th width="68">光学面直径</th><th width="48">总直径</th><th width="48">数量</th><th width="24"><a href="#" title="增加">+</a></th></tr>
+					<tr>
+						<td><select name="manufacturer"></select></td>
+						<td><input name="proId" type="hidden" /><input name="typeName" type="text" style="width:100%;border:0" /></td>
+						<td><input name="panTypeName" type="text" style="width:100%;border:0" readonly="readonly" /></td>
+						<td><input name="diopter" type="text" style="width:100%;border:0" /></td>
+						<td><input name="aConstant" type="text" style="width:100%;border:0" readonly="readonly" /></td>
+						<td><input name="surfaceDiameter" type="text" style="width:100%;border:0" readonly="readonly" /></td>
+						<td><input name="diameter" type="text" style="width:100%;border:0" readonly="readonly" /></td>
+						<td><input name="quantity" type="text" style="width:100%;border:0" /></td>
+						<td><a href="javascript:void(0);" title="删除">-</a></td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;">备注</td><td style="text-align:left" colspan="3"><textarea name="note" id="note" style="width:100%"></textarea></td>
+	</tr>
+</table>

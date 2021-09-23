@@ -1,0 +1,260 @@
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td,
+	img, div, dl, dt, dd, input, button, a {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+
+* {
+	box-sizing: content-box; -
+	moz-box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+}
+
+ul, li, ol {
+	list-style: none;
+}
+
+.lf {
+	float: left;
+}
+
+.rg {
+	float: right;
+}
+
+body {
+	background: #ebeff2 url(../images/bj-a.png) repeat;
+	margin: 0 auto;
+	padding: 0;
+	overflow-y: hidden
+}
+
+.logo {
+	height: 48px;
+	width: 401px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 6% 0 24px 0;
+}
+
+.logo img {
+	margin: 0;
+	padding: 0;
+}
+
+.pic {
+	position: absolute;
+	z-index: 1;
+	bottom: 30%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.main {
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 0;
+	background: url(../images/bj-ykdzbl.png) no-repeat;
+	text-align: center;
+	margin: 0 auto;
+	width: 1333px;
+	height: 343px;
+	position: relative;
+	z-index: 2;
+}
+
+.main .line {
+	position: relative;
+	left: 120px;
+	top: 45px;
+}
+
+.main  .change {
+	position: relative;
+	left: 240px;
+	top: 15px;
+	color: #4b504d;
+}
+
+.main  .change:hover {
+	color: #008000;
+}
+
+.user {
+	width: 305px;
+	height: 40px;
+	position: absolute;
+	left: 47.5%;
+	top: 72px;
+	font-size: 14px;
+	box-sizing: border-box;
+	line-height: 40px;
+	background: #EBEFF2;
+	border-radius: 10px;
+}
+
+.user select {
+	cursor: pointer;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	background: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.user select option {line-height 40px;
+	
+}
+
+.user:hover {
+	border: none
+}
+
+.user:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 7px solid transparent;
+	border-top-color: #ccc;
+	top: 14px;
+	right: 10px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.user select:focus {
+	outline: none;
+	border-color: #6b9cde;
+	-moz-box-shadow: 0 0 3px 0 #95B8E7;
+	-webkit-box-shadow: 0 0 3px 0 #95B8E7;
+	box-shadow: 0 0 3px 0 #95B8E7;
+	box-sizing: border-box;
+}
+
+.main .name {
+	font-size: 14px;
+	width: 305px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #e4e6e8;
+	background: #ebeff2 url(../images/icon-name.png) no-repeat 12px 12px;
+	position: absolute;
+	left: 47.5%;
+	top: 127px;
+	padding-left: 35px;
+	padding-right: 16px;
+	box-sizing: border-box;
+	background-size: 18px 18px;
+	border-radius: 10px;
+}
+
+.main .name:focus {
+	border-color: #6b9cde;
+	-moz-box-shadow: 0 0 3px 0 #95B8E7;
+	-webkit-box-shadow: 0 0 3px 0 #95B8E7;
+	box-shadow: 0 0 3px 0 #95B8E7;
+	box-sizing: border-box;
+}
+
+.main .password {
+	font-size: 14px;
+	border: 1px solid #e4e6e8;
+	width: 305px;
+	height: 40px;
+	line-height: 40px;
+	background: #EBEFF2 url(../images/icon-mm.png) no-repeat 12px 12px;
+	position: absolute;
+	left: 47.5%;
+	top: 183px;
+	padding-left: 35px;
+	padding-right: 16px;
+	box-sizing: border-box;
+	background-size: 18px 18px;
+	border-radius: 10px;
+}
+
+.main .password:focus {
+	border-color: #6b9cde;
+	-moz-box-shadow: 0 0 3px 0 #95B8E7;
+	-webkit-box-shadow: 0 0 3px 0 #95B8E7;
+	box-shadow: 0 0 3px 0 #95B8E7;
+	box-sizing: border-box;
+}
+
+.main .check {
+	position: absolute;
+	top: 238px;
+	left: 48.5%;
+}
+
+.buttongroup {
+	position: absolute;
+	top: 268px;
+	left: 47.5%;
+}
+
+.buttongroup input {
+	font-family: "Î¢ÈíÑÅºÚ";
+	width: 140px;
+	height: 40px;
+	border-radius: 33px;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+}
+
+.buttongroup .sure {
+	background: #3b9c3d;
+}
+
+.buttongroup .sure:hover {
+	background: #41ac44;
+	cursor: pointer
+}
+
+.buttongroup .reset {
+	background: #9faab0;
+	margin-left: 18px;
+}
+
+.buttongroup .reset:hover {
+	background: #b5c1c7;
+	cursor: pointer;
+}
+
+.footer {
+	padding-top: 16px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	color: #333;
+}
+
+::-ms-clear {
+	width: 26px;
+	height: 26px;
+}
+
+::-ms-reveal {
+	width: 26px;
+	height: 26px;
+}
+
+/*Ö÷Ò³logo*/
+.header .logo {
+	width: 302px;
+	height: 33px;
+	opacity: 1;
+	background: url(../images/logo.png) no-repeat;
+	float: left;
+}

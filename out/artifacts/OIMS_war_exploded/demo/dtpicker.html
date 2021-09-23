@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>DatePicker Demo</title>
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/language.config.js"></script>
+	<script type="text/javascript">
+	   var contextPath = "/OIMSV3";
+	   importJS("/js/dtcomm.js"); //导入js及样式
+	   $(document).ready(function(){
+		   $("#dt").attr("readonly",true); //设置只读属性
+		   $("#dt").datepicker(); //datepicker控件在文本框生效
+	   });
+	</script>
+	<!-- 
+	导入 importJS("/js/manager/dtcomm.js");
+	再给对应的控件加只读属性及加datepicker事件把控件转为datepicker
+	demo运行需把 contextPath修改为工程自身的应该根路径
+	 -->
+</head>
+<body>
+    选择日期：<input type='text' id='dt'/>
+</body>
+</html>

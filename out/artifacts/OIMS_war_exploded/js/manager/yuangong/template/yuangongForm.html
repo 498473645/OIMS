@@ -1,0 +1,115 @@
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td rowspan="4" align="center" width="106">
+			<div class="pople">
+				<img src="../images/pople.png" id="yg_pic" height="97"
+					width="104">
+			</div>
+		</td>
+		<td align="right" width="52">姓名:</td>
+		<td><input name="xingming" id="xingming"
+			onblur="this.className='blur';checkIsStrEmpty(this);" class="blur"
+			type="text"></td>
+		<td width="1%"><span class="required">*</span></td>
+		<td align="right" width="10%">性别:</td>
+		<td align="left"><input name="xingbie" id="xingbie1" value="1"
+			checked="" type="radio"><label for="xingbie1">男</label>&nbsp;&nbsp;<input
+			name="xingbie" id="xingbie0" value="0" type="radio"><label
+			for="xingbie0">女</label></td>
+		<td width="12"><span class="required">*</span></td>
+		<td align="right" width="52">工号:</td>
+		<td><input name="yggonghao" id="yggonghao"
+			onblur="this.className='blur';checkIsStrEmpty(this);" class="blur"
+			type="text"></td>
+		<td align="left" width="12"><span class="required">*</span></td>
+	</tr>
+	<tr>
+		<td align="right">出生日期:</td>
+		<td align="left"><input name="shengri" id="shengri"
+			onblur="this.className='blur';checkIsStrEmpty(this);" class="blur"
+			type="text"></td>
+		<td align="left"><span class="required">*</span></td>
+		<td align="right">所属科室:</td>
+		<td align="left"><select name="bumenId" id="bumenId"
+			onblur="this.className='blur'; checkIsStrEmpty(this);">
+				<option value="2">眼科</option>
+		</select>
+		</td>
+		<td align="left"><span class="required">*</span></td>
+		<td align="right">人员类别:</td>
+		<td align="left"><select name="category" id="category"
+			onblur="this.className='blur';checkIsStrEmpty(this);"><option
+					value=""></option>
+				<option value="6001">医生</option>
+				<option value="6002">护士</option>
+				<option value="6003">医技</option>
+				<option value="6004">其他</option></select></td>
+		<td align="left"><span class="required">*</span></td>
+	</tr>
+	<tr>
+		<td align="right">职务:</td>
+		<td align="left"><select name="zhiwu" id="zhiwu"
+			onblur="this.className='blur';checkIsStrEmpty(this);"><option
+					value=""></option>
+				<option value="普通医生">普通医生</option>
+				<option value="副主任医师">副主任医师</option>
+				<option value="主任医师">主任医师</option>
+				<option value="检查医生">检查医生</option>
+				<option value="护士">护士</option></select></td>
+		<td align="left"></td>
+		<td align="right">职称:</td>
+		<td><input name="title" id="title"
+			onblur="this.className='blur';" class="blur" type="text"></td>
+		<td align="left"></td>
+		<td align="right">学历:</td>
+		<td><input name="xueli" id="xueli"
+			onblur="this.className='blur';" class="blur" type="text"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td align="right">联系电话:</td>
+		<td align="left"><input name="dianhua" id="dianhua"
+			onblur="this.className='blur';checkIsTel(this)" maxlength="11"
+			class="blur" type="text"></td>
+		<td align="left">&nbsp;</td>
+		<td align="right">身份证:</td>
+		<td colspan="4" align="left"><input name="sfzh" id="sfzh"
+			onblur="this.className='blur'" class="blur" type="text"></td>
+		<td align="left">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td align="right" height="46" width="10%">图片上传</td>
+			<td width="40%"><div class="searchfile">
+					<input size="1"
+						style="opacity: 0; position: absolute; display: none; cursor: pointer; z-index: 10; left: 227px; top: 164px; width: 41px; height: 23px;"
+						name="yg_photo" id="yg_photo" class="filed"
+						onchange="onChange_YgPicPath('/OIMS/publish/yuangong/addYuanGong.htm','addYuanGongForm');"
+						type="file">
+					<div style="width: 197px;" class="fieldstyle">
+						<input name="txt_fieldstyle" id="txt_fieldstyle" class="fieldtext"
+							type="text">
+					</div>
+					<div class="buttonstyle">
+						<input id="btn_yuyan" class="fieldbutton" type="button">
+					</div>
+				</div></td>
+			<td align="right" width="10%">邮箱:</td>
+			<td width="39%"><input name="ygemail" id="ygemail"
+				onblur="this.className='blur';checkIsMail(this)" class="blur"
+				type="text"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td align="right">家庭地址:</td>
+			<td colspan="3" align="left"><input name="jtdz" id="jtdz"
+				onblur="this.className='blur'" class="blur" type="text"></td>
+		</tr>
+		<tr>
+			<td align="right">个人简介:</td>
+			<td colspan="3" align="left"><textarea name="jianjie"
+					onblur="this.className='blur'" class="blur" id="jianjie" cols="45"
+					rows="4"></textarea></td>
+		</tr>
+</table>

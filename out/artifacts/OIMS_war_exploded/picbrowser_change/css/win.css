@@ -1,0 +1,93 @@
+.openWin {
+	background: #f7f7f7;
+	border: 1px solid #b0b0b0;
+	overflow: hidden;
+	width: 300px;
+	text-align: center;
+	overflow-y: auto;
+}
+.openWin .opentitle {
+	background: url(images/opentitlebg.png) repeat-x left top;
+	height: 28px;
+	border-bottom: 1px solid #72b6bf;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 4px;
+	line-height: 28px;
+	text-align: left;
+	padding-right: 10px;
+}
+.openWin .opentitle span {
+	width: 16px;
+	height: 18px;
+	float: left;
+	display: block;
+	margin-right: 5px;
+	margin-top: 4px;
+}
+.opentitle span.openwinicon {
+	background: url(images/menuicon.png) no-repeat -70px -70px;
+}
+element.style {
+height: 117px;
+}
+.openWin.error .opencontent{ background:url(images/error.png) no-repeat 35px 35px;  font-size:14px; padding-left:108px;  padding-right:8px;display:table-cell}
+
+.openWin .opencontent p.text{ width:180px; padding:40px 0px;   font-size:14px; }
+.openWin.alert .opencontent{ background:url(images/warning.png) no-repeat 35px 35px; padding-left:108px; font-size:14px;padding-right:8px;display:table-cell}
+.openWin.confirm .opencontent{ background:url(images/confirm.png) no-repeat 35px 35px; padding-left:108px; font-size:14px;padding-right:8px; display:table-cell}
+
+.openWin.success .opencontent{ background:url(images/success.png) no-repeat 35px 35px; padding-left:108px; font-size:14px;padding-right:8px; display:table-cell}
+.openWin .opencontent {
+	background: #f7f7f7;
+	padding: 0px;
+}
+.openbutton {
+	height: 38px;
+	background: #f1f1f1;
+	border-top: 1px solid #e6e6e6;
+	padding-top: 15px;
+	text-align: center;
+	clear: both;
+}
+.openbutton a {
+	height: 25px;
+	padding-right: 28px;
+	padding-left: 30px;
+	padding-top: 7px;
+	padding-bottom: 11px;
+	width: 88px;
+	background: url(images/bigbtnbg.png) no-repeat center;
+	line-height: 27px;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+.openbutton a span.submit{background:url(images/menuicon.png) no-repeat -51px -70px;  }
+.openbutton a span.cancel{background:url(images/menuicon.png) no-repeat -88px -70px;}
+.openbutton a span.confirm{background:url(images/menuicon.png) no-repeat -50px -70px;}
+.openbutton a span.return{background:url(images/menuicon.png) no-repeat -153px -179px;}
+.opentitle span.openwinicon{background:url(images/menuicon.png) no-repeat -70px -70px;}
+
+.openbutton{ height:38px; background:#f1f1f1; border-top:1px solid #e6e6e6;padding-top:15px; text-align:center; clear:both;}
+.openbutton a:hover{ background:url(images/bigbtnbg1.png) no-repeat center;}
+.openbutton a span{  width:17px; height:17px;  padding-left:7px; padding-right:8px; margin-right:5px; }
+
+
+
+.openWin .opentitle .closediv{ display:block; height:23px;float:right; padding-top:2px; width:18px; }
+.openWin .opentitle .closediv a{ display:block; height:23px; float:right;}
+.openWin .opentitle .closediv a.small{ width:26px; background:url(images/small.png) no-repeat;}
+.openWin .opentitle .closediv a.small:hover{width:26px; background:url(images/small1.png) no-repeat;}
+.openWin .opentitle .closediv a.big{ width:26px; background:url(images/big.png) no-repeat;}
+.openWin .opentitle .closediv a.big:hover{ width:26px; background:url(images/biga.png) no-repeat;}
+.openWin .opentitle .closediv a.biga{ width:26px; background:url(images/big1.png) no-repeat;}
+.openWin .opentitle .closediv a.biga:hover{ width:26px; background:url(images/big1a.png) no-repeat;}
+.openWin .opentitle .closediv a.close{ width:24px; background:url(images/close.png) no-repeat;}
+.openWin .opentitle .closediv a.close:hover{width:24px; background:url(images/close1.png) no-repeat;}
+
+
+
+.ji{background: #C0C0C0;}
+.ou{background: #FFFFFF;}
+.pdfDiv ul li{line-height:25px; width:100px; text-align: center;}
+.pdfDiv ul li:hover{background: #0000FF; }

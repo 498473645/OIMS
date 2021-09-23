@@ -1,0 +1,108 @@
+
+.carousel-component { 
+	position:relative;
+	overflow:hidden;
+	visibility:visible; /* component turns it on when first item is rendered */
+}
+				
+.carousel-component ul.carousel-list { 
+	width:10000000px;
+	position:relative;
+	z-index:1; 
+}
+
+.carousel-component .carousel-list li { 
+	float:left;
+	list-style:none;
+	overflow:hidden;
+}
+
+.carousel-component .carousel-list li img{
+  width:130px;
+  height:102px;
+}
+
+.carousel-component .carousel-vertical li { 
+	float:none;
+	margin-bottom:0px;
+}
+
+.carousel-component ul.carousel-vertical { 
+	width:auto;
+}
+
+.carousel-component .carousel-clip-region { 
+	overflow:hidden;
+	margin:0px auto;
+	position:relative; 
+}
+
+
+
+.carousel-component { 
+	
+	padding:0px;
+	color:#618cbe;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 915px;
+  padding-top:10px;
+}
+
+.clear{clear:both; width:1px; height:1px; font-size:1px; visibility:hidden;}
+
+
+img.thumb {
+  background: #E3EDFA;
+}
+
+
+
+/* HTML CAROUSEL */
+#html-carousel { 
+    
+}
+
+#html-carousel .carousel-list li { 
+    margin:5px 4px 0px 4px;
+}
+
+
+#html-carousel .carousel-list li img { 
+    border:2px solid #fff;
+    display:block; 
+}
+
+#html-carousel {
+    float: left;
+    width: 855px;
+
+}
+
+
+/* BUTTONS */
+#prev-arrow-container { 
+    float:left;
+    margin: 0px;
+    padding: 0px;
+	margin-top:30px;
+}
+#next-arrow-container { 
+    float:rihgt;
+    margin: 0px;
+    padding: 0px;
+	margin-top:30px;
+
+}
+#next-arrow { 
+    cursor:pointer; 
+}
+
+#prev-arrow { 
+    cursor:pointer; 
+}
+
+

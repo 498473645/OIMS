@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:url(../images/bg.jpg) no-repeat top left;}
+.menu{ margin-bottom:10px; width:182px;position:relative; margin-left:10px; }
+.menu .menutop{ height:38px; font-size:14px; background:url(../images/menutop.png) no-repeat center bottom;font-size:14px; padding-top:5px;}
+.menu .menutop ul li{ text-align:center; padding-top:5px;}
+.menu .menumiddle{ background:url(../images/menumiddle.png) repeat-y; }
+.menu .menumiddle ul{ padding-left:7px;overflow:hidden; padding-top:3px; }
+.menu .menumiddle ul li{ width:82px; height:28px; display:block; float:left;cursor:hand; margin-right:5px; margin-bottom:6px;}
+.menu .menubottom{ background:url(../images/menubottom.png) no-repeat top center; height:8px;}
+.menu .menumiddle1{ background:url(../images/menumiddle.png) repeat-y; }
+.menu .menumiddle1 ul{ padding-left:7px;overflow:hidden; padding-top:8px; }
+.menu .menumiddle1 ul li{ width:190px; overflow:hidden; text-align:left; height:22px; font-family:"微软雅黑"; color:#333;  margin-right:5px; margin-bottom:6px;}
+.wihte{ border:3px solid #fff;}
+.blue{ border:3px solid #083f9c;} 

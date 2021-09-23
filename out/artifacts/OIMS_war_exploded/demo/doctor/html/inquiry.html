@@ -1,0 +1,41 @@
+<!-- 问诊页面 -->
+<div id="inquiry" class="maintab">
+	<div class="inquiry">
+		<div>
+			<h3>主诉</h3>
+			<textarea id="main_txt" onfocus="_emr_inquiry(this)" >左眼被木柴击伤后眼痛、视物不清，伴左侧头痛、恶心、呕吐15小时</textarea>
+		</div>
+		<div>
+			<h3>现病史</h3>
+			<textarea id="now_txt" onfocus="_emr_inquiry(this)">今晨6时劈柴时，左眼被柴爿击伤，即感左眼痛、流泪不止、视物模糊，并流出少量血水。片刻之后，眼睑出现青肿。即至当地卫生院就诊，伤眼涂以金霉素眼膏后覆盖纱布，并给止痛片和三七片药片，经治疗后眼痛稍减轻。因农活忙，回家后仍下地劳动。午后起感左眼胀痛，逐渐加重，并伴左侧头痛、恶心、呕吐二次，均为胃内容物，服止痛片无效，乃再次到卫生院就诊，给静脉注射50%葡萄糖液60ml，肌注灭吐灵、安定后，随即转来本院。经急诊检查，诊断为左眼球挫伤、前房积血，继发性青光眼，立即入院</textarea>
+		</div>
+		<div>
+			<h3>既往史</h3>
+			<textarea id="old_txt" onfocus="_emr_inquiry(this)">20岁时患过“肝炎”。近年无预防接种史。</textarea>
+		</div>
+		<div>
+			<h3>个人史</h3>
+			<textarea id="allergies_txt" onfocus="_emr_inquiry(this)">生于原籍，未到过外省。平时务农，冬闲时兼做竹木器具。嗜烟，每到约一包。每天饮白酒2~3两。25岁结婚，妻及一子二女均健康</textarea>
+		</div>
+		<div>
+			<h3>家族史</h3>
+			<textarea id="family_txt" onfocus="_emr_inquiry(this)">父亲于1956年前死于“肺病”；母亲于1971年因脑溢血病故。</textarea>
+		</div>
+	</div>
+	<div class="templet">
+		<table>
+			<tr>
+				<td align="center" width="52"><strong id="inquiry_title" style="font-size:14px;">主诉</strong></td>
+				<td align="center"><input type="text" class="blur"></td>
+				<td align="center"><a class="search">查找</a></td>
+			</tr>
+		</table>
+		<input type="hidden" id="inquiry_position">
+		<div id="inquiry_context" class="inputTemplateList_emr" style="border-top:1px solid #d2d2d2;"></div>
+	</div>
+	<div
+		style="width: 29%; float: left; border: 1px solid #d2d2d2; margin-left: 5px; height: 100%;">
+		<h3>套餐</h3>
+		<div></div>
+	</div>
+</div>

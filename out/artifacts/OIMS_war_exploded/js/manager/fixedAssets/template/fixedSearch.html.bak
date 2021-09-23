@@ -1,0 +1,35 @@
+<table style="width:100%;">
+	<tr>
+		<td class="formTdTitle">资产名称</td><td><input class="inputCommon" type="text" name="name" id="name"/></td>
+		<td class="formTdTitle">资产编号</td><td><input class="inputCommon" type="text" name="flowerNo" id="flowerNo" /></td>
+		<td class="formTdTitle">序列号</td><td><input class="inputCommon" type="text" name="sn" id="sn" /></td>
+		<td class="formTdTitle" colspan="4">
+			<input checked="checked" type="radio" value="" name="scrapFlag" id="scrapFlag" /><label for="scrapFlag">全部</label>
+			<input type="radio" value="true" name="scrapFlag" id="scrapFlagTrue" /><label for="scrapFlagTrue">已报废</label>
+			<input type="radio" value="false" name="scrapFlag" id="scrapFlagFalse" /><label for="scrapFlagFalse">未报废</label>
+		</td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">制造商</td><td><input class="inputCommon" type="text" name="manufacturer" /></td>
+		<td class="formTdTitle">厂家联系人</td><td><input class="inputCommon" type="text" name="contacts" /></td>
+		<td class="formTdTitle">手机</td><td><input class="inputCommon" type="text" name="mobile" /></td>
+		<td class="formTdTitle">价格</td>
+		<td><input type="text" name="priceMin" /></td>
+		<td>-</td>
+		<td><input type="text" name="priceMax" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">邮箱</td><td><input class="inputCommon" type="text" name="mail" /></td>
+		<td class="formTdTitle">下次维护时间</td><td><input class="inputCommon" type="text" id="nextMaintenanceDate" name="nextMaintenanceDate" /></td>
+		<td class="formTdTitle">管理员</td><td><input class="inputCommon" type="text" name="operator" /></td>
+		<td class="formTdTitle">采购时间</td>
+		<td><input type="text" name="purchaseOrderDateStart"  id="purchaseOrderDateStart"/></td>
+		<td>-</td>
+		<td><input type="text" name="purchaseOrderDateEnd" id="purchaseOrderDateEnd" /></td>
+	</tr>
+</table>
+<div class="avdopenbutton"> 
+	<a href="javascript:seniorFaSearchSubmit();"><span class="advsumit"></span>提交</a>
+	<a href="javascript:seniorFaSearchReset();"><span class="advreset"></span>重置</a>
+	<a id="closeId"><span class="close"></span>关闭</a> 
+</div>

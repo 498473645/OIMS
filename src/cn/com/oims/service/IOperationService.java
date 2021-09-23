@@ -18,42 +18,52 @@ import java.util.Vector;
 
 public interface IOperationService {
   void saveOrUpdateOperationDict(OperationDict paramOperationDict);
-  
+
   List<OperationDict> findOperationDictList(String paramString, Page paramPage);
-  
+
   void deleteOperationDict(Integer paramInteger);
-  
+
   void saveOrUpdateOperation(OperationAppointmentForm paramOperationAppointmentForm, String paramString);
-  
+
   Map<String, Object> findOperationList(Page paramPage, OperationSearchForm paramOperationSearchForm);
-  
+
   void deleteOperation(Long paramLong);
-  
+
   Operation getOperation(Long paramLong);
-  
+
   OperationDict getOperationDict(Integer paramInteger);
-  
+
   void saveOrUpdateOperationApplication(OperationApplicationForm paramOperationApplicationForm, String paramString);
-  
+
   void saveOrUpdateOperationPlan(OperationPlanForm paramOperationPlanForm, String paramString);
-  
+
   Map<String, Object> getOperationMap(String paramString);
-  
+
   void saveOrUpdateOperationRecord(OperationRecordForm paramOperationRecordForm, String paramString);
-  
+
   Map<String, Object> showOperationMap(OperationShowForm paramOperationShowForm);
-  
+
   void setOperationProcessState(Long[] paramArrayOfLong, Integer paramInteger, String paramString);
-  
+
   List<OperationConsumable> findOperationConsumable(Long paramLong);
-  
+
   void saveOrUpdateOperationConsumable(Long paramLong, Boolean paramBoolean, Vector<OperationConsumableForm> paramVector, String paramString);
-  
+
   Map<String, Object> findOperationConsumablePageList(OperationConsumableSearchForm paramOperationConsumableSearchForm, Page paramPage);
-  
+
   List<Map<String, Object>> findOperationList(OperationSearchForm paramOperationSearchForm);
-  
+
   String getOperationSizeTitle(Integer paramInteger);
-  
+
   String getAnesthesiaName(Integer paramInteger);
+
+  /**
+   * @Description: 查询手术列表(首页)
+   * @param page 分页查询对象
+   * @param form 手术表单查询对象
+   * @return java.util.Map<java.lang.String,java.lang.Object>
+   * @author huxiaoqiang
+   * @date 2019/12/18 11:32
+   */
+  public Map<String, Object> findOperationListForIndex(Page page, OperationSearchForm form);
 }

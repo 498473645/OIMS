@@ -1,0 +1,38 @@
+<input type="hidden" name="operationId" id="operationId" />
+<table>
+	<tr>
+		<td style="width:58px; text-align:right; font-weight:bold;">患者信息</td><td id="patientInfo" style="text-align:left;"></td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;font-weight:bold;">手术名称</td><td id="operationNames" style="text-align:left"></td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;font-weight:bold;">明细<br /><input type="checkbox" value="true" name="used" id="used" /><label for="used" style="font-weight:normal;color:red">已使用</label></td><td>
+			<div class="list" style="padding:0; height:280px; overflow:auto">
+				<table id="mingxi" style="width:100%">
+					<tr><th>产品编码</th><th>注册名称</th><th>产品注册号</th><th width="68">通用名</th><th width="58">规格型号</th><th width="58">厂家</th><th width="58">计量单位</th><th width="38">数量</th><th width="48">单价</th><th width="100">产品批号</th><th width="68">过期时间</th><th width="24"><a href="#" title="增加">+</a></th></tr>
+					<tr>
+						<td><input name="code" type="text" style="width:100%;border:0" /></td>
+						<td><input name="regName" type="text" style="width:100%;border:0" /></td>
+						<td><input name="regNo" type="text" style="width:100%;border:0" /></td>
+						<td><input name="name" type="text" style="width:100%;border:0" /></td>
+						<td><input name="specification" type="text" style="width:100%;border:0" /></td>
+						<td><input name="manufacturers" type="text" style="width:100%;border:0" /></td>
+						<td><input name="unit" type="text" style="width:100%;border:0" /></td>
+						<td><input name="quantity" type="text" style="width:100%;border:0" /></td>
+						<td><input name="price" type="text" style="width:100%;border:0" /></td>
+						<td><input name="sn" type="text" style="width:100%;border:0" /></td>
+						<td><input name="expiDate" type="text" style="width:100%;border:0" /></td>
+						<td><a href="javascript:void(0);" title="删除">-</a></td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td style="width:58px; text-align:right;">手术医生</td><td id="doctorList" style="text-align:left"></td>
+		<td style="width:58px; text-align:right;">护士</td><td id="nurseList" style="text-align:left"></td>
+	</tr>
+</table>

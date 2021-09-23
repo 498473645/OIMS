@@ -1,0 +1,132 @@
+<table>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">是否加急</td>
+		<td><input type="checkbox" value="true" name="urgent" id="urgent" />&nbsp;<label for="urgent" style="color:red">加急</label></td>
+		<td style="width:58px; font-weight:bold; text-align:right">手术类别</td>
+		<td style="text-align:left">
+			<input type="text" name="categoryName" id="categoryName" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">隔离状态</td>
+		<td>
+			<select name="isolation" id="isolation">
+				<option value="1">正常</option>
+				<option value="2">隔离</option>
+				<option value="3">放射</option>
+			</select>
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">开台时间</td>
+		<td><input type="text" name="appointmentTime" id="appointmentTime" style="width:100%" /></td>
+		
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">患者ID</td>
+		<td style="text-align:left"><input type="text" name="patientNo" id="patientNo" style="width:100%; height:22px" /></td>
+		<td style="width:58px; font-weight:bold; text-align:right">姓名</td>
+		<td>
+			<input type="text" name="patientName" id="patientName" style="width:100%" disabled="disabled" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">性别</td>
+		<td>
+			<input type="text" name="sex" id="sex" style="width:100%" disabled="disabled" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">年龄</td>
+		<td>
+			<input type="text" name="age" id="age" style="width:100%" disabled="disabled" />
+		</td>
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">联系人</td>
+		<td>
+			<input type="text" name="contact" id="contact" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">电话</td>
+		<td>
+			<input type="text" name="tel" id="tel" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">手机</td>
+		<td>
+			<input type="text" name="mobile" id="mobile" style="width:100%" />
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">病区</td>
+		<td>
+			<input type="hidden" name="areaCode" id="areaCode" />
+			<input type="text" name="area" id="area" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">床位</td>
+		<td>
+			<input type="text" name="bedNo" id="bedNo" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">病情</td>
+		<td colspan="3" style="text-align:left"><input type="text" name="condition" value="一般" id="condition" style="width:100%" /></td>
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">术前诊断</td>
+		<td colspan="7" style="text-align:left"><input type="text" name="medical" id="medical" style="width:100%" /></td>
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right; vertical-align:top">手术名称</td>
+		<td colspan="7"><input type="text" name="operationNames" id="operationNames" /></td>
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">手术大小</td>
+		<td>
+			<input type="text" name="operationSize" id="operationSize" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">手术级别</td>
+		<td>
+			<input type="text" name="levelFlag" id="levelFlag" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">专业组</td>
+		<td>
+			<input type="text" name="groupName" id="groupName" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">主刀医生</td>
+		<td>
+			<input type="text" name="doctorName" id="doctorName" style="width:100%" />
+		</td>
+	</tr>
+	<!-- 助手 -->
+	<tr class="shenqing anpan">
+		<td style="width:58px; font-weight:bold; text-align:right">第一助手</td>
+		<td>
+			<input type="text" name="firstAssistantName" id="firstAssistantName"  style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">第二助手</td>
+		<td>
+			<input type="text" name="secondAssistantName" id="secondAssistantName" style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">巡回护士</td>
+		<td>
+			<input type="text" name="circuitNurseName" id="circuitNurseName"  style="width:100%" />
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">器械护士</td>
+		<td>
+			<input type="text" name="instrumentNurseName" id="instrumentNurseName" style="width:100%" />
+		</td>
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">麻醉方式</td>
+		<td>
+			<input type="text" name="anesthesiaName" id="anesthesiaName" style="width:100%">
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">麻醉师</td>
+		<td>
+			<input name="anesthetist" id="anesthetist" style="width:100%" type="text">
+		</td>
+		<td style="width:58px; font-weight:bold; text-align:right">手术间</td>
+		<td id="tdOperationRoom">
+			<input type="text" id="operationRoomName" name="operationRoomName" />
+		</td>
+		<td colspan="2">
+			<input type="checkbox" value="true" name="drugResistanceBacteriaCarrier" id="drugResistanceBacteriaCarrier" /><label for="drugResistanceBacteriaCarrier">有耐药菌携带者参与手术</label>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:58px; font-weight:bold; text-align:right">备注</td>
+		<td colspan="7"><textarea style="width:100%; height:88px;" name="note" id="note"></textarea></td>
+	</tr>
+</table>

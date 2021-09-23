@@ -1,22 +1,9 @@
 package cn.com.oims.service.impl;
 
 import cn.com.oims.common.GlobalConfig;
-import cn.com.oims.dao.IBuMenDao;
-import cn.com.oims.dao.IEMRChufangDao;
-import cn.com.oims.dao.IHuanZheXinXiDao;
-import cn.com.oims.dao.IJiuzhenDao;
-import cn.com.oims.dao.IYuanGongDao;
+import cn.com.oims.dao.*;
 import cn.com.oims.dao.jdbc.IEyeDao;
-import cn.com.oims.dao.pojo.BuMen;
-import cn.com.oims.dao.pojo.DrugDict;
-import cn.com.oims.dao.pojo.DrugStock;
-import cn.com.oims.dao.pojo.EMRChufang;
-import cn.com.oims.dao.pojo.EMRChufangQindan;
-import cn.com.oims.dao.pojo.EyeInfoOutpClinic;
-import cn.com.oims.dao.pojo.HuanZheXinXi;
-import cn.com.oims.dao.pojo.Jiuzhen;
-import cn.com.oims.dao.pojo.OutpPresc;
-import cn.com.oims.dao.pojo.YuanGong;
+import cn.com.oims.dao.pojo.*;
 import cn.com.oims.service.IEMRChufangService;
 import cn.com.oims.service.IEMRService;
 import cn.com.oims.utils.DateUtils;
@@ -28,58 +15,55 @@ import cn.com.oims.webservice.pojo.PatientVistInfomation;
 import cn.com.oims.webservice.pojo.medicine.Drug;
 import com.codesnet.common.MultiUtils;
 import com.codesnet.common.Page;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import javax.jws.WebService;
 import org.apache.commons.beanutils.BeanUtils;
-//import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.jws.WebService;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+//import org.springframework.beans.BeanUtils;
 
 @Service
 @WebService
 public class EMRChufangServiceImpl implements IEMRChufangService {
   @Autowired
   private IYuanGongDao ygDao;
-  
+
   @Autowired
   private IEMRChufangDao dao;
-  
+
   @Autowired
   private HisWebService hisWebService;
-  
+
   @Autowired
   private IHuanZheXinXiDao huanZheXinXiDao;
-  
+
   @Autowired
   private IJiuzhenDao jiuzhenDao;
-  
+
   @Autowired
   private MedicineWebService medicineWebService;
-  
+
   @Autowired
   private IBuMenDao bumenDao;
-  
+
   @Autowired
   private IEyeDao eyeDao;
-  
+
   @Autowired
   private IEMRService iemrService;
-  
+
   private String language = "ISO-8859-1";
-  
+
   private EMRChufang e_c_f;
-  
+
   public void setMedicineWebService(MedicineWebService medicineWebService) {
     this.medicineWebService = medicineWebService;
   }
-  
+
   private Long getChufangId(EMRChufang chufang, HuanZheXinXi hzxx, Jiuzhen jz, YuanGong yg) {
     List<EMRChufang> list = this.dao.findChufangList(jz.getId());
     Iterator<EMRChufang> itr = list.iterator();
@@ -92,8 +76,8 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
         chufang = cf;
         this.dao.updateChufang(chufang);
         break;
-      } 
-    } 
+      }
+    }
     if (cfId == null) {
       PatientVistInfomation pvi = new PatientVistInfomation();
       Patient p = new Patient();
@@ -106,11 +90,11 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       String no = this.hisWebService.addOutpOrders(pvi);
       chufang.setCfdh(String.valueOf(no) + "_" + (list.size() + 1));
       cfId = this.dao.saveChufang(chufang);
-    } 
+    }
     this.e_c_f = chufang;
     return cfId;
   }
-  
+
   @Transactional
   public List<Long> saveChufang(List<EMRChufangQindan> list, Long jiuzhenId, Long huanzheId, String gonghao) {
     List<Long> list_l = new ArrayList<Long>();
@@ -158,14 +142,14 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
             oq.setYongyaopinlv(qd.getYongyaopinlv());
             this.dao.updateEMRChufangQindan(oq);
             this.medicineWebService.updateOutpPresc(op);
-          } 
+          }
           oldList.remove(oq);
           x = true;
           break;
-        } 
-      } 
+        }
+      }
       if (x)
-        continue; 
+        continue;
       chufang.setFyks(drug.getBumenId());
       Long chufangId = getChufangId(chufang, hzxx, jz, yg);
       qd.setChufangId(chufangId);
@@ -177,11 +161,11 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       if (!prescList.contains(presc)) {
         prescList.add(presc);
         map.put(chufangId, prescList);
-      } 
+      }
       updateChufangJiage(chufangId);
-    } 
+    }
     if (oldList.size() > 0)
-      list_l1 = deleteChufangQindan(oldList); 
+      list_l1 = deleteChufangQindan(oldList);
     PatientVistInfomation pvi = new PatientVistInfomation();
     Patient p = new Patient();
     p.setPatientId(hzxx.getBinglihao());
@@ -192,11 +176,11 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       EMRChufang chufang = this.dao.getChufang(chufangId);
       chufang.setJifeiFlag(this.medicineWebService.saveOutpPrescList(pvi, map.get(chufangId)));
       this.dao.updateChufang(chufang);
-    } 
+    }
     list_l.addAll(list_l1);
     return list_l;
   }
-  
+
   private void saveOrUpdateChufangToEyeInfoOutpClinic(Long jiuzhenId) {
     Jiuzhen visit = this.jiuzhenDao.findJiuzhenById(jiuzhenId);
     YuanGong yg = this.ygDao.obtainYuanGongByGonghao(visit.getFzys());
@@ -211,11 +195,11 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
         EMRChufangQindan cfqd = (EMRChufangQindan)m.get("cfqd");
         DrugStock dd = (DrugStock)m.get("yaopin");
         sb.append(String.valueOf(dd.getDrugName()) + cfqd.getYongliang() + dd.getDosageUnit() + cfqd.getYongfa() + cfqd.getYongyaopinlv() + " ");
-      } 
+      }
       if (eioc == null) {
         Boolean b = this.eyeDao.findPatientById(patient.getBinglihao());
         if (!b.booleanValue())
-          this.eyeDao.addPatientToEyeDatabase(patient); 
+          this.eyeDao.addPatientToEyeDatabase(patient);
         eioc = new EyeInfoOutpClinic();
         eioc.setFlow_no(String.valueOf(patient.getBinglihao()) + format.format(visit.getCaozuoTime()));
         eioc.setCli_date((new SimpleDateFormat("yyyyMMddHHmmss")).format(new Date()));
@@ -231,24 +215,24 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
         String statement = this.iemrService.createTreatmentInfo(map, sb.toString(), "prescription", visit);
         eioc.setTreatment_info((statement == null) ? null : new String(statement.getBytes(), this.language));
         this.eyeDao.updateEyeInfoOutpClinic(eioc);
-      } 
+      }
     } catch (Exception e) {
       e.printStackTrace();
-    } 
+    }
   }
-  
+
   public int getPrescriptionItemNoFromHis(OutpPresc op) {
     for (int i = 0; i < 3; i++) {
       Integer k = this.hisWebService.findOutpPrescByPK(op);
       if (k != null && k.intValue() > 0) {
         op.setItemNo(Integer.valueOf(op.getItemNo().intValue() + 1));
         if (i > 1)
-          System.out.println("getPrescriptionItemNoFromHis:" + op.getSerialNo()); 
-      } 
-    } 
+          System.out.println("getPrescriptionItemNoFromHis:" + op.getSerialNo());
+      }
+    }
     return op.getItemNo().intValue();
   }
-  
+
   private OutpPresc prescriptionToHis(Jiuzhen jz, EMRChufang chufang, EMRChufangQindan qd) {
     OutpPresc op = new OutpPresc();
     op.setVisitDate(jz.getCaozuoTime());
@@ -274,7 +258,7 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
     op.setDosageUnits(unit);
     return op;
   }
-  
+
   @Transactional
   public List<Long> deleteChufangQindan(List<EMRChufangQindan> oldList) {
     List<Long> list_l = new ArrayList<Long>();
@@ -293,19 +277,19 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       if (!b.booleanValue()) {
         list_l.add(qindan.getYaopinId());
         continue;
-      } 
+      }
       this.medicineWebService.deleteOutpPresc(op);
       this.dao.deleteChufangQindan(qindan);
       List<EMRChufangQindan> list = this.dao.findChufangQindanByChufangId(chufangId);
       if (list.size() == 0) {
         this.dao.deleteChufang(this.dao.getChufang(chufangId));
         continue;
-      } 
+      }
       updateChufangJiage(chufangId);
-    } 
+    }
     return list_l;
   }
-  
+
   private void updateChufangJiage(Long chufangId) {
     List<EMRChufangQindan> list = this.dao.findChufangQindanByChufangId(chufangId);
     Iterator<EMRChufangQindan> itr = list.iterator();
@@ -313,13 +297,13 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
     while (itr.hasNext()) {
       EMRChufangQindan qd = itr.next();
       if (qd.getJiage() != null)
-        money += qd.getJiage().floatValue() * qd.getShuliang().floatValue(); 
-    } 
+        money += qd.getJiage().floatValue() * qd.getShuliang().floatValue();
+    }
     EMRChufang chufang = this.dao.getChufang(chufangId);
     chufang.setZongjia(Float.valueOf(money));
     this.dao.updateChufang(chufang);
   }
-  
+
   public List<Map<String, Object>> findEMRChufang(Long jiuzhenId) {
     List<EMRChufang> list = this.dao.findChufangList(jiuzhenId);
     Iterator<EMRChufang> itr = list.iterator();
@@ -331,12 +315,12 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       List<EMRChufangQindan> ql = this.dao.findChufangQindanByChufangId(cf.getId());
       map.put("qindan", ql);
       nl.add(map);
-    } 
+    }
     list.clear();
     list = null;
     return nl;
   }
-  
+
   public void deleteChufangAll(Long jiuzhenId) {
     List<EMRChufang> list = this.dao.findChufangList(jiuzhenId);
     Iterator<EMRChufang> itr = list.iterator();
@@ -345,9 +329,9 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       List<EMRChufangQindan> ql = this.dao.findChufangQindanByChufangId(cf.getId());
       this.dao.deleteChufangQindanAll(ql);
       this.dao.deleteChufang(cf);
-    } 
+    }
   }
-  
+
   public List<Map<String, Object>> findEMRChufangQindan(Long jiuzhenId) {
     List<Map<String, Object>> nl = new ArrayList<Map<String, Object>>();
     List<EMRChufangQindan> list = this.dao.findChufangQindan(jiuzhenId);
@@ -359,38 +343,38 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       OutpPresc op = new OutpPresc();
       EMRChufang ecf = this.dao.getChufang(chufangId);
       if (ecf == null)
-        continue; 
+        continue;
       DrugStock ds = this.dao.getDrugStockById(chufang.getYaopinId());
       try {
         if (ecf.getCfdh() != null)
-          op.setSerialNo(Long.valueOf(Long.parseLong(ecf.getCfdh().split("_")[0]))); 
+          op.setSerialNo(Long.valueOf(Long.parseLong(ecf.getCfdh().split("_")[0])));
       } catch (Exception exception) {}
       op.setDrugCode(ds.getDrugCode());
       op.setDrugSpec(ds.getPackageSpec());
       op.setUnits(ds.getPackageUnits());
       Boolean b = this.medicineWebService.isDeleteOutpPresc(op);
       if (!b.booleanValue())
-        chufang.setJifeiFlag(Integer.valueOf(1)); 
+        chufang.setJifeiFlag(Integer.valueOf(1));
       Map<String, Object> map = new HashMap<String, Object>();
       map.put("cfqd", chufang);
       map.put("yaopin", dd);
       nl.add(map);
-    } 
+    }
     list.clear();
     list = null;
     return nl;
   }
-  
+
   public List<DrugDict> findDrugDictList(Page page, Integer categoryId, String search, String storename) {
     String categoryIds = null;
     List<DrugDict> list = this.dao.findDrugDictList(page, categoryIds, search, storename);
     if (list.size() == 0) {
       syncDrugList(search.toUpperCase());
       list = this.dao.findDrugDictList(page, categoryIds, search, storename);
-    } 
+    }
     return list;
   }
-  
+
   public DrugDict getDrugDictInfo(Long id) {
     DrugDict dict = this.dao.getEMRDrugDict(id);
     if (dict.getUpdateTime() == null || dict.getUpdateTime().before(MultiUtils.getStartTimeOfDay())) {
@@ -398,13 +382,13 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       dict.setPrice(price);
       dict.setUpdateTime(new Date());
       this.dao.update("DrugDict", dict);
-    } 
+    }
     Float storage = this.medicineWebService.getMedicineStorage(dict.getDrugCode());
     dict.setStore(storage);
     this.dao.update("DrugDict", dict);
     return dict;
   }
-  
+
   public List<DrugStock> findDrugStockList(Long drugDictId) {
     List<DrugStock> list = this.dao.findDrugStockList(drugDictId, true);
     List<DrugStock> returnList = new ArrayList<DrugStock>();
@@ -414,18 +398,18 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
         stock.setPrice(price);
         stock.setUpdateTime(new Date());
         this.dao.update("DrugStock", stock);
-      } 
+      }
       Float storage = this.medicineWebService.getMedicineStorage(stock.getDrugStockId());
       stock.setStore(storage);
       this.dao.update("DrugStock", stock);
       if (storage != null && storage.floatValue() > 0.0F)
-        returnList.add(stock); 
-    } 
+        returnList.add(stock);
+    }
     list.clear();
     list = null;
     return returnList;
   }
-  
+
   public void syncDrug() {
     syncDrugList(null);
   }
@@ -456,13 +440,13 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
       if(list.size()<pageSize)break;
     }
   }
-  
+
   private void syncDrugStock(DrugDict dict) {
     List<Drug> list = this.medicineWebService.findDrugStock(dict.getDrugCode());
     if (list == null || list.size() == 0) {
       System.out.println("code:" + dict.getDrugCode() + " 没有找到对应的药品库存");
       return;
-    } 
+    }
     Iterator<Drug> itr = list.iterator();
     while (itr.hasNext()) {
       Drug drug = itr.next();
@@ -473,12 +457,12 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
         stock.setInsertTime(new Date());
       } else {
         id = stock.getId();
-      } 
+      }
       try {
         BeanUtils.copyProperties(stock, drug);
       } catch (Exception e) {
         e.printStackTrace();
-      } 
+      }
       stock.setId(id);
       stock.setDrugDictId(dict.getId());
       stock.setDrugStockId(drug.getId());
@@ -487,39 +471,39 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
         bumen = new BuMen();
         bumen.setDwid(Integer.valueOf(1));
         bumen.setBmbm(drug.getDept().getDeptCode());
-      } 
+      }
       bumen.setBmmc(drug.getDept().getName());
       this.bumenDao.saveOrUpdateBuMen(bumen);
       stock.setBumenId(bumen.getId());
       stock.setStoreName(bumen.getBmmc());
       stock.setUpdateTime(new Date());
       if (stock.getDosageUnit().indexOf("滴眼液") != -1)
-        stock.setDosageUnit("滴"); 
+        stock.setDosageUnit("滴");
       this.dao.saveOrUpdateDrug(stock);
       DrugDict old = this.dao.getEMRDrugDictByCode(dict.getDrugCode());
       old.setPackageSpec(stock.getPackageSpec());
       this.dao.update("DrugDict", old);
-    } 
+    }
   }
-  
+
   public List<EMRChufangQindan> findQINDANByJzAndYaoPin(Long jiuzhenId, Long yaopinId) {
     List<EMRChufang> list = this.dao.findChufangList(jiuzhenId);
     List<EMRChufangQindan> list_qindan = new ArrayList<EMRChufangQindan>();
     for (EMRChufang ecf : list) {
       List<EMRChufangQindan> list_qindan_temp = this.dao.findQINDANByJzAndYaoPin(ecf.getId(), yaopinId);
       if (list_qindan_temp != null && list_qindan_temp.size() > 0)
-        list_qindan.addAll(list_qindan_temp); 
-    } 
+        list_qindan.addAll(list_qindan_temp);
+    }
     return list_qindan;
   }
-  
+
   public Map<String, Object> findDrugDictPageList(Page page, String search) {
     Map<String, Object> m = new HashMap<String, Object>();
     m.put("list", this.dao.findDrugDictPageList(page, search));
     m.put("page", page);
     return m;
   }
-  
+
   public Map<String, Object> findDrugTJPageList(Page page, CommonSerchForm searchform) {
     List<Map<String, Object>> list = this.dao.findDrugTJPageList(page, searchform);
     Map<String, Object> m = new HashMap<String, Object>();
@@ -527,7 +511,7 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
     m.put("page", page);
     return m;
   }
-  
+
   public Map<String, Object> findUseDocList(CommonSerchForm form) {
     Map<String, Object> map = new HashMap<String, Object>();
     List<Object> list = this.dao.findUseDocList(form);
@@ -543,24 +527,24 @@ public class EMRChufangServiceImpl implements IEMRChufangService {
           buf.append(jbList.get(i));
         } else {
           buf.append((new StringBuilder()).append(jbList.get(i)).append("、").toString());
-        } 
-      } 
+        }
+      }
       arg[3] = buf.toString();
-    } 
+    }
     map.put("list", list);
     return map;
   }
-  
+
   public void updateDrugUse(Long id) {
     DrugDict dd = this.dao.getEMRDrugDict(id);
     if (dd.isEnableFlag()) {
       dd.setEnableFlag(Boolean.valueOf(false));
     } else {
       dd.setEnableFlag(Boolean.valueOf(true));
-    } 
+    }
     this.dao.update("DrugDict", dd);
   }
-  
+
   public DrugStock getDrugStockById(Long id) {
     return this.dao.getDrugStockById(id);
   }

@@ -1,0 +1,391 @@
+<div id="shfc_print" style="padding-bottom: 0px; margin: 0px auto; padding-left: 10px; width: 683px; padding-right: 10px; background: rgb(255,255,255); color: rgb(79,79,79); padding-top: 30px;" >
+    <h1 style="text-align: center;line-height:50px; height: 50px; font-size: 20px">
+        术后复查</h1>
+    <div style="font-size: 14px; border-top: rgb(51,51,51) 2px solid">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    <th height="40px" nowrap="nowrap" width="12%">
+                        姓名：</th>
+                    <td width="13%" style="border-bottom:1px solid black;text-align:center;">
+                        <label id="suffererName"></label></td>
+                    <th nowrap="nowrap" width="12%">
+                        性别：</th>
+                    <td width="13%" style="border-bottom:1px solid black;text-align:center;">
+                        <label id="sex"></label></td>
+                    <th nowrap="nowrap" width="12%">
+                        年龄：</th>
+                    <td width="13%" style="border-bottom:1px solid black;text-align:center;">
+                        <label id="age"></label></td>
+                    <th nowrap="nowrap" width="12%">
+                        住院ID号：</th>
+                    <td width="13%" style="border-bottom:1px solid black;text-align:center;">
+                        <label id="blh"></label></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="padding-top:10px;height:30px;">
+                    时间：</td>
+                    <td nowrap="nowrap" style="padding-top:10px;">
+                    &nbsp;&nbsp;<label id="nian"/></label>&nbsp;&nbsp;年&nbsp;&nbsp;<label id="yue"/></label>&nbsp;&nbsp;月&nbsp;&nbsp;<label id="ri"/>&nbsp;&nbsp;日</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="text-align: center; padding-left: 0px; padding-right: 0px; font-size: 14px; padding-top: 1px; padding-bottom:10px">
+        <table style="border-left:1px solid black;border-top:1px solid black;" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    <td nowrap="nowrap" width="14%" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">主观感受</td>
+                    <td nowrap="nowrap" width="37%" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">右&nbsp;&nbsp;&nbsp;&nbsp;眼</td>
+                    <td nowrap="nowrap" width="37%" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">左&nbsp;&nbsp;&nbsp;&nbsp;眼</td>
+                    <td nowrap="nowrap" width="12%" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">签&nbsp;&nbsp;名</td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">特殊不适</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="tsbs_r1" name="tsbs_r" value="1"/>胀&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_r2" name="tsbs_r" value="2"/>刺&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_r3" name="tsbs_r" value="3"/>卡&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_r4" name="tsbs_r" value="4"/>痛&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_r5" name="tsbs_r" value="5"/>流泪
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="tsbs_l1" name="tsbs_l" value="1"/>胀&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_l2" name="tsbs_l" value="2"/>刺&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_l3" name="tsbs_l" value="3"/>卡&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_l4" name="tsbs_l" value="4"/>痛&nbsp;&nbsp;
+                        <input type="checkbox" id="tsbs_l5" name="tsbs_l" value="5"/>流泪
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                    <label id="tsbs_qz" onclick="openFloatDiv1('tsbs_qz','tsbs_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="tsbs_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">眩&nbsp;&nbsp;&nbsp;&nbsp;晕</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="xy_r1" name="xy_r" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="xy_r2" name="xy_r" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="xy_r3" name="xy_r" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="xy_r4" name="xy_r" value="4"/>无
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="xy_l1" name="xy_l" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="xy_l2" name="xy_l" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="xy_l3" name="xy_l" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="xy_l4" name="xy_l" value="4"/>无
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="xy_qz" onclick="openFloatDiv1('xy_qz','xy_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="xy_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">畏&nbsp;&nbsp;&nbsp;&nbsp;光</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="wg_r1" name="wg_r" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="wg_r2" name="wg_r" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="wg_r3" name="wg_r" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="wg_r4" name="wg_r" value="4"/>无
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="wg_l1" name="wg_l" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="wg_l2" name="wg_l" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="wg_l3" name="wg_l" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="wg_l4" name="wg_l" value="4"/>无
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="wg_qz" onclick="openFloatDiv1('wg_qz','wg_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="wg_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">视&nbsp;疲&nbsp;劳</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="spl_r1" name="spl_r" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="spl_r2" name="spl_r" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="spl_r3" name="spl_r" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="spl_r4" name="spl_r" value="4"/>无
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="spl_l1" name="spl_l" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="spl_l2" name="spl_l" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="spl_l3" name="spl_l" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="spl_l4" name="spl_l" value="4"/>无
+                    </td>
+                    <td  style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="spl_qz" onclick="openFloatDiv1('spl_qz','spl_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="spl_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">眩&nbsp;&nbsp;&nbsp;&nbsp;光</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="xg_r1" name="xg_r" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="xg_r2" name="xg_r" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="xg_r3" name="xg_r" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="xg_r4" name="xg_r" value="4"/>无
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="xg_l1" name="xg_l" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="xg_l2" name="xg_l" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="xg_l3" name="xg_l" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="xg_l4" name="xg_l" value="4"/>无
+                    </td>
+                    <td style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="xg_qz" onclick="openFloatDiv1('xg_qz','xg_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="xg_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">阅读困难</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="ydkn_r1" name="ydkn_r" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="ydkn_r2" name="ydkn_r" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="ydkn_r3" name="ydkn_r" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="ydkn_r4" name="ydkn_r" value="4"/>无
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="checkbox" id="ydkn_l1" name="ydkn_l" value="1"/>严重&nbsp;&nbsp;
+                        <input type="checkbox" id="ydkn_l2" name="ydkn_l" value="2"/>一般&nbsp;&nbsp;
+                        <input type="checkbox" id="ydkn_l3" name="ydkn_l" value="3"/>轻微&nbsp;&nbsp;
+                        <input type="checkbox" id="ydkn_l4" name="ydkn_l" value="4"/>无
+                    </td>
+                    <td style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="ydkn_qz" onclick="openFloatDiv1('ydkn_qz','ydkn_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="ydkn_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <td nowrap="nowrap" style="padding-top:10px;height:30px;">
+                    术后检查：</td>
+    <div style="padding-left: 0px; padding-right: 0px; font-size: 14px; padding-top: 0px">
+        <table cellpadding="0" cellspacing="0" width="100%" style="border-left:1px solid black;border-top:1px solid black;">
+            <tbody>
+                <tr>
+                    <td nowrap="nowrap" width="14%" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">检查项目</td>
+                    <td nowrap="nowrap" width="37%" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                    右&nbsp;&nbsp;&nbsp;&nbsp;眼</td>
+                    <td nowrap="nowrap" width="37%" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                    左&nbsp;&nbsp;&nbsp;&nbsp;眼</td>
+                    <td nowrap="nowrap" width="12%" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                    签&nbsp;&nbsp;名</td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">视&nbsp;&nbsp;&nbsp;&nbsp;力</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        裸眼视力&nbsp;&nbsp;<input type="text" id="lysl_r" style="width:50px; height:18px; overflow:visible;border:0px;"/>&nbsp;&nbsp;
+                        戴镜视力&nbsp;&nbsp;<input type="text" id="djsl_r" style="width:50px; height:18px; overflow:visible;border:0px;"/>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;text-align:center;">
+                        裸眼视力&nbsp;&nbsp;<input type="text" id="lysl_l" style="width:50px; height:18px; overflow:visible;border:0px;"/>&nbsp;&nbsp;
+                        戴镜视力&nbsp;&nbsp;<input type="text" id="djsl_l" style="width:50px; height:18px; overflow:visible;border:0px;"/>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;text-align:center;">
+                        <label id="sl_qz" onclick="openFloatDiv1('sl_qz','sl_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="sl_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">眼压</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input id="yy_r" type="text" style="width:50px; height:18px; overflow:visible;border:0px;"/>mmHg
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input id="yy_l" type="text" style="width:50px; height:18px; overflow:visible;;border:0px;"/>mmHg
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="yy_qz" onclick="openFloatDiv1('yy_qz','yy_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="yy_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">前节检查</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input id="qjjc_r" type="text" style="width:80%; height:18px; overflow:visible;border:0px;" onclick="openFloatDiv('qjjc_r');" onkeydown="closeFloatDiv()"/>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input id="qjjc_l" type="text" style="width:80%; height:18px; overflow:visible;border:0px;" onclick="openFloatDiv('qjjc_l');" onkeydown="closeFloatDiv()"/>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="qjjc_qz" onclick="openFloatDiv1('qjjc_qz','qjjc_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="qjjc_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:80px;">眼底检查</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <textarea id="ydjc_r" style="width:80%; height:78px; overflow:visible;border:0px;" onclick="openFloatDiv('ydjc_r');" onkeydown="closeFloatDiv()"></textarea>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <textarea id="ydjc_l" style="width:80%; height:78px; overflow:visible;border:0px;" onclick="openFloatDiv('ydjc_l');" onkeydown="closeFloatDiv()"></textarea>
+                    </td>
+                    <td style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="ydjc_qz" onclick="openFloatDiv1('ydjc_qz','ydjc_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="ydjc_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">电脑验光</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="dnyg_ds_r1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="dnyg_ds_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="dnyg_dc_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="dnyg_ds_l1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="dnyg_ds_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="dnyg_dc_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="dnyg_qz" onclick="openFloatDiv1('dnyg_qz','dnyg_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="dnyg_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">扩瞳检影</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="ktjy_ds_r1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="ktjy_ds_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="ktjy_dc_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="ktjy_ds_l1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="ktjy_ds_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="ktjy_dc_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="ktjy_qz" onclick="openFloatDiv1('ktjy_qz','ktjy_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="ktjy_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">扩瞳试片</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                           <input type="text" id="ktsp_ds_r1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="ktsp_ds_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="ktsp_dc_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        =<input type="text" id="ktsp_jt_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="ktsp_ds_l1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="ktsp_ds_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="ktsp_dc_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        =<input type="text" id="ktsp_jt_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="ktsp_qz" onclick="openFloatDiv1('ktsp_qz','ktsp_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="ktsp_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">小瞳检影</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="xtjy_ds_r1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="xtjy_ds_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="xtjy_dc_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        =<input type="text" id="xtjy_jt_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="xtjy_ds_l1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="xtjy_ds_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="xtjy_dc_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        =<input type="text" id="xtjy_jt_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="xtjy_qz" onclick="openFloatDiv1('xtjy_qz','xtjy_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="xtjy_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">小瞳试片</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="xtsp_ds_r1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="xtsp_ds_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="xtsp_dc_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        =<input type="text" id="xtsp_jt_r" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:left;">
+                        <input type="text" id="xtsp_ds_l1" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DS<input type="text" id="xtsp_ds_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        DC×<input type="text" id="xtsp_dc_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                        =<input type="text" id="xtsp_jt_l" style="width:50px; height:18px; overflow:visible;border:0px;text-align:center;"/>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="xtsp_qz" onclick="openFloatDiv1('xtsp_qz','xtsp_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="xtsp_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">UBM</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        拱高<input id="ubm_gg_r" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>mm
+                        前房深度<input id="ubm_qfsd_r" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>mm
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;">
+                        拱高<input id="ubm_gg_l" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>mm
+                        前房深度<input id="ubm_qfsd_l" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>mm
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="ubm_qz" onclick="openFloatDiv1('ubm_qz','ubm_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="ubm_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">角膜内皮</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        CD<input id="jmnp_cd_r" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>mm2&nbsp;&nbsp;
+                        <input id="jmnp_bfb_r" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>%
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        CD<input id="jmnp_cd_l" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>mm2&nbsp;&nbsp;
+                        <input id="jmnp_bfb_l" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>%
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="jmnp_qz" onclick="openFloatDiv1('jmnp_qz','jmnp_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="jmnp_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">TICL位置</td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="radio" id="ticl_wz_s_r" name="ticl_wz_r" value="s">顺
+                        <input type="radio" id="ticl_wz_n_r" name="ticl_wz_r" value="n">逆&nbsp;&nbsp;
+                        <input id="ticl_wz_d_r" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>&nbsp;&nbsp;°
+                    </td>
+                    <td nowrap="nowrap" colspan="4" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <input type="radio" id="ticl_wz_s_l" name="ticl_wz_l" value="s">顺
+                        <input type="radio" id="ticl_wz_n_l" name="ticl_wz_l" value="n">逆&nbsp;&nbsp;
+                        <input id="ticl_wz_d_l" type="text" style="width:40px; height:18px; overflow:visible;border:0px;text-align:center;"/>&nbsp;&nbsp;°
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="ticl_wz_qz" onclick="openFloatDiv1('ticl_wz_qz','ticl_wz_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="ticl_wz_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:30px;">其他</td>
+                    <td nowrap="nowrap" colspan="8" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <textarea id="qt" style="width:90%; height:28px; border:0px;"></textarea>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="qt_qz" onclick="openFloatDiv1('qt_qz','qt_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="qt_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" rowspan="2" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;height:70px;">处理意见</td>
+                    <td nowrap="nowrap" colspan="8" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <textarea id="clyj_r" style="width:90%; height:68px; border:0px;" onclick="openFloatDiv('clyj_r');" onkeydown="closeFloatDiv()"></textarea></td>
+                </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid black;text-align:center;">
+                        <label id="clyj_qz" onclick="openFloatDiv1('clyj_qz','clyj_qz_gh');" onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                        <label id="clyj_qz_gh" style="display:none;"></label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

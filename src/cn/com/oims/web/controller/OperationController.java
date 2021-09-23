@@ -37,10 +37,10 @@ import java.lang.Boolean;
 public class OperationController {
   @Autowired
   private IOperationService operationService;
-  
+
   @Autowired
   private HisWebService hisWebService;
-  
+
   @RequestMapping(value = {"saveOrUpdateOperationDict.htm"}, method = {RequestMethod.POST})
   public void saveOrUpdateOperationDict(OperationDict dict, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -54,10 +54,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"getOperationDict.htm"}, method = {RequestMethod.GET})
   public void getOperationDict(Integer id, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -71,10 +71,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"findOperationDictList.htm"}, method = {RequestMethod.POST})
   public void findOperationDictList(String inputCode, Page page, HttpServletRequest request, HttpServletResponse response) {
     String contextPath = request.getContextPath();
@@ -87,7 +87,7 @@ public class OperationController {
     map.put("page", page);
     JSONWriterUtils.writeJSONObj(map, response);
   }
-  
+
   @RequestMapping(value = {"deleteOperationDict.htm"}, method = {RequestMethod.POST})
   public void deleteOperationDict(Integer id, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -100,10 +100,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"saveOrUpdateOperation.htm"}, method = {RequestMethod.POST})
   public void saveOrUpdateOperation(OperationAppointmentForm form, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -116,10 +116,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"saveOrUpdateOperationApplication.htm"}, method = {RequestMethod.POST})
   public void saveOrUpdateOperationApplication(OperationApplicationForm form, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -132,10 +132,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"saveOrUpdateOperationPlan.htm"}, method = {RequestMethod.POST})
   public void saveOrUpdateOperationPlan(OperationPlanForm form, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -148,10 +148,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"saveOrUpdateOperationRecord.htm"}, method = {RequestMethod.POST})
   public void saveOrUpdateOperationRecord(OperationRecordForm form, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -160,22 +160,22 @@ public class OperationController {
     result.setGonghao((String)session.getAttribute("gonghao"));
     try {
       if (form.getId() == null)
-        throw new RuntimeException(""); 
+        throw new RuntimeException("");
       this.operationService.saveOrUpdateOperationRecord(form, result.getGonghao());
       result.setState(1);
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"findOperationList.htm"}, method = {RequestMethod.POST})
   public void findOperationList(OperationSearchForm form, Page page, HttpServletRequest request, HttpServletResponse response) {
     Map map = this.operationService.findOperationList(page, form);
     JSONWriterUtils.writeJSONObj(map, response);
   }
-  
+
   @RequestMapping(value = {"deleteOperation.htm"}, method = {RequestMethod.POST})
   public void deleteOperation(Long id, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -188,10 +188,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"getOperation.htm"}, method = {RequestMethod.GET})
   public void getOperation(Long id, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -205,10 +205,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"getOperationMap.htm"}, method = {RequestMethod.GET})
   public void getOperationMap(String binglihao, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -222,10 +222,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"showOperationMap.htm"}, method = {RequestMethod.GET})
   public void showOperation(OperationShowForm form, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -239,10 +239,10 @@ public class OperationController {
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"setOperationState.htm"}, method = {RequestMethod.GET})
   public void setOperationState(String ids, Integer state, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -253,16 +253,16 @@ public class OperationController {
       String[] _ids = ids.split(",");
       Long[] id = new Long[_ids.length];
       for (int i = 0; i < _ids.length; i++)
-        id[i] = Long.valueOf(Long.parseLong(_ids[i])); 
+        id[i] = Long.valueOf(Long.parseLong(_ids[i]));
       this.operationService.setOperationProcessState(id, state, result.getGonghao());
       result.setState(1);
     } catch (Exception e) {
       e.printStackTrace();
       result.setMessage(e.getMessage());
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"findPatsInHospital.htm"}, method = {RequestMethod.POST})
   public void findPatsInHospital(String deptCode, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -272,11 +272,11 @@ public class OperationController {
       result.setState(1);
     } catch (Exception e) {
       e.printStackTrace();
-    } 
+    }
     result.setObj(list);
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"findOperationConsumable.htm"}, method = {RequestMethod.GET})
   public void findOperationConsumable(Long operationId, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -286,16 +286,16 @@ public class OperationController {
       result.setState(1);
     } catch (Exception e) {
       e.printStackTrace();
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"findOperationConsumablePageList.htm"}, method = {RequestMethod.POST})
   public void findOperationConsumablePageList(Page page, OperationConsumableSearchForm form, HttpServletRequest request, HttpServletResponse response) {
     Map map = this.operationService.findOperationConsumablePageList(form, page);
     JSONWriterUtils.writeJSONObj(map, response);
   }
-  
+
   @RequestMapping(value = {"saveOrUpdateOperationConsumable.htm"}, method = {RequestMethod.POST})
   public void saveOrUpdateOperationConsumable(Long operationId, Boolean used, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -316,7 +316,7 @@ public class OperationController {
       String[] price = request.getParameterValues("price");
       Vector<OperationConsumableForm> vec = new Vector();
       if (used == null)
-        used = Boolean.valueOf(false); 
+        used = Boolean.valueOf(false);
       if (code != null && code.length > 0)
         for (int i = 0; i < code.length; i++) {
           OperationConsumableForm oc = new OperationConsumableForm();
@@ -333,15 +333,15 @@ public class OperationController {
           oc.setUnit(unit[i]);
           oc.setPrice(Float.valueOf(Float.parseFloat(price[i])));
           vec.add(oc);
-        }  
+        }
       this.operationService.saveOrUpdateOperationConsumable(operationId, used, vec, result.getGonghao());
       result.setState(1);
     } catch (Exception e) {
       e.printStackTrace();
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"operation_export.htm"}, method = {RequestMethod.POST})
   public void operationExport(HttpServletResponse response, HttpServletRequest request, OperationSearchForm form) {
     MyResult result = new MyResult();
@@ -357,32 +357,32 @@ public class OperationController {
       book = Workbook.createWorkbook(excelFile);
       WritableSheet sheet = book.createSheet("operation", 0);
       WritableFont title_style = new WritableFont(
-          WritableFont.ARIAL, 10, WritableFont.BOLD, false, 
+          WritableFont.ARIAL, 10, WritableFont.BOLD, false,
           UnderlineStyle.NO_UNDERLINE, Colour.BLACK);
       WritableFont content_style = new WritableFont(
-          WritableFont.ARIAL, 10, WritableFont.NO_BOLD, false, 
+          WritableFont.ARIAL, 10, WritableFont.NO_BOLD, false,
           UnderlineStyle.NO_UNDERLINE, Colour.BLACK);
       WritableCellFormat wcfFC_title = new WritableCellFormat(title_style);
       WritableCellFormat wcfFC_content = new WritableCellFormat(content_style);
       wcfFC_title.setAlignment(Alignment.CENTRE);
       wcfFC_content.setAlignment(Alignment.CENTRE);
-      String[] titles = { 
-          "加急", "患者ID号", "患者姓名", "性别", "年龄", "诊断", "手术类别", "手术大小", "手术级别", "手术名称", 
+      String[] titles = {
+          "加急", "患者ID号", "患者姓名", "性别", "年龄", "诊断", "手术类别", "手术大小", "手术级别", "手术名称",
           "手术时间", "主刀医生", "专业组", "状态", "第一助手", "巡回", "住院手术分类", "手术间", "眼别","麻醉方式" };
-      Integer[] widths = { 
-          Integer.valueOf(5), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(10), Integer.valueOf(10), Integer.valueOf(40), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(30), 
+      Integer[] widths = {
+          Integer.valueOf(5), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(10), Integer.valueOf(10), Integer.valueOf(40), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(30),
           Integer.valueOf(30), Integer.valueOf(18), Integer.valueOf(12), Integer.valueOf(12), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18), Integer.valueOf(18),Integer.valueOf(18) };
       for (int i = 0; i < titles.length; i++) {
         Label label = new Label(i, 0, titles[i], (CellFormat)wcfFC_title);
         sheet.addCell((WritableCell)label);
         sheet.setColumnView(i, widths[i].intValue());
-      } 
+      }
       while (page.getCurrentPage().intValue() <= page.getPageCount().intValue()) {
         Map map = this.operationService.findOperationList(page, form);
         shoushu_book((List<Map<String, Object>>)map.get("list"), titles.length, page.getPageSize().intValue() * (page.getCurrentPage().intValue() - 1), wcfFC_content, sheet);
         page = (Page)map.get("page");
         page.setCurrentPage(Integer.valueOf(page.getCurrentPage().intValue() + 1));
-      } 
+      }
       book.write();
     } catch (IOException e) {
       e.printStackTrace();
@@ -392,13 +392,13 @@ public class OperationController {
       if (book != null)
         try {
           book.close();
-        } catch (Exception exception) {} 
-    } 
+        } catch (Exception exception) {}
+    }
     result.setObj("/shoushu_excel/" + fileName);
     result.setState(1);
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   public File getNewFile(String tag, HttpServletRequest request) {
     String realPath = request.getServletContext().getRealPath("/shoushu_excel");
     Date date = new Date();
@@ -407,14 +407,14 @@ public class OperationController {
     String filePath = String.valueOf(realPath) + "/" + fileName;
     File excelFile = new File(filePath);
     if (!excelFile.exists() && !excelFile.isDirectory())
-      excelFile.mkdirs(); 
+      excelFile.mkdirs();
     if (excelFile.exists()) {
       excelFile.delete();
       excelFile = new File(filePath);
-    } 
+    }
     return excelFile;
   }
-  
+
   public void shoushu_book(List<Map<String, Object>> list, int titleLength, int startRow, WritableCellFormat content_style, WritableSheet sheet) {
     try {
       for (int i = 0; i < list.size(); i++) {
@@ -423,27 +423,27 @@ public class OperationController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         Date date = (Date)map.get("appointmentTime");
         if (date != null)
-          operationTime = sdf.format(date); 
+          operationTime = sdf.format(date);
         Date birthday = (Date)map.get("birthday");
-        String[] values = { 
-            (map.get("urgent") == null) ? "-" : "急", 
-            (map.get("patientNo") == null) ? "" : map.get("patientNo").toString(), 
-            (map.get("patientName") == null) ? "" : map.get("patientName").toString(), 
-            !Boolean.parseBoolean(map.get("sex").toString()) ? "女" : "男", 
-            (map.get("birthday") == null) ? "" : CommonFunction.getNianlingByCsrq(map.get("birthday").toString()).toString(), 
-            (map.get("medical") == null) ? "" : map.get("medical").toString(), 
-            map.get("category").toString().equals("0") ? "门诊手术" : "住院手术", 
-            getOperationSize(map.get("operationSize").toString()), 
-            getOperationLevel(map.get("levelFlag").toString()), 
-            getOperationName((List<Map<String, Object>>)map.get("operationDetails")), 
-            operationTime, 
-            (map.get("doctorName") == null) ? "" : map.get("doctorName").toString(), 
-            (map.get("groupName") == null) ? "" : map.get("groupName").toString(), 
-            getProcessState(map.get("processState").toString()), 
-            (map.get("firstAssistantName") == null) ? "" : map.get("firstAssistantName").toString(), 
-            (map.get("circuitNurseName") == null) ? "" : map.get("circuitNurseName").toString(), 
-            map.get("category").toString().equals("0") ? "" : ((map.get("childCategory") == null) ? "" : ((Integer.parseInt(map.get("childCategory").toString()) == 1) ? "常规" : ((Integer.parseInt(map.get("childCategory").toString()) == 2) ? "日间手术" : ((Integer.parseInt(map.get("childCategory").toString()) == 3) ? "非二次计划手术" : "周末手术")))), 
-            (map.get("operationRoom") == null) ? "" : map.get("operationRoom").toString(), 
+        String[] values = {
+            (map.get("urgent") == null) ? "-" : "急",
+            (map.get("patientNo") == null) ? "" : map.get("patientNo").toString(),
+            (map.get("patientName") == null) ? "" : map.get("patientName").toString(),
+            !Boolean.parseBoolean(map.get("sex").toString()) ? "女" : "男",
+            (map.get("birthday") == null) ? "" : CommonFunction.getNianlingByCsrq(map.get("birthday").toString()).toString(),
+            (map.get("medical") == null) ? "" : map.get("medical").toString(),
+            map.get("category").toString().equals("0") ? "门诊手术" : "住院手术",
+            getOperationSize(map.get("operationSize").toString()),
+            getOperationLevel(map.get("levelFlag").toString()),
+            getOperationName((List<Map<String, Object>>)map.get("operationDetails")),
+            operationTime,
+            (map.get("doctorName") == null) ? "" : map.get("doctorName").toString(),
+            (map.get("groupName") == null) ? "" : map.get("groupName").toString(),
+            getProcessState(map.get("processState").toString()),
+            (map.get("firstAssistantName") == null) ? "" : map.get("firstAssistantName").toString(),
+            (map.get("circuitNurseName") == null) ? "" : map.get("circuitNurseName").toString(),
+            map.get("category").toString().equals("0") ? "" : ((map.get("childCategory") == null) ? "" : ((Integer.parseInt(map.get("childCategory").toString()) == 1) ? "常规" : ((Integer.parseInt(map.get("childCategory").toString()) == 2) ? "日间手术" : ((Integer.parseInt(map.get("childCategory").toString()) == 3) ? "非二次计划手术" : "周末手术")))),
+            (map.get("operationRoom") == null) ? "" : map.get("operationRoom").toString(),
             (map.get("yanbie") == null) ? "" : map.get("yanbie").toString(),
                 getAnesthesiaName(Integer.parseInt(map.get("anesthesia").toString()))};
         int row = i + startRow + 1;
@@ -451,11 +451,11 @@ public class OperationController {
         for (int j = 0; j < titleLength; j++) {
           Label label = new Label(j, row, values[j], (CellFormat)content_style);
           sheet.addCell((WritableCell)label);
-        } 
-      } 
+        }
+      }
     } catch (WriteException e) {
       e.printStackTrace();
-    } 
+    }
   }
 
   public String getAnesthesiaName(Integer anesthesia) {
@@ -479,31 +479,31 @@ public class OperationController {
     }
     return n;
   }
-  
+
   private String getProcessState(String string) {
     if (string != null) {
       if (Integer.parseInt(string) == 0)
-        return "已预约"; 
+        return "已预约";
       if (Integer.parseInt(string) == 1)
-        return "已申请"; 
+        return "已申请";
       if (Integer.parseInt(string) == 2)
-        return "已安排"; 
+        return "已安排";
       if (Integer.parseInt(string) == 3)
-        return "已手术"; 
+        return "已手术";
       if (Integer.parseInt(string) == 4)
-        return "未手术"; 
+        return "未手术";
       if (Integer.parseInt(string) == 5)
-        return "停手术"; 
+        return "停手术";
       return null;
-    } 
+    }
     return null;
   }
-  
+
   private String getOperationName(List<Map<String, Object>> list) {
     StringBuilder sb = new StringBuilder("");
     for (int i = 0; i < list.size(); i++) {
       if (i > 0)
-        sb.append("+"); 
+        sb.append("+");
       String eye = "";
       switch (Integer.parseInt(((Map)list.get(i)).get("eyes").toString())) {
         case 48:
@@ -515,41 +515,41 @@ public class OperationController {
         case 46:
           eye = "左眼";
           break;
-      } 
+      }
       sb.append(eye);
       sb.append(((Map)list.get(i)).get("name").toString());
-    } 
+    }
     return sb.toString();
   }
-  
+
   private String getOperationLevel(String string) {
     if (string != null) {
       if (Integer.parseInt(string) == 0)
-        return "一级手术"; 
+        return "一级手术";
       if (Integer.parseInt(string) == 1)
-        return "二级手术"; 
+        return "二级手术";
       if (Integer.parseInt(string) == 2)
-        return "三级手术"; 
+        return "三级手术";
       if (Integer.parseInt(string) == 3)
-        return "四级手术"; 
+        return "四级手术";
       return null;
-    } 
+    }
     return null;
   }
-  
+
   private String getOperationSize(String string) {
     if (string != null) {
       if (Integer.parseInt(string) == 0)
-        return "小型手术"; 
+        return "小型手术";
       if (Integer.parseInt(string) == 1)
-        return "中型手术"; 
+        return "中型手术";
       if (Integer.parseInt(string) == 2)
-        return "大型手术"; 
+        return "大型手术";
       return null;
-    } 
+    }
     return null;
   }
-  
+
   @RequestMapping(value = {"uploadforvideo.htm"}, method = {RequestMethod.POST})
   public void uploadForvideo(MultipartFile vediofile, Long opeid, HttpServletRequest request, HttpServletResponse response) throws IOException {
     MyResult result = new MyResult();
@@ -563,12 +563,12 @@ public class OperationController {
     String oldFileName = vediofile.getOriginalFilename();
     String fileFormat = oldFileName.substring(oldFileName.lastIndexOf("."));
     String filename = String.valueOf(opeid.toString()) + fileFormat;
-    FavFTPUtil.uploadFileFromProduction(hostname, port, username, password, 
+    FavFTPUtil.uploadFileFromProduction(hostname, port, username, password,
         basePath, filename, vediofile);
     result.setState(1);
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"checkIsUploadedOrDel.htm"}, method = {RequestMethod.POST})
   public void checkIsUploadedOrDel(Long opeid, Long delflag, HttpServletRequest request, HttpServletResponse response) throws IOException {
     MyResult result = new MyResult();
@@ -583,7 +583,7 @@ public class OperationController {
     for (i = (arrayOfFile1 = files).length, b = 0; b < i; ) {
       File file = arrayOfFile1[b];
       String originalFilename = file.getName();
-      String filename = originalFilename.substring(0, 
+      String filename = originalFilename.substring(0,
           originalFilename.lastIndexOf("."));
       String fileFormat = originalFilename.substring(originalFilename
           .lastIndexOf(".") + 1);
@@ -591,13 +591,13 @@ public class OperationController {
         result.setState(1);
         result.setMessage(fileFormat);
         if (delflag.longValue() == 1L)
-          file.delete(); 
-      } 
+          file.delete();
+      }
       b++;
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"isInHospital.htm"}, method = {RequestMethod.POST})
   public void isInHospital(String patientId, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -608,14 +608,14 @@ public class OperationController {
         result.setObj(Boolean.valueOf(true));
       } else {
         result.setObj(Boolean.valueOf(false));
-      } 
+      }
       result.setState(1);
     } catch (Exception e) {
       e.printStackTrace();
-    } 
+    }
     JSONWriterUtils.writeJSONObj(result, response);
   }
-  
+
   @RequestMapping(value = {"/getOperationList.htm"}, method = {RequestMethod.POST})
   public void getOperationList(String patientId, HttpServletRequest request, HttpServletResponse response) {
     MyResult result = new MyResult();
@@ -625,5 +625,23 @@ public class OperationController {
     List list = this.operationService.findOperationList(osf);
     result.setObj(list);
     JSONWriterUtils.writeJSONObj(result, response);
+  }
+
+  /**
+   * @Description: 查询手术列表(首页)
+   * @param form 手术查询表单
+   * @param page 分页查询对象
+   * @param request
+   * @param response
+   * @author huxiaoqiang
+   * @date 2019-12-17 11:40:41
+   */
+  @RequestMapping(value = { "findOperationListForIndex.htm" }, method = {
+          org.springframework.web.bind.annotation.RequestMethod.POST })
+  public void findOperationListForIndex(OperationSearchForm form, Page page, HttpServletRequest request,
+                                        HttpServletResponse response) {
+    Map map = this.operationService.findOperationListForIndex(page, form);
+    response.setContentType("application/json");
+    JSONWriterUtils.writeJSONObj(map, response);
   }
 }

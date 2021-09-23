@@ -1,0 +1,105 @@
+<!-- 体格检查页面 -->
+<div id="physical" class="maintab" >
+	<div id="physical_" class="physical">
+		<table width="100%" height="100%"
+			style="text-align: center; font-size: 12px; border-collapse: collapse;"
+			border="0">
+			<tr>
+				<th></th>
+				<th>右眼</th>
+				<th>左眼</th>
+			</tr>
+			<tr height="60px">
+				<td width="90px">眼睑</td>
+				<td><div style="background-color:#fff;border:1px solid #d2d2d2;height:60px;"></div></td>
+				<td><textarea id="_emr_textarea" onclick="_emr_physical(this)">上下睑呈青紫色肿胀，眼裂稍狭，闭合良好</textarea></td>
+			</tr>
+			<tr height="30px">
+				<td>结膜</td>
+				<td><textarea onclick="_emr_physical(this)">上下睑结膜充血，上睑近内外眦部及睑极上缘部较明显，该处血管模糊，乳头肥大和滤泡约占上睑结膜面1/3，并有细线状白色疤痕；球结膜无充血。</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">因眼睑肿胀，局部触痛明显，未能检查睑结膜，球结膜呈睫状充血+++，颞下方距角膜缘3-4mm处可见一弧形裂口长约8mm，伤口内未见异物，筋膜组织外露，附近有大片出血</textarea>
+			</tr>
+			<tr height="30px">
+				<td>巩膜</td>
+				<td><textarea onclick="_emr_physical(this)">无色素、黄染、充血或损伤</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">同右眼</textarea>
+			</tr>
+			<tr height="30px">
+				<td>眼球</td>
+				<td><textarea onclick="_emr_physical(this)">眼位正常，无突出或内陷，眼球各方向运动无障碍。</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">同右眼</textarea>
+			</tr>
+			<tr height="30px">
+				<td>角膜</td>
+				<td><textarea onclick="_emr_physical(this)">大小正常，上部角膜缘有细小浅层新生血管长入约1mm，其余角膜组织透明，KP（-）</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">厌上形态正常，呈雾状混浊，角膜正颞下方有条状上皮缺损，荧光素染色（+），无异物，角膜上缘有浅层新生血管长入约1mm，角膜内面有大量细小棕色颗粒附着</textarea>
+			</tr>
+			<tr height="30px">
+				<td>前房</td>
+				<td><textarea onclick="_emr_physical(this)">深度正常，房水清</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">上方前房稍深，下方可见暗红色血液占前房1/3，有液平面，房水混浊（++）</textarea>
+			</tr>
+			<tr height="30px">
+				<td>虹膜</td>
+				<td><textarea onclick="_emr_physical(this)">纹理清晰</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">纹理不清，眼球转动时上部虹膜细微颤动，虹膜根部12～2点与睫状体离断，该处虹膜皱缩，睫状体区压痛明显。</textarea>
+			</tr>
+			<tr height="30px">
+				<td>瞳孔</td>
+				<td><textarea onclick="_emr_physical(this)"> 圆形，直径约3mm，对光反应灵敏</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">呈D形，扩大，直径约6×4.5mm，颞侧瞳孔缘有2个锯齿状缺口，对光反应迟钝</textarea>
+			</tr>
+			<tr height="30px">
+				<td>晶状体</td>
+				<td><textarea onclick="_emr_physical(this)">位置正常，前皮质可见车轮状灰白色混浊，刚达瞳孔缘，核呈均匀一致的淡黄色</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">向鼻下方移位，周边部前皮质车轮状灰白色混浊，可见颞上方晶体赤道部</textarea>
+			</tr>
+			<tr height="30px">
+				<td>玻璃体</td>
+				<td><textarea onclick="_emr_physical(this)">透明</textarea></td>
+				<td><textarea onclick="_emr_physical(this)">裂隙灯下见前部玻璃体有少量血块</textarea>
+			</tr>
+			<tr height="45px">
+				<td>眼底(<input type="checkbox"><span>散瞳</span>)
+				</td>
+				<td><textarea onclick="_emr_physical(this)"
+						style="height: 44px">视盘色泽正常，边界清晰，C/D=0.3～0.4;黄斑中心凹反光清晰，其周围末梢血管呈螺旋状；视网膜动脉变细，反光增强，A:V=1:2，动静脉交叉处静脉呈笔尖状，视网膜色泽正常</textarea></td>
+				<td><textarea onclick="_emr_physical(this)"
+						style="height: 44px">不能窥及，仅见红光反射，较暗</textarea>
+			</tr>
+		</table>
+	</div>
+	<div class="templet">
+		<table>
+			<tr>
+				<td align="center" width="52"><strong id="physical_title" style="font-size:14px;">眼睑</strong></td>
+				<td align="center"><input type="text" class="blur"></td>
+				<td align="center"><a class="search">查找</a></td>
+			</tr>
+		</table>
+		<input type="hidden" id="physical_position">
+		<div id="physical_context" class="inputTemplateList_emr"></div>
+	</div>
+	<div class="paint">
+		<h3>画图--眼睑--右眼(OD)</h3>
+		<div id="picture" style="width:100%;height:250px;border-bottom: 1px solid #d2d2d2;"></div>
+		<div style="height:120px;">
+			<div style="clear:both;">
+				<a><span class="pen"></span></a>
+			</div>
+			<div style="clear:both;">
+				<a href="javascript:alert('setPenColor' in window['paintSWF'])"><span class="minus" id="minus" ></span></a>
+				<a><span class="text"><input type="text" value="1" id="pensize"></span></a>
+				<a><span class="add" id="add"></span></a>
+			</div>
+			<div id="colorselector" style="clear:both;">
+				<a><span style="background-color:#ff0000" class="selected"></span></a>
+				<a><span style="background-color:#000000"></span></a>
+				<a><span style="background-color:#0000ff"></span></a>
+			</div>
+		</div>
+		<div class="btn">
+			<a id="repaint"><span class="reset" style="padding-top:2px;border:0px;"></span>重画</a>
+		</div>
+	</div>
+</div>

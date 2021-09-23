@@ -1,0 +1,39 @@
+<table style="width:100%;">
+	<tr>
+		<td class="formTdTitle">资产名称</td><td><input class="inputCommon" type="text" name="search_name" id="search_name"/></td>
+		<td class="formTdTitle">资产编号</td><td><input class="inputCommon" type="text" name="search_flowerNo" id="search_flowerNo" /></td>
+		<td class="formTdTitle">序列号</td><td><input class="inputCommon" type="text" name="search_sn" id="search_sn" /></td>
+		<td class="formTdTitle" colspan="4">
+			<input checked="checked" type="radio" value="" name="search_scrapFlag" id="search_scrapFlag" /><label for="search_scrapFlag">全部</label>
+			<input type="radio" value="true" name="search_scrapFlag" id="search_scrapFlagTrue" /><label for="search_scrapFlagTrue">已报废</label>
+			<input type="radio" value="false" name="search_scrapFlag" id="search_scrapFlagFalse" /><label for="search_scrapFlagFalse">未报废</label>
+		</td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">制造商</td><td><input class="inputCommon" type="text" name="search_manufacturer" /></td>
+		<td class="formTdTitle">厂家联系人</td><td><input class="inputCommon" type="text" name="search_contacts" /></td>
+		<td class="formTdTitle">手机</td><td><input class="inputCommon" type="text" name="search_mobile" /></td>
+		<td class="formTdTitle">价格</td>
+		<td><input type="text" name="search_priceMin" /></td>
+		<td>-</td>
+		<td><input type="text" name="search_priceMax" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle">邮箱</td><td><input class="inputCommon" type="text" name="search_mail" /></td>
+		<td class="formTdTitle">下次维护时间</td><td><input class="inputCommon" type="text" id="search_nextMaintenanceDate" name="search_nextMaintenanceDate" /></td>
+		<td class="formTdTitle">管理员</td><td><input class="inputCommon" type="text" name="search_operator" /></td>
+		<td class="formTdTitle">采购时间</td>
+		<td><input type="text" name="search_purchaseOrderDateStart"  id="search_purchaseOrderDateStart"/></td>
+		<td>-</td>
+		<td><input type="text" name="search_purchaseOrderDateEnd" id="search_purchaseOrderDateEnd" /></td>
+	</tr>
+	<tr>
+		<td class="formTdTitle"></td>
+		<td colspan="9">将在<input type="text" name="sysm" style="width:20px; text-align:center" />年内到达最长使用寿命的资产</td>
+	</tr>
+</table>
+<div class="avdopenbutton"> 
+	<a href="javascript:seniorFaSearchSubmit();"><span class="advsumit"></span>提交</a>
+	<a href="javascript:seniorFaSearchReset();"><span class="advreset"></span>重置</a>
+	<a id="closeId"><span class="close"></span>关闭</a> 
+</div>

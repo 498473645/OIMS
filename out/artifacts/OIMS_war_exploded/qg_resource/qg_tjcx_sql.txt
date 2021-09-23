@@ -1,0 +1,307 @@
+select t.jcxm,t.xmfl,t.ssfs1,t.ssfs2,t.ssfs3,t.ysqz,y.xingming as ys_xingming,t.blh,t.binglinumber,t.xingming,t.lc_id,t.sj
+ from(
+     select (select '主述病史' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.wz_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '主述病史' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.wz_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '主述病史' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.zs_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shjl q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '视力' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.sl_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '视力' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.sl_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '视力' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.sl_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shjl q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '视力' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.sl_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '视力' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.sl_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '瞳孔直径' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.tkzj_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '瞳孔直径' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.tkzj_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '瞳孔直径' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.tkzj_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '眼压' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yanya_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '眼压' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yanya_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '眼压' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yy_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shjl q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '眼压' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yy_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '眼压' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yy_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '角膜地形图' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.jmdxt_K1_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '角膜地形图' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.jmdxt_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '角膜地形图' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.dxt_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shjl q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '角膜地形图' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.jmdxt_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '偏心率' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.pxl_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '电脑验光' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.dnyg_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '电脑验光' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.dnyg_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '电脑验光' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.dnyg_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '电脑验光' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.dnyg_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '散瞳检影' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.stjy_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '散瞳检影' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ktjy_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '散瞳检影' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ktjy_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '散瞳检影' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ktjy_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '散瞳试片' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.stsp_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '散瞳试片' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ktsp_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '散瞳试片' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ktsp_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '散瞳试片' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ktsp_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '小瞳检影' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtjy_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '小瞳检影' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtjy_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '小瞳检影' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtjy_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '小瞳检影' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtjy_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '小瞳试片' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtsp_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '小瞳试片' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtsp_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '小瞳试片' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtsp_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shjl q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '小瞳试片' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtsp_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '小瞳试片' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xtsp_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '角膜厚度' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.jmhd_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '角膜厚度' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.jmhd_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '角膜厚度' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.jmhd_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '前节检查' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.qjjc_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '前节检查' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.sl_qz as qjjc_qz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '眼底检查' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ydjc_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '眼底检查' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ydjc_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '眼位' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yw_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '眼位' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yw_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '注视性质' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.zsxz_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '注视性质' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.zsxz_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '同时视' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.tss_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '同时视' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.tss_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '融合范围' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.rhfw_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '融合范围' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.rhfw_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '立体视' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.lts_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '立体视' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.lts_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '像不等检查' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xbdjc_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '像不等检查' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.xbdjc_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '中心暗点' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.zxad_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '中心暗点' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.zxad_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '眼轴长度' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yzcd_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '眼轴长度' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.yzcd_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select 'P~VEP' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.PVEP_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select 'P~VEP' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.PVEP_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '裂隙灯照相' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.lxdzx_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '裂隙灯照相' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.lxd_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shjl q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '裂隙灯照相' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.lxdzx_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '内皮镜检查' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.npjjc_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select '内皮镜检查' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.npjjc_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc_er q,qg_lc l,huanzhexinxi h,qg_bl_er b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '三面镜检查' from dual) as jcxm,(select '病历' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.smjjc_qz as ysqz,q.blh,q.binglinumber,h.xingming,l.id as lc_id,q.jzrq as sj
+     from qg_bl_er q,qg_lc l,huanzhexinxi h 
+     where q.id=l.bl_id and q.blh=h.binglihao
+     union
+     select (select 'UBM' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ubm_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select '角膜内皮' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.jmnp_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+     union
+     select (select 'TICL位置' from dual) as jcxm,(select '术后复查' from dual) as xmfl,l.ssfs1,l.ssfs2,l.ssfs3,q.ticl_wz_qz as ysqz,q.blh,b.binglinumber,h.xingming,l.id as lc_id,q.sj
+     from qg_shfc q,qg_lc l,huanzhexinxi h,qg_bl b 
+     where q.lc_id=l.id and l.bl_id=b.id and q.blh=h.binglihao
+) t  left join yuangong y on t.ysqz=y.gonghao
+ where 1=1 

@@ -1,0 +1,145 @@
+.selection-menu {
+	overflow: hidden;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	position: absolute;
+}
+
+.selection-menu-item {
+	overflow: hidden;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	white-space: nowrap;
+	position: relative;
+	cursor: pointer;
+}
+
+.selection-menu-text {
+	height: 20px;
+	line-height: 20px;
+	margin-left: 9px;
+	float: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.selection-menu-icon {
+	left: 2px;
+	top: 50%;
+	width: 16px;
+	height: 16px;
+	margin-top: -8px;
+	position: absolute;
+}
+
+.selection-menu-rightarrow {
+	top: 50%;
+	width: 16px;
+	height: 16px;
+	right: 0px;
+	margin-top: -8px;
+	position: absolute;
+}
+
+.selection-menu-line {
+	left: 26px;
+	top: 0px;
+	height: 2000px;
+	font-size: 1px;
+	position: absolute;
+}
+
+.selection-menu-sep {
+	font-size: 1px;
+	margin-top: 3px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 25px;
+}
+
+.selection-menu-text,.selection-menu-text span {
+	font-size: 12px;
+}
+
+.selection-menu-rightarrow {
+	background-image: url("images/menu_arrows.png");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position-x: -32px;
+	background-position-y: center;
+	background-size: auto;
+	background-origin: padding-box;
+	background-clip: border-box;
+	background-color: transparent;
+}
+
+.selection-menu-line {
+	border-right-color: #fff;
+	border-left-color: #ccc;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+}
+
+.selection-menu-sep {
+	border-top-color: #ccc;
+	border-bottom-color: #fff;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+}
+
+.selection-menu {
+	color: #444;
+	border-top-color: #ddd;
+	border-right-color: #ddd;
+	border-bottom-color: #ddd;
+	border-left-color: #ddd;
+	background-color: rgb(250, 250, 250);
+}
+
+.selection-menu-item {
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+}
+
+.selection-menu-active {
+	border-color: #b7d2ff;
+	color: #000000;
+	background: #eaf2ff;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}

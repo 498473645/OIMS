@@ -1,0 +1,144 @@
+:focus {
+	outline: 0;
+}
+/*css3动画*/
+/**{ -webkit-transition:all 0.5s ease-in-out; -moz-transition:all 0.5s ease-in-out; -ms-transition:all 0.5s ease-in-out; -o-transition:all 0.5s ease-in-out; transition:all 0.5s ease-in-out; }*/
+
+/*被选中的文本样式*/
+::-webkit-selection {
+	background: #000;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #000;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: #000;
+	color: #fff;
+	text-shadow: none;
+}
+
+.cssSelect {
+	white-space: nowrap;
+	float: left;
+}
+
+.cssSelect * {
+	display: block;
+}
+
+.cssSelect a {
+	color: #666;
+	outline-width: 0px;
+	text-decoration: none;
+}
+
+.cssSelect .selectBox {
+	cursor: pointer;
+	border: none;
+	float: left;
+	width: 307px;
+}
+
+.cssSelect .selectLt {
+	cursor: pointer;
+	float: left;
+	text-align: left;
+	width: 250px
+}
+
+.cssSelect .selectRt {
+	cursor: pointer;
+	/*background:url('../images/skin_icons.png')  -49px -160px no-repeat #f2f2f2; border-left: 1px solid #c8c8c8; */
+	float: left
+}
+
+.cssSelect .selectBox {
+	
+}
+
+.cssSelect .selectLt {
+	overflow: hidden;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px 0 15px;
+	background: none transparent scroll repeat 0% 0%;
+	color: #666;
+}
+
+.cssSelect .selectRt {
+	height: 40px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 48px
+}
+
+.cssSelect .sNormal {
+	background-position: 0px 0px
+}
+/*.cssSelect .sNormal .selectRt { background-position: 100% 0px}*/
+.cssSelect .sHover {
+	background-position: 0px -50px
+}
+
+.cssSelect .sHover .selectRt {
+	/*background: url('../images/skin_icons.png')  -49px -160px no-repeat #e6e6e6; */
+	
+}
+
+.cssSelect .sPressDown {
+	
+}
+
+.cssSelect .sPressDown .selectRt {
+	/*background: url('../images/skin_icons.png')  -49px -160px no-repeat #e6e6e6; */
+	
+}
+
+.cssSelect .optionsBox {
+	position: absolute;
+	top: 40px;
+	border: 1px solid #dbdbdb;
+	padding: 2px;
+	margin: 0px;
+	background: #fff;
+	z-index: 100;
+	width: 300px
+}
+
+.cssSelect .optionsInnerBox {
+	
+}
+
+.cssSelect .optionBox {
+	cursor: pointer;
+	padding: 2px 30px 2px 18px;
+	margin: 0px;
+	height: 28px;
+	line-height: 28px;
+}
+
+.cssSelect .optionBox span {
+	cursor: pointer;
+	font-size: 12px
+}
+
+.cssSelect .oNormal {
+	
+}
+
+.cssSelect .oHover {
+	background: #088000;
+	color: #fff;
+}
+
+.cssSelect .selected {
+	background: #ebeff2;
+	color: #333;
+}

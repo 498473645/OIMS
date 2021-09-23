@@ -1,0 +1,94 @@
+.titleDiv{
+	height:20px;
+}
+span.replaceTxt{color:blue; display:none}
+#top{line-height:30px; height:30px; border-bottom:1px solid #d2d2d2}
+#top #patientInfo img{display:inline; vertical-align:middle;}
+.tab{padding: 3px 0 0 0; margin:0; overflow:hidden; height:22px}
+.doctortitle_sg{
+	width:100%;
+	height: 28px;
+	background: url("../style/green/images/tdtitlebg.png") repeat-x -1px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 27px;
+	vertical-align: middle;
+	margin-left:26px;
+	padding-left:8px;
+}
+.visitList{position:absolute; width:112px; border-right:1px solid #d2d2d2; background:#f3f3f3; left:28px}
+	.visitList .contrast {
+	    background: url("../../style/green/images/contrastbg.png") repeat-x;
+	    border-bottom: 1px solid #bbbaba;
+	    height: 21px;
+	    line-height: 21px;
+	    padding: 0 0 0 8px;
+	    text-align: center;
+	}
+	.visitList .up1 {
+		display:block;
+	    background: url("../../style/green/images/up1.png") no-repeat ;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList .up1:hover {
+	    background: url("../../style/green/images/up1.png") no-repeat;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList .down1 {
+		display:block;
+	    background: url("../../style/green/images/down1.png") no-repeat;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList .down1:hover {
+	    background: url("../../style/green/images/down1.png") no-repeat;
+	    height: 10px;
+	    padding: 0;
+	}
+	.visitList ul li{
+		border-bottom: 1px solid #fff;
+   		line-height: 26px;
+   		height:46px;
+    	padding: 10px 0;
+    	text-align:center;
+	}
+	.visitList ul li.on{
+		background: url("../../images/libghover.png") no-repeat ;
+	}
+	.visitList ul li span{
+		display: block;
+	    float: left;
+	    margin-left: 8px;
+	    margin-top: 15px;
+	}
+	#visitRecord{ background:#f3f3f3; font-size:15px; font-weight:bold; float:left; width: 26px;overflow: hidden; cursor: pointer; vertical-align:middle;text-align: center;border-right:1px solid #d2d2d2;border-bottom:1px solid #d2d2d2;}
+	.medicalRecord{ margin-left:26px}
+	.tabContent{overflow:auto; overflow-x: hidden;}
+	.tabContent h1, .tabRight h1,.shiliOrYanyaTemplate h1{
+		display: block;
+		font-size:14px;
+		height: 26px;
+		line-height: 26px;
+		text-align: center;
+		background: url(../style/green/images/tdtitlebg.png) repeat-x;
+	}
+	.tabRight h1{color:blue}
+	.tab{padding: 3px 0 0 0; margin:0; overflow:hidden; height:22px}
+	.tabRight{width:296px; float:right; border-left:1px solid #d2d2d2;}
+	
+	.tabWhich{
+		width:100%;
+		height:25px;
+		background: url(../../images/steel.jpg);
+		color:purple;
+		font-weight:bolder;
+		padding-top:5px;
+	}
+	.tabList{
+		width:100%;
+		background: #fff;
+		color:purple;
+	}
+	

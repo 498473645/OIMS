@@ -1,0 +1,47 @@
+﻿<div class="qrcode" style="float:left;margin-left:1px;margin-right:5px;"></div>
+<div style="float:left;">请扫描二维码<br/>进自助机缴费<br/><span class="hidespan"><font style="font-size:20px;font-weight:bold;">军人优先</font></span></div>
+<div class="barcodeDiv"></div>
+<h1 style="text-align: center;height:40px;line-height:20px;">
+		陆军军医大学第一附属医院（西南医院）</h1>
+		 <h1 style="height:30px;line-height:15px;">检验申请单</h1>
+	<div style="border-bottom: rgb(51,51,51) 2px solid; font-size: 14px; border-top: rgb(51,51,51) 2px solid">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr>
+			<th width="10%"><span >ID号：</span></th>
+			<td width="10%"><span class="replaceTxt">{binglihao}</span></td>
+			<th width="10%"><span >姓名：</span></th>
+			<td width="10%"><span class="replaceTxt">{xingming}</span></td>
+			<th width="10%"><span >性别：</span></th>
+			<td width="10%"><span class="replaceTxt">{sex}</span></td>
+			<th width="10%"><span >年龄：</span></th>
+			<td width="10%"><span class="replaceTxt">{age}</span></td>
+            <th width="10%"><span >费别：</span></th>
+			<td width="10%"><span class="replaceTxt">{chargeType}</span></td>
+		</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="orderList" style="font-size:14px;">
+    ads
+    </div>
+	<div style="font-size: 14px; padding-top: 1px; border-top: rgb(51,51,51) 2px solid">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr>
+					<th height="30" nowrap="nowrap" width="15%">
+						申请科室：</th>
+					<td width="19%">
+						<span class="replaceTxt">{keshi}</span></td>
+					<th nowrap="nowrap" width="15%">
+						申请医生：</th>
+					<td width="19%">
+						<span class="replaceTxt">{kdys}</span></td>
+					<th nowrap="nowrap" width="15%">
+						申请时间：</th>
+					<td width="19%">
+						<span class="replaceTxt">{kdsj}</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>

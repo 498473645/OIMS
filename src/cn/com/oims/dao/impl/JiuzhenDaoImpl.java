@@ -615,7 +615,7 @@ public class JiuzhenDaoImpl extends BaseDaoImpl implements IJiuzhenDao {
   public List<Map<String, Object>> getZhenDuanList(String jzid) {
     Map<String, Object> map = new HashMap<String, Object>();
     List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-    String hql = "select new map(a.jiuzhen_id as jzid ,a.zdfl_id as zdflid,a.zdys as zdys,a.zd_time as zd_time ,a.confirmed as confirmed,a.eye as eye,(select b.disease from JiBing b where b.id = a.zdfl_id)as zdflname) from JzZhenduan a  where a.jiuzhen_id = :jzid";
+    String hql = "select new map(a.jiuzhen_id as jzid ,a.zdfl_id as zdflid,a.zdys as zdys,a.zd_time as zd_time ,a.confirmed as confirmed,a.eye as eye,(select b.disease from JiBing b where b.id = a.zdfl_id)as zdflname,(select b.icd_code from JiBing b where b.id = a.zdfl_id)as icdCode) from JzZhenduan a  where a.jiuzhen_id = :jzid";
     map.put("jzid", Long.valueOf(Long.parseLong(jzid)));
     list = findList(hql, map);
     return list;

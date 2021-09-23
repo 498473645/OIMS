@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div style="padding-bottom: 10px; margin: 0px auto; padding-left: 10px; width: 623px; padding-right: 10px; background: rgb(255,255,255); color: rgb(79,79,79); padding-top: 10px">
+	<h1 style="text-align: center; line-height: 50px; height: 50px; font-size: 30px">
+		重庆西南医院裂隙灯检查报告</h1>
+	<div style="border-bottom: rgb(51,51,51) 2px solid; font-size: 14px; border-top: rgb(51,51,51) 2px solid">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr>
+					<th nowrap="nowrap" width="12%">
+						ID号：</th>
+					<td width="14%">
+						<label id="caseNumber" class="replaceTxt">{patient_id}</label></td>
+					<th height="30" nowrap="nowrap" width="9%">
+						姓名：</th>
+					<td width="14%">
+						<label id="suffererName" class="replaceTxt">{xingming}</label></td>
+					<th nowrap="nowrap" width="10%">
+						性别：</th>
+					<td width="11%">
+						<label id="sex" class="replaceTxt">{sex}</label></td>
+					<th nowrap="nowrap" width="13%">
+						出生日期：</th>
+					<td width="17%">
+						<label id="age" class="replaceTxt">{shengri}</label></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="text-align: center; padding-left: 0px; font-size: 14px; padding-top: 10px">	
+		<table border="0" cellpadding="5" cellspacing="0" width="100%">
+        	<tr>
+            	<th width="13%">眼别：</th>
+                <td align="left"><span class="replaceTxt">{yanbie}</span></td>
+            </tr><tr>
+            	<th style=" border-top:1px solid">诊断：</th>
+                <td style=" border-top:1px solid">
+				<textarea  class="replaceTxt" style="width: 99%; height: 60px; overflow: auto"  disabled="disabled">{results}</textarea></td>
+            </tr><tr>
+            	<th>照相方式：</th>
+                <td>
+				<textarea  class="replaceTxt" style="width: 99%; height:80px; overflow: auto" disabled="disabled">{zxfs}</textarea></td>
+            </tr><tr>
+            	<th>存盘路径：</th>
+                <td>
+				<textarea class="replaceTxt"  style="width: 99%; height: 120px; overflow: auto"  disabled="disabled">{cplj}</textarea></td>
+            </tr>
+        </table>
+	</div>
+	<div style="font-size: 14px; padding-top: 5px; border-bottom: rgb(51,51,51) 2px solid">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr>
+					<th height="30" nowrap="nowrap" width="15%">
+						报告日期：</th>
+					<td width="19%">
+						<span id="cli_date" class="replaceTxt" style="width:102px">{cli_date}</span></td>
+					<th nowrap="nowrap" width="15%">
+						申请医生：</th>
+					<td width="19%">
+						<span id="rep_doc" class="replaceTxt" style="width:102px">{rep_doc}</span></td>
+					<th nowrap="nowrap" width="15%">
+						检查医生：</th>
+					<td width="19%">
+						<span id="doctor" class="replaceTxt" style="width:102px">{check_doc}</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<p style="text-indent: 3px; font-size: 12px">
+		注：本报告谨供临床医师参考，影像科医师签字后有效</p>
+</div>
+</body>
+</html>

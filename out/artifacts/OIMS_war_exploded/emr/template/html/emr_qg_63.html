@@ -1,0 +1,632 @@
+  <div id="chongqingxinanbaogao" style="padding-bottom: 10px; margin: 0px auto; padding-left: 
+
+10px; width:683px; padding-right: 10px; background: rgb(255,255,255); color: rgb(79,79,79); 
+
+padding-top: 30px;border:0px solid;font-size:14px;">
+        <table  border="0" cellpadding="0" cellspacing="6" width="100%">
+            <tr>
+                <th nowrap="nowrap" colspan="6" align="center"><span style="font-size: 20px">
+                陆军军医大学第一附属医院（西南医院）</span></th>
+            </tr>
+            <tr>
+                <th nowrap="nowrap" colspan="6" align="center">
+                <h1 style="text-align: center; font-size: 30px">眼屈光手术中心病历</h1></th>
+            </tr>
+            <tr>
+                <th nowrap="nowrap" width="12%">
+                ID号：</th>
+                <td nowrap="nowrap" width="20%">
+                    <label id="caseNumber">caseNumber</label></td>
+                <th nowrap="nowrap" width="16%">
+                <!--手术方式：-->病历编号：</th>
+                <td nowrap="nowrap" width="20%">
+                    <!--<label id="ssfs">ssfs</label>-->
+                    <input type="text" id="bingliNumber" style="width:90%;border:0px;">
+          </td>
+                <th nowrap="nowrap" width="12%">
+                </th>
+                <td nowrap="nowrap" width="20%">
+                    
+                </td>
+            </tr>
+        </table>
+        <table cellpadding="5" cellspacing="0" width="100%" style="border-top:1px solid 
+
+black;border-left:1px solid black;">
+                <tr>
+                    <td nowrap="nowrap" style="width:6%;border-right:1px solid black;border-
+
+bottom:1px solid black;height:30px;" >姓名</td>
+                    <td nowrap="nowrap" style="width:12%;border-right:1px solid black;border-
+
+bottom:1px solid black;"><label id="suffererName"></label></td>
+                    <td nowrap="nowrap" style="width:7%;border-right:1px solid black;border-
+
+bottom:1px solid black;">性别</td>
+                    <td nowrap="nowrap" style="width:7%;border-right:1px solid black;border-
+
+bottom:1px solid black;"><label id="sex"></label></td>
+                    <td nowrap="nowrap" style="width:10%;border-right:1px solid black;border-
+
+bottom:1px solid black;">出生日期</td>
+                    <td nowrap="nowrap" style="width:12%;border-right:1px solid black;border-
+
+bottom:1px solid black;">
+                         <label id="birthday"></label>
+                    </td>
+                    <td nowrap="nowrap" style="width:7%;border-right:1px solid black;border-
+
+bottom:1px solid black;">职业</td>
+                    <td nowrap="nowrap" style="width:11%;border-right:1px solid black;border-
+
+bottom:1px solid black;">
+                        <input type="text" id="job" width="90%" style="border:0px;" 
+
+onblur="updateHzxx(1)"/>
+                    </td>
+                    <td nowrap="nowrap" style="width:10%;border-right:1px solid black;border-
+
+bottom:1px solid black;">就诊日期</td>
+                    <td nowrap="nowrap" style="width:17%;border-right:1px solid black;border-
+
+bottom:1px solid black;">
+                                    <input type="text" id="cli_date" style="width:98%;font-
+
+size:12px;border:0px;"/>
+                              </td>
+                </tr>
+        </table>
+        <table cellpadding="5" cellspacing="0" width="100%" style="border-left:1px solid 
+
+black;">
+                <tr>
+                    <td nowrap="nowrap" style="width:6%;border-right:1px solid black;border-
+
+bottom:1px solid black;height:30px;">住址</td>
+                    <td nowrap="nowrap" style="width:40%;border-right:1px solid black;border-
+
+bottom:1px solid black;">
+                        <input type="text" id="address" width="90%" style="border:0px;" 
+
+onblur="updateHzxx(1)"/>
+                    </td>
+                    <td nowrap="nowrap" style="width:13%;border-right:1px solid black;border-
+
+bottom:1px solid black;">电话号码</td>
+                    <td nowrap="nowrap" style="width:40%;border-right:1px solid black;border-
+
+bottom:1px solid black;">
+                        <input type="text" id="cellphone" width="90%" style="border:0px;" 
+
+onblur="updateHzxx(1)"/>
+                    </td>
+                </tr>
+        </table>
+        <table cellpadding="5" cellspacing="0" width="100%" style="border-left:1px solid 
+
+black;">
+                <tr>
+                    <td style="width:90%;border-right:1px solid black;border-bottom:1px solid 
+
+black;height:40px;">
+                        <div id="qgzs" style="height:38px;border:0px;background:#fff;" 
+
+contenteditable=true>视力减退 年，配镜 年，现镜：右 度，左 度，稳定 年，接触镜 年，脱镜 
+
+天;</div>
+                    </td>
+                    <td style="width:10%;border-right:1px solid black;border-bottom:1px solid 
+
+black;text-align:center;">签字</td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid black;border-bottom:1px solid 
+
+black;height:40px;">
+            <div id="qgjws" style="height:38px;border:0px;background:#fff;" 
+
+contenteditable=true>其他屈光手术史 ，眼疾史 ,全身病史 ,外伤史;</div>
+                    </td>
+                    <td rowspan="2" style="border-right:1px solid black;border-bottom:1px solid 
+
+black;text-align:center;">
+              <label id="wz_qz" onclick="openFloatDiv1('wz_qz','wz_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+              <label id="wz_qz_gh" style="display:none;"></label>
+          </td>
+                </tr>
+                <tr>
+                    <td style="width:13%;border-right:1px solid black;border-bottom:1px solid 
+
+black;height:40px;">
+                        <div style="width:14%;height:38px;border:0px;float:left;">药物过敏史：
+
+</div>
+                        <div id="ywgms" 
+
+style="width:35%;height:48px;border:0px;float:left;background:#fff;margin-left:2px;" 
+
+contenteditable=true></div>
+                        <div style="width:14%;height:38px;border:0px;float:left;margin-
+
+left:4px;">家庭近视史：</div>
+                        <div id="jtjss" 
+
+style="width:35%;height:48px;border:0px;float:left;background:#fff;margin-left:2px;" 
+
+contenteditable=true></div>
+                    </td>    
+                </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0" width="100%" style="border-left:1px solid 
+
+black;text-align:center;">
+                <tr>
+                    <td nowrap="nowrap" style="width:12%;border-right:1px solid black;border-
+
+bottom:1px solid black;height:30px;">眼别（主）</td>
+                    <td align="center" nowrap="nowrap" style="width:39%;border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                        <input type='radio' id='yanbie_r' name='yanbie' value='0'/>&nbsp;&nbsp;
+
+右</td>
+                    <td align="center" nowrap="nowrap" style="width:39%;border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                        <input type='radio' id='yanbie_l' name='yanbie' value='1'/>&nbsp;&nbsp;
+
+左</td>
+                    <td nowrap="nowrap" style="width:10%;border-right:1px solid black;border-
+
+bottom:1px solid black;text-align:center;">-</td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">视&nbsp;&nbsp;力</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                        <input type="text" id="ysl_r" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;远&nbsp;&nbsp;<input type="text" id="jsl_r" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;近
+                    </td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                        <input type="text" id="ysl_l" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;远&nbsp;&nbsp;<input type="text" id="jsl_l" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;近
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="sl_qz" onclick="openFloatDiv1('sl_qz','sl_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="sl_qz_gh" style="display:none;"></label></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">瞳孔直径</td>
+                    <td align="center" nowrap="nowrap"  style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                        <input type="text" id="tkzj_m_r" style="width:40px;border:0px;"/>（明）
+
+<input type="text" id="tkzj_a_r" style="width:40px;border:0px;"/>（暗）mm</td>
+                    <td align="center" nowrap="nowrap"  style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                        <input type="text" id="tkzj_m_l" style="width:40px;border:0px;"/>（明）
+
+<input type="text" id="tkzj_a_l" style="width:40px;border:0px;"/>（暗）mm</td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="tkzj_qz" onclick="openFloatDiv1('tkzj_qz','tkzj_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="tkzj_qz_gh" style="display:none;"></label></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">眼&nbsp;&nbsp;压</td>
+                    <td align="center" nowrap="nowrap"  style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                        <input type="text" id="yanya_r" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;mmHg</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                        <input type="text" id="yanya_l" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;mmHg</td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="yanya_qz" onclick="openFloatDiv1('yanya_qz','yanya_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="yanya_qz_gh" style="display:none;"></label></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;line-height:2em;">角&nbsp;&nbsp;膜<br />地形图</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;height:60px;line-height:2em;">
+                        K1&nbsp;&nbsp;<input type="text" id="jmdxt_K1_r" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;K2&nbsp;&nbsp;<input type="text" id="jmdxt_K2_r" 
+
+style="width:40px;border:0px;"/><br/>@&nbsp;&nbsp;<input type="text" id="jmdxt_a_r" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;DK&nbsp;&nbsp;<input type="text" id="jmdxt_DK_r" 
+
+style="width:40px;border:0px;"/>
+<br/>    角膜直径<input type="text" id="jmzj_r" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;mm</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;line-height:2em;" >
+                        K1&nbsp;&nbsp;<input type="text" id="jmdxt_K1_l" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;K2&nbsp;&nbsp;<input type="text" id="jmdxt_K2_l" 
+
+style="width:40px;border:0px;"/><br/>
+@&nbsp;&nbsp;<input type="text" id="jmdxt_a_l" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;DK&nbsp;&nbsp;<input type="text" id="jmdxt_DK_l" 
+
+style="width:40px;border:0px;"/><br/>角膜直径<input type="text" id="jmzj_l" 
+
+style="width:40px;border:0px;"/>&nbsp;&nbsp;mm</td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="jmdxt_K1_qz" onclick="openFloatDiv1
+
+('jmdxt_K1_qz','jmdxt_K1_qz_gh');" onkeydown="closeFloatDiv1()" 
+
+style="cursor:pointer;"></label>
+                    <label id="jmdxt_K1_qz_gh" style="display:none;"></label></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">
+                    ECC</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                    <input type="text" id="pxl_H_r" 
+
+style="width:40px;border:0px;display:none"/>&nbsp;&nbsp;E&nbsp;&nbsp;<input type="text" 
+
+id="pxl_V_r" style="width:40px;border:0px;"/></td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                    <input type="text" id="pxl_H_l" 
+
+style="width:40px;border:0px;display:none"/>&nbsp;&nbsp;E&nbsp;&nbsp;<input type="text" 
+
+id="pxl_V_l" style="width:40px;border:0px;"/></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="pxl_qz" onclick="openFloatDiv1('pxl_qz','pxl_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="pxl_qz_gh" style="display:none;"></label></td>
+                </tr>
+            <tr style="display:none">
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">
+                    电脑验光</td>
+                    <td align="left" nowrap="nowrap"  style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                    <input type="text" id="dnyg_r3" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="dnyg_r1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="dnyg_r2" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td align="left" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="dnyg_l3" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="dnyg_l1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="dnyg_l2" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="dnyg_qz" onclick="openFloatDiv1('dnyg_qz','dnyg_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="dnyg_qz_gh" style="display:none;"></label></td>
+                </tr><tr style="display:none">
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">
+                    散瞳检影</td>
+                    <td align="left" nowrap="nowrap"  style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                    <input type="text" id="stjy_r3" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="stjy_r1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="stjy_r2" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td align="left" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="stjy_l3" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="stjy_l1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="stjy_l2" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="stjy_qz" onclick="openFloatDiv1('stjy_qz','stjy_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="stjy_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">
+                    散瞳试片</td>
+                    <td align="left" nowrap="nowrap"  style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                    <input type="text" id="stsp_r4" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="stsp_r1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="stsp_r2"  style="width:50px;border:0px;text-
+
+align:center;"/>-><input type="text" id="stsp_r3" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td align="left" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="stsp_l4" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="stsp_l1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="stsp_l2" 
+style="width:50px;border:0px;text-align:center;"/>-><input type="text" id="stsp_l3" 
+
+style="width:50px;border:0px;text-align:center;"/></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="stsp_qz" onclick="openFloatDiv1('stsp_qz','stsp_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="stsp_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">
+                    小瞳试片</td>
+                    <td align="left" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="xtjy_r4" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="xtjy_r1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="xtjy_r2" style="width:50px;border:0px;text-
+
+align:center;"/>-><input type="text" id="xtjy_r3" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td align="left" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="xtjy_l4" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="xtjy_l1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="xtjy_l2" style="width:50px;border:0px;text-
+
+align:center;"/>-><input type="text" id="xtjy_l3" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="xtjy_qz" onclick="openFloatDiv1('xtjy_qz','xtjy_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="xtjy_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">
+                    小瞳试片</td>
+                    <td align="left" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="xtsp_r4" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="xtsp_r1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="xtsp_r2" style="width:50px;border:0px;text-
+
+align:center;"/>-><input type="text" id="xtsp_r3" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td align="left" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="xtsp_l4" style="width:50px;border:0px;text-
+
+align:center;"/>DS
+                    <input type="text" id="xtsp_l1" style="width:50px;border:0px;text-
+
+align:center;"/>DC×<input type="text" id="xtsp_l2" style="width:50px;border:0px;text-
+
+align:center;"/>-><input type="text" id="xtsp_l3" style="width:50px;border:0px;text-
+
+align:center;"/></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="xtsp_qz" onclick="openFloatDiv1('xtsp_qz','xtsp_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="xtsp_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:30px;">
+                    角膜厚度</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="jmhd_r" style="width:80%;border:0px;"/>μm</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <input type="text" id="jmhd_l" style="width:80%;border:0px;"/>μm</td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="jmhd_qz" onclick="openFloatDiv1('jmhd_qz','jmhd_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="jmhd_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:70px;">
+                    前节检查</td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <textarea id="qjjc_r" style="width:98%;height:68px;border:0px;font-
+
+size:12px;" onclick="openFloatDiv('qjjc_r');" onkeydown="closeFloatDiv()"></textarea></td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <textarea type="text" id="qjjc_l" 
+
+style="width:98%;height:68px;border:0px;font-size:12px;" onclick="openFloatDiv('qjjc_l');" 
+
+onkeydown="closeFloatDiv()"></textarea></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="qjjc_qz" onclick="openFloatDiv1('qjjc_qz','qjjc_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="qjjc_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:60px;">
+                    眼底检查</td>
+                    <td align="center" nowrap="nowrap"  style="border-right:1px solid 
+
+black;border-bottom:1px solid black;">
+                    <textarea id="ydjc_r" style="width:98%;height:58px;border:0px;font-
+
+size:12px;" onclick="openFloatDiv('ydjc_r');" onkeydown="closeFloatDiv()"></textarea></td>
+                    <td align="center" nowrap="nowrap" style="border-right:1px solid 
+
+black;border-bottom:1px solid black;" >
+                    <textarea id="ydjc_l" style="width:98%;height:58px;border:0px;font-
+
+size:12px;" onclick="openFloatDiv('ydjc_l');" onkeydown="closeFloatDiv()"></textarea></td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="ydjc_qz" onclick="openFloatDiv1('ydjc_qz','ydjc_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="ydjc_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:50px;">
+                    处理意见</td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;" colspan="2" >
+                    <textarea id="clyj" name="clyj" style="width:98%; height: 48px;border:0px; 
+
+overflow:visible;" onclick="openFloatDiv('clyj');" onkeydown="closeFloatDiv()"></textarea></td>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="clyj_qz" onclick="openFloatDiv1('clyj_qz','clyj_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="clyj_qz_gh" style="display:none;"></label></td>
+                </tr><tr>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;height:50px;">
+                    备注</td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;" colspan="2" >
+                    <textarea id="bz" style="width:98%; height: 48px;border:0px; 
+
+overflow:visible;"></textarea></td>
+                    </td>
+                    <td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px 
+
+solid black;">
+                    <label id="bz_qz" onclick="openFloatDiv1('bz_qz','bz_qz_gh');" 
+
+onkeydown="closeFloatDiv1()" style="cursor:pointer;"></label>
+                    <label id="bz_qz_gh" style="display:none;"></label></td>
+                </tr>
+<tr><td nowrap="nowrap" style="border-right:1px solid black;border-bottom:1px solid 
+
+black;height:30px;">录入者</td><td nowrap="nowrap" style="border-right:1px solid black;border-
+
+bottom:1px solid black;" colspan="3"><select id="recorder"></select></td></tr>
+        </table>
+</div> 

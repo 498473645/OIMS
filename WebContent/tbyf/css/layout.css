@@ -1,0 +1,38 @@
+html,body,div,p,a,dl,dt,dd{ margin: 0px; padding: 0px; font-size: 12px; font-family: "微软雅黑","宋体","arial";}
+.left{ float: left;}
+.right{ float: right;}
+img{border:none;}
+/*头部header样式*/
+.header{ 
+	height: 67px; width: 100%; 
+   FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#035733,endColorStr=#0f7026); /*IE 6 7 8*/ 
+
+    background: -ms-linear-gradient(left, #035733, #0f7026); /* IE 10 */ 
+    background: -moz-linear-gradient(left,#035733,#0f7026); /*火狐*/ 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#035733), to(#0f7026)); /*谷歌*/ 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#035733), to(#0f7026)); /* Safari 4-5, Chrome 1-9*/ 
+    background: -webkit-linear-gradient(left, #035733, #0f7026); /*Safari5.1 Chrome 10+*/ 
+    background: -o-linear-gradient(left, #035733, #0f7026); /*Opera 11.10+*/ overflow:hidden;box-sizing: border-box; zoom: 0;
+    }
+:root .header{filter:none;}
+.header .logo{ width: 30%; padding:18px 10px 0 15px; position: relative; z-index: 1;}
+.header-main{ background:url(../images/top-bj-img.png) no-repeat #035733;  height: 66px; width: 772px; position: absolute; right:0px ; clear: both; z-index: 0;}
+.header-main .user{  width: 200px; box-sizing: border-box;height: 67px; padding-top: 8px; padding-left: 10px;font-size: 14px; color: #e4eae7; position: absolute; right:175px}
+dt.left{ width: 50px; }
+dd.left{ width: 130px; text-align: left; padding-left: 10px; padding-top:8px;}
+dd.left p{ line-height: 18px;}
+.icon{ width:180px; line-height: 76px; height: 66px; position: absolute; right: 0px; top: 0px; margin: 0px; padding: 0; }
+.icon a{ width: 60px; height:66px; display:block; float: left; background:#008000; text-align: center; }
+.icon a:hover{ background: #0f960f;}
+.line-two,.line-three{ padding-top: 6px; box-sizing: border-box;}
+.line-two{  position: absolute; right: 117px;}
+.line-three{ position: absolute; right: 59px;}
+.line{ width: 100%; height: 10px; background: url(../images/top-bottom-bj.jpg) repeat; }
+ 
+/*END 头部header样式*/
+
+
+
+/*底部样式*/
+.footer{ background:#035733; height: 40px; color: #e3e2e2; line-height: 40px; text-align: center;}
+/*END 底部样式*/

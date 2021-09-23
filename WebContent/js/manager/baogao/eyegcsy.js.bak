@@ -4,14 +4,17 @@ var data_eyegcsy_syType = [ {
 	value : '',
 	text : ''
 }, {
-	value : 'OCTOUPS 101',
-	text : 'OCTOUPS 101'
+	value : 'OCTOUPS 900',
+	text : 'OCTOUPS 900'
 }, {
 	value : 'Humphvey',
 	text : 'Humphvey'
 }, {
-	value : '微视野',
-	text : '微视野'
+	value : '微视野 MP-3',
+	text : '微视野 MP-3'
+}, {
+	value : '微视野 Maia',
+	text : '微视野 Maia'
 }, {
 	value : '上邦',
 	text : '上邦'
@@ -169,6 +172,8 @@ function initData_eyegcsy() {
 				$("#rep_doc").val(eyegcsy.repDoc);// 申请医生
 			if($("#doctor").length == 1)
 				$("#doctor").val(eyegcsy.doctor);// 申请医生
+			if($("#cli_date").length==1)
+				$("#cli_date").html(eyegcsy.cliDate);
 			if (data_outBaogaoHelp.obj.reportDate != eyegcsy.cliDate) {
 				utilTool().fdisabled($("#div_reportresult"));
 				$("#a_updatebaogao").attr("disabled", "disabled");

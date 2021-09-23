@@ -1,40 +1,23 @@
 package cn.com.oims.service.impl;
 
 import cn.com.oims.common.Utils;
-import cn.com.oims.dao.IBingliDao;
-import cn.com.oims.dao.IDoctorsWorkstationDao;
-import cn.com.oims.dao.IHuanZheXinXiDao;
-import cn.com.oims.dao.IJiuzhenDao;
-import cn.com.oims.dao.IJzjlDao;
-import cn.com.oims.dao.IShiLiDao;
-import cn.com.oims.dao.IYuanGongDao;
-import cn.com.oims.dao.pojo.HuanZheXinXi;
-import cn.com.oims.dao.pojo.Jiuzhen;
-import cn.com.oims.dao.pojo.Jzjl;
-import cn.com.oims.dao.pojo.ShiLi;
-import cn.com.oims.dao.pojo.YanYa;
-import cn.com.oims.dao.pojo.YuanGong;
+import cn.com.oims.dao.*;
+import cn.com.oims.dao.pojo.*;
 import cn.com.oims.service.IBingliService;
 import cn.com.oims.service.IEMRService;
 import cn.com.oims.service.IShiLiService;
-import cn.com.oims.utils.DateUtils;
 import cn.com.oims.utils.JsonUtil;
 import cn.com.oims.web.form.BingliForm;
 import cn.com.oims.web.form.HuanZheSearchExForm;
 import cn.com.oims.web.form.HuanZheSearchForm;
 import com.codesnet.common.Page;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 public class BingliServiceImpl implements IBingliService {
@@ -172,51 +155,51 @@ public class BingliServiceImpl implements IBingliService {
   @Override
   public List<Map<String, Object>> findBy4Exprot(String categoryId) {
     List<Map<String, Object>> list = this.bingliDao.findBy4Exprot(categoryId);
-    for (Map<String, Object> map : list) {
-      Long jiuzhenId = Long.valueOf(Long.parseLong(map.get("id").toString()));
-      Jiuzhen jz = this.jiuzhenDao.findJiuzhenById(jiuzhenId);
-      ShiLi o = this.shiLiDao.getShiliByJiuzhenId(jiuzhenId);
-      StringBuffer sb_l = new StringBuffer("");
-      if (o != null) {
-        if (o.getLj() != null) {
-          sb_l.append("近视力").append("(" + this.shiLiService.getShiLiValue(o.getLj().floatValue()) + ")、");
-        }
-        if (o.getLjz() != null) {
-          sb_l.append("矫正视力").append("(" + this.shiLiService.getShiLiValue(o.getLjz().floatValue()) + ")、");
-        }
-        if (o.getLl() != null) {
-          sb_l.append("裸眼视力").append("(" + this.shiLiService.getShiLiValue(o.getLl().floatValue()) + ")、");
-        }
-        if (o.getLedtrs() != null && !o.getLedtrs().equals(new Integer(0))) {
-          sb_l.append("EDTRS").append("(" + this.shiLiService.getShiLiValue(o.getLedtrs().intValue()) + ")、");
-        }
-        StringBuffer sb_r = new StringBuffer("");
-        if (o.getRj() != null) {
-          sb_r.append("近视力").append("(" + this.shiLiService.getShiLiValue(o.getRj().floatValue()) + ")、");
-        }
-        if (o.getRjz() != null) {
-          sb_r.append("矫正视力").append("(" + this.shiLiService.getShiLiValue(o.getRjz().floatValue()) + ")、");
-        }
-        if (o.getRl() != null) {
-          sb_r.append("裸眼视力").append("(" + this.shiLiService.getShiLiValue(o.getRl().floatValue()) + ")、");
-        }
-        if (o.getRedtrs() != null && !o.getRedtrs().equals(new Integer(0))) {
-          sb_r.append("EDTRS").append("(" + this.shiLiService.getShiLiValue(o.getRedtrs().intValue()) + ")、");
-        }
-        map.put("shili_od", sb_r.toString());
-        map.put("shili_os", sb_l.toString());
-      } else {
-        map.put("shili_od", "");
-        map.put("shili_os", "");
-      } 
-      Map<String, Object> handle_map = this.iemrService
-        .findCombineChuZhi(jiuzhenId);
-      Set<String> set = handle_map.keySet();
-      for (String s : set) {
-        map.put(s, handle_map.get(s));
-      }
-      map.put("age", Integer.valueOf(DateUtils.calculateAge(jz.getCaozuoTime(), (Date)map.get("shengri"))));
-    } 
+//    for (Map<String, Object> map : list) {
+//      Long jiuzhenId = Long.valueOf(Long.parseLong(map.get("id").toString()));
+//      Jiuzhen jz = this.jiuzhenDao.findJiuzhenById(jiuzhenId);
+//      ShiLi o = this.shiLiDao.getShiliByJiuzhenId(jiuzhenId);
+//      StringBuffer sb_l = new StringBuffer("");
+//      if (o != null) {
+//        if (o.getLj() != null) {
+//          sb_l.append("近视力").append("(" + this.shiLiService.getShiLiValue(o.getLj().floatValue()) + ")、");
+//        }
+//        if (o.getLjz() != null) {
+//          sb_l.append("矫正视力").append("(" + this.shiLiService.getShiLiValue(o.getLjz().floatValue()) + ")、");
+//        }
+//        if (o.getLl() != null) {
+//          sb_l.append("裸眼视力").append("(" + this.shiLiService.getShiLiValue(o.getLl().floatValue()) + ")、");
+//        }
+//        if (o.getLedtrs() != null && !o.getLedtrs().equals(new Integer(0))) {
+//          sb_l.append("EDTRS").append("(" + this.shiLiService.getShiLiValue(o.getLedtrs().intValue()) + ")、");
+//        }
+//        StringBuffer sb_r = new StringBuffer("");
+//        if (o.getRj() != null) {
+//          sb_r.append("近视力").append("(" + this.shiLiService.getShiLiValue(o.getRj().floatValue()) + ")、");
+//        }
+//        if (o.getRjz() != null) {
+//          sb_r.append("矫正视力").append("(" + this.shiLiService.getShiLiValue(o.getRjz().floatValue()) + ")、");
+//        }
+//        if (o.getRl() != null) {
+//          sb_r.append("裸眼视力").append("(" + this.shiLiService.getShiLiValue(o.getRl().floatValue()) + ")、");
+//        }
+//        if (o.getRedtrs() != null && !o.getRedtrs().equals(new Integer(0))) {
+//          sb_r.append("EDTRS").append("(" + this.shiLiService.getShiLiValue(o.getRedtrs().intValue()) + ")、");
+//        }
+//        map.put("shili_od", sb_r.toString());
+//        map.put("shili_os", sb_l.toString());
+//      } else {
+//        map.put("shili_od", "");
+//        map.put("shili_os", "");
+//      }
+//      Map<String, Object> handle_map = this.iemrService
+//        .findCombineChuZhi(jiuzhenId);
+//      Set<String> set = handle_map.keySet();
+//      for (String s : set) {
+//        map.put(s, handle_map.get(s));
+//      }
+//      map.put("age", Integer.valueOf(DateUtils.calculateAge(jz.getCaozuoTime(), (Date)map.get("shengri"))));
+//    }
     return list;
   }
   

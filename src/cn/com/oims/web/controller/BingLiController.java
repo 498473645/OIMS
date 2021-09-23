@@ -2,11 +2,7 @@ package cn.com.oims.web.controller;
 
 import cn.com.oims.common.XLSHead;
 import cn.com.oims.dao.pojo.HuanZheXinXi;
-import cn.com.oims.service.IBingliService;
-import cn.com.oims.service.IHuanZheXinXiService;
-import cn.com.oims.service.IJcdService;
-import cn.com.oims.service.IJiuzhenService;
-import cn.com.oims.service.IOimsLogService;
+import cn.com.oims.service.*;
 import cn.com.oims.web.form.BingliForm;
 import cn.com.oims.web.form.HuanZheSearchExForm;
 import cn.com.oims.web.form.HuanZheSearchForm;
@@ -14,21 +10,18 @@ import com.codesnet.common.JSONWriterUtils;
 import com.codesnet.common.MyResult;
 import com.codesnet.common.Page;
 import com.codesnet.common.PhotoUtilsImpl;
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Controller
 @RequestMapping({"bingli"})
@@ -168,6 +161,10 @@ public class BingLiController extends BaseController {
     h = new XLSHead("shengri", "生日", "date");
     vh.add(h);
     h = new XLSHead("age", "年龄");
+    vh.add(h);
+    h = new XLSHead("jtdz", "住址");
+    vh.add(h);
+    h = new XLSHead("shouji", "手机");
     vh.add(h);
     h = new XLSHead("disease", "诊断");
     vh.add(h);

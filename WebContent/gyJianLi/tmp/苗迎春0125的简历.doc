@@ -1,0 +1,524 @@
+
+<div class=Section1 style='layout-grid:15.6pt;margin:0px;width:100%'>
+<p class=MsoNormal align=center style='text-align:center;tab-stops:-14.2pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:36.0pt;mso-bidi-font-size:
+42.0pt;font-family:黑体;mso-hansi-font-family:Calibri;color:red'>员工档案表</span></b>
+<span style='mso-bookmark:OLE_LINK2'></span><span style='mso-bookmark:OLE_LINK1'></span>
+ 工号：<span style="color:green" id='yuangong_gonghao' >0125</span>
+ <input   type='hidden' id='jianli_ID'>
+<table class=MsoNormalTable   border=1 
+ style='align:center;width:100%;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+
+ <tr style=''>
+  <td  style='width:70.7pt;height:22.05pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span
+	  style='font-family:宋体;cursor:pointer'>姓<span lang=EN-US><span
+	  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>名</span></p>
+  </td>
+  <td style='width:70.7pt;height:22.05pt '>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>苗迎春</span></p>
+  </td>
+  <td style='width:56.8pt;height:22.05pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>性<span lang=EN-US><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>别</span></p>
+  </td>
+  <td  style='width:63.75pt;height:22.05pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>男</span></p>
+  </td>
+  <td colspan=2 style='width:2.0cm;height:22.05pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>民<span lang=EN-US><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>族</span></p>
+  </td>
+  <td colspan=2 style='width:77.9pt;height:22.05pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+  <td rowspan=5 style='width:120pt;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>
+   未上传照片
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:20.95pt'>
+  <td style='width:63.6pt;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>政治面貌</span></p>
+  </td>
+  <td  style='width:70.7pt;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+  <td  style='width:56.8pt;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>籍<span lang=EN-US><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>贯</span></p>
+  </td>
+  <td  style='width:63.75pt;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+  <td  colspan=2 style='width:2.0cm;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>婚育情况</span></p>
+  </td>
+  <td  colspan=2 style='width:77.9pt;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:21.2pt'>
+  <td  style='width:63.6pt;height:21.2pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>身<span lang=EN-US><span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span>高</span></p>
+  </td>
+  <td  style='width:70.7pt;height:21.2pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+  <td  style='width:56.8pt;height:21.2pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>身 份 证</span></p>
+  </td>
+  <td width=264 colspan=5 style='width:198.35pt;height:21.2pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:20.85pt'>
+  <td  style='width:63.6pt;height:20.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>E-mail</span></p>
+  </td>
+  <td width=94 style='width:70.7pt;height:20.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+  <td  style='width:56.8pt;height:20.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>联系电话</span></p>
+  </td>
+  <td width=264 colspan=5 style='width:198.35pt;height:20.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:19.75pt'>
+  <td  style='width:63.6pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>现居住地</span></p>
+  </td>
+  <td width=434 colspan=7 style='width:325.85pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'>-----</span></p>
+  </td>
+ </tr>
+ </table>
+ 
+ <table class=MsoNormalTable name=jtcy border=1 width=100% style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;border:none>
+ <tr style='mso-yfti-irow:5;height:18.35pt'>
+  <td  rowspan=4 style='width:10%;height:18.35pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>家庭主要成员</span></p>
+  </td>
+  <td width=94 style='width:10%;height:18.35pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>称谓</span></p>
+  </td>
+  <td  style='width:56.8pt;height:18.35pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>姓名</span></p>
+  </td>
+  <td width=264 colspan=5 style='width:50%;height:18.35pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>工作单位及职务</span></p>
+  </td>
+  <td  style='width:20%;height:18.35pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>联系电话</span></p>
+  </td>
+ </tr>
+ 
+ </table>
+ <table class=MsoNormalTable name=dyxl   border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:9;height:20.95pt'>
+  <td rowspan=2 style='width:10%;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>第一学历</span></p>
+  </td>
+    <td  style='width:20%;height:18.35pt;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>学历名称</span></p>
+  </td>
+  <td  style='width:35%;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>毕业院校</span></p>
+  </td>
+  <td width=104 colspan=3 style='width:35%;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>专业</span></p>
+  </td>
+ </table>
+ <table class=MsoNormalTable name=zgxl   border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:9;height:20.95pt'>
+  <td rowspan=2 style='width:10%;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>最高学历</span></p>
+  </td>
+    <td  style='width:20%;height:18.35pt;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>学历名称</span></p>
+  </td>
+  <td  style='width:35%;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>毕业院校</span></p>
+  </td>
+  <td width=104 colspan=3 style='width:35%;height:20.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>专业</span></p>
+  </td>
+ </tr>
+ </table>
+<table class=MsoNormalTable  name=xuewei  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:11'>
+  <td rowspan=2 style='width:10%'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>学位</span></p>
+  </td>
+  <td  style='width:71.25pt;height:20%;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>学位名称</span></p>
+  </td>
+  <td  style='width:30%;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>职称等级及时间</span></p>
+  </td>
+  <td  colspan=7 style='width:30%;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>执业资格及时间</span></p>
+  </td>
+ </tr>
+ </table>
+ <table class=MsoNormalTable name=jypx  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:12;height:17.7pt'>
+  <td  rowspan=6 style='width:10%;height:17.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>教育培训及实习经历（从第一学历起）<span
+  lang=EN-US></span></span></p>
+  </td>
+  <td width=170 colspan=2 style='width:30%;height:17.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'>
+  <span style='font-family:宋体;cursor:pointer'>起止时间</span><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'></span></p>
+  </td>
+  <td width=359 colspan=6 style='width:70%;height:17.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span style='font-family:
+  宋体;cursor:pointer'>学校（单位）</span><span lang=EN-US
+  style='font-family:宋体;cursor:pointer'></span></p>
+  </td>
+ </tr>
+ </table>
+<table class=MsoNormalTable name=gzjl   border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:18;height:19.45pt'>
+  <td  rowspan=4 style='width:10%;height:19.45pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>工作简历<b style='mso-bidi-font-weight:
+  normal'></b></span></p>
+  </td>
+  <td width=170 colspan=2 style='width:20%;height:19.45pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>起止时间</span></p>
+  </td>
+  <td width=359 colspan=6 style='width:70%;height:19.45pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:宋体;cursor:pointer'>工作单位及职务</span></p>
+  </td>
+ </tr>
+ </table>
+ <table class=MsoNormalTable name="cgjl"  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ 
+ <tr style='mso-yfti-irow:22;height:25.25px' id='aaaaa'>
+  <td class="redClass"  rowspan=100 style='width:10%;height:25.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体;color:red'>成果奖励</span></p>
+  </td>
+  <td width=170 colspan=2 style='width:15%;height:25.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>成果（项目）名称</span></p>
+  </td>
+  <td width=114 colspan=2 style='width:25%;height:25.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>等级</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:20%;height:25.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>排名</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:10%;height:25.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>时间</span></p>
+  </td>
+   <td width=300 colspan=6 style='width:20%;height:27.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>附件</span></p>
+  </td>
+ </tr>
+ </table>
+ <table class=MsoNormalTable name="cykt"  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ 
+ <tr style='mso-yfti-irow:25;height:41.6pt'>
+  <td class="redClass"  rowspan=100 style='width:10%;height:41.6pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体;color:red'>主持或参与课题</span></p>
+  </td>
+  <td width=170 colspan=2 style='width:15%;height:41.6pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>课题名称</span></p>
+  </td>
+  <td width=114 colspan=2 style='width:25%;height:41.6pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>课题类别</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>（经费数额）</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:20%;height:41.6pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>排名</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:10%;height:41.6pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>起止时间</span></p>
+  </td>
+   <td width=300 colspan=6 style='width:20%;height:27.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>附件</span></p>
+  </td>
+ </tr>
+	  <tr style='mso-yfti-irow:27;height:21.45pt'>
+	  <td width=170 colspan=2 style='width:127.5pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	  <td width=114 colspan=2 style='width:85.2pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	  <td width=123 colspan=2 style='width:92.25pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	  <td width=123 colspan=2 style='width:92.15pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	    <td width=300 colspan=6 style='width:130pt;height:27.75pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>emr.docx</span></p>
+	  </td>
+	 </tr>
+	  <tr style='mso-yfti-irow:27;height:21.45pt'>
+	  <td width=170 colspan=2 style='width:127.5pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	  <td width=114 colspan=2 style='width:85.2pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	  <td width=123 colspan=2 style='width:92.25pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	  <td width=123 colspan=2 style='width:92.15pt;height:21.45pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>-----</span></p>
+	  </td>
+	    <td width=300 colspan=6 style='width:130pt;height:27.75pt'>
+	  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+	  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+	  楷体'>emr.docx</span></p>
+	  </td>
+	 </tr>
+ </table>
+ <table class=MsoNormalTable name="fblw"  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:28'>
+  <td class="redClass"  rowspan=100 style='width:10%;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体;color:red'>发表论文</span></p>
+  </td>
+  <td width=284 colspan=4 style='width:25%;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>论文名称（类别）</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:25%'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>发表刊物</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>（<span lang=EN-US>SCI</span>论文注明当年影响因子）</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:20%'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>期、卷、页码</span></p>
+  </td>
+   <td width=300 colspan=6 style='width:20%;height:27.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>附件</span></p>
+  </td>
+ </tr>
+ </table>
+ <table class=MsoNormalTable name="xwlw"  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:28'>
+  <td class="redClass"  rowspan=3 style='width:10%;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体;color:red'>学位论文</span></p>
+  </td>
+  <td width=284 colspan=4 style='width:25%;'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>论文名称（类别）</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:25%'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>发表刊物</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>（<span lang=EN-US>SCI</span>论文注明当年影响因子）</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:20%'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>期、卷、页码</span></p>
+  </td>
+   <td width=300 colspan=6 style='width:20%;height:27.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>附件</span></p>
+  </td>
+ </tr>
+ </table>
+ <table class=MsoNormalTable name="hdzl"  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ 
+ <tr style='mso-yfti-irow:32;height:22.1pt'>
+  <td class="redClass"  rowspan=100 style='width:10%;height:22.1pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体;color:red'>获得专利</span></p>
+  </td>
+  <td width=284 colspan=4 style='width:30%;height:22.1pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>专利名称</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:30%;height:22.1pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>专利类型</span></p>
+  </td>
+  <td width=123 colspan=2 style='width:10%;height:22.1pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>获得时间</span></p>
+  </td>
+   <td width=300 colspan=6 style='width:20%;height:27.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>附件</span></p>
+  </td>
+ </tr>
+ </table>
+ <table class=MsoNormalTable name="qtry"  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ 
+ <tr style='mso-yfti-irow:35;height:48.65pt'>
+  <td  class="redClass" rowspan=100 style='width:10%;height:48.65pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体;color:red'>获得的其它奖励和荣誉称号</span></p>
+  </td>
+  <td width=284 colspan=12 style='width:70%;height:22.1pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>名称及介绍</span></p>
+  </td>
+   <td width=300 colspan=6 style='width:20%;height:27.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:
+  楷体'>附件</span></p>
+  </td>
+ </tr>
+ </table>
+ <table class=MsoNormalTable name="zwpj"  border=1 width=100%
+ style='align:center;border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none>
+ <tr style='mso-yfti-irow:36;mso-yfti-lastrow:yes;height:125.65pt'>
+  <td rowspan=100 style='width:10%;height:125.65pt'>
+   <p class=MsoNormal align=center style='text-align:center'><span style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-bidi-font-family:楷体'>自我评价(500字以内)</span></p>
+  </td>
+  </tr>
+  <tr>
+  <td style='width:90%;height:18.35pt;'>
+     <p class=MsoNormal align=center style='text-align:center'><span style='font-family:宋体;cursor:pointer'>自我评价</span></p>
+  </td>
+  </tr>
+
+</table>
+
+
+</div>

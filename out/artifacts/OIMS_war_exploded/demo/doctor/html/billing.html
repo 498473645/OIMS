@@ -1,0 +1,71 @@
+<!-- 开单页面 -->
+<div id="billing" class="maintab">
+	<div class="billing">
+		<div style="height: 28px;" class="tablabe2 mcTitleTag">
+			<div class="tab_hide tab_show" onclick="_emr_showChecks(this)">
+				<span>快速录入</span>
+			</div>
+			<div class="tab_hide" onclick="_emr_showChecks(this)">
+				<span>检查项目</span>
+			</div>
+			<div class="tab_hide" onclick="_emr_showChecks(this)">
+				<span>病种分类</span>
+			</div>
+			<div class="tab_hide" onclick="_emr_showChecks(this)">
+				<span>化验项目</span>
+			</div>
+		</div>
+		
+		<div id="normal" style="width:100%;height:257px;border-bottom:1px solid #d2d2d2;overflow:auto;">
+			<table>
+				<tr><td><input type="text" value="请输入关键字或拼音" class="blur"></td><td><input type="button" value="检索"></td></tr>
+			</table>
+			<table style="border-collapse: collapse;width:100%;background:#ffffff;" border="0">
+				<tr><td><input type="checkbox"><span>裂隙灯</span></td><td><input type="checkbox"><span>裂隙灯</span></td></tr>
+			</table>
+		</div>
+		<div id="special" style="width:100%;height:257px;border-bottom:1px solid #d2d2d2;overflow:auto;display:none;">
+			<!-- 常规检查 -->
+			<table id="normalitems" style="border-collapse: collapse;width:100%;background:#ffffff;" border="0">
+			</table>
+			<!-- 特殊检查 -->
+			<table id="specialitems" style="border-collapse: collapse;width:100%;background:#ffffff;" border="0">
+			</table>
+		</div>
+		<div id="sort" style="width:100%;height:257px;border-bottom:1px solid #d2d2d2;overflow:auto;display:none;">
+			<!-- 病种分类 -->
+			<div style="width:50%;height:100%;float:left;overflow:auto;">
+				
+			</div>
+			<div style="width:50%;height:100%;float:right;overflow:auto;">
+				
+			</div>
+		</div>
+		<div id="assay" style="width:100%;height:257px;border-bottom:1px solid #d2d2d2;overflow:auto;display:none;">
+			<!-- 化验项目 -->
+			<table id="assayitems" style="border-collapse: collapse;width:100%;" border="0"></table>
+		</div>
+		
+		<h3>开单信息</h3>
+		<div style="width:100%;height:100px;">
+		</div>
+	</div>
+	<div class="checktips">
+		<div style="height: 28px;vertical-align:middle;text-align:center;" class="tablabe2 mcTitleTag"><span>检查提示</span></div>
+		<div style="width:100%;height:257px;border-bottom:1px solid #d2d2d2;">
+			<div style="width:49.5%;height:257px;border-right:1px solid #d2d2d2;float:left;">
+				<h3>右眼(OD)</h3>
+				<div id="check_tips_od"></div>
+			</div>
+			<div style="width:49.5%;height:257px;border-left:1px solid #d2d2d2;float:right;">
+				<h3>左眼(OS)</h3>
+				<div id="check_tips_os"></div>
+			</div>
+		</div>
+		<div style="width:100%;height:90px;border-bottom:1px solid #d2d2d2;">
+		</div>
+		<div style="width:100%;height:40px;">
+			<textarea style="border:0px;height:100%;"></textarea>
+		</div>
+	</div>
+</div>

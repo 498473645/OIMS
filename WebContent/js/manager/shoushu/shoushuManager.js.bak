@@ -608,19 +608,6 @@ function showShoushuPageList(btns,title, process,currentPage){
 	div.children("a:eq(5)").after("<br/>");
 	div = $("<div />").attr("id","pageList").addClass("list").appendTo("#right");
 	div.createPageList(listFactor);
-	/*div.find("tr").children("td").dblclick(function(){
-		var val = $(this).parent().find("input[name=checkBoxObj]").val();
-		var d=eval("("+val+")");
-		if(process=='0'){
-			editShoushuYuyue(d);
-		}else if(process=='0,1'){
-			shoushuShenqing(d);
-		}else if(process=='1,2'){
-			shoushuAnpai(d);
-		}else if(process=='2,3,4,5,10'){
-			shoushuJilu(d);
-		}
-	});*/
 	if(process=="1,2"||process=="2,3,4,5,10"){
 		var option = {
 				timepicker:false,
@@ -1143,44 +1130,6 @@ function operationFormValidate(){
 		$.oimsAlert("请输入手术时间！");
 		return false;
 	}
-	
-	//new Date(Date.parse(str.replace(/-/g,"/")));
-	//var da = new Date().format('yyyy-MM-dd hh:mm:ss'); //将日期格式串,转换成先要的格式
-	/*var date = new Date();
-	if(userData.role==oimsCategory.ssshs_role||userData.role==oimsCategory.zy_role){
-		
-	}
-	else if(!form.find("input[name=urgent]").is(":checked")&&form.find("input[name=category]:checked").val()=="1"){
-		var d = date.getDate()+MINI_READY_FOR_OPERATION;
-		if(date.getHours()>=17)
-			d++;
-		date.setDate(d);
-	}
-	var minDate= date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();*/
-	
-	//处理手术申请中  普通手术下午五点后提交的bug问题
-	//需要判断是在手术申请列表中
-	if($(".opentitle") != undefined && $(".opentitle") != null && $(".opentitle").eq(0).html().indexOf("手术申请") != -1){
-		var date = new Date();
-		if(userData.role==oimsCategory.ssshs_role||userData.role==oimsCategory.zy_role){
-			
-		}
-		else if(!form.find("input[name=urgent]").is(":checked")){
-			var d = date.getDate()+MINI_READY_FOR_OPERATION;
-			if(date.getHours()>=17)
-				d++;
-			date.setDate(d);
-		}
-		var minDate= date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
-		var dateMin = new Date(Date.parse(minDate.replace(/-/g,"/")));
-		var dateSubmit = new Date(Date.parse(appointmentDate.replace(/-/g,"/")));
-		if(dateMin > dateSubmit){
-			$.oimsAlert("五点后只能处理急诊！");
-			return false;
-		}
-	}
-	//以上需要判断是在手术申请列表中
-	
 	return true;
 }
 
@@ -1277,9 +1226,7 @@ function initAppointmentDateTime(form,data){
 		if(userData.role==oimsCategory.ssshs_role||userData.role==oimsCategory.zy_role){
 			
 		}
-		//else if(!form.find("input[name=urgent]").is(":checked")&&form.find("input[name=category]:checked").val()=="1"){
-		//2019年3月22日 修改 ， 门诊患者也判断17点 ，17点以后不得申请第二天手术
-		else if(!form.find("input[name=urgent]").is(":checked")){
+		else if(!form.find("input[name=urgent]").is(":checked")&&form.find("input[name=category]:checked").val()=="1"){
 			var d = date.getDate()+MINI_READY_FOR_OPERATION;
 			if(date.getHours()>=17)
 				d++;

@@ -1,0 +1,686 @@
+@charset "utf-8";
+/* CSS Document */
+font.red{ color:#F00; font-weight:bold;}
+font.green{ color:#008510; font-weight:bold;}
+font.dark{ color:#37a2af; font-weight:bold;}
+font.blue{ color:#3000ff; font-weight:bold;}
+a.search{ display:block; height:27px; width:88px; background:url(../images/search.png) no-repeat; text-align:center; line-height:27px; vertical-align:middle;padding-left:5px;}
+a.search:hover{ display:block; height:27px; width:88px; background:url(../images/searchhover.png) no-repeat;}
+a.advsearch{ display:block; height:27px; width:88px; background:url(../images/advsearch.png) no-repeat;text-align:center; line-height:27px; vertical-align:middle; padding-left:10px;}
+a.advsearch:hover{ display:block; height:27px; width:88px; background:url(../images/advsearchhover.png) no-repeat;}
+
+/*******页面中大按钮统一风格样式************/
+.buttonsytle{ height:40px;  width:138px; margin:0px auto; padding-top:10px;}/*****弹出最下面的中间两个字按钮********/
+.buttonsytle a{ display:block; float:left;  width:64px; height:27px; margin-right:5px;  background:url(../images/smallbtnbg.png) no-repeat; line-height:27px; vertical-align:middle; text-align:left;}
+.buttonsytle a:hover{ background:url(../images/smallbtnbg1.png) no-repeat;}
+.buttonsytle a span{ display:block; float:left; width:16px; height:17px; margin-left:8px; margin-right:3px; margin-top:3px; }
+
+
+.buttonsytle1{ height:30px;clear:both;  padding-top:6px; }/*********页面中间使用的按钮***********/
+.buttonsytle1 a{ display:block; float:left; width:88px; height:27px;  background:url(../images/bigbtnbg.png) no-repeat; line-height:27px; vertical-align:middle; margin-right:10px; }
+.buttonsytle1 a:hover{ background:url(../images/bigbtnbg1.png) no-repeat;}
+.buttonsytle1 a span{ display:block; float:left; width:17px; height:17px; margin-left:10px; padding-right:0px; margin-right:3px; margin-top:5px; }
+
+/***********banner部分*************/
+.header{ height:63px; clear:both; background:url(../images/headerbg.png) repeat-x left top;}
+.header .logo{ width:588px; background:url(../images/logo.png) no-repeat; height:63px; float:left; } 
+.header .set{ width:266px; float:right; padding-right:20px; height:63px;}
+.header .set ul{ padding-top:12px; list-style:none; }
+.header .set ul li{ padding-right:5px; display:block; float:left; width:82px; height:39px; padding-top:5px; line-height:42px; vertical-align:middle;}
+.header .set ul li.settext{ background:url(../images/setbg.png) no-repeat;}
+.header .set ul li.exit{ background:url(../images/exitbg.png) no-repeat;}
+.header .set ul li.help{ background:url(../images/helpbg.png) no-repeat;}
+.header .set ul li a{ padding-left:45px; color:#4f4f4f; }
+/***********banner部分end*************/
+.content{ width:100%;overflow:hidden; height:100%;background:#f3f3f3; }
+.left{ width:190px; background:#f3f3f3; float:left;}
+.left .menu{ width:185px; float:left;background:#f3f3f3; }
+.wel{ height:65px; background:url(../images/welcomebg.png) repeat-x top left; padding-top:10px;}
+.wel span{ width:38px; height:38px; display:block; padding-left:8px; float:left; padding-right:5px; }
+.wel p{ line-height:20px; color:#5e5e5e; }
+.wel p.time{ text-align:center;} 
+.modulertitle{ height:31px; background:url(../images/modulartitlebg.png) repeat-x left; text-align:center; font-size:14px; font-weight:bold; line-height:31px; vertical-align:middle;}
+.up{ background:url(../images/up.png) no-repeat; height:10px; }
+.up:hover{ background:url(../images/uphover.png) no-repeat; height:10px;}
+.down{ background:url(../images/down.png) no-repeat; height:10px; }
+.down:hover{ background:url(../images/downhover.png) no-repeat; height:10px;}
+.left .narrow{ width:5px; background:#c3c3c3;height:100%; float:right; }
+.left .narrow span{ background:url(../images/narrow.png) no-repeat center; height:33px; width:5px; margin-top:190px; display:block;}
+/***********左边菜单部分*************/
+.nav{ font-size:14px; }
+.nav ul li{ background:url(../images/menubg.png) repeat-x top left; height: 31px; line-height:31px; }
+.nav ul li a{padding-left:25px; color: #444659;  font-size:14px;   display: block; text-decoration: none; line-height:31px;    vertical-align:middle; }
+.nav ul li a:hover{ color: #000000;font-weight:bold;background:url(../images/menubghover.png) repeat-x top left;}
+.nav ul li span{ display:block; width:23px; height:22px; float:left; margin-top:4px; margin-right:5px;}
+.nav ul li.on{background:url(../images/menubghover.png) repeat-x top left;font-size:14px;color: #000000;}
+.nav ul ul {background: #f4f4f4;  border-bottom:1px #bbbaba solid; }
+.nav ul ul li{ background:none; line-height:30px;padding-left:20px; }
+.nav ul ul li a{ padding-left:10px; }
+.nav ul ul li a:hover{background:none}
+.nav ul ul li a span{ display:block; float:left; width:8px; height:8px;background:url(../images/icon.png) no-repeat center left; padding-top:18px;}
+.nav ul ul li:hover{  background:#e0e0e0;}
+.nav ul ul li.on{  background:#B8ADAD;}
+
+/***********左边菜单部分end*************/
+/***********右边标题部分*************/
+.right{  background:#f3f3f3; margin-left:190px; overflow:auto; height:100%;}
+.title{  background:url(../images/titlebg.png) repeat-x left; height:32px; padding-left:10px; border:1px solid #bbbaba; font-size:14px; font-weight:bold; line-height:32px; /*vertical-align:middle;*/}
+.title .titleT{ display:block; float:left; width:20%;}
+.title .titleT span{ display:block; width:26px; height:26px; float:left; margin-top:4px;}
+.title .sum{ float:right; padding-right:15px; font-size:12px; font-weight:normal; }
+
+/***********右边部分end*************/
+
+/***********右边查询表单部分*************/
+.query{ background:url(../images/queryborder.png) repeat-x left bottom; height:235px; overflow:hidden; padding:0px 2px 0px 0px;  }
+.query .star{ float:left; width:104px; background:url(../images/starbg.png) repeat-y top left; padding-top:5px; }
+.query .star .starwidth{ width:104px;}
+.query .star a{ margin-bottom:5px; margin-left:5px; font-size:20px; font-family:"微软雅黑"; text-align:center; }
+.checkicon{ background:url(../images/checkiconbg.png) repeat-y left top; border:1px solid #bfbebe; display:block; float:right; width:32px; height:156px;  padding-top:70px;  text-align:center; font-size:14px; font-weight:bold;  z-index:999999; cursor:pointer;  }
+.checkiconopenimg{ height:226px; z-index:99999; background:#f3f3f3; border:1px solid #bfbebe; width:465px; float:right; }
+.checkiconclose{ background:url(../images/checkiconbg.png) repeat-y left top; border:1px solid #bfbebe; display:block; float:left; width:32px; height:156px;  padding-top:70px;  text-align:center; font-size:14px; font-weight:bold; cursor:pointer; }
+.checkimg{ width:420px; float:right; height:226px;}
+.checkimg ul {padding-top:7px;}
+.checkimg ul li{display:block; width:200px; height:212px; float:left; margin-right:8px;}
+.checkimg ul li.lefteye1{padding-top:31px;}
+.checkimg ul li.righteye1{ padding-top:31px;}
+.checkicon a{ text-align:center; vertical-align:middle;font-size:14px; font-weight:bold; cursor:pointer;}	
+.checkicon p{ width:20px; padding-left:6px; line-height:20px;}		   
+a.breakcheck{background:url(../images/breakcheck.png) no-repeat; display:block; width:95px; height:65px; padding-top:6px;}
+.star p{ width:50px; line-height:30px; padding-left:20px;}
+a.starcheck:hover{background:url(../images/breakcheck.png) no-repeat; display:block; width:95px; height:65px; padding-top:6px;}
+a.breakcheck:hover{background:url(../images/breakcheck.png) no-repeat; display:block; width:95px; height:65px; padding-top:6px;}		
+.tabled{  padding-top:7px; padding-left:7px; padding-right:5px; }	
+.headimg{ width:38px; height:30px; background:url(../images/head2.png) no-repeat center;}
+
+
+/***********右边查询表单部分end*************/
+.advquery{  padding-top:5px; text-align:left; margin:0px; padding-left:5px; }
+.advquery table td{ padding-left:8px;}
+.advquery table td.leftalign{ text-align:left;}
+.list{ padding:10px; overflow:hidden; overflow-y:auto; padding-top:7px; }
+.list table{ border:1px solid #d2d2d2; border-collapse:collapse; }
+.list table td{ border:1px solid #d2d2d2; border-collapse:collapse; height:21px; overflow:hidden; text-align:center; padding:0px;}
+.list table th{ border:1px solid #d2d2d2; border-collapse:collapse; background:url(../images/thbg.png) repeat-x ; height:24px; overflow:hidden;}
+.list table tr.t1 td {background-color:#fff; }
+.list table tr.t2 td {background-color:#f9f9f9; }
+.list table tr.t3 td {background-color:#bbe5ea; }
+.list table tr.t4 td {background-color:#bbe5ea; }
+div.page{ text-align:right; padding-right:10px; padding-left:15px; font-weight:normal; padding-top:4px;background:url(../images/thbg.png) repeat-x bottom ; height:24px; border:1px solid #d2d2d2; border-top:none; cursor:hand;}
+.list td.datatdbg{ background:#e2e2e2 url(../images/tdbg.png) repeat-y left top; width:112px; padding:0px;}
+.list td.datatdbg .context ul li.up1{ background:url(../images/up1.png) no-repeat left; height:10px;padding:0px;}
+.list td.datatdbg .context ul li span{ display:block; height:50px; width:10px; float:left; padding-top:15px; padding-left:4px;}
+.list td.datatdbg .context ul li.up1:hover{ background:url(../images/up1.png) no-repeat left; height:10px;padding:0px;}
+.list td.datatdbg .context ul li.down1{ background:url(../images/down1.png) no-repeat left; height:10px;padding:0px;}
+.list td.datatdbg .context ul li.down1:hover{ background:url(../images/down1.png) no-repeat left; height:10px;padding:0px;}
+.list td.datatdbg .context ul li{ height:56px; background:url(../images/libg.png) no-repeat top left; padding-top:10px;}
+.list td.datatdbg .context ul li.contrast{ padding:0px; height:21px; line-height:21px; background:url(../images/contrastbg.png) repeat-x; border-bottom:1px solid #bbbaba; text-align:left; padding-left:8px; }
+.list td.datatdbg .context ul li.contrast a{ display:block; width:42px; height:17px; background:url(../images/bg4.png) no-repeat; float:right; margin-top:3px; text-align:center; line-height:17px; vertical-align:middle; margin-right:40px;}
+.list td.datatdbg .context ul li.contrast a:hover{ display:block; width:42px; height:17px; background:url(../images/bg5.png) no-repeat; float:right; margin-top:3px; text-align:center; line-height:17px; vertical-align:middle; margin-right:40px;}
+.list td.datatdbg .context ul li.contrast:hover{ padding:0px; height:21px; line-height:21px; background:url(../images/contrastbg.png) repeat-x; border-bottom:1px solid #bbbaba;padding-left:8px;}
+.list td.datatdbg .context ul li p.doctor{ color:#686868;}
+.list td.datatdbg .context ul li:hover{ background:url(../images/libghover.png) no-repeat left top;}
+.list td.datatdbg .context ul li.visited{ background:url(../images/libghover.png) no-repeat left top;}
+.list td.datatdbg .context ul li p{ line-height:25px;}
+.list table td.name{ background:#c8f1f6; height:32px;}
+.list table td.normal{ background:url(../images/gree.png) no-repeat center; }
+.list table td.noth{ background:url(../images/red.png) no-repeat center; }
+.list table td.notline{ background:url(../images/orange.png) no-repeat center; }
+.list table tr.wihte{ background:#fff;}
+.list div.doctortitle{ height:26px; background:url(../images/tdtitlebg.png) repeat-x bottom; text-align:center; font-weight:bold; line-height:26px; vertical-align:middle;}
+.list div.doctortitle1 span.flash{ display: block; float:right; width:17px; height:17px; padding-right:5px; margin-top:4px; }
+.list div.doctortitle1{ height:28px; background:url(../images/tdtitlebg.png) repeat-x; text-align:center; font-weight:bold; line-height:28px; vertical-align:middle;}
+.list div.doctortext{ background:#fff; height:80px; overflow-x:hidden; overflow-y:auto;text-align: left;}
+.list table.tableno{ border:none;}
+.list table.tableno td{ border:none; line-height:30px; padding-right:10px; text-align:right;} 
+.doctortextimg{ width:402px;}
+.list div.doctortext1{ background:#fff; height:60px; border-bottom:1px solid #cdcdcd; overflow-x:hidden; overflow-y:auto;}
+.page span{ display:block;float:right;padding-left:3px;  }
+.page span.pagelefta{ /*background:url(../images/navLeft.gif) no-repeat;*/width:28px; height:18px;cursor:hand;  }
+.page span.pageleftb{ /*background:url(../images/left.gif) no-repeat;*/width:28px; height:18px;cursor:hand;  }
+.page span.pagerighta{ /*background:url(../images/navRight.gif) no-repeat;*/width:28px; height:18px; cursor:hand; }
+.page span.pagerightb{ /*background:url(../images/right.gif) no-repeat;*/width:28px; height:18px;cursor:hand;  }
+.blur1{ height:16px; width:22px;border:1px solid #bebebe; }
+.page span a{border:1px solid #bebebe; margin-left:5px; background:#c6e9ed; padding:2px; padding-bottom:0px; cursor:hand;  }
+/***********footer部分*************/
+.footer{ height:37px; padding-left:10px; clear:both; background:url(../images/footerbg.png) repeat-x left top;}
+.footer .footerlogo{ background:url(../images/sigm.png) no-repeat; width:67px; height:37px; padding-left:24px; float:left;}
+.footer p{ line-height:37px; vertical-align:middle; text-align:center; }
+/***********footer -end*************/
+/****go按钮******/
+.button{
+background:url(../images/thbg.png) repeat-x left top;
+border:solid 1px #A6A6A6;
+padding:3px 3px;
+height:22px;
+margin-left:4px;
+cursor:pointer;
+margin-top:2px;
+
+}
+.buttonhover{
+background:url(../images/thbg2.png) repeat-x left top;
+border:solid 1px #A6A6A6;
+padding:3px 3px;
+height:22px;
+margin-left:4px;
+cursor:pointer;
+margin-top:2px;
+
+}
+/****go按钮end******/
+.btn{ text-align:right; padding-right:10px;float:right;}
+.btn a{ display:block; width:55px;  height:24px; background:url(../images/line.png) no-repeat center right; float:left;  text-align:center; line-height:22px; vertical-align:middle;padding-right:5px; padding-left:5px;}
+.btn a span{ width:16px; height:18px; display:block; float:left; }
+.btn a:hover{ background:url(../images/btnbg.png) repeat-x ; height:22px; border:1px solid #bbbaba; width:55px;}
+.btn a.four{ display:block; width:68px;  height:24px; background:url(../images/line.png) no-repeat center right; float:left;  text-align:center; line-height:22px; vertical-align:middle;padding-right:5px; padding-left:5px;}
+.btn a.four.noline{ background:none;}
+.btn a.four span{ width:16px; height:18px; display:block; float:left; margin-top:2px; }
+.btn a.four:hover{ background:url(../images/btnbg.png) repeat-x ; height:22px; border:1px solid #bbbaba; width:68px;}
+
+
+/*************高级查询弹出DIV样式********/
+.openadvsearch{ background:#fefefe url(../images/advsearchbg.png) repeat-x bottom; border:1px solid #b1b1b1; width:800px;}
+.openadvsearch .opentitle span{ border:none;}
+
+
+
+/*******弹出导入DIV样式***********/
+.openexportdiv{ width:410px; border:1px solid #b4b4b4; background:#f7f7f7;}
+
+.power{ padding:10px; padding-left:18px;}
+
+/*********tab切换样式***********/
+.tablabel{
+	height:26px;
+	margin:2px 0px 0px 0px;
+	padding:0px 0px 0px 2px;
+
+      
+	background:url(../images/tabbg_bg.png) repeat-x left bottom;
+	font-size:12px;	
+	padding-top:5px;
+}
+.tableft{ width: 24px; background:url(../images/left.png) no-repeat bottom left; height:26px; float:left; margin-right:2px;}
+.tabright{ width:24px; height:26px; background:url(../images/right.png) no-repeat bottom right; float:right; margin-right:5px;}
+/*Rename Back */
+
+.tab_hide {
+	color: #4f4f4f;
+	height: 25px;
+	margin:0px 1px 0px 1px;/*设置上边距1px,以得到off的下边框与tabdiv下边线重合*/
+	line-height: 25px;
+	float: left;
+	background:url(../images/tabbg12.png) no-repeat right top;/*****背景图片与on一致，均为tabbg.png*/
+	cursor: pointer;
+}
+.tab_hide span{
+	background:url(../images/tabbg1.png) no-repeat left top;/*****背景图片与on一致，均为tabbg.png*/
+	cursor: pointer;
+	padding:0 10px;
+	display:block;
+}
+.tab_show {
+	color: #4f4f4f;
+	height: 25px;
+	margin:0px 1px 0px 1px;
+	line-height: 25px;
+	float: left;
+	background:url(../images/tabbg22.png) no-repeat right top;/*****背景图片与off一致，均为tabbg.png*/
+	/*border-bottom:1px solid #fff;*/
+	cursor: pointer;
+}
+.tab_show span{
+	background:url(../images/tabbg2.png) no-repeat left top;
+	/*border-bottom:1px solid #fff;*/
+	cursor: pointer;
+	padding:0 10px;
+	display:block;
+}
+
+.tablabe2{
+	height:22px;
+	margin:2px 0px 5px 0px;
+	padding:2px 0px 0px 2px;
+	width:99%;
+	overflow:hidden; 
+	font-size:12px;	
+
+}
+.tabline{ background:url(../images/tabline.png) repeat-x left bottom; height:26px;margin:4px 0px 3px 0px; width:100%; overflow:hidden; }
+.passwordset{ height:175px;}
+/********弹出窗口内容样式*********/ 
+ .imgview1{ padding:10px; padding-right:0px;  overflow-y:auto;margin-bottom:10px;  }
+ .imgview1 ul li img{ width:200px; height:156px; display:block; float:left;padding-bottom:8px;}
+ .imgview1 ul li{ width:200px; height:176px; float:left; padding-right:10px; padding-bottom:10px;}
+ .imgview1 ul li p{ line-height:10px; text-align:center; }
+
+.password{ width:100px; background:#ffffdb; height:20px; border:1px solid #bdbc40; color:#9d9d3f;}
+
+ .yginfo{ padding:10px;}
+ .yginfo .nameinfo{ text-align:left; height:25px; border-bottom:1px solid #e3e3e3; margin-bottom:5px;}
+
+div.otcion{ display:block; float:right; width:300px; height:23px; font-weight:normal; font-size:12px; text-align:right; padding-right:20px;}
+.reporttable{ padding:2px;}
+.reporttable table{ border:1px solid #e2e1e1; border-collapse:collapse;}
+.reporttable table th{ border:1px solid #e2e1e1; height:30px; border-collapse:collapse; font-weight:normal; color:#5e5e5e;}
+.reporttable table td{  border:1px solid #e2e1e1; padding-left:2px; border-collapse:collapse; color:#a7a7a7;}
+.reporttable table td.tdb{ padding:6px;}
+.eye{ background:#fff url(../images/eye.png) no-repeat center; height:300px; border:1px solid #e1e1e1; border-top:none;}
+.eyea{ background:url(../images/eye1.png) no-repeat; height:300px; border:1px solid #e1e1e1; border-top:none;}
+.eyec{  border:1px solid #e1e1e1; background:#fff; height:260px; width:320px; float:left; margin:20px 10px;} 
+
+.tool{ height:28px; border:1px solid #e1e1e1; background:url(../images/tdtitlebg.png) repeat-x; padding-left:10px; }
+.tool span{ display:block; width:16px; height:16px; float:left; margin-right:12px; margin-top:5px;}
+
+ .colse{ height:22px; }
+ .colse span{ display:block; float:right; width:16px; height:16px; background:url(../images/closes.png) no-repeat center;}
+
+/********报告*************/
+
+.reportresult{ width:640px;  margin:0px auto; color:#4f4f4f; background:#fff;
+}
+.reportresult h1{ line-height:50px; height:50px; font-size:30px; text-align:center;}
+.reportresult h2{ line-height:30px; height:30px; font-size:24px; text-align:center; margin-bottom:18px;}
+.info{ border-bottom:2px solid #333; border-top:2px solid #333; font-size:14px;}
+.info table td{ height:30px;}
+.reportimg{ text-align:center;  padding-top:10px; padding-left:10px; overflow:hidden;}
+.reportimg1{ border:1px solid #aaaaaa; width:250px; height:200px; float:left; display:block; margin-right:15px; margin-bottom:15px;}
+.reportimgposition{ margin:0px auto; width:535px; height:100%; overflow:hidden;}
+.reportresult h3{ clear:both; font-size:18px; font-weight:bold; line-height:40px; height:40px;}
+.reportresult p{ text-indent:25px; line-height:23px; font-size:14px;}
+table.eyesinfo{ margin:0px 15px; font-size:14px; border:1px solid #c2c2c2; border-collapse:collapse;}
+table.eyesinfo td{ height:24px;border:1px solid #c2c2c2; border-collapse:collapse; text-align:center;}
+.reportfoot{ border-bottom:2px solid #333; font-size:14px; padding-bottom:5px; padding-left:5px; margin-top:10px;}
+p.reportfoot1{ font-size:12px; text-indent:3px;}
+.eyes{ height:100%;}
+.check{ height:100%;}
+.addReporetTemplate{ padding:5px; background:#fff; border:1px solid #bebebe;}
+.addReporetTemplate .Ckedit{ height:103px; background:url(../images/Ckedit.png) no-repeat center;}
+.chooseimg{ position:fixed; top:40%; right:16px; height:131px; width:30px;background:url(../images/choosebg.png) no-repeat; font-size:14px; text-align:center; padding-top:30px; font-weight:bold; cursor:pointer;}
+.chooseimg span{ width:20px; display:block; padding-left:5px;}
+.chooseopenimg{ width:200px; padding:10px; border:1px solid #cbcbcb;  background:#f5f5f5; float:right; overflow-y:auto; height:600px;  }
+.chooseopenimg ul li{ width:200px; height:150px; padding-bottom:10px; }
+.chooseopenimg ul li.img1{ background:url(../images/img.png) no-repeat;}
+.chooseopendiv{ position:absolute; top:2px; right:2px; width:252px; height:600px;}
+.chooseclosebtn{ width:30px; float:left;background:url(../images/choosebg.png) no-repeat; height:131px; margin-top:200px; text-align:center; font-size:14px; font-weight:bold; padding-top:30px; cursor:pointer;}
+.chooseclosebtn{width: 20px;
+display: block;
+padding-left: 5px;
+}
+/****************医生工作站************/
+.checklist{ overflow-y:auto;font-weight:normal;  }
+.checklist ul{ height:132px; overflow:auto;}
+.checklist ul li{ text-align:left; padding-left:8px; line-height:28px; line-height:28px; width:47%; float:left; cursor:pointer;  }
+.checklist ul li span{ width:17px; height:17px; display:block; float:left; margin-top:5px; margin-right:3px;}
+.date ul li{ line-height:26px; height:26px; vertical-align: middle;}
+.date ul li.datetable{ background:url(../images/datebg.png) no-repeat top left;}
+.date ul li.datetable:hover{ background:url(../images/datebg1.png) no-repeat top left;}
+.enquiry{margin:5px; border:1px solid #cdcdcd;}
+.enquiry1{margin:5px;background:#fff; }
+.enquiry table{  border:1px  solid #dadada; border-collapse:collapse;}
+.enquiry table td{ border:1px  solid #dadada; border-collapse:collapse;}
+.enquiry1 table td{ height:30px; padding:0px 3px;}
+.enquiry1 table td.legend{ width:45px; text-align:center;}
+.enquiry1 table td input.blur{ width:98%;}
+.enquiry1 table td input.focus{width:98%;}
+.enquiry1 table td span:hover{ background:url(../images/tubg1.png) no-repeat center; cursor:hand;}
+.enquiry1 table td span{ display:block; float:right; width:39px; height:22px; background:url(../images/tubg.png) no-repeat center; padding-right:4px;cursor:hand; line-height:22px; text-align:center;}
+.enquiry1 table td span.checkt{ display:block; float:right; width:53px; height:22px; background:url(../images/tubg2.png) no-repeat center; padding-right:4px;cursor:hand; line-height:22px; text-align:center; padding-left:2px;}
+.enquiry1 table td input{height:28px;border:0px;width:100%;}
+
+span.edito{ width:16px; height:16px; float:right; background: url(../images/edit.png) no-repeat; display:block; margin-top:4px;}
+.treebg{ background:url(../images/treebg.png) repeat-y left top;}
+span.dorp{ width:17px; height:14px; background:url(../images/drou.png) no-repeat center; display:block; float:right; padding-right:10px; padding-top:10px;}
+span.downdorp{ width:17px; height:14px; background:url(../images/downdrou.png) no-repeat center; display:block; float:right; padding-right:10px; padding-top:10px;}
+.exportbtnbgbg{background: url(../images/exportbtnbg.png) repeat-x top left;padding-top:10px; padding-left:20px; border-bottom:1px solid #d4d4d4;  }
+.diagnose{ background:#fff; border:1px solid #d2d2d2; margin:6px;}
+.diagnoselist{max-height: 30%;overflow: auto;}
+.diagnoselist ul{ padding-left:6px;}
+.diagnoselist ul li{ line-height:26px; height:26px; text-align:left; border-bottom:1px dotted #d2d2d2; }
+
+.diagnoselist ul li span.question{ width:16px; height:24px; background:url(../images/question.png) no-repeat center; cursor:pointer; display:block; float:left; margin-right:5px;}
+.diagnoselist ul li span{ width:16px; height:24px; background:url(../images/icon1.png) no-repeat center; cursor:pointer; display:block; float:left;margin-right:9px;}
+.diagnoselist ul li:hover{cursor:pointer;}
+.single{ height:20px; font-weight:bold; text-align:left; padding-left:10px; padding-top:12px; margin-bottom:8px; color:#0a6e7b;}
+span.notedel{ height:16px; display:block; float:right; width:16px; background:url(../images/closes.png) no-repeat center; margin-right:10px;}
+.diagnoselist ul li  span.notedel{ height:16px; display:block; float:right; width:16px; background:url(../images/closes.png) no-repeat center; margin-right:10px;}
+
+.medical{ padding:10px; width:750px;}
+.medical h2{ line-height:75px; height:75px; font-size:36px; font-weight:bold; text-align:center;}
+.medical .bt{ font-size:22px;height:45px; text-align:right;}
+.medical table{ border:1px solid #000; border-collapse:collapse;}
+.medical table td{ border:1px solid #000; border-collapse:collapse; padding:0px 3px; font-size:16px;}
+.medical table td.bgcolor{ background:#f8f8f8; font-weight:bold; text-align:right;}
+.medical table td.head{background:url(../images/head1.png) no-repeat center;  width:136px; height:128px;}
+
+/***********权限树*************/
+.tree{ background:#f7f7f7;width:730px;border:1px solid #d2d2d2; height:300px; overflow-x:hidden; overflow-y:auto; border-top:none;}
+.treetitle{ height:24px; background:url(../images/tdtitlebg.png) repeat-x left top; font-size:14px;border-top:1px solid #d2d2d2;
+border-bottom:1px solid #d2d2d2; line-height:24px; vertical-align:middle; padding-left:8px; padding-top:3px; font-weight:bold; cursor:pointer; text-align:left; }
+.treetitle span{ width:16px; height:16px; display:block; float:left; margin-right:3px;}
+.tree table tr{ height:35px;}
+.tree table td.treedropmenu{ font-weight:bold; padding-left:15px; color:#727272; text-align:left;}
+div.treedropmenu1{ color:#868686; background:#f2f2f2; border:1px solid #dedede; line-height:25px; vertical-align:middle; margin-bottom:5px; margin-top:5px; font-weight:normal; text-align:left; }
+div.treedropmenu1 input{ margin-left:8px;}
+.solidline{ border-bottom:1px dashed #d9d9d9;}
+/******************系统配置**************/
+.list fieldset.fieldsetsytle table{ border:none;}
+.list fieldset.fieldsetsytle table td{ border:none; border-bottom:1px dotted #9b9b9b; text-align:left; height:75px}
+.list fieldset.fieldsetsytle table td p{ line-height:25px; height:25px;}
+.list fieldset.fieldsetsytle table td p.title3{ font-size:14px; font-weight:bold;}
+.list fieldset.fieldsetsytle table td p.title3 font{ font-size:12px;}
+.list fieldset.fieldsetsytle table td.system{ text-align:center;}
+.list fieldset.fieldsetsytle table td.system span{ width:16px; height:16px; padding:2px 8px; margin-right:3px;}
+.sumitbutton{ height:47px;padding-top:15px; text-align:center;}
+.sumitbutton a{ height:27px; padding-right:28px; padding-left:28px; padding-top:5px; padding-bottom:11px; width:88px; background:url(../images/bigbtnbg.png) no-repeat center; line-height:27px; vertical-align:middle; margin-right:3px; }
+.sumitbutton a:hover{ background:url(../images/bigbtnbg1.png) no-repeat center;}
+.sumitbutton a span{  width:17px; height:17px; padding-top:-2px; padding-bottom:3px; padding-left:7px; padding-right:8px; margin-right:5px;}
+.systems{ text-align:right; padding-right:20px; font-weight:bold;}
+.systems span{ width:20px; height:19px; margin-left:10px;}
+.systems span.gree{ background: url(../images/gree.png) no-repeat center; padding:12px;}
+.systems span.red{ background: url(../images/red.png) no-repeat center; padding:12px;}
+.systems span.orange{ background: url(../images/orange.png) no-repeat center; padding:12px;}
+.start{ background:url(../images/start.png) no-repeat 12px 7px;}
+.disable{background:url(../images/disable.png) no-repeat 12px 7px;}
+
+/***************预约管理**************/
+.line{ height:6px; clear:both; margin-bottom:5px; border-bottom:1px dotted #999;}
+.reservation{ height:207px; background:url(../images/reservationbg.png) repeat-x bottom left; }
+.reservation .query1{ padding:5px;}
+.reservation .query1 table.yytime td{ font-weight:bold;} 
+.reservation .query1 table td{ height:27px;}
+.reservation .query1 table.yytime td.font{ font-size:14px;}
+.reservation table.tablew{ height:205px;}
+.reservation .reservationTime{width:137px; background:url(../images/reservationTimebg.png) repeat-y left top;}
+.doctordate .up2{ background:url(../images/up2.png) no-repeat left top; height:23px;}
+.doctordate .down2{background:url(../images/down2.png) no-repeat left top; height:23px;}
+.doctordate ul{ margin:5px; border:1px solid #bbbaba;border-bottom:none; margin-top:6px;}
+.doctordate ul li{ height:28px; background:url(../images/doctordatebg.png) repeat-x top left; border-bottom:1px solid #bbbaba; line-height:28px; text-align:center; vertical-align:middle; font-weight:bold; font-size:12px; color:#5d5d5d; font-family:"微软雅黑";}
+.doctordate ul li:hover{ background:url(../images/doctordatebg1.png) repeat-x top left;}
+.ordertime{ width:95px; height:120px; background:#eaf8fa; color:#333; border:1px solid #72c5ce; padding:5px; padding-left:10px;}
+.ordertime span{ line-height:22px; font-weight:bold;} 
+.ordertime p{ line-height:18px;}
+.queryform{ padding:10px;background:url(../images/reservationbg.png) repeat-x bottom left; }
+.queryform table td{ height:29px;}
+
+/********统计管理***********/
+.statistics{ height:410px; background:#f0f0f0 url(../images/queryborder.png) repeat-x left bottom; overflow:hidden;}
+.statisticsfrom{ background:url(../images/checkiconbg.png) repeat-y left top; border:1px solid #bfbebe; display:block; float:right; width:32px; height:257px; padding-top:150px;   text-align:center; font-size:14px; border-top:none;
+               font-weight:bold;  z-index:999999; cursor:pointer;  }
+.statisticsfrom1{ width:210px; height:408px;  z-index:999999; display:block; float:right; background:url(../images/statisticsfrom1bg.png) repeat-y left top; border-left:1px solid #c3c3c3; border-right:1px solid #c3c3c3; }	
+.statisticsfrom1 .t{ height:24px; line-height:24px; vertical-align:middle; background:url(../images/diseasetitlebg.png) repeat-x top left; text-align:center; font-weight:bold; }	
+.statisticsfrom1 .t span{ display:block; height:17px; width:17px; background:url(../images/x.png) no-repeat center; float:left; padding-left:10px; padding-top:2px; cursor:pointer;}   
+.statisticssquare{ overflow-y:auto; height:407px;   }	
+.square{ background:#fff url(../images/square.png) no-repeat center; border:1px solid #c4c4c4; width:680px; height:375px; margin-bottom:10px; margin-top:5px;}
+.square1{ background:#fff; border:1px solid #c4c4c4; width:580px; height:328px; margin-bottom:10px; margin-top:5px;}			   
+.bton{ padding-left:8px; padding-right:5px; padding-top:20px;}
+.tt{ height:50px; background:url(../images/queryborder.png) repeat-x left bottom; color:#018b9d; font-size:18px; text-align:center; line-height:50px; vertical-align:middle; font-weight:bold; clear:both; }
+.openbutton p{ text-align:left; padding-left:10px; font-weight:bold;}
+.openbutton p font{ color:#ff9000;}
+.list1{ width:460px; float:left;}
+.fromimg{ width:300px; float:right; height:210px; margin:10px; margin-left:0px; border:1px solid #d2d2d2; }
+/*************数据管理*****************/
+
+.backup{ border:1px dashed #a6a6a6; height:150px; background:url(../images/warning.png) no-repeat 50px 50px; width:500px; margin:0 auto;}
+.backup p{ font-size:14px; font-weight:bold; padding-top:65px; padding-left:115px;}
+.backup1{ border:1px dashed #a6a6a6; height:150px; background:url(../images/warning.png) no-repeat 50px 50px; width:300px; margin:0 auto; margin-top:50px;}
+.backup1 p{ font-size:14px; font-weight:bold; padding-top:65px; padding-left:115px;}
+.listquery { padding:6px 10px 0px 10px;}
+.listquery table.dataexport{  border:none;}
+.listquery table.dataexport td{ border:none; height:30px;  padding-right:4px; padding-left:2px;  }
+
+.listquery table.dataexport td.idname{ text-align:right; vertical-align:middle;}
+table.dataexportable{ border:none; height:30px;  }
+table.dataexportable td{ border:none;padding-right:4px; padding-left:4px; padding-top:6px;}
+table.dataexportable td.tdp{ padding-left:10px;}
+.exportbtn{ margin:0 auto; padding-top:5px; padding-left:20px; width:200px; height:30px; }
+
+.bowsrediv{ padding-left:20px; text-align:left; margin-top:10px;}
+.dataselectdrop{ width:200px; border:1px solid #d2d1d1;}
+.selectlist{ height:180px; overflow:auto; overflow-x:hidden; background:#eae9e9; text-align:left;}
+.selectbtn{ height:25px; padding-top:8px; background:#eae9e9; text-align:center;}
+.selectbtn a{ background:url(../images/tubg.png) no-repeat; padding:2px 10px 6px 10px; }
+.nobg{ background:none;}
+.ot{ height:25px; }
+.ot span{ display:block; float:left; width:70px; height:25px; line-height:25px; vertical-align:middle; font-weight:bold; text-align:right; padding-right:5px;}
+.ot select{ width:100px; float:left;}
+.ot input{ width:100px; float:left;}
+.ui-corner-left{border: 1px solid #AAA;background: #CCC;color: #222;font-weight: bold;margin: -1px;height: 100%;}
+#progressbar{border: 1px solid #AAA;text-align: left;overflow: hidden;height: 1.5em;width: 500px;margin: 0 auto;}
+td.jcxm_image_eye img{ width:259px; height:172px;}
+input.no{ background:url(../images/jy.png) no-repeat center; width:44px; height:27px; border:none;}
+.openWin table td.photo{ text-align:center; vertical-align:middle;}
+.openWin table td.photo img{ width:100px; height:100px;}
+.textareab{ margin-bottom:8px;}
+.rightbotton{ position:absolute; width:204px; background:#ddf1f4; border:1px solid #88d1db; overflow:hidden;}
+.rightbotton ul{ padding:5px; padding-left:4px;}
+.rightbotton ul li{ line-height:27px; padding-left:5px; }
+.rightbotton ul li:hover{ background:url(../images/bg3.png) no-repeat center; cursor:pointer;}
+.systemlanguage{ height:50px; text-align:center;}
+.systemlanguage table{ border:none; text-align:right; height:50px;}
+.systemlanguage table td{ border:none;  text-align:right; padding-right:5px;}
+.note{ text-align:center; padding-top:20px;}
+.note table{ width:500px;border:1px solid #d2d2d2; border-collapse:collapse; }
+.note table td{ height:28px;border:1px solid #d2d2d2; border-collapse:collapse; padding-left:5px; }
+.note table th{ height:38px;  text-align:left; padding-left:5px; background:url(../images/thbg1.png) repeat-x  bottom left;}
+.note table td input{ width:160px;}
+.note table td select{ width:160px;}
+.positionimg{ padding-top:9px;}
+.positionimg img{ height:80px; width:100px; }
+
+.auto_hidden {width:204px;border-top: 1px solid #333;border-bottom: 1px solid #333;border-left: 1px solid #333;border-right: 1px solid #333;display:none;z-index:99999;}
+.auto_hidden {width:204px;border: 1px solid #D2D2D2;display:none;z-index:99999;}
+.auto_show { width:204px;border: 1px solid #D2D2D2;z-index:99999;display:block;text-align:left;max-height: 30%;overflow-y: auto;}
+.auto_onmouseover{background-color:highlight;width:100%;z-index:99999;}
+.auto_onmouseout{width:100%;background-color:#ffffff;z-index:99999;}
+a.cutbg{ background:url(../images/bigbtnbg.png) no-repeat; width:88px; height:27px; display:block; float:left;   line-height:27px; vertical-align:middle;}
+a.cutbg span{ height:16px; width:16px; display:block; float:left; margin-top:6px; margin-left:10px; margin-right:4px;}
+a.cutbg:hover { background:url(../images/bigbtnbg1.png) no-repeat;}
+a.btnone{ background:url(../images/bigbtnbg.png) no-repeat; width:88px; height:27px; display:block; float:left;   line-height:27px; vertical-align:middle;}
+a.btnone:hover { background:url(../images/bigbtnbg1.png) no-repeat;}
+a.btnone span{ height:16px; width:16px; display:block; float:left; margin-top:6px; margin-left:18px; margin-right:4px;}
+.xuanzhong_oimsDiv{display: block;height: 27px;width: 88px;background: url(../images/advsearchhover.png) no-repeat;text-align: center;line-height: 27px;vertical-align: middle;padding-left: 10px;}
+.checkiconclose p{width: 20px;padding-left: 6px;line-height: 20px;}
+.checklist{font-weight:normal;} /*overflow-y:auto;*/
+.checklist ul{overflow:auto;} /*height:132px;*/
+.c_r_class{height:15px; vertical-align:bottom;}
+.c_r_classLeft{height:15px; vertical-align:bottom;margin-left:3px}
+input[type = 'checkBox']{
+	height:15px; vertical-align:bottom;
+}
+input[type = 'radio']{
+	height:15px; vertical-align:bottom;
+}
+
+
+
+/*********检查报告模板***********/
+.checkmodule{ background:#7d7d7d;}
+.reportdiv{ margin-left:0px; padding-top:8px; background:#949494
+ }
+div.i{ background:url(../images/closes.png) no-repeat center; width:16px; height:16px;}
+.curve{ height:22px; }
+.curve a{ display:block; width:66px; height:22px; background:url(../images/tubg3.png) no-repeat; text-align:center; float:left; margin-right:7px; line-height:22px; vertical-align:middle;}
+
+.checksearch{ background:#ebebeb; border-bottom:1px solid #cdcdcd; padding:5px; text-align:left;}
+.checksearch a{ width:63px; height:20px; float:right; line-height:20px; vertical-align:middle; background: url(../images/btnbg1.png) no-repeat; text-align:center; border:1px solid #bcbbbb;}
+.checksearch a span{ padding-left:18px; }
+.checksearchlist ul{ text-align:left; color:#767676;}
+.checksearchlist ul li {line-height:24px; padding-left:5px; padding-right:5px;}
+.checksearchlist ul li.bg{ background:#fefefe;}
+
+.checksearchlist ul li:hover{ background:#e3f4f6;}
+
+.inputTemplateList_emr a{display:block; padding-left:6px; line-height:22px; margin:2px}
+.inputTemplateList_emr a:hover{background:#c3c3c3; color:#fff}
+
+.jcdclass{ background:url(../images/checkiconbg.png) repeat-y left top; border:1px solid #bfbebe; display:block; float:right; width:16px; height:450px; text-align:center; font-size:14px; font-weight:bold;  z-index:999999; cursor:pointer;  }
+#jcddiv{position:absolute;width:35%;height:100%;top:0px;right:-500px;background-color:#eeeeee;opacity:0}
+
+.biaoqian1{background:url(../images/biaoqian1.jpg) no-repeat;}
+.biaoqian2{background:url(../images/biaoqian2.jpg) no-repeat;}
+/*************检查完成查看PDF的*****************/
+
+
+
+/*******************查看全院病历****************************/
+.qybl{ font-size:14px; }
+.qybl ul li{ background:url(../images/menubg.png) repeat-x top left; height: 31px; line-height:31px; width:100%;}
+.qybl ul li a{ color: #444659;  font-size:14px;   display: block; text-decoration: none; line-height:31px; vertical-align:middle;width:100%;}
+.qybl ul li a:hover{ color: #000000;font-weight:bold;background:url(../images/menubghover.png) repeat-x top left;}
+.qybl ul li a.on{background:url(../images/menubghover.png) repeat-x top left;}
+.qybl ul li span{ display:block; width:23px; height:22px; float:left; margin-top:4px; margin-right:5px;}
+.qybl ul li.on{background:url(../images/menubghover.png) repeat-x top left;font-size:14px;color: #000000;}
+.qybl ul ul {background: #f4f4f4;  border-bottom:1px #bbbaba solid; }
+.qybl ul ul li{ background:none; line-height:30px;padding-left:20px; }
+.qybl ul ul li a{ padding-left:10px; }
+.qybl ul ul li a:hover{background:none}
+.qybl ul ul li a span{ display:block; float:left; width:8px; height:8px;background:url(../images/icon.png) no-repeat center left; padding-top:18px;}
+.qybl ul ul li:hover{  background:#e0e0e0;}
+.qybl ul ul li.on{  background:#e0e0e0;}
+/*******************查看全院病历****************************/
+
+/************************统计*******************************/
+
+.img{ position:fixed; top:40%; right:16px; height:131px; width:30px;background:url(../images/choosebg.png) no-repeat; font-size:14px; text-align:center; padding-top:30px; font-weight:bold; cursor:pointer;}
+.img span{ width:20px; display:block; padding-left:5px;}
+.openimg{ width:230px; padding:10px; border:1px solid #cbcbcb;  background:#f5f5f5; float:right; overflow-y:auto; height:600px;  }
+.openimg ul li{ width:100%;padding-bottom:5px;}
+.opendiv{ position:absolute; top:2px; right:2px; width:282px; height:600px;}
+.closebtn{ width:30px; float:left;background:url(../images/choosebg.png) no-repeat; height:131px; margin-top:200px; text-align:center; font-size:14px; font-weight:bold; padding-top:30px; cursor:pointer;}
+.closebtn{width: 20px;display: block;padding-left: 5px;}
+
+.opendiv .findTitle{ height:24px; line-height:24px; vertical-align:middle; background:url(../images/diseasetitlebg.png) repeat-x top left; text-align:center; font-weight:bold; }
+.opendiv .lilist_div{width:100%;height:200px; padding:0px; margin:0px; overflow:auto;}
+
+.divChart{height: 300px;border:solid 1px #000;float:left;margin-left:2px;width:49%;}
+.weekChart{height: 300px;border:solid 1px #000;float:right;}
+.monthChart{width:100%; border:#0F3 solid 1px; height:300px;margin-left:2px; float:left;}
+.mzChaetDiv{width:100%;height:300px;border:solid 1px black;}
+
+/************************统计*******************************/
+
+
+/*******************眼科门诊病历****************************/
+.mzbl{ font-size:14px; }
+.mzbl ul li{color: #444659; background:url(../images/menubg.png) repeat-x top left; height: 31px; line-height:31px; width:100%;}
+.mzbl ul li a{font-size:14px;display: block; text-decoration: none; line-height:31px; vertical-align:middle;width:100%;}
+.mzbl ul li a:hover{ color:#000000;font-weight:bold;background:url(../images/menubghover.png) repeat-x top left;}
+.mzbl ul li a.on{background:url(../images/menubghover.png) repeat-x top left;}
+/*******************眼科门诊病历****************************/
+/******************屈光***********************/
+.tab_show li{
+	background:red;margin:1px;
+}
+.son{
+	width:105px;height:80px;float:left;
+}
+ .tab_show_ls {
+	color: #4f4f4f;
+	height: 100px;
+	margin:0px 1px 0px 1px;
+	line-height: 25px;
+	float: left;
+	background:url(../images/tabbg22.png) no-repeat right top;****背景图片与off一致，均为tabbg.png
+	border-bottom:1px solid #fff;
+	cursor: pointer;
+}
+.tab_show_col {
+	color: #4f4f4f;
+	height: 25px;
+	margin:0px 1px 0px 1px;
+	line-height: 25px;
+	border-bottom:1px solid #fff;
+	cursor: pointer;
+}
+.tab_show_col_zi {
+	color: #4f4f4f;
+	height: 75px;
+	float:left;
+	margin:0px 1px 0px 1px;
+	line-height: 75px;
+	border-bottom:1px solid #fff;
+	cursor: pointer;
+}
+.tab_show_ls span{
+	cursor: pointer;
+	padding:0 10px;
+	display:block;
+}
+.tab_show_col span{
+	border:1px solid #d2d2d2;
+}
+.tab_show_ls_span{
+	background:url(../images/tabbg2.png) no-repeat left top;
+	border-bottom:1px solid #fff;
+	cursor: pointer;
+	padding:0 10px;
+	display:block;
+} 
+.changeBackground_in{
+	background:#ffffdb;
+}
+
+.input90{
+	width:90%;;
+}
+.input80{
+	width:80%;
+}
+.textarea90{
+	width:90%;text-align:left;
+}
+.td_border{
+	border-right:1px solid rgb(51,51,51);border-bottom:1px solid rgb(51,51,51);
+}
+
+.baoGaoDan_print{
+	width:80%;margin-left:10%;font-size:10px;
+}
+.baoGaoDan_print1{
+	width:100%;margin-left:0%;font-size:10px;
+}
+.baoGaoDan_print2{
+	width:60%;margin-left:20%;font-size:14px;
+}
+.yy_print_bianliang{
+	border-bottom:1px solid black;
+}
+.print_big_siz{
+	font-size:20px;
+}
+
+/******************屈光************************/
+
+/**通知**/
+.tongzhiShowDiv{
+	position:absolute;
+	border:1px solid #ccc;
+}
+
+.tongzhiShowDivBg{
+	position:absolute;
+	background:#fff;
+	border:1px solid #ccc;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+}
+
+.tongzhiShowDiv h1{text-indent:1em; background:url("../images/titlebg.png") repeat-x; height:22px; line-height:22px; font-size:14px}
+.tongzhiShowDiv ul{margin:0; padding:8px}
+.tongzhiShowDiv ul li{list-style:none; float:none;}
+.tongzhiShowDiv ul li a:hover{color:#ff0000}
+.tongzhiShowDiv ul li span.new, .tongzhiShowDiv td span.new{color:#ff0000; font-size:10px;}
+.tongzhiShowDiv table{width:100%}
+.tongzhiShowDiv table th{background:#ddd}
+.tongzhiShowDiv table td{border:1px sold #ddd; text-align:center}
+.tongzhiShowDiv table tr.curr td{background:#bbe5ea}
+
+.showTableData{border:1px solid #ddd; background:#fff}
+.showTableData td{text-align:left; vertical-align:top}
+
+td.formTdTitle{text-align:right; font-weight:bold; width:88px}
+td input.inputCommon{width:100%;}
+td textarea.inputCommon{width:100%}

@@ -1,0 +1,8 @@
+jcxmIDConfig={
+	ACAO:5,
+	YANYA:2,
+	PCAO:4,
+	YANGUANG:3,
+	YANDIZX:6,
+	SHILI:1
+};

@@ -1,0 +1,12 @@
+select 
+h.binglihao as patient_id,
+h.xingming as name,
+h.xingbie as sex,
+h.shengri as birthday,
+s.rl as od,
+s.ll as os,
+j.caozuo_time as visited_time,
+j.fzys as doctor_no
+from huanzhexinxi h, jiuzhen j, shili s
+where h.id=j.huanzhe_id and s.jiuzhen_id=j.id
+and j.id in (select z.jiuzhen_id from jiuzhen_zhenduan z, diseases d where  z.zdfl_id=d.id and d.disease like '%RP%' group by z.jiuzhen_id);

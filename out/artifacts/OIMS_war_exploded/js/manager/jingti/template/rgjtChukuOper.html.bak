@@ -1,0 +1,48 @@
+<input type="hidden" name="id" id="id" />
+<input type="hidden" name="outOrPut" id="outOrPut" />
+<table id='rgjtChukuOper'>
+	<tr>
+		<td style="width:58px; text-align:right;">类型</td><td id="TDTypeId" style="text-align:left"></td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;">明细</td><td>
+			<div class="list" style="padding:0; height:280px; overflow:auto">
+				<table id="mingxi" style="width:100%">
+					<tr>
+						<th style="width:20px"></th>
+						<th>厂家</th>
+						<th>晶体名称</th>
+						<th hidden  width="48">襻类型</th>
+						<th width="48">屈光度</th>
+						<th hidden width="48">A常数</th>
+						<th hidden  width="68">光学面直径</th>
+						<th hidden  width="48">总直径</th>
+						<th width="100" >sn</th>
+						<th width="72" >效期</th>
+						<th width="100" >发票号</th>
+						<th width="48">数量</th> 
+						<!-- <th width="24"><a href="#" title="增加">+</a></th> -->
+					</tr>
+					<tr>
+						<th></th>
+						<td><select name="manufacturer"></select></td>
+						<td><input name="proId" type="hidden" /><input name="typeName" type="text" style="width:100%;border:0" /></td>
+						<td hidden><input name="panTypeName" type="hidden" style="width:100%;border:0" readonly="readonly" /></td>
+						<td><input name="diopter" type="text" style="width:100%;border:0" /></td>
+						<td hidden><input name="aConstant" type="hidden" style="width:100%;border:0" readonly="readonly" /></td>
+						<td hidden><input name="surfaceDiameter" type="hidden" style="width:100%;border:0" readonly="readonly" /></td>
+						<td hidden><input name="diameter" type="hidden" style="width:100%;border:0" readonly="readonly" /></td>
+						<td ><input name="sn" type="text" style="width:100%;border:0;" /></td>
+						<td ><input name="expiTime" type="text" style="width:100%;border:0;"  /></td>
+						<td ><input name="batchNumber" type="text" style="width:100%;border:0;"  /></td>
+						<td><input name="quantity" value="1"  type="text" style="width:100%;border:0" /></td>
+					 	<!-- <td><a href="javascript:void(0);" title="删除">-</a></td> --> 
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="width:58px; text-align:right;">备注</td><td style="text-align:left"><textarea name="note" id="note" style="width:100%"></textarea></td>
+	</tr>
+</table>
